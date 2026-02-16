@@ -1,6 +1,6 @@
 extends Control
 
-@onready var scroll_container: ScrollContainer = $ScrollContainer
+@export var scroll_container: ScrollContainer
 
 @export var text_node: RichTextLabel
 @export var velo : float = 1

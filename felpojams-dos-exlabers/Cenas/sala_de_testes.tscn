@@ -1,16 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://cyjl8yk6bbiou"]
+[gd_scene load_steps=5 format=3 uid="uid://cyjl8yk6bbiou"]
 
+[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/carimbo.tscn" id="1_67ekk"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/personagem_principal.tscn" id="1_mlq5q"]
+[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/ui_tintas.tscn" id="3_g2hjm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
 size = Vector2(1184, 162.5)
 
 [node name="Sala de testes" type="Node2D"]
 
+[node name="Carimbo2" parent="." instance=ExtResource("1_67ekk")]
+
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("1_mlq5q")]
+position = Vector2(215, 33)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(570, 573)
 shape = SubResource("RectangleShape2D_67ekk")
+
+[node name="UI_Tintas" parent="." instance=ExtResource("3_g2hjm")]
