@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://crihralf2ygsv"]
+
+[ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Codigos/personagem_principal.gd" id="1_liew2"]
+[ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="2_kbw71"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2qgk"]
+radius = 48.0
+height = 128.0
+
+[node name="PersonagemPrincipal" type="CharacterBody2D"]
+script = ExtResource("1_liew2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_kbw71")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_a2qgk")

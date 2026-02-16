@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyjl8yk6bbiou"]
+
+[ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/personagem_principal.tscn" id="1_mlq5q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
+size = Vector2(1184, 162.5)
+
+[node name="Sala de testes" type="Node2D"]
+
+[node name="PersonagemPrincipal" parent="." instance=ExtResource("1_mlq5q")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(570, 573)
+shape = SubResource("RectangleShape2D_67ekk")
