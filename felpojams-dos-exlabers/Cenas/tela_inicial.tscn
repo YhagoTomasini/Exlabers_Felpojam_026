@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://dohiuhxtebot1"]
+
+[ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
+
+[node name="Tela_Inicial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1rrf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
