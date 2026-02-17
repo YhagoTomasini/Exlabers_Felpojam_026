@@ -39,14 +39,30 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-#Verificação da colisão com o ciano por area2D :D
+
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
-	if area.name == "Area2DCiano":
+	#Passar de Lvl e recebe uma nova cor de tinta
+	if area.name == "FinalLvl1":
+		Globals.arrayTintas.append(Globals.amarelo)
+		#get_tree().change_scene_to_file("res://Cenas/sala_de_testes.tscn")
+		area.queue_free()
+	elif area.name == "FinalLvl2":
+		Globals.arrayTintas.append(Globals.magenta)
+		#get_tree().change_scene_to_file("res://Cenas/sala_de_testes.tscn")
+		area.queue_free()
+	elif area.name == "FinalLvl3":
+		Globals.arrayTintas.append(Globals.ciano)
+		#get_tree().change_scene_to_file("res://Cenas/sala_de_testes.tscn")
+		area.queue_free()
+	
+	#Verificação da colisão com o ciano por area2D :D
+	elif area.name == "Area2DCiano":
 		noCianoI += 1
 		noCianoB = true
 
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	if area.name == "Area2DCiano":
-		noCianoI -= 1
-		if noCianoI <= 0:
-			noCianoB = false
+	if area != null:
+		if area.name == "Area2DCiano":
+			noCianoI -= 1
+			if noCianoI <= 0:
+				noCianoB = false

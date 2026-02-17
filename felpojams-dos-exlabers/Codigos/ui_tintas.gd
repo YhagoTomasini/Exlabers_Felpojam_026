@@ -22,9 +22,9 @@ func atualizar_barra():
 	#Sempre que chamado irá verificar qual a tinta atual
 	if Globals.corAtual == 0:
 		estoqueAtual = Globals.tanqueTintaPreta
-	elif Globals.corAtual == 1:
-		estoqueAtual = Globals.tanqueTintaMagenta
 	elif Globals.corAtual == 2:
+		estoqueAtual = Globals.tanqueTintaMagenta
+	elif Globals.corAtual == 1:
 		estoqueAtual = Globals.tanqueTintaAmarelo
 	elif Globals.corAtual == 3:
 		estoqueAtual = Globals.tanqueTintaCiano

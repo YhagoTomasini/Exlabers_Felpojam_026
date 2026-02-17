@@ -29,10 +29,10 @@ func _process(delta: float) -> void:
 			marcaInstanciada = cenaMarcaK.instantiate()
 			
 		elif Globals.corAtual == 1:
-			marcaInstanciada = cenaMarcaM.instantiate()
+			marcaInstanciada = cenaMarcaY.instantiate()
 			
 		elif Globals.corAtual == 2:
-			marcaInstanciada = cenaMarcaY.instantiate()
+			marcaInstanciada = cenaMarcaM.instantiate()
 			
 		elif Globals.corAtual == 3:
 			marcaInstanciada = cenaMarcaC.instantiate()

@@ -12,7 +12,7 @@ var ciano : Texture2D = preload("res://Imagens/cianoUI.png")
 # VARIAVEIS do PERSONAGEM
 
 #TINTAS
-var arrayTintas = [preto, magenta, amarelo, ciano] #só para os icones das cores na ui
+var arrayTintas = [preto] #só para os icones das cores na ui
 var corAtual = 0
 var barraEstoqueSize : float = 10
 

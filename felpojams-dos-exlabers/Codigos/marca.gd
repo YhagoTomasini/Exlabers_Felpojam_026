@@ -26,7 +26,7 @@ func _ready() -> void:
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaPreta -= 1
 			
-		elif Globals.corAtual == 1:
+		elif Globals.corAtual == 2:
 			if Globals.tanqueTintaMagenta < 1:
 				queue_free()
 			else:
@@ -36,7 +36,7 @@ func _ready() -> void:
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaMagenta -= 1
 			
-		elif Globals.corAtual == 2:
+		elif Globals.corAtual == 1:
 			if Globals.tanqueTintaAmarelo < 1:
 				queue_free()
 			else:
