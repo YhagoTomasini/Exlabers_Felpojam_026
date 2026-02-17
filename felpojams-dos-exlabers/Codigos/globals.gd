@@ -12,6 +12,7 @@ var ciano : Texture2D = preload("res://Imagens/cianoUI.png")
 #ESTOQUE DE TINTAS	
 var arrayTintas = [preto, magenta, amarelo, ciano]
 var corAtual = 0
+var barraEstoqueSize : float = 10
 
 var maxTanque : float = 10
 

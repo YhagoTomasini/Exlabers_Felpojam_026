@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://crihralf2ygsv"]
+
+[ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Codigos/personagem_principal.gd" id="1_liew2"]
+[ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="2_kbw71"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2qgk"]
+radius = 48.0
+height = 128.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7kss6"]
+radius = 62.0
+height = 160.0
+
+[node name="PersonagemPrincipal" type="CharacterBody2D"]
+script = ExtResource("1_liew2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 1)
+texture = ExtResource("2_kbw71")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_a2qgk")
+debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="Area2DPersonagem" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DPersonagem"]
+shape = SubResource("CapsuleShape2D_7kss6")
+debug_color = Color(0, 1, 1, 0.41960785)
+
+[connection signal="area_entered" from="Area2DPersonagem" to="." method="_on_area_2d_personagem_area_entered"]
+[connection signal="area_shape_exited" from="Area2DPersonagem" to="." method="_on_area_2d_personagem_area_shape_exited"]

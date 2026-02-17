@@ -44,5 +44,7 @@ func _ready() -> void:
 				simbulo.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaCiano -= 1
+			
+		
 
 	

@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://wmuccc45p5r8"]
+
+[ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_4o040"]
+
+[sub_resource type="GDScript" id="GDScript_4o040"]
+script/source = "extends Area2D
+
+
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4o040"]
+radius = 31.06445
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
+
+[node name="marcaC" type="Node2D" node_paths=PackedStringArray("simbulo")]
+script = ExtResource("1_4o040")
+simbulo = NodePath("Area2DCiano/CollisionShape2D/Sprite2D")
+
+[node name="Area2DCiano" type="Area2D" parent="."]
+script = SubResource("GDScript_4o040")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCiano"]
+shape = SubResource("CircleShape2D_4o040")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2DCiano/CollisionShape2D"]
+scale = Vector2(64, 64)
+texture = SubResource("CanvasTexture_k1gx7")
+
+[connection signal="body_entered" from="Area2DCiano" to="Area2DCiano" method="_on_body_entered"]

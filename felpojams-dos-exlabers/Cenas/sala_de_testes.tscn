@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cyjl8yk6bbiou"]
 
-[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/carimbo.tscn" id="1_67ekk"]
-[ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/personagem_principal.tscn" id="1_mlq5q"]
-[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/ui_tintas.tscn" id="3_g2hjm"]
+[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="1_67ekk"]
+[ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="1_mlq5q"]
+[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Prefabs/ui_tintas.tscn" id="3_g2hjm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
 size = Vector2(1184, 162.5)
@@ -12,7 +12,7 @@ size = Vector2(1184, 162.5)
 [node name="Carimbo2" parent="." instance=ExtResource("1_67ekk")]
 
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("1_mlq5q")]
-position = Vector2(215, 33)
+position = Vector2(386, 289)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

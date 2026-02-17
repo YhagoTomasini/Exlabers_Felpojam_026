@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
 [ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Codigos/ui_tintas.gd" id="1_y871h"]
 
-[node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3")]
+[node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +16,7 @@ script = ExtResource("1_y871h")
 icone1 = NodePath("IconeT13")
 icone2 = NodePath("IconeTSelecionada")
 icone3 = NodePath("IconeT22")
+barra = NodePath("BarraTanque")
 
 [node name="IconeT13" type="Sprite2D" parent="."]
 position = Vector2(26.800018, 614.7999)
@@ -31,3 +32,14 @@ texture = ExtResource("1_8xrun")
 position = Vector2(109, 614.7999)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_8xrun")
+
+[node name="FundoBarraTanque" type="Sprite2D" parent="."]
+position = Vector2(66, 550)
+scale = Vector2(0.2, 0.5)
+texture = ExtResource("1_8xrun")
+
+[node name="BarraTanque" type="Sprite2D" parent="."]
+position = Vector2(66, 579)
+scale = Vector2(0.2, 1)
+texture = ExtResource("1_8xrun")
+offset = Vector2(0, -32)

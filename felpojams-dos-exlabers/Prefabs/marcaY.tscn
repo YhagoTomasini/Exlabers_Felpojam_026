@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://enlmwilln5od"]
+
+[ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_ve2ui"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ve2ui"]
+radius = 32.140316
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
+
+[node name="marcaY" type="Node2D" node_paths=PackedStringArray("simbulo")]
+script = ExtResource("1_ve2ui")
+simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
+
+[node name="StaticBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_ve2ui")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+scale = Vector2(64, 64)
+texture = SubResource("CanvasTexture_k1gx7")

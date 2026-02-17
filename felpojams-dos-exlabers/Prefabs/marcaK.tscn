@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://wmuccc45p5r8"]
+[gd_scene load_steps=4 format=3 uid="uid://buuduu3bpc52i"]
 
-[ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_ovglf"]
+[ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_fmdbb"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ovglf"]
-size = Vector2(64, 64)
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmdbb"]
+radius = 32.24903
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
-[node name="marca" type="Node2D" node_paths=PackedStringArray("simbulo")]
-script = ExtResource("1_ovglf")
+[node name="marcaK" type="Node2D" node_paths=PackedStringArray("simbulo")]
+script = ExtResource("1_fmdbb")
 simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_ovglf")
+shape = SubResource("CircleShape2D_fmdbb")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
 scale = Vector2(64, 64)
