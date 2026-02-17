@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckan1kkpgao1p"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
+
+[node name="marcaY" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 1, 0.49803922)
+scale = Vector2(64, 64)
+texture = SubResource("CanvasTexture_k1gx7")
