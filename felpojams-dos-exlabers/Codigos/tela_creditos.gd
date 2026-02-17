@@ -1,5 +1,7 @@
 extends Control
 
+#Literalmente o mesmo código que usei nos créditos de itsy bitsy spider e crysantiun
+
 @export var scroll_container: ScrollContainer
 
 @export var text_node: RichTextLabel

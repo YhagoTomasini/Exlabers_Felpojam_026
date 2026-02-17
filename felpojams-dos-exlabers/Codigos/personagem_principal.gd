@@ -4,6 +4,9 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+#temos uma booleana para verificação se esta na marca ciano,
+#e uma inteira para verificar em quantos ciano o personagem esta
+#por motivos similares da goma de mascar de Itsy Bitsy Spider
 var noCianoB : bool
 var noCianoI : int
 
@@ -12,14 +15,17 @@ func _ready() -> void:
 	noCianoI = 0
 
 func _physics_process(delta: float) -> void:
+	#Se n estiver no chão e n estiver no ciano cai normal,
 	if not is_on_floor() and !noCianoB:
 		velocity += get_gravity() * delta
+	#Se n estiver no chão e estiver no ciano cai devagar
 	elif not is_on_floor() and noCianoB:
 		velocity += (get_gravity() * delta)/4
 
-	# Handle jump.
+	#Se estiver no chão e não estiver em um ciano pula normal
 	if Input.is_action_just_pressed("ui_up") and is_on_floor() and !noCianoB:
 		velocity.y = JUMP_VELOCITY
+	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
 	elif Input.is_action_pressed("ui_up") and noCianoB:
 		velocity.y = JUMP_VELOCITY/4
 
@@ -33,12 +39,11 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
+#Verificação da colisão com o ciano por area2D :D
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	if area.name == "Area2DCiano":
 		noCianoI += 1
 		noCianoB = true
-		
 
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area.name == "Area2DCiano":

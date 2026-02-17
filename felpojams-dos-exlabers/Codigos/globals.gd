@@ -1,5 +1,7 @@
 extends Node
 
+#preload das imagens dos icones da ui de cada cor de tinta para deixar no array
+#e permitir a funcionalidade do botão interativo que criei na ui
 var preto : Texture2D = preload("res://Imagens/preoUI.png")
 var magenta : Texture2D = preload("res://Imagens/magentaUI.png")
 var amarelo : Texture2D = preload("res://Imagens/amareloUI.png")
@@ -9,8 +11,8 @@ var ciano : Texture2D = preload("res://Imagens/cianoUI.png")
 
 # VARIAVEIS do PERSONAGEM
 
-#ESTOQUE DE TINTAS	
-var arrayTintas = [preto, magenta, amarelo, ciano]
+#TINTAS
+var arrayTintas = [preto, magenta, amarelo, ciano] #só para os icones das cores na ui
 var corAtual = 0
 var barraEstoqueSize : float = 10
 
