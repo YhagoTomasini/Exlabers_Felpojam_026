@@ -33,3 +33,5 @@ position = Vector2(625, 450)
 
 [node name="FinalLvl3" parent="." instance=ExtResource("6_o0ncy")]
 position = Vector2(835, 447)
+
+[node name="TesteCommit" type="Node2D" parent="."]
