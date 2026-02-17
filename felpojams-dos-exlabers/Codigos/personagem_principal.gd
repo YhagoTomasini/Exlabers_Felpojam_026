@@ -9,6 +9,8 @@ const JUMP_VELOCITY = -400.0
 #por motivos similares da goma de mascar de Itsy Bitsy Spider
 var noCianoB : bool
 var noCianoI : int
+var knockback_vector := Vector2.ZERO
+var knockback_power := 20 
 
 func _ready() -> void:
 	noCianoB = false
@@ -36,7 +38,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+	if knockback_vector != Vector2.ZERO:
+		velocity = knockback_vector
 	move_and_slide()
 
 
@@ -60,6 +63,9 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		noCianoI += 1
 		noCianoB = true
 		
+	elif area.name == "Area2DMagenta":
+		var knockback = Vector2((global_position.x - area.global_position.x) * knockback_power, -200)
+		empurra(knockback)
 
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area != null:
@@ -67,6 +73,13 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 			noCianoI -= 1
 			if noCianoI <= 0:
 				noCianoB = false
+
+func empurra(knockback_force := Vector2.ZERO,duration := 0.25):
+	if knockback_force != Vector2.ZERO:
+		knockback_vector = knockback_force
+		var knockback_tween := get_tree().create_tween()
+		knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
+		
 
 func player_morreu():
 	Globals.refil_de_tinta()
