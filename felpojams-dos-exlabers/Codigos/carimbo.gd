@@ -16,7 +16,7 @@ extends Node2D
 #marca hipotetica
 @onready var marcaHipoteticaCena = preload("res://Prefabs/marcaHipotetica.tscn")
 var marcaHipotetica
-var rangeMH = 120
+var rangeMH = 256
 
 func _ready() -> void:
 	pass
