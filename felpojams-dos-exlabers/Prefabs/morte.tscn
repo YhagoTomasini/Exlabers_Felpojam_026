@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://y1np6ckhs8dw"]
+
+[ext_resource type="Script" uid="uid://dexo3e147nclq" path="res://Codigos/morte.gd" id="1_w58u7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
+
+[node name="morte" type="Area2D" groups=["Morte"]]
+script = ExtResource("1_w58u7")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_d45mu")
+debug_color = Color(0.9385134, 0.13612941, 0.52302086, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

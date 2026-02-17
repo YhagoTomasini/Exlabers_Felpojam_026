@@ -59,6 +59,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	elif area.name == "Area2DCiano":
 		noCianoI += 1
 		noCianoB = true
+		
 
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area != null:
@@ -66,3 +67,7 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 			noCianoI -= 1
 			if noCianoI <= 0:
 				noCianoB = false
+
+func player_morreu():
+	Globals.refil_de_tinta()
+	get_tree().call_deferred("reload_current_scene")

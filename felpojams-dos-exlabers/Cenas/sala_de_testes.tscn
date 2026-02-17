@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cyjl8yk6bbiou"]
+[gd_scene load_steps=9 format=3 uid="uid://cyjl8yk6bbiou"]
 
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="1_67ekk"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="1_mlq5q"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="4_to47i"]
 [ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="5_ea0tj"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="6_o0ncy"]
+[ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="7_ea0tj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
 size = Vector2(1184, 162.5)
@@ -35,3 +36,6 @@ position = Vector2(625, 450)
 position = Vector2(835, 447)
 
 [node name="TesteCommit" type="Node2D" parent="."]
+
+[node name="Morte" parent="." instance=ExtResource("7_ea0tj")]
+position = Vector2(1031, 458)
