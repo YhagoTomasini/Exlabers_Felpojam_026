@@ -34,8 +34,8 @@ scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_8xrun")
 
 [node name="FundoBarraTanque" type="Sprite2D" parent="."]
-position = Vector2(66, 550)
-scale = Vector2(0.2, 0.5)
+position = Vector2(66, 546.5)
+scale = Vector2(0.2, 0.5546875)
 texture = ExtResource("1_8xrun")
 
 [node name="BarraTanque" type="Sprite2D" parent="."]
