@@ -4,7 +4,18 @@ var pressionado : bool = false
 @export var sprite : AnimatedSprite2D
 
 func _ready() -> void:
-	print(pressionado)
+	pass
+	
+#func _physics_process(delta):
+	#var corpo = get_overlapping_bodies()
+	#
+	#if corpo.size() > 0 and !pressionado:
+		#_on_body_entered(corpo[0])
+		#print("hehe boi")
+	#
+	#elif corpo.size() == 0 and pressionado:
+		#_on_body_exited(null)
+	
 
 
 func desativar_colisao_porta(valor: bool):
@@ -30,6 +41,7 @@ func desativar_colisao_porta(valor: bool):
 
 func _on_body_entered(body: Node2D) -> void:
 	#if body.name == "body_marcaY":
+	print(body)
 	pressionado = true
 	sprite.play("apertado")
 	
