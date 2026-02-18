@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="4_to47i"]
 [ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="5_ea0tj"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="6_o0ncy"]
-[ext_resource type="PackedScene" path="res://Prefabs/morte.tscn" id="7_ea0tj"]
+[ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="7_ea0tj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
 size = Vector2(1184, 162.5)
