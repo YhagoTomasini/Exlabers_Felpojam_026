@@ -33,5 +33,10 @@ text = "Jogar"
 layout_mode = 2
 text = "creditos"
 
+[node name="Button3" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Sair"
+
 [connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]
 [connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_button_3_button_down"]
