@@ -1,6 +1,9 @@
 extends Control
 
-#boto~es
+@onready var jogarB : Button = $VBoxContainer/Button
+
+func _ready() -> void:
+	jogarB.grab_focus()
 
 func _on_button_button_down() -> void:
 	get_tree().change_scene_to_file("res://Cenas/sala_de_testes.tscn")
