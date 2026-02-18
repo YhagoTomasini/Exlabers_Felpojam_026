@@ -21,3 +21,9 @@ func _process(delta: float) -> void:
 		scroll_container.scroll_vertical += 1 * velo
 	elif !acabou:
 		fim()
+		
+	if !acabou:
+		if Input.is_action_pressed("ui_up"):
+			velo = 6.0
+		else:
+			velo = 1.0
