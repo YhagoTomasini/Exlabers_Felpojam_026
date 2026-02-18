@@ -10,7 +10,7 @@ extends Node2D
 @onready var cenaMarcaK = preload("res://Prefabs/marcaK.tscn")
 
 #Precisa pegar a referencia da UI para ativar uma função no código dela
-@onready var ui_tintas: Control = $"../Control/UI_Tintas"
+@onready var ui_tintas: Control = %UI_Tintas
 @onready var player = $"../PersonagemPrincipal"
 
 #marca hipotetica
