@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-const TIRO = preload("uid://dlajl544ftnv")
+const TIRO = preload("res://Prefabs/tiro.tscn")
 
 @onready var marker: Marker2D = $marker
 @onready var cd_tiro: Timer = $cd_tiro

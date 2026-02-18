@@ -39,5 +39,6 @@ sprite_frames = SubResource("SpriteFrames_aldta")
 position = Vector2(0, 3.1666667)
 shape = SubResource("RectangleShape2D_c21w8")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

@@ -10,8 +10,8 @@ func _ready() -> void:
 	#var corpo = get_overlapping_bodies()
 	#
 	#if corpo.size() > 0 and !pressionado:
-		#_on_body_entered(corpo[0])
 		#print("hehe boi")
+		#_on_body_entered(corpo[0])
 	#
 	#elif corpo.size() == 0 and pressionado:
 		#_on_body_exited(null)
@@ -52,3 +52,11 @@ func _on_body_exited(body: Node2D) -> void:
 	sprite.play("default")
 	
 	desativar_colisao_porta(false)
+
+
+func _on_area_entered(area: Area2D) -> void:
+	print(area)
+	pressionado = true
+	sprite.play("apertado")
+	
+	desativar_colisao_porta(true)
