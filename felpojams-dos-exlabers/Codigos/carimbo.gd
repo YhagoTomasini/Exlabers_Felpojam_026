@@ -16,25 +16,26 @@ extends Node2D
 #marca hipotetica
 @onready var marcaHipoteticaCena = preload("res://Prefabs/marcaHipotetica.tscn")
 var marcaHipotetica
-var rangeMH = 256
+@export var rangeMH : int = 128
 
 func _ready() -> void:
 	pass
 	
 func _process(delta: float) -> void:
-	#Vou mudar esse código:
-	#Enquanto estiver segurando o "clickRight"
-	#intantiate "marcaHipotetica" a X pixels do player na direção da posição local do mouse
-	#Se apertar "clickLeft" instancia a "marca" na posição em que estava a "marcaHipotetica"
-	#something like:
-	
 	if Input.is_action_pressed("clickRight"):
 		if marcaHipotetica == null:
 			marcaHipotetica = marcaHipoteticaCena.instantiate()
 			add_child(marcaHipotetica)
 		
-		var direção = (get_local_mouse_position() - player.position).normalized()
-		marcaHipotetica.position = player.position + direção * rangeMH
+		var joyStick_direcao = Input.get_vector("JoyStick_esquerda", "JoyStick_Direita", "JoyStick_Cima", "JoyStick_Baixo")
+		var direcao = Vector2.ZERO
+		
+		if joyStick_direcao.length() > 0.2:
+			direcao = joyStick_direcao.normalized()
+		else:
+			direcao = (get_local_mouse_position() - player.position).normalized()
+		
+		marcaHipotetica.position = player.position + direcao * rangeMH
 		
 	else:
 		if marcaHipotetica != null:
@@ -46,7 +47,7 @@ func _process(delta: float) -> void:
 		if uiTntas != null:
 			uiTntas.atualizar_barra()
 		
-		#instaancia a marca dependendo da com atual, uma global que é alterada pelo codigo ui_tintas
+		#instancia a marca dependendo da com atual, uma global que é alterada pelo codigo ui_tintas
 		var marcaInstanciada
 		
 		if Globals.corAtual == 0:
