@@ -30,6 +30,7 @@ window/stretch/aspect="expand"
 [global_group]
 
 Morte="Tudo que mata o player"
+Player=""
 
 [input]
 

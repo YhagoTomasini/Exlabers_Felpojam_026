@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cyjl8yk6bbiou"]
+[gd_scene load_steps=13 format=3 uid="uid://cyjl8yk6bbiou"]
 
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="1_67ekk"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="1_mlq5q"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="6_o0ncy"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="7_ea0tj"]
 [ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="8_o0ncy"]
+[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/dipsarador.tscn" id="9_hxyqr"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="10_eorjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
@@ -52,6 +53,9 @@ scale = Vector2(3, 3)
 [node name="porta2" parent="." instance=ExtResource("10_eorjc")]
 position = Vector2(1398, 835)
 scale = Vector2(3, 3)
+
+[node name="Dipsarador" parent="." instance=ExtResource("9_hxyqr")]
+position = Vector2(117, 847)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
