@@ -3,9 +3,10 @@ extends Control
 #código dos icones interativos das tintas da UI
 
 #Pego os objetos que vai ser afetados pelo código
-@export var icone1 : Sprite2D
-@export var icone2 : Sprite2D
-@export var icone3 : Sprite2D
+@export var icone1 : TextureRect
+@export var icone2 : TextureRect
+@export var icone3 : TextureRect
+
 @export var barra : Sprite2D
 
 func _ready() -> void:

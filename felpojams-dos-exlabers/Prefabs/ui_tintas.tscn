@@ -5,11 +5,10 @@
 
 [node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra")]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_y871h")
@@ -18,28 +17,46 @@ icone2 = NodePath("IconeTSelecionada")
 icone3 = NodePath("IconeT22")
 barra = NodePath("BarraTanque")
 
-[node name="IconeT13" type="Sprite2D" parent="."]
-position = Vector2(26.800018, 614.7999)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_8xrun")
-
-[node name="IconeTSelecionada" type="Sprite2D" parent="."]
-position = Vector2(65.799995, 614.7999)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_8xrun")
-
-[node name="IconeT22" type="Sprite2D" parent="."]
-position = Vector2(109, 614.7999)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_8xrun")
-
 [node name="FundoBarraTanque" type="Sprite2D" parent="."]
-position = Vector2(66, 546.5)
+position = Vector2(105.8, -152.5)
 scale = Vector2(0.2, 0.5546875)
 texture = ExtResource("1_8xrun")
 
 [node name="BarraTanque" type="Sprite2D" parent="."]
-position = Vector2(66, 579)
+position = Vector2(105.8, -120)
 scale = Vector2(0.2, 1)
 texture = ExtResource("1_8xrun")
 offset = Vector2(0, -32)
+
+[node name="IconeT13" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -64.0
+offset_right = 160.0
+offset_bottom = 64.0
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8xrun")
+
+[node name="IconeTSelecionada" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 72.0
+offset_top = -80.0
+offset_right = 200.0
+offset_bottom = 48.0
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8xrun")
+
+[node name="IconeT22" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = -64.0
+offset_right = 272.0
+offset_bottom = 64.0
+scale = Vector2(0.25, 0.25)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8xrun")
