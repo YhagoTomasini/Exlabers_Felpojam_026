@@ -10,7 +10,7 @@ extends Node2D
 @onready var cenaMarcaK = preload("res://Prefabs/marcaK.tscn")
 
 #Precisa pegar a referencia da UI para ativar uma função no código dela
-@onready var uiTntas = $"../UI_Tintas"
+@onready var ui_tintas: Control = $"../Control/UI_Tintas"
 @onready var player = $"../PersonagemPrincipal"
 
 #marca hipotetica
@@ -44,8 +44,8 @@ func _process(delta: float) -> void:
 		
 	if Input.is_action_just_pressed("clickLeft") and marcaHipotetica != null:
 		#Se existir a UI pede para ativar a função atualizar_barra nela
-		if uiTntas != null:
-			uiTntas.atualizar_barra()
+		if ui_tintas != null:
+			ui_tintas.atualizar_barra()
 		
 		#instancia a marca dependendo da com atual, uma global que é alterada pelo codigo ui_tintas
 		var marcaInstanciada
