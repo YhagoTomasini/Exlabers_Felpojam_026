@@ -6,6 +6,7 @@ const MAGENTA_FORCE = -400.0
 
 @onready var anim: AnimatedSprite2D = $anim
 @onready var particulas_morte: CPUParticles2D = $particulas_morte
+@onready var camera: Camera2D = %camera
 
 
 #temos uma booleana para verificação se esta na marca ciano,
@@ -133,6 +134,7 @@ func player_morreu():
 	anim.visible = false
 	set_physics_process(false)
 	particulas_morte.emitting = true
+	camera.shake()
 	await get_tree().create_timer(1).timeout
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")
