@@ -9,13 +9,13 @@ radius = 32.140316
 
 [node name="marcaY" type="Node2D" node_paths=PackedStringArray("simbulo")]
 script = ExtResource("1_ve2ui")
-simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
+simbulo = NodePath("body_marcaY/CollisionShape2D/Sprite2D")
 
-[node name="StaticBody2D" type="RigidBody2D" parent="."]
+[node name="body_marcaY" type="RigidBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body_marcaY"]
 shape = SubResource("CircleShape2D_ve2ui")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="body_marcaY/CollisionShape2D"]
 scale = Vector2(64, 64)
 texture = SubResource("CanvasTexture_k1gx7")
