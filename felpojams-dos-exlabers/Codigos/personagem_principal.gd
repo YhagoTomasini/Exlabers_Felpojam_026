@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const MAGENTA_FORCE = -400.0
-const AIR_FRICTION := 0.7
+
 
 #temos uma booleana para verificação se esta na marca ciano,
 #e uma inteira para verificar em quantos ciano o personagem esta
@@ -13,12 +13,18 @@ var noCianoI : int
 var knockback_vector := Vector2.ZERO
 var knockback_power := 20 
 
+#variaveis do pulo
+const AIR_FRICTION := 0.7
 var is_jumping := false
 @export var jump_heigh := 128
 @export var max_time_to_peak := 0.5
 var jump_velocity
 var gravity
 var fall_gravity
+
+#Variaveis do coyote
+var can_jump := true
+@onready var coyote_timer: Timer = $coyote_timer
 
 
 func _ready() -> void:
@@ -37,7 +43,7 @@ func _physics_process(delta: float) -> void:
 		velocity += (get_gravity() * delta)/4
 
 	#Se estiver no chão e não estiver em um ciano pula normal
-	if Input.is_action_just_pressed("ui_up") and is_on_floor() and !noCianoB:
+	if Input.is_action_just_pressed("ui_up") and can_jump and !noCianoB:
 		velocity.y = -jump_velocity
 		is_jumping = true
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
@@ -45,7 +51,12 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -jump_velocity/4
 	elif is_on_floor():
 		is_jumping = false
-		
+	
+	if is_on_floor() and !can_jump:
+		can_jump = true
+	elif can_jump and coyote_timer.is_stopped():
+		coyote_timer.start()
+	
 	if velocity.y > 0 or not Input.is_action_pressed("ui_up"):
 		velocity.y += fall_gravity*delta
 	else:
@@ -105,3 +116,7 @@ func empurra(knockback_force := Vector2.ZERO,duration := 0.25):
 func player_morreu():
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")
+
+
+func _on_coyote_timer_timeout() -> void:
+	can_jump = false
