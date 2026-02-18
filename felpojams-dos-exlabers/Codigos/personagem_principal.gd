@@ -44,6 +44,7 @@ func _physics_process(delta: float) -> void:
 
 	#Se estiver no chão e não estiver em um ciano pula normal
 	if Input.is_action_just_pressed("ui_up") and can_jump and !noCianoB:
+		jump_tween()
 		velocity.y = -jump_velocity
 		is_jumping = true
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
@@ -106,17 +107,21 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 			if noCianoI <= 0:
 				noCianoB = false
 
-func empurra(knockback_force := Vector2.ZERO,duration := 0.25):
-	if knockback_force != Vector2.ZERO:
-		knockback_vector = knockback_force
-		var knockback_tween := get_tree().create_tween()
-		knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
-		
+#func empurra(knockback_force := Vector2.ZERO,duration := 0.25):
+	#if knockback_force != Vector2.ZERO:
+		#knockback_vector = knockback_force
+		#var knockback_tween := get_tree().create_tween()
+		#knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
+
 
 func player_morreu():
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")
 
+func jump_tween():
+	var tween = create_tween()
+	tween.tween_property(self, "scale", Vector2(0.7, 1.4), 0.1)
+	tween.tween_property(self, "scale", Vector2.ONE, 0.1)
 
 func _on_coyote_timer_timeout() -> void:
 	can_jump = false
