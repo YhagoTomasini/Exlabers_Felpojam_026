@@ -20,4 +20,5 @@ func qual_direcao(dir):
 func _on_player_detector_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		queue_free()
+		print("Ir no tiro e habilitar a morte")
 		#body.player_morreu()

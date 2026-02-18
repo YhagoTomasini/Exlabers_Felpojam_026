@@ -4,6 +4,9 @@ extends CharacterBody2D
 const SPEED = 300.0
 const MAGENTA_FORCE = -400.0
 
+@onready var anim: AnimatedSprite2D = $anim
+@onready var particulas_morte: CPUParticles2D = $particulas_morte
+
 
 #temos uma booleana para verificação se esta na marca ciano,
 #e uma inteira para verificar em quantos ciano o personagem esta
@@ -12,7 +15,8 @@ var noCianoB : bool
 var noCianoI : int
 var knockback_vector := Vector2.ZERO
 var knockback_power := 20 
-
+var direction
+var is_dead : bool = false
 #variaveis do pulo
 const AIR_FRICTION := 0.7
 var is_jumping := false
@@ -65,13 +69,15 @@ func _physics_process(delta: float) -> void:
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
+	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
+		velocity.x = lerp(velocity.x, direction * SPEED, AIR_FRICTION)
+		anim.scale.x = direction
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
+	_set_state()
 	move_and_slide()
 
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
@@ -95,10 +101,11 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		noCianoB = true
 		
 	elif area.name == "Area2DMagenta":
+		velocity.y = MAGENTA_FORCE*1.7
 		#var knockback = Vector2((global_position.x - area.global_position.x) * knockback_power, -200)
 		#empurra(knockback)
 		#Só comentar e descomentar se quiser voltar o knocback
-		velocity.y = MAGENTA_FORCE*1.7
+
 
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area != null:
@@ -113,8 +120,20 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 		#var knockback_tween := get_tree().create_tween()
 		#knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
 
+func _set_state():
+	var state = "Idle"
+	if is_jumping:
+		state = "Jump"
+	elif direction != 0:
+		state = "Run"
+	if anim.name != state:
+		anim.play(state)
 
 func player_morreu():
+	anim.visible = false
+	set_physics_process(false)
+	particulas_morte.emitting = true
+	await get_tree().create_timer(1).timeout
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")
 
