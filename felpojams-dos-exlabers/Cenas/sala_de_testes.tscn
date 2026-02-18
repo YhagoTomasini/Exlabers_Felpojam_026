@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="1_67ekk"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="1_mlq5q"]
-[ext_resource type="PackedScene" path="res://Cenas/pause.tscn" id="1_o0ncy"]
+[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="1_o0ncy"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Prefabs/ui_tintas.tscn" id="3_g2hjm"]
 [ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="4_to47i"]
 [ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="5_ea0tj"]
@@ -12,51 +12,67 @@
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="10_eorjc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
-size = Vector2(1184, 162.5)
+size = Vector2(1956, 162.5)
 
 [node name="Sala de testes" type="Node2D"]
 
 [node name="Carimbo2" parent="." instance=ExtResource("1_67ekk")]
 
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("1_mlq5q")]
-position = Vector2(386, 289)
+position = Vector2(545, 666)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(570, 573)
+position = Vector2(966, 1011)
 shape = SubResource("RectangleShape2D_67ekk")
 
-[node name="UI_Tintas" parent="." instance=ExtResource("3_g2hjm")]
-
 [node name="FinalLvl2" parent="." instance=ExtResource("4_to47i")]
-position = Vector2(742, 452)
+position = Vector2(1184, 885)
 
 [node name="FinalLvl1" parent="." instance=ExtResource("5_ea0tj")]
-position = Vector2(625, 450)
+position = Vector2(840, 873)
 
 [node name="FinalLvl3" parent="." instance=ExtResource("6_o0ncy")]
-position = Vector2(835, 447)
+position = Vector2(1592, 863)
 
 [node name="TesteCommit" type="Node2D" parent="."]
 
 [node name="Morte" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(1031, 458)
-
-[node name="Pause" parent="." instance=ExtResource("1_o0ncy")]
-offset_left = 386.0
-offset_top = 289.0
-offset_right = 386.0
-offset_bottom = 289.0
+position = Vector2(1820, 867)
 
 [node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("8_o0ncy")]
-position = Vector2(197, 409)
+position = Vector2(287, 877)
 alvo_porta = NodePath("../porta")
 
 [node name="porta" parent="." instance=ExtResource("10_eorjc")]
-position = Vector2(695, 403)
+position = Vector2(1032, 832)
 scale = Vector2(3, 3)
 
 [node name="porta2" parent="." instance=ExtResource("10_eorjc")]
-position = Vector2(787, 403.00003)
+position = Vector2(1398, 835)
 scale = Vector2(3, 3)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Pause" parent="Control" instance=ExtResource("1_o0ncy")]
+layout_mode = 1
+offset_left = 123.0
+offset_top = 175.0
+offset_right = 123.0
+offset_bottom = 175.0
+
+[node name="UI_Tintas" parent="Control" instance=ExtResource("3_g2hjm")]
+layout_mode = 1
+offset_left = 31.0
+offset_top = 265.0
+offset_right = 31.0
+offset_bottom = 265.0

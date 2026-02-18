@@ -1,15 +1,38 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8eao55q21qss"]
+[gd_scene load_steps=6 format=3 uid="uid://b8eao55q21qss"]
 
-[ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_ifau0"]
+[ext_resource type="Texture2D" uid="uid://bft7sfgdh1adl" path="res://Imagens/porta_teste2.png" id="1_8t5db"]
+[ext_resource type="Script" uid="uid://bi7vai4bqnnwo" path="res://Prefabs/porta.gd" id="1_pnrxh"]
+[ext_resource type="Texture2D" uid="uid://bohnbr0c6cea" path="res://Imagens/porta_teste.png" id="2_pnrxh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k3mqw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8t5db")
+}],
+"loop": true,
+"name": &"aberta",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_pnrxh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8t5db"]
-size = Vector2(12, 55)
+size = Vector2(64, 64)
 
-[node name="porta" type="StaticBody2D"]
+[node name="porta" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+script = ExtResource("1_pnrxh")
+sprite = NodePath("sprite")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_k3mqw")
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8t5db")
-
-[node name="sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.119999826, 0.47999966)
-texture = ExtResource("1_ifau0")
