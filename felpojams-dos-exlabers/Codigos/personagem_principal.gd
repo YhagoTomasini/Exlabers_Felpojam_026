@@ -8,7 +8,7 @@ const MAGENTA_FORCE = -400.0
 @onready var particulas_morte: CPUParticles2D = $particulas_morte
 @onready var camera: Camera2D = %camera
 
-
+var push_force = 80.0
 #temos uma booleana para verificação se esta na marca ciano,
 #e uma inteira para verificar em quantos ciano o personagem esta
 #por motivos similares da goma de mascar de Itsy Bitsy Spider
@@ -80,6 +80,10 @@ func _physics_process(delta: float) -> void:
 		velocity = knockback_vector
 	_set_state()
 	move_and_slide()
+	for i in get_slide_collision_count():
+		var c = get_slide_collision(i)
+		if c.get_collider() is RigidBody2D:
+			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
 
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	#Passar de Lvl e recebe uma nova cor de tinta

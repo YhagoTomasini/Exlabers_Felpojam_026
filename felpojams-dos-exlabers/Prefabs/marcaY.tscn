@@ -8,6 +8,8 @@ radius = 32.140316
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
 [node name="marcaY" type="Node2D" node_paths=PackedStringArray("simbulo")]
+light_mask = 2
+visibility_layer = 3
 script = ExtResource("1_ve2ui")
 simbulo = NodePath("body_marcaY/CollisionShape2D/Sprite2D")
 
