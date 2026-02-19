@@ -3,4 +3,8 @@
 [ext_resource type="Script" uid="uid://bubqcd6lqkkm0" path="res://Codigos/camera.gd" id="1_lits1"]
 
 [node name="camera" type="Camera2D"]
+limit_smoothed = true
+drag_horizontal_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
 script = ExtResource("1_lits1")

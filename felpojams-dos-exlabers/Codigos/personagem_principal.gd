@@ -144,7 +144,7 @@ func player_morreu():
 	anim.visible = false
 	set_physics_process(false)
 	particulas_morte.emitting = true
-	camera.shake()
+	camera.shake(20)
 	await get_tree().create_timer(1).timeout
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")

@@ -79,10 +79,11 @@ position = Vector2(216, 904)
 [node name="TesteCommit" type="Node2D" parent="."]
 
 [node name="Morte" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(1264, 1016)
+position = Vector2(1279.9999, 776)
+scale = Vector2(5.839998, 1)
 
 [node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("8_o0ncy")]
-position = Vector2(1568, 920)
+position = Vector2(1568, 912.00006)
 alvo_porta = NodePath("../porta")
 
 [node name="porta" parent="." instance=ExtResource("10_eorjc")]
