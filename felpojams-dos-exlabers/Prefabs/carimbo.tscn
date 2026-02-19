@@ -1,11 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://csmiixpup6vdl"]
+[gd_scene load_steps=2 format=3 uid="uid://csmiixpup6vdl"]
 
 [ext_resource type="Script" uid="uid://l063jc7qomho" path="res://Codigos/carimbo.gd" id="1_6lp3l"]
-[ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="2_8f5je"]
 
-[node name="Carimbo" type="Node2D" node_paths=PackedStringArray("aud")]
+[node name="Carimbo" type="Node2D"]
 script = ExtResource("1_6lp3l")
-aud = NodePath("AudioStreamPlayer2D")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_8f5je")

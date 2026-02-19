@@ -1,7 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://iavy8kf34yx5"]
+[gd_scene load_steps=9 format=3 uid="uid://iavy8kf34yx5"]
 
 [ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Codigos/audio_manager.gd" id="1_86yo6"]
+[ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Codigos/SoundEffects.gd" id="2_838mi"]
+[ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="3_khsds"]
+[ext_resource type="AudioStream" uid="uid://xdtj07eeum8x" path="res://Sons/Tap.mp3" id="4_dhxjl"]
+[ext_resource type="AudioStream" uid="uid://csqm1t2njoqq" path="res://Sons/Boing.mp3" id="5_55k7s"]
+
+[sub_resource type="Resource" id="Resource_dhxjl"]
+script = ExtResource("2_838mi")
+limite = 3
+som = ExtResource("3_khsds")
+volume = -8.485
+pitch_rand = 0.24
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
+[sub_resource type="Resource" id="Resource_838mi"]
+script = ExtResource("2_838mi")
+tipo = 3
+som = ExtResource("5_55k7s")
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
+[sub_resource type="Resource" id="Resource_khsds"]
+script = ExtResource("2_838mi")
+tipo = 1
+som = ExtResource("4_dhxjl")
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_86yo6")
-sons = null
+sons = Array[ExtResource("2_838mi")]([SubResource("Resource_dhxjl"), SubResource("Resource_838mi"), SubResource("Resource_khsds")])
