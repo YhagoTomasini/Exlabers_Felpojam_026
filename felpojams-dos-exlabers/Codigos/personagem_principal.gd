@@ -151,12 +151,12 @@ func player_morreu():
 
 func jump_tween():
 	var tween = create_tween()
-	tween.tween_property(anim, "scale", Vector2(0.7, 1.4), 0.1)
+	tween.tween_property(anim, "scale", Vector2(0.8, 1.2), 0.1)
 	tween.tween_property(anim, "scale", Vector2.ONE, 0.08)
 
 func queda_tween():
 	var tween = create_tween()
-	tween.tween_property(anim, "scale", Vector2(1.4, 0.7), 0.1)
+	tween.tween_property(anim, "scale", Vector2(1.2, 0.8), 0.1)
 	tween.tween_property(anim, "scale", Vector2.ONE, 0.05)
 
 func _on_coyote_timer_timeout() -> void:
