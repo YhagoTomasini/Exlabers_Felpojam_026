@@ -17,6 +17,7 @@ func criar_aud_localizado(local : Vector2, tipo : SoundEffect.TIPO_DE_SOM):
 			som.contar_aud(1)
 			var novo_aud : AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 			add_child(novo_aud)
+			novo_aud.bus = som.bus
 			novo_aud.position = local
 			novo_aud.stream = som.som
 			novo_aud.volume_db = som.volume
@@ -35,6 +36,7 @@ func criar_aud(tipo : SoundEffect.TIPO_DE_SOM):
 			som.contar_aud(1)
 			var novo_aud : AudioStreamPlayer = AudioStreamPlayer.new()
 			add_child(novo_aud)
+			novo_aud.bus = som.bus
 			novo_aud.stream = som.som
 			novo_aud.volume_db = som.volume
 			novo_aud.pitch_scale = som.pitch

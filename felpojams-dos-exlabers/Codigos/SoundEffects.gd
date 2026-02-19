@@ -2,6 +2,8 @@ class_name SoundEffect
 extends Resource
 
 enum TIPO_DE_SOM {
+	TEMA1,
+	TEMA2,
 	CARIMBO,
 	PASSO,
 	PULO,
@@ -15,6 +17,7 @@ enum TIPO_DE_SOM {
 @export_range(-40, 20) var volume : float = 0
 @export_range(0.0, 4.0, 0.1) var pitch : float = 1.0
 @export_range(0.0, 1.0, 0.01) var pitch_rand : float = 0.0
+@export var bus : StringName
 
 var aud_quantidade : int
 
