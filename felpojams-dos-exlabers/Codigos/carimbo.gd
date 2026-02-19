@@ -18,6 +18,8 @@ extends Node2D
 var marcaHipotetica
 @export var rangeMH : int = 128
 
+@export var aud : AudioStreamPlayer2D
+
 func _ready() -> void:
 	pass
 	
@@ -61,6 +63,8 @@ func _process(delta: float) -> void:
 			
 		elif Globals.corAtual == 3:
 			marcaInstanciada = cenaMarcaC.instantiate()
+		
+		aud.play()
 		
 		marcaInstanciada.global_position = marcaHipotetica.position
 		add_child(marcaInstanciada)
