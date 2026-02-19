@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 600.0
 const MAGENTA_FORCE = -400.0
 
 @onready var anim: AnimatedSprite2D = $anim
@@ -9,15 +9,18 @@ const MAGENTA_FORCE = -400.0
 @onready var camera: Camera2D = %camera
 
 var push_force = 80.0
+
 #temos uma booleana para verificação se esta na marca ciano,
 #e uma inteira para verificar em quantos ciano o personagem esta
 #por motivos similares da goma de mascar de Itsy Bitsy Spider
 var noCianoB : bool
 var noCianoI : int
+
 var knockback_vector := Vector2.ZERO
 var knockback_power := 20 
 var direction
 var is_dead : bool = false
+
 #variaveis do pulo
 const AIR_FRICTION := 0.7
 var is_jumping := false
@@ -30,7 +33,6 @@ var fall_gravity
 #Variaveis do coyote
 var can_jump := true
 @onready var coyote_timer: Timer = $coyote_timer
-
 
 func _ready() -> void:
 	noCianoB = false
@@ -127,10 +129,17 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 
 func _set_state():
 	var state = "Idle"
-	if is_jumping:
-		state = "Jump"
-	elif direction != 0:
+	
+	if !is_on_floor():
+		if velocity.y < 0:
+			#if is_jumping:
+			state = "Jump"
+		else:
+			state = "Falling"
+			
+	elif velocity.x != 0:
 		state = "Run"
+		
 	if anim.name != state:
 		anim.play(state)
 
