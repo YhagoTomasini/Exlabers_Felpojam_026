@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://crihralf2ygsv"]
+[gd_scene load_steps=39 format=3 uid="uid://crihralf2ygsv"]
 
 [ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Codigos/personagem_principal.gd" id="1_liew2"]
 [ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="2_76unu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://3slnnctebagi" path="res://Imagens/player/morte1.png" id="7_js6sr"]
 [ext_resource type="Texture2D" uid="uid://b00gvf8ti4o8t" path="res://Imagens/player/morte2.png" id="8_y08vd"]
 [ext_resource type="Texture2D" uid="uid://b60ledmekthf8" path="res://Imagens/player/morte3.png" id="9_vq5uy"]
+[ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="10_y08vd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8hgv"]
 atlas = ExtResource("2_js6sr")
@@ -210,7 +211,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a2qgk"]
-radius = 70.0
+radius = 64.0
 height = 250.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7kss6"]
@@ -266,6 +267,9 @@ initial_velocity_min = 420.0
 initial_velocity_max = 600.0
 angular_velocity_min = 420.0
 angular_velocity_max = 650.0
+
+[node name="camera" parent="." instance=ExtResource("10_y08vd")]
+position = Vector2(0, -128)
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="area_entered" from="Area2DPersonagem" to="." method="_on_area_2d_personagem_area_entered"]

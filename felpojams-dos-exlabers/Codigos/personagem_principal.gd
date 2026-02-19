@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 const AIR_FRICTION := 0.7
-const SPEED = 600.0
-const MAGENTA_FORCE = -400.0
+const SPEED = 650.0
+const MAGENTA_FORCE = -800.0
 
 @onready var anim: AnimatedSprite2D = $anim
 @onready var particulas_morte: CPUParticles2D = $particulas_morte
-@onready var camera: Camera2D = %camera
+
 @onready var coyote_timer: Timer = $coyote_timer
+@onready var camera: Camera2D = $camera
 
 @export var jump_heigh := 128
 @export var max_time_to_peak := 0.5
