@@ -1,14 +1,16 @@
 extends CharacterBody2D
 
-
+const AIR_FRICTION := 0.7
 const SPEED = 600.0
 const MAGENTA_FORCE = -400.0
 
 @onready var anim: AnimatedSprite2D = $anim
 @onready var particulas_morte: CPUParticles2D = $particulas_morte
 @onready var camera: Camera2D = %camera
+@onready var coyote_timer: Timer = $coyote_timer
 
-var push_force = 80.0
+@export var jump_heigh := 128
+@export var max_time_to_peak := 0.5
 
 #temos uma booleana para verificação se esta na marca ciano,
 #e uma inteira para verificar em quantos ciano o personagem esta
@@ -20,19 +22,14 @@ var knockback_vector := Vector2.ZERO
 var knockback_power := 20 
 var direction
 var is_dead : bool = false
-
-#variaveis do pulo
-const AIR_FRICTION := 0.7
+var estava_no_chao : bool = true
+var push_force = 80.0
 var is_jumping := false
-@export var jump_heigh := 128
-@export var max_time_to_peak := 0.5
 var jump_velocity
 var gravity
 var fall_gravity
-
-#Variaveis do coyote
 var can_jump := true
-@onready var coyote_timer: Timer = $coyote_timer
+
 
 func _ready() -> void:
 	noCianoB = false
@@ -51,7 +48,6 @@ func _physics_process(delta: float) -> void:
 
 	#Se estiver no chão e não estiver em um ciano pula normal
 	if Input.is_action_just_pressed("ui_up") and can_jump and !noCianoB:
-		jump_tween()
 		velocity.y = -jump_velocity
 		is_jumping = true
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
@@ -75,7 +71,7 @@ func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = lerp(velocity.x, direction * SPEED, AIR_FRICTION)
-		anim.scale.x = direction
+		anim.flip_h = (direction<0)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if knockback_vector != Vector2.ZERO:
@@ -86,6 +82,7 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
+	
 
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	#Passar de Lvl e recebe uma nova cor de tinta
@@ -132,11 +129,11 @@ func _set_state():
 	
 	if !is_on_floor():
 		if velocity.y < 0:
-			#if is_jumping:
 			state = "Jump"
+			jump_tween()
 		else:
 			state = "Falling"
-			
+			queda_tween()
 	elif velocity.x != 0:
 		state = "Run"
 		
@@ -154,8 +151,13 @@ func player_morreu():
 
 func jump_tween():
 	var tween = create_tween()
-	tween.tween_property(self, "scale", Vector2(0.7, 1.4), 0.1)
-	tween.tween_property(self, "scale", Vector2.ONE, 0.1)
+	tween.tween_property(anim, "scale", Vector2(0.7, 1.4), 0.1)
+	tween.tween_property(anim, "scale", Vector2.ONE, 0.08)
+
+func queda_tween():
+	var tween = create_tween()
+	tween.tween_property(anim, "scale", Vector2(1.4, 0.7), 0.1)
+	tween.tween_property(anim, "scale", Vector2.ONE, 0.05)
 
 func _on_coyote_timer_timeout() -> void:
 	can_jump = false
