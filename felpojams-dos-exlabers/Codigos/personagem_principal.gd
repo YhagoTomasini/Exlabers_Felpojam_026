@@ -130,12 +130,14 @@ func _set_state():
 	if !is_on_floor():
 		if velocity.y < 0:
 			state = "Jump"
+			AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PULO)
 			jump_tween()
 		else:
 			state = "Falling"
 			queda_tween()
 	elif velocity.x != 0:
 		state = "Run"
+		AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PASSO)
 		
 	if anim.name != state:
 		anim.play(state)

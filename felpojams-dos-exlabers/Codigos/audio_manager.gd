@@ -33,7 +33,7 @@ func criar_aud(tipo : SoundEffect.TIPO_DE_SOM):
 		var som : SoundEffect = registroSons[tipo]
 		if som.tem_limite():
 			som.contar_aud(1)
-			var novo_aud : AudioStreamPlayer2D = AudioStreamPlayer2D.new()
+			var novo_aud : AudioStreamPlayer = AudioStreamPlayer.new()
 			add_child(novo_aud)
 			novo_aud.stream = som.som
 			novo_aud.volume_db = som.volume
