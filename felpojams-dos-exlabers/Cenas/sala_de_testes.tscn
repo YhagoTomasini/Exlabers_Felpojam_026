@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://cyjl8yk6bbiou"]
+[gd_scene load_steps=16 format=3 uid="uid://cyjl8yk6bbiou"]
 
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="1_67ekk"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="1_mlq5q"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="1_o0ncy"]
+[ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="1_o42xe"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Prefabs/ui_tintas.tscn" id="3_g2hjm"]
 [ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="3_ueut7"]
 [ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="4_to47i"]
@@ -13,53 +14,84 @@
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/dipsarador.tscn" id="9_hxyqr"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="10_eorjc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_67ekk"]
-size = Vector2(1956, 162.5)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8262j"]
+texture = ExtResource("1_o42xe")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+3:7/0 = 0
+3:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+
+[sub_resource type="TileSet" id="TileSet_ipfeo"]
+tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_8262j")
 
 [node name="Sala de testes" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_ipfeo")
+format = 2
+layer_0/tile_data = PackedInt32Array(983040, 65536, 1, 983041, 65536, 1, 983043, 65536, 1, 983044, 65536, 1, 983045, 65536, 1, 983046, 65536, 1, 983047, 65536, 1, 983048, 65536, 1, 983049, 65536, 1, 983050, 65536, 1, 983051, 65536, 1, 983052, 65536, 1, 983053, 65536, 1, 983054, 65536, 1, 983055, 65536, 1, 983056, 65536, 1, 983057, 65536, 1, 983058, 65536, 1, 983061, 65536, 1, 983062, 65536, 1, 983063, 65536, 1, 983064, 65536, 1, 983065, 65536, 1, 983066, 65536, 1, 983067, 65536, 1, 983068, 65536, 1, 983069, 65536, 1, 917513, 65536, 1, 917514, 65536, 1, 917515, 65536, 1, 851979, 65536, 1, 851978, 65536, 1, 917516, 65536, 1, 917521, 65536, 1, 851985, 65536, 1, 851986, 65536, 1, 917522, 65536, 1, 786450, 65536, 1, 786449, 65536, 1, 917525, 65536, 1, 851989, 65536, 1, 786453, 65536, 1, 786454, 65536, 1, 851990, 65536, 1, 917526, 65536, 1, 1048575, 65536, 1, 1048574, 65536, 1, 1048573, 65536, 1, 983037, 65536, 1, 917501, 65536, 1, 851965, 65536, 1, 786429, 65536, 1, 720893, 65536, 1, 655357, 65536, 1, 589821, 65536, 1, 524285, 65536, 1, 458749, 65536, 1, 393213, 65536, 1, 327677, 65536, 1, 262141, 65536, 1, 196605, 65536, 1, 196606, 65536, 1, 196607, 65536, 1, 131072, 65536, 1, 131073, 65536, 1, 131074, 65536, 1, 131075, 65536, 1, 131076, 65536, 1, 131077, 65536, 1, 131078, 65536, 1, 131079, 65536, 1, 131080, 65536, 1, 131081, 65536, 1, 131082, 65536, 1, 131083, 65536, 1, 131084, 65536, 1, 131085, 65536, 1, 131086, 65536, 1, 131087, 65536, 1, 131088, 65536, 1, 131089, 65536, 1, 131090, 65536, 1, 131091, 65536, 1, 131092, 65536, 1, 131093, 65536, 1, 131094, 65536, 1, 131095, 65536, 1, 131096, 65536, 1, 131097, 65536, 1, 131098, 65536, 1, 131099, 65536, 1, 131100, 65536, 1, 131101, 65536, 1, 983070, 65536, 1, 983071, 65536, 1, 983072, 65536, 1, 983073, 65536, 1, 983074, 65536, 1, 131115, 65536, 1, 131102, 65536, 1, 131103, 65536, 1, 131104, 65536, 1, 131105, 65536, 1, 131106, 65536, 1, 131107, 65536, 1, 131108, 65536, 1, 131109, 65536, 1, 131110, 65536, 1, 131111, 65536, 1, 131112, 65536, 1, 131113, 65536, 1, 131114, 65536, 1, 917535, 65536, 1, 917536, 65536, 1, 917537, 65536, 1, 983075, 65536, 1, 1048611, 65536, 1, 1048612, 65536, 1, 1048613, 65536, 1, 1048614, 65536, 1, 1048615, 65536, 1, 1048616, 65536, 1, 1048617, 65536, 1, 1048618, 65536, 1, 1048619, 65536, 1, 1048620, 65536, 1, 1048621, 65536, 1, 983086, 65536, 1, 917551, 65536, 1, 917552, 65536, 1, 917553, 65536, 1, 917554, 65536, 1, 917555, 65536, 1, 852020, 65536, 1, 786484, 65536, 1, 720948, 65536, 1, 655412, 65536, 1, 589876, 65536, 1, 524340, 65536, 1, 458803, 65536, 1, 393267, 65536, 1, 327731, 65536, 1, 327730, 65536, 1, 262194, 65536, 1, 262193, 65536, 1, 196657, 65536, 1, 196656, 65536, 1, 196655, 65536, 1, 131119, 65536, 1, 131118, 65536, 1, 131117, 65536, 1, 131116, 65536, 1, 1310716, 65536, 1, 1376252, 65536, 1, 1310717, 65536, 1, 1376253, 65536, 1, 1245184, 65536, 1, 1310720, 65536, 1, 1441788, 65536, 1, 1507324, 65536, 1, 1441789, 65536, 1, 1507325, 65536, 1, 1376256, 65536, 1, 1441792, 65536, 1, 1507329, 65536, 1, 1507330, 65536, 1, 1507331, 65536, 1, 1507332, 65536, 1, 1507333, 65536, 1, 1507334, 65536, 1, 1507335, 65536, 1, 1507336, 65536, 1, 983042, 65536, 1)
 
 [node name="Carimbo2" parent="." instance=ExtResource("1_67ekk")]
 
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("1_mlq5q")]
-position = Vector2(545, 666)
+position = Vector2(-40, 816)
 
 [node name="camera" parent="PersonagemPrincipal" instance=ExtResource("3_ueut7")]
 unique_name_in_owner = true
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(966, 1011)
-shape = SubResource("RectangleShape2D_67ekk")
-
 [node name="FinalLvl2" parent="." instance=ExtResource("4_to47i")]
-position = Vector2(1184, 885)
+position = Vector2(184, 912)
 
 [node name="FinalLvl1" parent="." instance=ExtResource("5_ea0tj")]
-position = Vector2(840, 873)
+position = Vector2(168, 912)
 
 [node name="FinalLvl3" parent="." instance=ExtResource("6_o0ncy")]
-position = Vector2(1592, 863)
+position = Vector2(216, 904)
 
 [node name="TesteCommit" type="Node2D" parent="."]
 
 [node name="Morte" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(1820, 867)
+position = Vector2(1264, 1016)
 
 [node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("8_o0ncy")]
-position = Vector2(287, 877)
+position = Vector2(1568, 920)
 alvo_porta = NodePath("../porta")
 
 [node name="porta" parent="." instance=ExtResource("10_eorjc")]
-position = Vector2(1032, 832)
-scale = Vector2(3, 3)
-
-[node name="porta2" parent="." instance=ExtResource("10_eorjc")]
-position = Vector2(1398, 835)
+position = Vector2(2072, 800)
 scale = Vector2(3, 3)
 
 [node name="Dipsarador" parent="." instance=ExtResource("9_hxyqr")]
-position = Vector2(117, 847)
+position = Vector2(2976, 928)
+para_direita = false
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
