@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ckm0hnhgfu27o" path="res://Codigos/dipsarador.gd" id="1_dnphu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnphu"]
-size = Vector2(49, 52)
+size = Vector2(128, 128)
 
 [node name="Dipsarador" type="StaticBody2D"]
 collision_layer = 2
@@ -12,8 +12,9 @@ script = ExtResource("1_dnphu")
 
 [node name="sprite" type="Sprite2D" parent="."]
 modulate = Color(0.38039216, 0.6313726, 0.46666667, 1)
+position = Vector2(-0.34150696, 0.6830139)
 rotation = 3.1415927
-scale = Vector2(0.36000085, 0.39999986)
+scale = Vector2(0.99499, 1.0083085)
 texture = ExtResource("1_3wlqe")
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -27,7 +28,7 @@ wait_time = 0.5
 one_shot = true
 
 [node name="detector" type="RayCast2D" parent="."]
-target_position = Vector2(256, 0)
+target_position = Vector2(768, 0)
 collision_mask = 8
 
 [connection signal="timeout" from="cd_tiro" to="." method="_on_cd_tiro_timeout"]
