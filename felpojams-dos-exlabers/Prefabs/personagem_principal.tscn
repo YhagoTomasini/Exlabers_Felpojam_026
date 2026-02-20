@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://crihralf2ygsv"]
+[gd_scene load_steps=40 format=3 uid="uid://crihralf2ygsv"]
 
 [ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Codigos/personagem_principal.gd" id="1_liew2"]
 [ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="2_76unu"]
@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://3slnnctebagi" path="res://Imagens/player/morte1.png" id="7_js6sr"]
 [ext_resource type="Texture2D" uid="uid://b00gvf8ti4o8t" path="res://Imagens/player/morte2.png" id="8_y08vd"]
 [ext_resource type="Texture2D" uid="uid://b60ledmekthf8" path="res://Imagens/player/morte3.png" id="9_vq5uy"]
-[ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="10_y08vd"]
+[ext_resource type="Texture2D" uid="uid://btjb3fmfesuwo" path="res://Imagens/preoUI.png" id="10_vq5uy"]
+[ext_resource type="PackedScene" path="res://Prefabs/camera.tscn" id="10_y08vd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8hgv"]
 atlas = ExtResource("2_js6sr")
@@ -267,6 +268,23 @@ initial_velocity_min = 420.0
 initial_velocity_max = 600.0
 angular_velocity_min = 420.0
 angular_velocity_max = 650.0
+
+[node name="particulas_andando" type="CPUParticles2D" parent="."]
+visible = false
+position = Vector2(-1, 128)
+texture = ExtResource("10_vq5uy")
+lifetime = 0.5
+emission_shape = 3
+emission_rect_extents = Vector2(64, 1)
+direction = Vector2(0, 0)
+gravity = Vector2(0, -100)
+initial_velocity_max = 50.0
+angular_velocity_min = -100.0
+angular_velocity_max = 100.0
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 0.0
+scale_amount_max = 0.2
 
 [node name="camera" parent="." instance=ExtResource("10_y08vd")]
 position = Vector2(0, -128)
