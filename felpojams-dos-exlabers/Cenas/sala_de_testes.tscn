@@ -74,14 +74,14 @@ unique_name_in_owner = true
 position = Vector2(0, -128)
 limit_left = -400
 
-[node name="FinalLvl2" parent="." instance=ExtResource("4_to47i")]
-position = Vector2(1104, 1928)
-
 [node name="FinalLvl1" parent="." instance=ExtResource("5_ea0tj")]
-position = Vector2(1088, 1928)
+position = Vector2(-204, 896)
+
+[node name="FinalLvl2" parent="." instance=ExtResource("4_to47i")]
+position = Vector2(-225, 896)
 
 [node name="FinalLvl3" parent="." instance=ExtResource("6_o0ncy")]
-position = Vector2(1136, 1920)
+position = Vector2(-247, 896)
 
 [node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("8_o0ncy")]
 position = Vector2(1728, 1968)
