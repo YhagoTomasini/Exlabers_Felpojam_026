@@ -7,4 +7,7 @@ offset_right = 8.0
 offset_bottom = 16.0
 max_value = 1.0
 step = 0.001
+value = 0.5
 script = ExtResource("1_m8twe")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

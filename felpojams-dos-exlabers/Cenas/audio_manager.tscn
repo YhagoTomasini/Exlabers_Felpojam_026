@@ -11,7 +11,7 @@
 script = ExtResource("2_838mi")
 limite = 1
 som = ExtResource("3_dhxjl")
-bus = &"musica"
+bus = &"Musica"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [sub_resource type="Resource" id="Resource_dhxjl"]
@@ -21,7 +21,7 @@ tipo = 2
 som = ExtResource("3_khsds")
 volume = -8.485
 pitch_rand = 0.24
-bus = &"efeitos"
+bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [sub_resource type="Resource" id="Resource_khsds"]
@@ -29,14 +29,14 @@ script = ExtResource("2_838mi")
 limite = 1
 tipo = 3
 som = ExtResource("4_dhxjl")
-bus = &"efeitos"
+bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [sub_resource type="Resource" id="Resource_838mi"]
 script = ExtResource("2_838mi")
 tipo = 4
 som = ExtResource("5_55k7s")
-bus = &"efeitos"
+bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [node name="AudioManager" type="Node2D"]

@@ -45,7 +45,7 @@ text = "Volume Musica"
 
 [node name="vol_slider2" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
-nomeBus = "musica"
+nomeBus = "Musica"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -53,6 +53,6 @@ text = "Volume Efeitos"
 
 [node name="vol_slider3" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
-nomeBus = "efeitos"
+nomeBus = "Efeitos"
 
 [connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]
