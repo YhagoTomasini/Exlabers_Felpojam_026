@@ -1,23 +1,23 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyjl8yk6bbiou"]
+[gd_scene load_steps=18 format=3 uid="uid://bxbgh7i4ujtv8"]
 
-[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="1_67ekk"]
-[ext_resource type="Script" path="res://Codigos/sala_de_testes.gd" id="1_ipfeo"]
-[ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="1_mlq5q"]
-[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="1_o0ncy"]
-[ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="1_o42xe"]
-[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Prefabs/ui_tintas.tscn" id="3_g2hjm"]
-[ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="3_ueut7"]
-[ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="4_to47i"]
-[ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="5_ea0tj"]
-[ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="6_o0ncy"]
-[ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="7_ea0tj"]
-[ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="8_o0ncy"]
-[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/dipsarador.tscn" id="9_hxyqr"]
-[ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="10_eorjc"]
-[ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/configs.tscn" id="14_8262j"]
+[ext_resource type="Script" path="res://Codigos/sala_de_testes.gd" id="1_hi7e4"]
+[ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="2_m07bn"]
+[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="3_0j72k"]
+[ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Prefabs/personagem_principal.tscn" id="4_tkup8"]
+[ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="5_h6hf0"]
+[ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="6_hwt8t"]
+[ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="7_ft07n"]
+[ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="8_5vy2q"]
+[ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="9_ui2e8"]
+[ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="10_nd5ic"]
+[ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="11_pdsi7"]
+[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/dipsarador.tscn" id="12_6c7qm"]
+[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="13_luafv"]
+[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Prefabs/ui_tintas.tscn" id="14_x7ool"]
+[ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/configs.tscn" id="15_ybvt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8262j"]
-texture = ExtResource("1_o42xe")
+texture = ExtResource("2_m07bn")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
@@ -54,7 +54,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_8262j")
 
 [node name="Sala de testes" type="Node2D"]
-script = ExtResource("1_ipfeo")
+script = ExtResource("1_hi7e4")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(128, -960)
@@ -63,56 +63,61 @@ tile_set = SubResource("TileSet_ipfeo")
 format = 2
 layer_0/tile_data = PackedInt32Array(1048574, 65536, 1, 1048575, 65536, 1, 983040, 65536, 1, 983041, 65536, 1, 983042, 65536, 1, 983043, 65536, 1, 983044, 65536, 1, 1048573, 65536, 1, 983037, 65536, 1, 917501, 65536, 1, 851965, 65536, 1, 786429, 65536, 1, 720893, 65536, 1, 655357, 65536, 1, 589821, 65536, 1, 524285, 65536, 1, 983045, 65536, 1, 917510, 65536, 1, 983046, 65536, 1, 983047, 65536, 1, 983050, 65536, 1, 983051, 65536, 1, 917515, 65536, 1, 851979, 65536, 1, 917516, 65536, 1, 983052, 65536, 1, 983053, 65536, 1, 983054, 65536, 1, 983055, 65536, 1, 983056, 65536, 1, 983058, 65536, 1, 983057, 65536, 1, 917522, 65536, 1, 917523, 65536, 1, 851987, 65536, 1, 983059, 65536, 1, 983063, 65536, 1, 917527, 65536, 1, 851991, 65536, 1, 917528, 65536, 1, 983064, 65536, 1, 983065, 65536, 1, 983066, 65536, 1, 983067, 65536, 1, 983068, 65536, 0, 983069, 65536, 0, 983070, 65536, 1, 983071, 65536, 1, 983072, 65536, 1, 983073, 65536, 1, 1048609, 65536, 1, 1048610, 65536, 1, 1114146, 65536, 1, 1114147, 65536, 1, 1114148, 65536, 1, 1179684, 65536, 1, 1179683, 65536, 1, 1179682, 65536, 1, 1114145, 65536, 1, 1048608, 65536, 1, 1114157, 65536, 1, 1179693, 65536, 1, 1114158, 65536, 1, 1114159, 65536, 1, 1114160, 65536, 1, 1114161, 65536, 1, 1114162, 65536, 1, 1114163, 65536, 1, 1179694, 65536, 1, 1179695, 65536, 1, 1179696, 65536, 1, 1179697, 65536, 1, 1179698, 65536, 1, 1179699, 65536, 1, 1048624, 0, 1, 983088, 0, 1, 983089, 0, 1, 1048625, 0, 1)
 
-[node name="Carimbo2" parent="." instance=ExtResource("1_67ekk")]
+[node name="Carimbo2" parent="." instance=ExtResource("3_0j72k")]
 rangeMH = 256
 
-[node name="PersonagemPrincipal" parent="." instance=ExtResource("1_mlq5q")]
+[node name="PersonagemPrincipal" parent="." instance=ExtResource("4_tkup8")]
 position = Vector2(-40, 816)
 
-[node name="camera2" parent="PersonagemPrincipal" instance=ExtResource("3_ueut7")]
+[node name="camera2" parent="PersonagemPrincipal" instance=ExtResource("5_h6hf0")]
 unique_name_in_owner = true
 position = Vector2(0, -128)
 
-[node name="FinalLvl2" parent="." instance=ExtResource("4_to47i")]
+[node name="FinalLvl2" parent="." instance=ExtResource("6_hwt8t")]
 position = Vector2(1104, 1928)
 
-[node name="FinalLvl1" parent="." instance=ExtResource("5_ea0tj")]
+[node name="FinalLvl1" parent="." instance=ExtResource("7_ft07n")]
 position = Vector2(1088, 1928)
 
-[node name="FinalLvl3" parent="." instance=ExtResource("6_o0ncy")]
+[node name="FinalLvl3" parent="." instance=ExtResource("8_5vy2q")]
 position = Vector2(1136, 1920)
 
-[node name="Morte" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(1280, 1088)
+[node name="espinhos" type="Node2D" parent="."]
+position = Vector2(1280, 1216)
 scale = Vector2(21.799995, 1)
 
-[node name="Morte2" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(2880, 1088)
+[node name="Morte4" parent="espinhos" instance=ExtResource("9_ui2e8")]
+position = Vector2(117.43123, -256)
+scale = Vector2(0.5834862, 1)
+
+[node name="Void" type="Node2D" parent="."]
+position = Vector2(1280, 1216)
 scale = Vector2(21.799995, 1)
 
-[node name="Morte4" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(3840.0002, 960)
-scale = Vector2(12.7199955, 1)
+[node name="Morte" parent="Void" instance=ExtResource("9_ui2e8")]
 
-[node name="Morte3" parent="." instance=ExtResource("7_ea0tj")]
-position = Vector2(5376.0005, 1472)
-scale = Vector2(53.694885, -1.0985683)
+[node name="Morte2" parent="Void" instance=ExtResource("9_ui2e8")]
+position = Vector2(73.394516, 0)
 
-[node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("8_o0ncy")]
+[node name="Morte3" parent="Void" instance=ExtResource("9_ui2e8")]
+position = Vector2(187.88995, 511.99988)
+scale = Vector2(2.4630687, -1.0985683)
+
+[node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("10_nd5ic")]
 position = Vector2(1728, 1968)
 alvo_porta = NodePath("../porta")
 
-[node name="porta" parent="." instance=ExtResource("10_eorjc")]
+[node name="porta" parent="." instance=ExtResource("11_pdsi7")]
 position = Vector2(2232, 1856)
 scale = Vector2(3, 3)
 
-[node name="Dipsarador" parent="." instance=ExtResource("9_hxyqr")]
+[node name="Dipsarador" parent="." instance=ExtResource("12_6c7qm")]
 position = Vector2(2560, 1984)
 para_direita = false
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="HUD" node_paths=PackedStringArray("configs") instance=ExtResource("1_o0ncy")]
+[node name="Pause" parent="HUD" node_paths=PackedStringArray("configs") instance=ExtResource("13_luafv")]
 visible = false
 offset_left = -7.0
 offset_top = 9.0
@@ -120,14 +125,14 @@ offset_right = -7.0
 offset_bottom = 9.0
 configs = NodePath("../Configs")
 
-[node name="UI_Tintas" parent="HUD" instance=ExtResource("3_g2hjm")]
+[node name="UI_Tintas" parent="HUD" instance=ExtResource("14_x7ool")]
 unique_name_in_owner = true
 offset_left = 22.0
 offset_top = -36.0
 offset_right = 22.0
 offset_bottom = -36.0
 
-[node name="Configs" parent="HUD" node_paths=PackedStringArray("pause") instance=ExtResource("14_8262j")]
+[node name="Configs" parent="HUD" node_paths=PackedStringArray("pause") instance=ExtResource("15_ybvt4")]
 offset_left = -7.0
 offset_top = 9.0
 offset_right = -7.0
