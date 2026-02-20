@@ -154,9 +154,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rx1wt")
 }],
-"loop": true,
+"loop": false,
 "name": &"Jump",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -229,16 +229,21 @@ frame_1/duration = 0.5
 frame_2/texture = ExtResource("9_vq5uy")
 frame_2/duration = 0.5
 
-[node name="PersonagemPrincipal" type="CharacterBody2D" groups=["Player"]]
+[node name="PersonagemPrincipal" type="CharacterBody2D" node_paths=PackedStringArray("anim", "particulas_morte", "particulas_andando", "coyote_timer", "camera") groups=["Player"]]
 collision_layer = 9
 collision_mask = 3
 script = ExtResource("1_liew2")
-jump_heigh = 256
+anim = NodePath("anim")
+particulas_morte = NodePath("particulas_morte")
+particulas_andando = NodePath("particulas_andando")
+coyote_timer = NodePath("coyote_timer")
+camera = NodePath("camera")
+jump_heigh = 600.0
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_7kss6")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -270,7 +275,6 @@ angular_velocity_min = 420.0
 angular_velocity_max = 650.0
 
 [node name="particulas_andando" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2(-1, 128)
 texture = ExtResource("10_vq5uy")
 lifetime = 0.5
@@ -290,6 +294,7 @@ scale_amount_max = 0.2
 position = Vector2(0, -128)
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
+[connection signal="animation_looped" from="anim" to="." method="_on_anim_animation_looped"]
 [connection signal="area_entered" from="Area2DPersonagem" to="." method="_on_area_2d_personagem_area_entered"]
 [connection signal="area_shape_exited" from="Area2DPersonagem" to="." method="_on_area_2d_personagem_area_shape_exited"]
 [connection signal="timeout" from="coyote_timer" to="." method="_on_coyote_timer_timeout"]

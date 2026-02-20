@@ -4,13 +4,14 @@ const AIR_FRICTION := 0.7
 const SPEED = 650.0
 const MAGENTA_FORCE = -800.0
 
-@onready var anim: AnimatedSprite2D = $anim
-@onready var particulas_morte: CPUParticles2D = $particulas_morte
+@export var anim : AnimatedSprite2D
+@export var particulas_morte : CPUParticles2D
+@export var particulas_andando : CPUParticles2D
 
-@onready var coyote_timer: Timer = $coyote_timer
-@onready var camera: Camera2D = $camera
+@export var coyote_timer: Timer
+@export var camera: Camera2D
 
-@export var jump_heigh := 128
+@export var jump_heigh : float
 @export var max_time_to_peak := 0.5
 
 #temos uma booleana para verificação se esta na marca ciano,
@@ -33,6 +34,7 @@ var can_jump := true
 
 
 func _ready() -> void:
+	particulas_andando.emitting = false
 	noCianoB = false
 	noCianoI = 0
 	jump_velocity= (jump_heigh*2)/ max_time_to_peak
@@ -77,7 +79,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
+		
 	_set_state()
+	
 	move_and_slide()
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
@@ -113,7 +117,6 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		#empurra(knockback)
 		#Só comentar e descomentar se quiser voltar o knocback
 
-
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area != null:
 		if area.name == "Area2DCiano":
@@ -129,22 +132,29 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 
 func _set_state():
 	var state = "Idle"
+	particulas_andando.emitting = false
 	
 	if !is_on_floor():
 		if velocity.y < 0:
 			state = "Jump"
+			particulas_andando.emitting = true
+			
 			AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PULO)
 			jump_tween()
 		else:
+			particulas_andando.emitting = false
 			state = "Falling"
 			queda_tween()
+			
 	elif velocity.x != 0:
 		state = "Run"
+		particulas_andando.emitting = true
 		AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PASSO)
 		
 	if anim.name != state:
 		anim.play(state)
-
+	
+	
 func player_morreu():
 	anim.visible = false
 	set_physics_process(false)
