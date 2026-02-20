@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_ve2ui"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ve2ui"]
-radius = 32.140316
+radius = 64.0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
@@ -19,5 +19,6 @@ simbulo = NodePath("body_marcaY/CollisionShape2D/Sprite2D")
 shape = SubResource("CircleShape2D_ve2ui")
 
 [node name="Sprite2D" type="Sprite2D" parent="body_marcaY/CollisionShape2D"]
-scale = Vector2(64, 64)
+position = Vector2(9.536743e-07, 1.9073486e-06)
+scale = Vector2(112, 96)
 texture = SubResource("CanvasTexture_k1gx7")

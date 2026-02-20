@@ -13,7 +13,7 @@ func _on_body_entered(body: Node2D) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4o040"]
-size = Vector2(64, 128)
+size = Vector2(128, 256)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
@@ -25,11 +25,10 @@ simbulo = NodePath("Area2DCiano/CollisionShape2D/Sprite2D")
 script = SubResource("GDScript_4o040")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCiano"]
-position = Vector2(0, -32)
 shape = SubResource("RectangleShape2D_4o040")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2DCiano/CollisionShape2D"]
-scale = Vector2(64, 130.66667)
+scale = Vector2(128, 255.84)
 texture = SubResource("CanvasTexture_k1gx7")
 
 [connection signal="body_entered" from="Area2DCiano" to="Area2DCiano" method="_on_body_entered"]

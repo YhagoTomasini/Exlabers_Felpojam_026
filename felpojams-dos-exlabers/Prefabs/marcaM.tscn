@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_5jqdy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5jqdy"]
-radius = 32.01562
+radius = 64.0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ktuj"]
-radius = 40.0
+radius = 72.0
 
 [node name="marcaM" type="Node2D" node_paths=PackedStringArray("simbulo")]
 script = ExtResource("1_5jqdy")
@@ -20,7 +20,8 @@ simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
 shape = SubResource("CircleShape2D_5jqdy")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-scale = Vector2(64, 64)
+position = Vector2(-1.9073486e-06, 1.9073486e-06)
+scale = Vector2(128, 128)
 texture = SubResource("CanvasTexture_k1gx7")
 
 [node name="Area2DMagenta" type="Area2D" parent="."]

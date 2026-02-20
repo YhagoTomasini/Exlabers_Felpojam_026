@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_fmdbb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fmdbb"]
-size = Vector2(128, 64)
+size = Vector2(256, 128)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1jbht"]
-size = Vector2(141, 76)
+size = Vector2(205.73302, 90.8537)
 
 [node name="marcaK" type="Node2D" node_paths=PackedStringArray("simbulo")]
 script = ExtResource("1_fmdbb")
@@ -20,11 +20,12 @@ simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
 shape = SubResource("RectangleShape2D_fmdbb")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-scale = Vector2(128, 64)
+scale = Vector2(256, 127.12261)
 texture = SubResource("CanvasTexture_k1gx7")
 
 [node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1.3512659, 1.6399994)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0.5, 1)
+position = Vector2(0, 0.30487832)
 shape = SubResource("RectangleShape2D_1jbht")
