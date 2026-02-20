@@ -2,6 +2,7 @@ extends Control
 
 @onready var voltarB : Button = $VBoxContainer/Voltar
 @onready var corFundo :ColorRect = $ColorRect
+@export var configs : Control
 
 var parado : bool
 
@@ -39,7 +40,8 @@ func _on_reiniciar_button_down() -> void:
 	get_tree().call_deferred("reload_current_scene")
 
 func _on_configrações_button_down() -> void:
-	pass # Replace with function body.
+	visible = false
+	configs.visible = true
 
 func _on_voltar_button_down() -> void:
 	despausa()

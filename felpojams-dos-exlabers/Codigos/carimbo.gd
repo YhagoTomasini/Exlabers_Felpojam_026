@@ -20,7 +20,7 @@ var marcaHipotetica
 
 #@export var aud : AudioStreamPlayer2D
 
-@onready var camera: Camera2D = %camera
+@onready var camera: Camera2D = %camera2
 
 func _ready() -> void:
 	pass

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://blerwglsbs62e"]
+
+[ext_resource type="Script" uid="uid://cv5wmgglsicsg" path="res://Codigos/vol_slider.gd" id="1_m8twe"]
+
+[node name="vol_slider" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0
+max_value = 2.0
+step = 0.001
+script = ExtResource("1_m8twe")
