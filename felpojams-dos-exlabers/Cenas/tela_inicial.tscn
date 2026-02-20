@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://dohiuhxtebot1"]
+[gd_scene load_steps=5 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
+[ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="2_00dnc"]
+[ext_resource type="Texture2D" uid="uid://d2m5fimh03jw2" path="res://Imagens/botao_teste.png" id="3_x33ye"]
+[ext_resource type="Texture2D" uid="uid://bft7sfgdh1adl" path="res://Imagens/porta_teste2.png" id="4_0nw1j"]
 
 [node name="Tela_Inicial" type="Control"]
 layout_mode = 3
@@ -11,32 +14,56 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b1rrf")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
+[node name="ParallaxBG" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG"]
+position = Vector2(959, 555)
+scale = Vector2(15.124998, 8.65625)
+texture = ExtResource("2_00dnc")
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBG"]
+scroll_scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Parallax2D"]
+position = Vector2(422, 314)
+scale = Vector2(3.9375, 3.5)
+texture = ExtResource("3_x33ye")
+
+[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBG"]
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Parallax2D2"]
+position = Vector2(1389, 779)
+scale = Vector2(1.484375, 1.0468756)
+texture = ExtResource("4_0nw1j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -33.0
-offset_right = 24.0
-offset_bottom = 33.0
+offset_left = -35.5
+offset_top = -50.5
+offset_right = 35.5
+offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Jogar"
 
-[node name="Button2" type="Button" parent="VBoxContainer"]
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "creditos"
 
-[node name="Button3" type="Button" parent="VBoxContainer"]
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "Sair"
 
-[connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
-[connection signal="button_down" from="VBoxContainer/Button3" to="." method="_on_button_3_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Button3" to="." method="_on_button_3_button_down"]
