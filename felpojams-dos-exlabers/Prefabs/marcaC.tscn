@@ -12,8 +12,8 @@ func _on_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
 "
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_4o040"]
-radius = 31.06445
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o040"]
+size = Vector2(64, 128)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
@@ -25,10 +25,11 @@ simbulo = NodePath("Area2DCiano/CollisionShape2D/Sprite2D")
 script = SubResource("GDScript_4o040")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCiano"]
-shape = SubResource("CircleShape2D_4o040")
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_4o040")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2DCiano/CollisionShape2D"]
-scale = Vector2(64, 64)
+scale = Vector2(64, 130.66667)
 texture = SubResource("CanvasTexture_k1gx7")
 
 [connection signal="body_entered" from="Area2DCiano" to="Area2DCiano" method="_on_body_entered"]
