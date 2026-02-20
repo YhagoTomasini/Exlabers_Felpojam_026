@@ -43,5 +43,6 @@ func _on_configrações_button_down() -> void:
 	visible = false
 	configs.visible = true
 
-func _on_voltar_button_down() -> void:
+
+func _on_voltar_pressed() -> void:
 	despausa()
