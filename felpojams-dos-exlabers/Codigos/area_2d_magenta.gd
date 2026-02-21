@@ -5,6 +5,9 @@ extends Area2D
 
 func bounce():
 	print("bounce")
+	
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PULA_PULA)
+	
 	var tween = create_tween()
 	
 	tween.tween_property(sprite, "scale", Vector2(1.2, 0.7), 0.08)

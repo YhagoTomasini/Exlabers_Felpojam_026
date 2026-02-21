@@ -7,10 +7,9 @@
 script/source = "extends Area2D
 
 
-
-
-func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+func _ready() -> void:
+	AudioManager.criar_aud_localizado(global_position, SoundEffect.TIPO_DE_SOM.GOTAS)
+ # Replace with function body.
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4o040"]
@@ -41,5 +40,3 @@ linear_accel_max = 100.0
 scale_amount_min = 4.0
 scale_amount_max = 16.0
 color = Color(0, 1, 1, 0.654902)
-
-[connection signal="body_entered" from="Area2DCiano" to="Area2DCiano" method="_on_body_entered"]

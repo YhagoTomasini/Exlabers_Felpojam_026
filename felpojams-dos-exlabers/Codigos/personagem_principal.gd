@@ -49,6 +49,7 @@ func _physics_process(delta: float) -> void:
 	#el
 	if not is_on_floor() and noCianoB:
 		velocity += (get_gravity() * delta)/4
+		is_jumping = false
 
 	#Se estiver no chão e não estiver em um ciano pula normal
 	if Input.is_action_just_pressed("ui_up") and can_jump and !noCianoB:
@@ -57,6 +58,7 @@ func _physics_process(delta: float) -> void:
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
 	elif Input.is_action_pressed("ui_up") and noCianoB:
 		velocity.y = -jump_velocity/4
+	
 	elif is_on_floor():
 		is_jumping = false
 	
@@ -114,6 +116,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		noCianoB = true
 		
 	elif area.name == "Area2DMagenta":
+		is_jumping = true
 		velocity.y = MAGENTA_FORCE*1.7
 		area.bounce()
 		#var knockback = Vector2((global_position.x - area.global_position.x) * knockback_power, -200)
@@ -135,16 +138,23 @@ func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_
 
 func _set_state():
 	var state = "Idle"
+	var efeitoSom  = null
 	particulas_andando.emitting = false
-	
+	if !noCianoB:
+		AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.AGUA)
 	if !is_on_floor():
 		if !noCianoB:
+			AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.AGUA)
+		
 			if velocity.y < 0:
-				state = "Jump"
-				particulas_andando.emitting = true
+				if is_jumping:
+					state = "Jump"
+					efeitoSom = SoundEffect.TIPO_DE_SOM.PULO
+					
+					particulas_andando.emitting = true
+					
+					jump_tween()
 				
-				AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PULO)
-				jump_tween()
 			else:
 				particulas_andando.emitting = false
 				state = "Falling"
@@ -152,17 +162,22 @@ func _set_state():
 				
 		else:
 			state = "Nadando"
+			efeitoSom = SoundEffect.TIPO_DE_SOM.AGUA
 			
 	elif velocity.x != 0:
 		state = "Run"
 		particulas_andando.emitting = true
-		AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PASSO)
+		efeitoSom = SoundEffect.TIPO_DE_SOM.PASSO
 		
 	if anim.name != state:
 		anim.play(state)
+		if efeitoSom != null:
+			AudioManager.criar_aud(efeitoSom)
 	
 	
 func player_morreu():
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
+	
 	anim.visible = false
 	set_physics_process(false)
 	particulas_morte.emitting = true

@@ -8,7 +8,10 @@ enum TIPO_DE_SOM {
 	PASSO,
 	PULO,
 	PULA_PULA,
-	AGUA
+	AGUA,
+	MORTE,
+	GOTAS,
+		
 }
 
 @export_range(0, 10) var limite : int = 5
