@@ -2,9 +2,24 @@
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
 
-[node name="marcaY" type="Node2D"]
+[node name="marcahipotetica" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.49803922)
-scale = Vector2(64, 64)
+scale = Vector2(128, 128)
 texture = SubResource("CanvasTexture_k1gx7")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+amount = 16
+randomness = 1.0
+lifetime_randomness = 0.1
+emission_shape = 1
+emission_sphere_radius = 92.0
+spread = 13.12
+gravity = Vector2(0, -180)
+linear_accel_max = 50.74
+angle_min = -180.0
+angle_max = 180.0
+scale_amount_min = 8.0
+scale_amount_max = 32.0
+color = Color(1, 1, 1, 0.3137255)

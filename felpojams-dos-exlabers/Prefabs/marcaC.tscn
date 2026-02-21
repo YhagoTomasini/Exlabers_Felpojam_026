@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://wmuccc45p5r8"]
 
 [ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_4o040"]
+[ext_resource type="Texture2D" uid="uid://birw1ddk6h76u" path="res://Imagens/carimbos/azul.png" id="2_gfmrn"]
 
 [sub_resource type="GDScript" id="GDScript_4o040"]
 script/source = "extends Area2D
@@ -13,9 +14,7 @@ func _on_body_entered(body: Node2D) -> void:
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4o040"]
-size = Vector2(128, 256)
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
+size = Vector2(128, 128)
 
 [node name="marcaC" type="Node2D" node_paths=PackedStringArray("simbulo")]
 script = ExtResource("1_4o040")
@@ -28,7 +27,19 @@ script = SubResource("GDScript_4o040")
 shape = SubResource("RectangleShape2D_4o040")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2DCiano/CollisionShape2D"]
-scale = Vector2(128, 255.84)
-texture = SubResource("CanvasTexture_k1gx7")
+texture = ExtResource("2_gfmrn")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emission_shape = 1
+emission_sphere_radius = 66.99
+direction = Vector2(0, 1)
+spread = 0.0
+gravity = Vector2(0, 6.19)
+initial_velocity_max = 90.29
+linear_accel_min = -100.0
+linear_accel_max = 100.0
+scale_amount_min = 4.0
+scale_amount_max = 16.0
+color = Color(0, 1, 1, 0.654902)
 
 [connection signal="body_entered" from="Area2DCiano" to="Area2DCiano" method="_on_body_entered"]

@@ -113,6 +113,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		
 	elif area.name == "Area2DMagenta":
 		velocity.y = MAGENTA_FORCE*1.7
+		area.bounce()
 		#var knockback = Vector2((global_position.x - area.global_position.x) * knockback_power, -200)
 		#empurra(knockback)
 		#Só comentar e descomentar se quiser voltar o knocback

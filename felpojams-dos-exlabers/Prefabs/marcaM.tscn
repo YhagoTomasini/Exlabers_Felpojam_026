@@ -1,14 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cr0mh4ef3jkn2"]
+[gd_scene load_steps=6 format=3 uid="uid://cr0mh4ef3jkn2"]
 
 [ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_5jqdy"]
+[ext_resource type="Texture2D" uid="uid://6brus8staoto" path="res://Imagens/carimbos/magenta2.png" id="2_5ktuj"]
+[ext_resource type="Script" uid="uid://cvgttsfwkily5" path="res://Prefabs/area_2d_magenta.gd" id="3_xc68n"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5jqdy"]
-radius = 64.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xc68n"]
+size = Vector2(126, 126)
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_5ktuj"]
-radius = 72.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mdcb"]
+size = Vector2(150, 147)
 
 [node name="marcaM" type="Node2D" node_paths=PackedStringArray("simbulo")]
 script = ExtResource("1_5jqdy")
@@ -17,14 +17,17 @@ simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("CircleShape2D_5jqdy")
+shape = SubResource("RectangleShape2D_xc68n")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(-1.9073486e-06, 1.9073486e-06)
-scale = Vector2(128, 128)
-texture = SubResource("CanvasTexture_k1gx7")
+position = Vector2(0, 64)
+texture = ExtResource("2_5ktuj")
+offset = Vector2(0, -64)
 
-[node name="Area2DMagenta" type="Area2D" parent="."]
+[node name="Area2DMagenta" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("3_xc68n")
+sprite = NodePath("../StaticBody2D/CollisionShape2D/Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DMagenta"]
-shape = SubResource("CircleShape2D_5ktuj")
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_6mdcb")

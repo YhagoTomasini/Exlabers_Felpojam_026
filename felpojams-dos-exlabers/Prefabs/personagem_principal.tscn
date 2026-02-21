@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://crihralf2ygsv"]
+[gd_scene load_steps=37 format=3 uid="uid://crihralf2ygsv"]
 
 [ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Codigos/personagem_principal.gd" id="1_liew2"]
 [ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="2_76unu"]
@@ -39,18 +39,6 @@ region = Rect2(256, 256, 256, 256)
 [sub_resource type="AtlasTexture" id="AtlasTexture_0rbj2"]
 atlas = ExtResource("2_76unu")
 region = Rect2(512, 256, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_5tiqp"]
-atlas = ExtResource("4_2g78t")
-region = Rect2(0, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vjkxk"]
-atlas = ExtResource("4_2g78t")
-region = Rect2(256, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rciie"]
-atlas = ExtResource("4_2g78t")
-region = Rect2(0, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rx1wt"]
 atlas = ExtResource("4_2g78t")
@@ -142,15 +130,6 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 0.51,
-"texture": SubResource("AtlasTexture_5tiqp")
-}, {
-"duration": 0.81,
-"texture": SubResource("AtlasTexture_vjkxk")
-}, {
-"duration": 0.81,
-"texture": SubResource("AtlasTexture_rciie")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_rx1wt")
 }],
@@ -238,12 +217,12 @@ particulas_morte = NodePath("particulas_morte")
 particulas_andando = NodePath("particulas_andando")
 coyote_timer = NodePath("coyote_timer")
 camera = NodePath("camera")
-jump_heigh = 600.0
+jump_heigh = 128.0
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_7kss6")
-animation = &"Idle"
+animation = &"Jump"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
