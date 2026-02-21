@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://co1uo20k2ecem"]
+[gd_scene load_steps=7 format=3 uid="uid://co1uo20k2ecem"]
 
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
 [ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Codigos/ui_tintas.gd" id="1_y871h"]
 [ext_resource type="Shader" uid="uid://c8e2ftnoacjtm" path="res://new_shader.gdshader" id="3_badn5"]
 [ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/quadradoBranco.png" id="4_badn5"]
+[ext_resource type="Texture2D" uid="uid://cr40m0tkcqujp" path="res://Imagens/UI/frasco_preto.png" id="4_mpdm0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_mpdm0"]
 shader = ExtResource("3_badn5")
@@ -28,17 +29,17 @@ icone2 = NodePath("IconeTSelecionada")
 icone3 = NodePath("IconeT22")
 barra = NodePath("BarraTanque")
 
-[node name="FundoBarraTanque" type="Sprite2D" parent="."]
-position = Vector2(105.8, -188.50002)
-scale = Vector2(0.62187505, 1.2265625)
-texture = ExtResource("1_8xrun")
-
 [node name="BarraTanque" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mpdm0")
-position = Vector2(105.8, -120)
-scale = Vector2(1, 2)
+position = Vector2(104, -97.99999)
+scale = Vector2(0.6, 1.5)
 texture = ExtResource("4_badn5")
 offset = Vector2(0, -32)
+
+[node name="FundoBarraTanque" type="Sprite2D" parent="."]
+position = Vector2(104, -160)
+scale = Vector2(2.0908344, 2.1215277)
+texture = ExtResource("4_mpdm0")
 
 [node name="IconeT13" type="TextureRect" parent="."]
 layout_mode = 0

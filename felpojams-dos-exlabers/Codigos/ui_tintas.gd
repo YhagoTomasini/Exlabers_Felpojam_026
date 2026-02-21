@@ -38,7 +38,7 @@ func atualizar_barra():
 		barra.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
 	
 	#e escala ela baseado no maximo que teria de tinta e a quantidadde de tinta atual
-	barra.scale.y = (estoqueAtual / Globals.maxTanque)*2
+	barra.scale.y = (estoqueAtual / Globals.maxTanque)*1.5
 	
 	print(Globals.barraEstoqueSize)
 
