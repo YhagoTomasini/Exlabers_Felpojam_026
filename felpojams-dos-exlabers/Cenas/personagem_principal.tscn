@@ -298,6 +298,7 @@ scale_amount_max = 0.2
 
 [node name="camera" parent="." instance=ExtResource("10_y08vd")]
 position = Vector2(0, -128)
+position_smoothing_enabled = true
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="animation_looped" from="anim" to="." method="_on_anim_animation_looped"]
