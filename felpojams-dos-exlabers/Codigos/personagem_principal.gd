@@ -43,10 +43,11 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	#Se n estiver no chão e n estiver no ciano cai normal,
-	if not is_on_floor() and !noCianoB:
-		velocity.x = 0
+	#if not is_on_floor() and !noCianoB:
+		#velocity.x = 0
 	#Se n estiver no chão e estiver no ciano cai devagar
-	elif not is_on_floor() and noCianoB:
+	#el
+	if not is_on_floor() and noCianoB:
 		velocity += (get_gravity() * delta)/4
 
 	#Se estiver no chão e não estiver em um ciano pula normal
@@ -87,6 +88,7 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
+			
 	if Input.is_action_just_pressed("reset"):
 		Globals.refil_de_tinta()
 		get_tree().reload_current_scene()

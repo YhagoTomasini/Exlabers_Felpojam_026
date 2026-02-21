@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dvkmnrd0dsu3m" path="res://Codigos/marca.gd" id="1_5jqdy"]
 [ext_resource type="Texture2D" uid="uid://6brus8staoto" path="res://Imagens/carimbos/magenta2.png" id="2_5ktuj"]
-[ext_resource type="Script" uid="uid://cvgttsfwkily5" path="res://Prefabs/area_2d_magenta.gd" id="3_xc68n"]
+[ext_resource type="Script" uid="uid://cvgttsfwkily5" path="res://Codigos/area_2d_magenta.gd" id="3_xc68n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xc68n"]
 size = Vector2(126, 126)
