@@ -29,6 +29,7 @@ script = ExtResource("2_838mi")
 limite = 1
 tipo = 3
 som = ExtResource("4_dhxjl")
+pitch_rand = 0.5
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
@@ -36,6 +37,7 @@ metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 script = ExtResource("2_838mi")
 tipo = 4
 som = ExtResource("5_55k7s")
+pitch_rand = 0.06
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
