@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://iavy8kf34yx5"]
+[gd_scene load_steps=19 format=3 uid="uid://iavy8kf34yx5"]
 
 [ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Codigos/audio_manager.gd" id="1_86yo6"]
 [ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Codigos/SoundEffects.gd" id="2_838mi"]
@@ -9,6 +9,7 @@
 [ext_resource type="AudioStream" uid="uid://ddna3gqnyxptb" path="res://Sons/Jump.mp3" id="6_55k7s"]
 [ext_resource type="AudioStream" uid="uid://dsasgcef2ur61" path="res://Sons/water.mp3" id="8_0yobf"]
 [ext_resource type="AudioStream" uid="uid://d17y0fmwy3vq1" path="res://Sons/gotas_agua.mp3" id="9_0yobf"]
+[ext_resource type="AudioStream" uid="uid://dc5vq57eoogw7" path="res://Sons/hurt.mp3" id="9_fwm2o"]
 
 [sub_resource type="Resource" id="Resource_55k7s"]
 script = ExtResource("2_838mi")
@@ -69,6 +70,14 @@ pitch_rand = 0.15
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
+[sub_resource type="Resource" id="Resource_3ex0a"]
+script = ExtResource("2_838mi")
+tipo = 7
+som = ExtResource("9_fwm2o")
+pitch_rand = 0.15
+bus = &"Efeitos"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
 [sub_resource type="Resource" id="Resource_3m2wa"]
 script = ExtResource("2_838mi")
 tipo = 8
@@ -80,4 +89,4 @@ metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_86yo6")
-sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3m2wa")])
+sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3ex0a"), SubResource("Resource_3m2wa")])

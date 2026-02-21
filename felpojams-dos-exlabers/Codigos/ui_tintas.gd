@@ -33,7 +33,7 @@ func atualizar_barra():
 	#E vai mudar a cor da barra (que está usando o msm sprite dos icone da tinta na ui, momentaneamente)
 	#e escala ela baseado no maximo que teria de tinta e a quantidadde de tinta atual
 	barra.texture = Globals.arrayTintas[Globals.corAtual]
-	barra.scale.y = estoqueAtual / Globals.maxTanque
+	barra.scale.y = (estoqueAtual / Globals.maxTanque)*2
 	
 	print(Globals.barraEstoqueSize)
 
