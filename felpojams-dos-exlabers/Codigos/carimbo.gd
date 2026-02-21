@@ -16,7 +16,7 @@ extends Node2D
 #marca hipotetica
 @onready var marcaHipoteticaCena = preload("res://Prefabs/marcaHipotetica.tscn")
 var marcaHipotetica
-@export var rangeMH : int = 128
+@export var rangeMH : int = 32
 
 #@export var aud : AudioStreamPlayer2D
 

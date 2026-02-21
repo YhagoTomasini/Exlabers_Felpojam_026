@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://crihralf2ygsv"]
+[gd_scene load_steps=41 format=3 uid="uid://crihralf2ygsv"]
 
 [ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Codigos/personagem_principal.gd" id="1_liew2"]
 [ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="2_76unu"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cavphklnfbmdg" path="res://Imagens/player/jumping.png" id="4_2g78t"]
 [ext_resource type="Texture2D" uid="uid://djmfly7rd8ru6" path="res://Imagens/magentaUI.png" id="4_68mg3"]
 [ext_resource type="Texture2D" uid="uid://3wrt7u4nvg2u" path="res://Imagens/player/player_correndo.png" id="5_68mg3"]
+[ext_resource type="Texture2D" uid="uid://qelfqli71kf7" path="res://Imagens/player/player_swimming.png" id="6_5aplp"]
 [ext_resource type="Texture2D" uid="uid://3slnnctebagi" path="res://Imagens/player/morte1.png" id="7_js6sr"]
 [ext_resource type="Texture2D" uid="uid://b00gvf8ti4o8t" path="res://Imagens/player/morte2.png" id="8_y08vd"]
 [ext_resource type="Texture2D" uid="uid://b60ledmekthf8" path="res://Imagens/player/morte3.png" id="9_vq5uy"]
@@ -47,6 +48,18 @@ region = Rect2(256, 256, 256, 256)
 [sub_resource type="AtlasTexture" id="AtlasTexture_js6sr"]
 atlas = ExtResource("4_68mg3")
 region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjkxk"]
+atlas = ExtResource("6_5aplp")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rciie"]
+atlas = ExtResource("6_5aplp")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rrra"]
+atlas = ExtResource("6_5aplp")
+region = Rect2(0, 256, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_66os2"]
 atlas = ExtResource("5_68mg3")
@@ -150,6 +163,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_vjkxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rciie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rrra")
+}],
+"loop": true,
+"name": &"Nadando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_66os2")
 }, {
 "duration": 1.0,
@@ -217,12 +244,12 @@ particulas_morte = NodePath("particulas_morte")
 particulas_andando = NodePath("particulas_andando")
 coyote_timer = NodePath("coyote_timer")
 camera = NodePath("camera")
-jump_heigh = 128.0
+jump_heigh = 160.0
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_7kss6")
-animation = &"Jump"
+animation = &"Nadando"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

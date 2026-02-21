@@ -136,16 +136,20 @@ func _set_state():
 	particulas_andando.emitting = false
 	
 	if !is_on_floor():
-		if velocity.y < 0:
-			state = "Jump"
-			particulas_andando.emitting = true
-			
-			AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PULO)
-			jump_tween()
+		if !noCianoB:
+			if velocity.y < 0:
+				state = "Jump"
+				particulas_andando.emitting = true
+				
+				AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.PULO)
+				jump_tween()
+			else:
+				particulas_andando.emitting = false
+				state = "Falling"
+				queda_tween()
+				
 		else:
-			particulas_andando.emitting = false
-			state = "Falling"
-			queda_tween()
+			state = "Nadando"
 			
 	elif velocity.x != 0:
 		state = "Run"
@@ -168,7 +172,7 @@ func player_morreu():
 func jump_tween():
 	var tween = create_tween()
 	tween.tween_property(anim, "scale", Vector2(0.8, 1.2), 0.1)
-	tween.tween_property(anim, "scale", Vector2.ONE, 0.08)
+	tween.tween_property(anim, "scale", Vector2.ONE, 0.05)
 
 func queda_tween():
 	var tween = create_tween()
