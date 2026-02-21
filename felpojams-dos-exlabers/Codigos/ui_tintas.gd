@@ -22,17 +22,22 @@ func atualizar_barra():
 	
 	#Sempre que chamado irá verificar qual a tinta atual
 	if Globals.corAtual == 0:
+		barra.self_modulate = Color(0.0, 0.0, 0.0, 1.0)
 		estoqueAtual = Globals.tanqueTintaPreta
+		
 	elif Globals.corAtual == 2:
 		estoqueAtual = Globals.tanqueTintaMagenta
+		barra.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
+		
 	elif Globals.corAtual == 1:
 		estoqueAtual = Globals.tanqueTintaAmarelo
+		barra.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+		
 	elif Globals.corAtual == 3:
 		estoqueAtual = Globals.tanqueTintaCiano
+		barra.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
 	
-	#E vai mudar a cor da barra (que está usando o msm sprite dos icone da tinta na ui, momentaneamente)
 	#e escala ela baseado no maximo que teria de tinta e a quantidadde de tinta atual
-	barra.texture = Globals.arrayTintas[Globals.corAtual]
 	barra.scale.y = (estoqueAtual / Globals.maxTanque)*2
 	
 	print(Globals.barraEstoqueSize)
