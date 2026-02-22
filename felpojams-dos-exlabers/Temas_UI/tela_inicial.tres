@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://dfcivdba3fj8h"]
+
+[ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_pma2h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pma2h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lou1e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8b40y"]
+
+[resource]
+Button/colors/font_color = Color(0.22327286, 0.24796286, 0.23966324, 1)
+Button/font_sizes/font_size = 54
+Button/fonts/font = ExtResource("1_pma2h")
+Button/styles/focus = SubResource("StyleBoxEmpty_pma2h")
+Button/styles/hover = SubResource("StyleBoxEmpty_lou1e")
+Button/styles/normal = SubResource("StyleBoxEmpty_8b40y")
+VBoxContainer/constants/separation = 12
