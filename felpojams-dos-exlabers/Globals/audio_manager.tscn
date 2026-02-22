@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://iavy8kf34yx5"]
 
-[ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Codigos/audio_manager.gd" id="1_86yo6"]
+[ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Globals/audio_manager.gd" id="1_86yo6"]
 [ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Codigos/SoundEffects.gd" id="2_838mi"]
 [ext_resource type="AudioStream" uid="uid://cxma2tcb5i183" path="res://Sons/raffa_o_bardo.mp3.mp3" id="3_dhxjl"]
 [ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="3_khsds"]
@@ -65,7 +65,7 @@ script = ExtResource("2_838mi")
 limite = 1
 tipo = 6
 som = ExtResource("8_0yobf")
-volume = -8.354
+volume = -12.354
 pitch_rand = 0.15
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"

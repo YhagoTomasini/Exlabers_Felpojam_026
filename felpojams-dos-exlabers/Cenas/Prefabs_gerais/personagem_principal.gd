@@ -11,7 +11,7 @@ const MAGENTA_FORCE = -800.0
 @export var coyote_timer: Timer
 @export var camera: Camera2D
 
-@export var jump_heigh : float
+var jump_heigh : float = 264
 @export var max_time_to_peak := 0.5
 
 #temos uma booleana para verificação se esta na marca ciano,
@@ -46,7 +46,6 @@ func _physics_process(delta: float) -> void:
 	#if not is_on_floor() and !noCianoB:
 		#velocity.x = 0
 	#Se n estiver no chão e estiver no ciano cai devagar
-	#el
 	if not is_on_floor() and noCianoB:
 		velocity += (get_gravity() * delta)/4
 		is_jumping = false
@@ -99,16 +98,19 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	#Passar de Lvl e recebe uma nova cor de tinta
 	if area.name == "FinalLvl1":
 		Globals.arrayTintas.append(Globals.amarelo)
-		get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
-		area.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/lvl_2.tscn")
+		#area.queue_free()
 	elif area.name == "FinalLvl2":
 		Globals.arrayTintas.append(Globals.magenta)
-		get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
-		area.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/lvl_3.tscn")
+		#area.queue_free()
 	elif area.name == "FinalLvl3":
 		Globals.arrayTintas.append(Globals.ciano)
-		get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
-		area.queue_free()
+		get_tree().change_scene_to_file("res://Cenas/lvl_4.tscn")
+		#area.queue_free()
+	elif area.name == "FinalLvl4":
+		get_tree().change_scene_to_file("res://Cenas/tela_creditos.tscn")
+		#area.queue_free()
 	
 	#Verificação da colisão com o ciano por area2D :D
 	elif area.name == "Area2DCiano":
