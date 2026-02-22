@@ -92,7 +92,7 @@ func _physics_process(delta: float) -> void:
 			
 	if Input.is_action_just_pressed("reset"):
 		Globals.refil_de_tinta()
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
 
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	#Passar de Lvl e recebe uma nova cor de tinta

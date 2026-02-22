@@ -463,6 +463,9 @@ rangeMH = 256
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("5_lbgfl")]
 position = Vector2(805, 1637)
 
+[node name="FinalLvl3" parent="." instance=ExtResource("9_rfkta")]
+position = Vector2(1490, 1679)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_1eq1w")]
@@ -479,6 +482,3 @@ configs = NodePath("../Configs")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_afi0q")]
 pause = NodePath("../Pause")
-
-[node name="FinalLvl3" parent="." instance=ExtResource("9_rfkta")]
-position = Vector2(1490, 1679)
