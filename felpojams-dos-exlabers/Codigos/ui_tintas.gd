@@ -9,12 +9,12 @@ extends Control
 
 @export var barra : Sprite2D
 @export var barra2 : Sprite2D
+@export var frasco : Sprite2D
 
 func _ready() -> void:
 	atualizar_tintas()
 	atualizar_barra()
 	
-	barra2.self_modulate = Color(0.0, 0.0, 0.0, 1.0)
 #Essa função serve para atualizar a barra de nivel de cada tinta nos carimbos,
 #uma forma visual de mostrar para o player que a tinta esta acabando
 func atualizar_barra():
@@ -25,19 +25,24 @@ func atualizar_barra():
 	#Sempre que chamado irá verificar qual a tinta atual
 	if Globals.corAtual == 0:
 		barra.self_modulate = Color(0.157, 0.157, 0.267, 1.0)
+		frasco.self_modulate = Color(0.157, 0.157, 0.267, 1.0)
+
 		estoqueAtual = Globals.tanqueTintaPreta
 		
 	elif Globals.corAtual == 2:
 		estoqueAtual = Globals.tanqueTintaMagenta
 		barra.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
+		frasco.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
 		
 	elif Globals.corAtual == 1:
 		estoqueAtual = Globals.tanqueTintaAmarelo
 		barra.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+		frasco.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
 		
 	elif Globals.corAtual == 3:
 		estoqueAtual = Globals.tanqueTintaCiano
 		barra.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
+		frasco.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
 	
 	#e escala ela baseado no maximo que teria de tinta e a quantidadde de tinta atual
 	barra.scale.y = (estoqueAtual / Globals.maxTanque)*1.5
