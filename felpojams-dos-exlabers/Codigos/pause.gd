@@ -5,10 +5,12 @@ extends Control
 @export var configs : Control
 
 var parado : bool
+var naConfig : bool
 
 func _ready() -> void:
 	visible = false
 	parado = false
+	naConfig = false
 	corFundo.color = Color(1.0, 1.0, 1.0, 0.25)
 
 func despausa():
@@ -23,14 +25,16 @@ func pausar():
 
 func grabFocus():
 	voltarB.grab_focus()
-		
+	naConfig = false
+	
 func _unhandled_input(event: InputEvent) -> void:
-	if !parado:
-		if event.is_action_pressed("ui_pause"):
-			pausar()
-	else:
-		if event.is_action_pressed("ui_pause"):
-			despausa()
+	if event.is_action_pressed("ui_pause"):
+		if !parado:
+			if !naConfig:
+				pausar()
+		else:
+			if !naConfig:
+				despausa()
 
 func _on_menu_button_down() -> void:
 	Globals.refil_de_tinta()
@@ -45,6 +49,7 @@ func _on_reiniciar_button_down() -> void:
 func _on_configrações_button_down() -> void:
 	visible = false
 	configs.visible = true
+	naConfig = true
 	configs.grabFocus()
 
 
