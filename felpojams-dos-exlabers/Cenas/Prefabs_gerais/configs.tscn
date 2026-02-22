@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cc64sy15wkgb8"]
+[gd_scene load_steps=3 format=3 uid="uid://cj4boxypchcqd"]
 
-[ext_resource type="PackedScene" uid="uid://blerwglsbs62e" path="res://Prefabs/vol_slider.tscn" id="1_l3ino"]
-[ext_resource type="Script" uid="uid://cy2yulhwwmopk" path="res://Cenas/Prefabs_gerais/configs.gd" id="1_sbaa7"]
+[ext_resource type="PackedScene" uid="uid://blerwglsbs62e" path="res://Cenas/vol_slider.tscn" id="1_l3ino"]
+[ext_resource type="Script" uid="uid://cy2yulhwwmopk" path="res://Codigos/configs.gd" id="1_sbaa7"]
 
 [node name="Configs" type="Control" node_paths=PackedStringArray("voltarB")]
 process_mode = 3

@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cj5kh1wmhxnyr"]
+[gd_scene load_steps=4 format=3 uid="uid://ben8uam3h2ffs"]
 
-[ext_resource type="Script" uid="uid://bojq0myeh58gy" path="res://Cenas/Prefabs_gerais/pause.gd" id="1_40wpw"]
+[ext_resource type="Script" uid="uid://bojq0myeh58gy" path="res://Codigos/pause.gd" id="1_40wpw"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_40wpw"]
 action = &"ui_cancel"

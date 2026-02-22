@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@export var cursor : Sprite2D
+@onready var cursor : Sprite2D = $Sprite2D
 
 func _ready() -> void:
 	cor_cursor()

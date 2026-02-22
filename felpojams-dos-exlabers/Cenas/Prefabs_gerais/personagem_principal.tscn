@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://meks5blytwgp"]
+[gd_scene load_steps=41 format=3 uid="uid://crihralf2ygsv"]
 
 [ext_resource type="Script" uid="uid://ook85e8o0y3q" path="res://Cenas/Prefabs_gerais/personagem_principal.gd" id="1_liew2"]
 [ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="2_76unu"]
