@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bhbilclqhc7sf"
-path="res://.godot/imported/f.svg-f9581d33eb46dc72947339b8bc49a6d4.ctex"
+uid="uid://b6qjlw7xcndaq"
+path="res://.godot/imported/frasco_magenta.png-5df63cc8a018d2fd2d63ad2b403c494f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Temas_UI/f.svg"
-dest_files=["res://.godot/imported/f.svg-f9581d33eb46dc72947339b8bc49a6d4.ctex"]
+source_file="res://Imagens/UI/frasco_magenta.png"
+dest_files=["res://.godot/imported/frasco_magenta.png-5df63cc8a018d2fd2d63ad2b403c494f.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

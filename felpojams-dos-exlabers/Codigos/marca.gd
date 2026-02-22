@@ -22,7 +22,7 @@ func _ready() -> void:
 			else:
 				alpha = Globals.tanqueTintaPreta / Globals.maxTanque
 				print(alpha, "-", Globals.tanqueTintaPreta)
-				simbulo.self_modulate = Color()
+				#simbulo.self_modulate = Color()
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaPreta -= 1
 			
@@ -32,7 +32,7 @@ func _ready() -> void:
 			else:
 				alpha = Globals.tanqueTintaMagenta / Globals.maxTanque
 				print(alpha, "-", Globals.tanqueTintaMagenta)
-				simbulo.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
+				#simbulo.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaMagenta -= 1
 			
@@ -42,7 +42,7 @@ func _ready() -> void:
 			else:
 				alpha = Globals.tanqueTintaAmarelo / Globals.maxTanque
 				print(alpha, "-", Globals.tanqueTintaAmarelo)
-				simbulo.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+				#simbulo.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaAmarelo -= 1
 			
@@ -52,7 +52,7 @@ func _ready() -> void:
 			else:
 				alpha = Globals.tanqueTintaCiano / Globals.maxTanque
 				print(alpha, "-", Globals.tanqueTintaCiano)
-				simbulo.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
+				#simbulo.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
 				simbulo.modulate = Color(1.0, 1.0, 1.0, alpha)
 				Globals.tanqueTintaCiano -= 1
 			

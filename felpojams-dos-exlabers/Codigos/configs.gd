@@ -3,13 +3,27 @@ extends Control
 @export var pause : Control
 @export var voltarB : Button
 
+var podeVoltar : bool
+
 func _ready() -> void:
 	visible = false
-	
+	podeVoltar = false
+
+func _unhandled_input(event: InputEvent) -> void:
+	if podeVoltar:
+		voltarPause()
+
 func _on_button_button_down() -> void:
+	voltarPause()
+	
+func voltarPause():
+	podeVoltar = false
 	pause.visible = true
 	visible = false
 	pause.grabFocus()
 
 func grabFocus():
+	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
+	podeVoltar = true
 	voltarB.grab_focus()
+	

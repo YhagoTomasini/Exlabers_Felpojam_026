@@ -16,5 +16,5 @@ void fragment() {
         discard;
     }
 
-    COLOR = texture(TEXTURE, uv);
+    COLOR = texture(TEXTURE, uv)*COLOR;
 }
