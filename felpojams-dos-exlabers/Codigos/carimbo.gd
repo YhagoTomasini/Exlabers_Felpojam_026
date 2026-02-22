@@ -20,7 +20,7 @@ var marcaHipotetica
 
 #@export var aud : AudioStreamPlayer2D
 
-@onready var camera: Camera2D = %camera2
+#@onready var camera: Camera2D = %camera2
 
 func _ready() -> void:
 	pass
@@ -53,7 +53,7 @@ func _process(delta: float) -> void:
 		
 		#instancia a marca dependendo da com atual, uma global que é alterada pelo codigo ui_tintas
 		var marcaInstanciada
-		camera.shake(5)
+		#camera.shake(5)
 		if Globals.corAtual == 0:
 			marcaInstanciada = cenaMarcaK.instantiate()
 			
