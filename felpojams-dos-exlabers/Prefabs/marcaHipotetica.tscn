@@ -1,13 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://ckan1kkpgao1p"]
+[gd_scene load_steps=3 format=3 uid="uid://ckan1kkpgao1p"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_k1gx7"]
+[ext_resource type="Script" uid="uid://intiglfblypf" path="res://Codigos/marca_hipotetica.gd" id="1_iwxes"]
+[ext_resource type="Texture2D" uid="uid://bue0k4q7sq3m5" path="res://Imagens/carimbos/preto.png" id="2_uoowg"]
 
-[node name="marcahipotetica" type="Node2D"]
+[node name="marcahipotetica" type="Node2D" node_paths=PackedStringArray("icone")]
+script = ExtResource("1_iwxes")
+icone = NodePath("Sprite2D")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(1, 1, 1, 0.49803922)
-scale = Vector2(128, 128)
-texture = SubResource("CanvasTexture_k1gx7")
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0.2509804)
+texture = ExtResource("2_uoowg")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 16
@@ -22,4 +25,4 @@ angle_min = -180.0
 angle_max = 180.0
 scale_amount_min = 8.0
 scale_amount_max = 32.0
-color = Color(1, 1, 1, 0.3137255)
+color = Color(0, 0, 0, 0.1254902)
