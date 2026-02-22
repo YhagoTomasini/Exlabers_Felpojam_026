@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dohiuhxtebot1"]
+[gd_scene load_steps=5 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://dukhde1amcw7g" path="res://Imagens/teste_fundo.png" id="2_x33ye"]
-[ext_resource type="Texture2D" uid="uid://d2m5fimh03jw2" path="res://Imagens/botao_teste.png" id="3_x33ye"]
-[ext_resource type="Texture2D" uid="uid://bft7sfgdh1adl" path="res://Imagens/porta_teste2.png" id="4_0nw1j"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
+[ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="6_0nw1j"]
 
 [node name="Tela_Inicial" type="Control"]
 layout_mode = 3
@@ -28,7 +27,6 @@ scroll_scale = Vector2(0.1, 0.1)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Parallax2D"]
 position = Vector2(422, 314)
 scale = Vector2(3.9375, 3.5)
-texture = ExtResource("3_x33ye")
 
 [node name="Parallax2D2" type="Parallax2D" parent="ParallaxBG"]
 scroll_scale = Vector2(0.5, 0.5)
@@ -36,20 +34,8 @@ scroll_scale = Vector2(0.5, 0.5)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Parallax2D2"]
 position = Vector2(1389, 779)
 scale = Vector2(1.484375, 1.0468756)
-texture = ExtResource("4_0nw1j")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 925.0
-offset_top = 353.0
-offset_right = 996.0
-offset_bottom = 376.0
-size_flags_horizontal = 4
-theme = ExtResource("5_x33ye")
-text = "JOGO DO ANO
-FELPS"
-horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
@@ -57,26 +43,40 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 442.0
-offset_top = -108.0
-offset_right = 774.0
-offset_bottom = 117.0
+offset_left = 346.0
+offset_top = -19.0
+offset_right = 759.0
+offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_x33ye")
 
-[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="Jogar" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "JOGAR	"
 
-[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="creditos" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "CRÉDITOS"
 
-[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
+[node name="sair" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "SAIR"
 
-[connection signal="button_down" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="CanvasLayer/VBoxContainer/Button2" to="." method="_on_button_2_button_down"]
-[connection signal="button_down" from="CanvasLayer/VBoxContainer/Button3" to="." method="_on_button_3_button_down"]
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 1257.0
+offset_top = 198.0
+offset_right = 1768.0
+offset_bottom = 435.0
+size_flags_horizontal = 4
+theme = ExtResource("5_x33ye")
+text = "JOGO DO ANO
+FELPS"
+horizontal_alignment = 1
+
+[node name="button_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_0nw1j")
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/sair" to="." method="_on_sair_pressed"]
