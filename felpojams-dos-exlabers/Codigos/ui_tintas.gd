@@ -8,11 +8,13 @@ extends Control
 @export var icone3 : TextureRect
 
 @export var barra : Sprite2D
+@export var barra2 : Sprite2D
 
 func _ready() -> void:
 	atualizar_tintas()
 	atualizar_barra()
-
+	
+	barra2.self_modulate = Color(0.0, 0.0, 0.0, 1.0)
 #Essa função serve para atualizar a barra de nivel de cada tinta nos carimbos,
 #uma forma visual de mostrar para o player que a tinta esta acabando
 func atualizar_barra():
@@ -22,7 +24,7 @@ func atualizar_barra():
 	
 	#Sempre que chamado irá verificar qual a tinta atual
 	if Globals.corAtual == 0:
-		barra.self_modulate = Color(0.0, 0.0, 0.0, 1.0)
+		barra.self_modulate = Color(0.157, 0.157, 0.267, 1.0)
 		estoqueAtual = Globals.tanqueTintaPreta
 		
 	elif Globals.corAtual == 2:
@@ -39,7 +41,8 @@ func atualizar_barra():
 	
 	#e escala ela baseado no maximo que teria de tinta e a quantidadde de tinta atual
 	barra.scale.y = (estoqueAtual / Globals.maxTanque)*1.5
-	
+	barra2.scale.y = (estoqueAtual / Globals.maxTanque)*1.5
+
 	print(Globals.barraEstoqueSize)
 
 #Essa função serve para conseguir mudar qual tinta o player vai usar

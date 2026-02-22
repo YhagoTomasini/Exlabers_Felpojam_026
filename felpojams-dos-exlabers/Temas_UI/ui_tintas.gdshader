@@ -9,7 +9,7 @@ void fragment() {
     vec2 uv = UV;
 
     float wave = sin((uv.x * wave_frequency) + TIME * wave_speed) * (wave_strength / 100.0);
- 
+
     float liquid_level = progress + wave;
 
     if (uv.y < liquid_level) {

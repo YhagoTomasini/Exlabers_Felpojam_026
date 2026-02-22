@@ -1,19 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://co1uo20k2ecem"]
+[gd_scene load_steps=8 format=3 uid="uid://co1uo20k2ecem"]
 
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
 [ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Codigos/ui_tintas.gd" id="1_y871h"]
-[ext_resource type="Shader" uid="uid://c8e2ftnoacjtm" path="res://new_shader.gdshader" id="3_badn5"]
+[ext_resource type="Shader" uid="uid://dirjjsfbncuwq" path="res://Temas_UI/ui_tintas.gdshader" id="2_mpdm0"]
 [ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/quadradoBranco.png" id="4_badn5"]
 [ext_resource type="Texture2D" uid="uid://cr40m0tkcqujp" path="res://Imagens/UI/frasco_preto.png" id="4_mpdm0"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_mpdm0"]
-shader = ExtResource("3_badn5")
-shader_parameter/progress = 0.0400000019
-shader_parameter/wave_strength = 3.33
-shader_parameter/wave_speed = -3.0
-shader_parameter/wave_frequency = 2.0
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tmomi"]
+shader = ExtResource("2_mpdm0")
+shader_parameter/progress = 0.0550000026125
+shader_parameter/wave_strength = 3.0
+shader_parameter/wave_speed = -4.0
+shader_parameter/wave_frequency = 3.0
 
-[node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mpdm0"]
+shader = ExtResource("2_mpdm0")
+shader_parameter/progress = 0.0550000026125
+shader_parameter/wave_strength = 3.0
+shader_parameter/wave_speed = 4.0
+shader_parameter/wave_frequency = 3.0
+
+[node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra", "barra2")]
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
@@ -28,6 +35,14 @@ icone1 = NodePath("IconeT13")
 icone2 = NodePath("IconeTSelecionada")
 icone3 = NodePath("IconeT22")
 barra = NodePath("BarraTanque")
+barra2 = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_tmomi")
+position = Vector2(104, -98)
+scale = Vector2(0.6, 1.5)
+texture = ExtResource("4_badn5")
+offset = Vector2(0, -32)
 
 [node name="BarraTanque" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_mpdm0")
