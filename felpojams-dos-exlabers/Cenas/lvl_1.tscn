@@ -475,8 +475,6 @@ position = Vector2(8149, 514)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("9_ww2hj")]
-offset_top = -2160.0
-offset_bottom = -2160.0
 
 [connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMapLayer/@Area2D@88030" to="TileMapLayer/@Area2D@88030" method="_on_body_entered"]
