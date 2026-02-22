@@ -23,8 +23,10 @@ var tanqueTintaMagenta : float = 10
 var tanqueTintaAmarelo : float = 10
 var tanqueTintaCiano : float = 10
 
+
 func refil_de_tinta():
 	tanqueTintaPreta = 10
 	tanqueTintaMagenta = 10
 	tanqueTintaAmarelo = 10
 	tanqueTintaCiano = 10
+	

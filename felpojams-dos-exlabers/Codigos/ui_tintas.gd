@@ -48,6 +48,7 @@ func atualizar_barra():
 	barra.scale.y = (estoqueAtual / Globals.maxTanque)*1.5
 	barra2.scale.y = (estoqueAtual / Globals.maxTanque)*1.5
 
+	Cursor2d.cor_cursor()
 	print(Globals.barraEstoqueSize)
 
 #Essa função serve para conseguir mudar qual tinta o player vai usar

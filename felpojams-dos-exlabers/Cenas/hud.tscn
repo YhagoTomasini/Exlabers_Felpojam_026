@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct4u7nw18h0s0"]
+
+[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="1_5udud"]
+[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Prefabs/ui_tintas.tscn" id="2_vodeq"]
+[ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/configs.tscn" id="3_is2x6"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Pause" parent="." node_paths=PackedStringArray("configs") instance=ExtResource("1_5udud")]
+visible = false
+offset_left = -7.0
+offset_top = 9.0
+offset_right = -7.0
+offset_bottom = 9.0
+configs = NodePath("../Configs")
+
+[node name="UI_Tintas" parent="." instance=ExtResource("2_vodeq")]
+unique_name_in_owner = true
+offset_left = 22.0
+offset_top = -36.0
+offset_right = 22.0
+offset_bottom = -36.0
+
+[node name="Configs" parent="." node_paths=PackedStringArray("pause") instance=ExtResource("3_is2x6")]
+offset_left = -7.0
+offset_top = 9.0
+offset_right = -7.0
+offset_bottom = 9.0
+pause = NodePath("../Pause")

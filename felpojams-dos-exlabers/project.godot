@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*res://Codigos/globals.gd"
 AudioManager="*res://Cenas/audio_manager.tscn"
+Cursor2d="*res://Cenas/cursor_2d.tscn"
 
 [display]
 

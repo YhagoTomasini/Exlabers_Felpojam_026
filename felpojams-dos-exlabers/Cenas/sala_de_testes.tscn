@@ -119,10 +119,8 @@ para_direita = false
 
 [node name="Pause" parent="HUD" node_paths=PackedStringArray("configs") instance=ExtResource("1_o0ncy")]
 visible = false
-offset_left = -7.0
-offset_top = 9.0
-offset_right = -7.0
-offset_bottom = 9.0
+offset_right = 0.0
+offset_bottom = 0.0
 configs = NodePath("../Configs")
 
 [node name="UI_Tintas" parent="HUD" instance=ExtResource("3_g2hjm")]
@@ -133,10 +131,6 @@ offset_right = 22.0
 offset_bottom = -36.0
 
 [node name="Configs" parent="HUD" node_paths=PackedStringArray("pause") instance=ExtResource("14_8262j")]
-offset_left = -7.0
-offset_top = 9.0
-offset_right = -7.0
-offset_bottom = 9.0
 pause = NodePath("../Pause")
 
 [node name="porta" parent="." instance=ExtResource("10_eorjc")]
