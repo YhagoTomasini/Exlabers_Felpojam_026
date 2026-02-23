@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=4 uid="uid://bhrkx0lteq4ue"]
 
 [ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="1_nfgon"]
-[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/dipsarador.tscn" id="2_yoai7"]
+[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_yoai7"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="3_46wci"]
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_jjbd0"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_lbgfl"]

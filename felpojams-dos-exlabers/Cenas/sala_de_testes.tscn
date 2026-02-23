@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="6_o0ncy"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="7_ea0tj"]
 [ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="8_o0ncy"]
-[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/dipsarador.tscn" id="9_hxyqr"]
+[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="9_hxyqr"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="10_eorjc"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="14_8262j"]
 

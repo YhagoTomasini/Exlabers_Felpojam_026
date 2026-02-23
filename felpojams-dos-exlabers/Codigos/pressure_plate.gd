@@ -25,6 +25,7 @@ func desativar_colisao_porta(valor: bool):
 		var portaAnim : AnimatedSprite2D = alvo_porta.find_child("sprite")
 		
 		if valor:
+			#await get_tree().create_timer(1).timeout
 			if portaAnim:
 				portaAnim.play("aberta")
 			if colisao:
@@ -32,6 +33,7 @@ func desativar_colisao_porta(valor: bool):
 				colisao.set_deferred("disabled", valor)
 				
 		else:
+			await get_tree().create_timer(1).timeout
 			if portaAnim:
 				portaAnim.play("default")
 			if colisao:
@@ -40,12 +42,12 @@ func desativar_colisao_porta(valor: bool):
 
 
 func _on_body_entered(body: Node2D) -> void:
-	#if body.name == "body_marcaY":
-	print(body)
-	pressionado = true
-	sprite.play("apertado")
-	
-	desativar_colisao_porta(true)
+	if body.name == "body_marcaY" or body.name == "body_marcaP" or body.name == "body_marcaM":
+		print(body)
+		pressionado = true
+		sprite.play("apertado")
+		
+		desativar_colisao_porta(true)
 
 func _on_body_exited(body: Node2D) -> void:
 	pressionado = false

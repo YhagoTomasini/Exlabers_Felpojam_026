@@ -12,21 +12,21 @@ size = Vector2(150, 147)
 
 [node name="marcaM" type="Node2D" node_paths=PackedStringArray("simbulo")]
 script = ExtResource("1_5jqdy")
-simbulo = NodePath("StaticBody2D/CollisionShape2D/Sprite2D")
+simbulo = NodePath("body_marcaM/CollisionShape2D/Sprite2D")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="body_marcaM" type="StaticBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="body_marcaM"]
 shape = SubResource("RectangleShape2D_xc68n")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/CollisionShape2D"]
+[node name="Sprite2D" type="Sprite2D" parent="body_marcaM/CollisionShape2D"]
 position = Vector2(0, 64)
 texture = ExtResource("2_5ktuj")
 offset = Vector2(0, -64)
 
 [node name="Area2DMagenta" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
 script = ExtResource("3_xc68n")
-sprite = NodePath("../StaticBody2D/CollisionShape2D/Sprite2D")
+sprite = NodePath("../body_marcaM/CollisionShape2D/Sprite2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DMagenta"]
 position = Vector2(0, -0.5)

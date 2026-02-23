@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b8eao55q21qss"]
 
 [ext_resource type="Texture2D" uid="uid://bft7sfgdh1adl" path="res://Imagens/porta_teste2.png" id="1_8t5db"]
-[ext_resource type="Script" path="res://Codigos/porta.gd" id="1_pnrxh"]
+[ext_resource type="Script" uid="uid://bi7vai4bqnnwo" path="res://Codigos/porta.gd" id="1_pnrxh"]
 [ext_resource type="Texture2D" uid="uid://bohnbr0c6cea" path="res://Imagens/porta_teste.png" id="2_pnrxh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k3mqw"]
@@ -24,16 +24,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8t5db"]
-size = Vector2(64, 64)
+size = Vector2(258, 256)
 
 [node name="porta" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
 position = Vector2(0, -1.9073486e-06)
-scale = Vector2(-1.9803284, 5.996674)
 script = ExtResource("1_pnrxh")
 sprite = NodePath("sprite")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_k3mqw")
 
 [node name="collision" type="CollisionShape2D" parent="."]
