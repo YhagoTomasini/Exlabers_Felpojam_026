@@ -3,7 +3,18 @@
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://dukhde1amcw7g" path="res://Imagens/teste_fundo.png" id="2_x33ye"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
-[ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="6_0nw1j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouhyk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5803922, 0, 0.1882353, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [node name="Tela_Inicial" type="Control"]
 layout_mode = 3
@@ -43,9 +54,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 346.0
+offset_left = 383.0
 offset_top = -19.0
-offset_right = 759.0
+offset_right = 722.0
 offset_bottom = 260.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -74,8 +85,14 @@ text = "JOGO DO ANO
 FELPS"
 horizontal_alignment = 1
 
-[node name="button_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("6_0nw1j")
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 701.0
+offset_top = 80.0
+offset_right = 1137.0
+offset_bottom = 155.0
+theme = ExtResource("5_x33ye")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ouhyk")
+text = "botao teste"
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]

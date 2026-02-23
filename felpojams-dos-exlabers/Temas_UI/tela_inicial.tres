@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=8 format=3 uid="uid://dfcivdba3fj8h"]
 
 [ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_pma2h"]
-[ext_resource type="Texture2D" uid="uid://0mo6bc06thmw" path="res://Temas_UI/tema_botão.png" id="2_8b40y"]
+[ext_resource type="Texture2D" uid="uid://crreoqea3xbhb" path="res://Temas_UI/Rectangle 1.png" id="2_8b40y"]
 [ext_resource type="FontFile" uid="uid://btb1c2whxbho0" path="res://Fontes/Mansalva-Regular.ttf" id="2_lou1e"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pma2h"]
@@ -12,6 +12,10 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_57sgy"]
 texture = ExtResource("2_8b40y")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
 
 [resource]
 Button/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
