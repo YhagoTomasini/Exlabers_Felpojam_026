@@ -1,7 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://cj4boxypchcqd"]
+[gd_scene load_steps=11 format=3 uid="uid://cj4boxypchcqd"]
 
-[ext_resource type="PackedScene" uid="uid://blerwglsbs62e" path="res://Cenas/vol_slider.tscn" id="1_l3ino"]
-[ext_resource type="Script" uid="uid://cy2yulhwwmopk" path="res://Codigos/configs.gd" id="1_sbaa7"]
+[ext_resource type="PackedScene" uid="uid://blerwglsbs62e" path="res://Prefabs/vol_slider.tscn" id="1_l3ino"]
+[ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_qoi7d"]
+[ext_resource type="Script" uid="uid://cy2yulhwwmopk" path="res://Cenas/Prefabs_gerais/configs.gd" id="1_sbaa7"]
+[ext_resource type="FontFile" uid="uid://btb1c2whxbho0" path="res://Fontes/Mansalva-Regular.ttf" id="2_ooukr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sd3aa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pr460"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty5da"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2qtkj"]
+load_path = "res://.godot/imported/Rectangle 1.png-3d9faa715ce8e97135060343dd0a874c.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slxxp"]
+texture = SubResource("CompressedTexture2D_2qtkj")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="Theme" id="Theme_06sah"]
+Button/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
+Button/colors/font_focus_color = Color(0.5803922, 0, 0.1882353, 1)
+Button/colors/font_hover_color = Color(0.5803922, 0, 0.1882353, 1)
+Button/colors/font_pressed_color = Color(0.5803922, 0, 0.1882353, 1)
+Button/font_sizes/font_size = 54
+Button/fonts/font = ExtResource("1_qoi7d")
+Button/styles/focus = SubResource("StyleBoxEmpty_sd3aa")
+Button/styles/hover = SubResource("StyleBoxEmpty_pr460")
+Button/styles/normal = SubResource("StyleBoxEmpty_ty5da")
+Button/styles/pressed = SubResource("StyleBoxTexture_slxxp")
+Label/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
+Label/font_sizes/font_size = 52
+Label/fonts/font = ExtResource("2_ooukr")
+VBoxContainer/constants/separation = 33
 
 [node name="Configs" type="Control" node_paths=PackedStringArray("voltarB")]
 process_mode = 3
@@ -11,6 +45,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_06sah")
 script = ExtResource("1_sbaa7")
 voltarB = NodePath("VBoxContainer/Button")
 
@@ -34,7 +69,8 @@ text = "Voltar"
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volume global"
+text = "Volume principal"
+horizontal_alignment = 1
 
 [node name="vol_slider" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
@@ -42,7 +78,8 @@ nomeBus = "Master"
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volume Musica"
+text = "Volume da música"
+horizontal_alignment = 1
 
 [node name="vol_slider2" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
@@ -50,7 +87,8 @@ nomeBus = "Musica"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volume Efeitos"
+text = "Volume dos efeitos"
+horizontal_alignment = 1
 
 [node name="vol_slider3" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
