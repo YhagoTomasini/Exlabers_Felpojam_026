@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://bhrkx0lteq4ue"]
+[gd_scene load_steps=15 format=4 uid="uid://bhrkx0lteq4ue"]
 
 [ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="1_nfgon"]
+[ext_resource type="PackedScene" uid="uid://c3pqevbncic26" path="res://Prefabs/disparador2.tscn" id="2_46wci"]
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_yoai7"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="3_46wci"]
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_jjbd0"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="7_scb3e"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_afi0q"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="9_rfkta"]
+[ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="11_jjbd0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2ekb"]
 texture = ExtResource("1_nfgon")
@@ -440,6 +442,7 @@ texture_region_size = Vector2i(64, 64)
 19:19/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_snc0v"]
+scenes/1/scene = ExtResource("2_46wci")
 scenes/4/scene = ExtResource("2_yoai7")
 scenes/5/scene = ExtResource("3_46wci")
 
@@ -453,7 +456,7 @@ sources/1 = SubResource("TileSetScenesCollectionSource_snc0v")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAABABAAAAAEAAAAAAABAA8AAAAEAAAAAAACAA8AAAAEAAAAAAACABAAAAAEAAAAAAADABAAAAAEAAAAAAADAA8AAAAEAAAAAAAEABAAAAAEAAAAAAAEAA8AAAAEAAAAAAAFAA8AAAAEAAAAAAAFABAAAAAEAAAAAAAGABAAAAAEAAAAAAAGAA8AAAAEAAAAAAAHAA8AAAAEAAAAAAAHABAAAAAEAAAAAAAIABAAAAAEAAAAAAAIAA8AAAAEAAAAAAAJAA8AAAAEAAAAAAAJABAAAAAEAAAAAAAKABAAAAAEAAAAAAAKAA8AAAAEAAAAAAALAA8AAAAEAAAAAAALABAAAAAEAAAAAAA=")
+tile_map_data = PackedByteArray("AAABABAAAAAEAAAAAAABAA8AAAAEAAAAAAACAA8AAAAEAAAAAAACABAAAAAEAAAAAAADABAAAAAEAAAAAAADAA8AAAAEAAAAAAAEABAAAAAEAAAAAAAEAA8AAAAEAAAAAAAFAA8AAAAEAAAAAAAFABAAAAAEAAAAAAAGABAAAAAEAAAAAAAGAA8AAAAEAAAAAAAHAA8AAAAEAAAAAAAHABAAAAAEAAAAAAAIABAAAAAEAAAAAAAIAA8AAAAEAAAAAAAJAA8AAAAEAAAAAAAJABAAAAAEAAAAAAAKABAAAAAEAAAAAAAKAA8AAAAEAAAAAAALAA8AAAAEAAAAAAALABAAAAAEAAAAAAD5/w4AAQAAAAAABAADAAwAAQAAAAAAAQA=")
 tile_set = SubResource("TileSet_w7074")
 rendering_quadrant_size = 32
 
@@ -482,3 +485,6 @@ configs = NodePath("../Configs")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_afi0q")]
 pause = NodePath("../Pause")
+
+[node name="FinalLvl2" parent="." instance=ExtResource("11_jjbd0")]
+position = Vector2(444, 1204)

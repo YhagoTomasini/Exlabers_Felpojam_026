@@ -113,7 +113,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		#area.queue_free()
 	
 	#Verificação da colisão com o ciano por area2D :D
-	elif area.name == "Area2DCiano":
+	elif area.is_in_group("agua"):
 		noCianoI += 1
 		noCianoB = true
 		
@@ -127,7 +127,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 
 func _on_area_2d_personagem_area_shape_exited(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
 	if area != null:
-		if area.name == "Area2DCiano":
+		if area.is_in_group("agua"):
 			noCianoI -= 1
 			if noCianoI <= 0:
 				noCianoB = false

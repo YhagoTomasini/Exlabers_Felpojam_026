@@ -7,4 +7,4 @@
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(4, 32)
 shape = SubResource("RectangleShape2D_ua1kx")
-debug_color = Color(0, 1, 1, 0.41960785)
+debug_color = Color(0.20392157, 0.3882353, 0.45490196, 0.41960785)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=4 uid="uid://m2yqyxr1rvmi"]
+[gd_scene load_steps=15 format=4 uid="uid://m2yqyxr1rvmi"]
 
 [ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="1_0bvtg"]
+[ext_resource type="PackedScene" uid="uid://bw38lxq1b3nfh" path="res://Prefabs/aguita.tscn" id="2_ibmap"]
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_wi2ro"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="3_ibmap"]
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_5kih6"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="7_51177"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_jy2vw"]
 [ext_resource type="PackedScene" uid="uid://bhe0k7d2w87n3" path="res://Prefabs/final_lvl_4.tscn" id="9_16uk6"]
+[ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="11_5kih6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f2ekb"]
 texture = ExtResource("1_0bvtg")
@@ -440,6 +442,7 @@ texture_region_size = Vector2i(64, 64)
 19:19/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_snc0v"]
+scenes/1/scene = ExtResource("2_ibmap")
 scenes/4/scene = ExtResource("2_wi2ro")
 scenes/5/scene = ExtResource("3_ibmap")
 
@@ -453,7 +456,7 @@ sources/1 = SubResource("TileSetScenesCollectionSource_snc0v")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAABABAAAAAEAAAAAAABAA8AAAAEAAAAAAACAA8AAAAEAAAAAAACABAAAAAEAAAAAAADABAAAAAEAAAAAAADAA8AAAAEAAAAAAAEABAAAAAEAAAAAAAEAA8AAAAEAAAAAAAFAA8AAAAEAAAAAAAFABAAAAAEAAAAAAAGABAAAAAEAAAAAAAGAA8AAAAEAAAAAAAHAA8AAAAEAAAAAAAHABAAAAAEAAAAAAAIABAAAAAEAAAAAAAIAA8AAAAEAAAAAAAJAA8AAAAEAAAAAAAJABAAAAAEAAAAAAAKABAAAAAEAAAAAAAKAA8AAAAEAAAAAAALAA8AAAAEAAAAAAALABAAAAAEAAAAAAA=")
+tile_map_data = PackedByteArray("AAABABAAAAAEAAAAAAABAA8AAAAEAAAAAAACAA8AAAAEAAAAAAACABAAAAAEAAAAAAADABAAAAAEAAAAAAADAA8AAAAEAAAAAAAEABAAAAAEAAAAAAAEAA8AAAAEAAAAAAAFAA8AAAAEAAAAAAAFABAAAAAEAAAAAAAGABAAAAAEAAAAAAAGAA8AAAAEAAAAAAAHAA8AAAAEAAAAAAAHABAAAAAEAAAAAAAIABAAAAAEAAAAAAAIAA8AAAAEAAAAAAAJAA8AAAAEAAAAAAAJABAAAAAEAAAAAAAKABAAAAAEAAAAAAAKAA8AAAAEAAAAAAALAA8AAAAEAAAAAAALABAAAAAEAAAAAAAAAA8AAQAAAAAAAQD//w8AAQAAAAAAAQD+/w8AAQAAAAAAAQD8/w8AAQAAAAAAAQD9/w8AAQAAAAAAAQD8/xAAAQAAAAAABQD9/xAAAQAAAAAABQD+/xAAAQAAAAAABQD//xAAAQAAAAAABQAAABAAAQAAAAAABQD6/xAAAQAAAAAABQD7/xAAAQAAAAAABQD5/woAAQAAAAAABQD5/wsAAQAAAAAABQD5/wwAAQAAAAAABQD5/w0AAQAAAAAABQD5/w4AAQAAAAAABQD5/w8AAQAAAAAABQD5/xAAAQAAAAAABQA=")
 tile_set = SubResource("TileSet_w7074")
 rendering_quadrant_size = 32
 
@@ -482,3 +485,6 @@ pause = NodePath("../Pause")
 
 [node name="FinalLvl4" parent="." instance=ExtResource("9_16uk6")]
 position = Vector2(1492, 1710)
+
+[node name="FinalLvl3" parent="." instance=ExtResource("11_5kih6")]
+position = Vector2(-554, 1705)
