@@ -44,7 +44,7 @@ func _process(delta):
 	parallax.scroll_offset = parallax.scroll_offset.lerp(alvo, delta * suavidade)
 
 func _on_jogar_pressed() -> void:
-	get_tree().change_scene_to_file("res://Cenas/sala_de_testes.tscn")
+	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
 	#button_sound.play()
 
 func _on_creditos_pressed() -> void:
