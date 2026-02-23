@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://iavy8kf34yx5"]
 
 [ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Globals/audio_manager.gd" id="1_86yo6"]
-[ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Codigos/SoundEffects.gd" id="2_838mi"]
+[ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Globals/SoundEffects.gd" id="2_838mi"]
 [ext_resource type="AudioStream" uid="uid://cxma2tcb5i183" path="res://Sons/raffa_o_bardo.mp3.mp3" id="3_dhxjl"]
 [ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="3_khsds"]
 [ext_resource type="AudioStream" uid="uid://xdtj07eeum8x" path="res://Sons/Tap.mp3" id="4_dhxjl"]
