@@ -23,8 +23,24 @@ var tanqueTintaMagenta : float = 10
 var tanqueTintaAmarelo : float = 10
 var tanqueTintaCiano : float = 10
 
+var tanqueAtualPreta : float = 10
+var tanqueAtualMagenta : float = 10
+var tanqueAtualAmarelo : float = 10
+var tanqueAtualCiano : float = 10
 
+func saveTanqueCena():
+	tanqueAtualPreta = tanqueTintaPreta
+	tanqueAtualMagenta = tanqueTintaMagenta
+	tanqueAtualAmarelo = tanqueTintaAmarelo
+	tanqueAtualCiano = tanqueTintaCiano
+	
 func refil_de_tinta():
+	tanqueTintaPreta = tanqueAtualPreta
+	tanqueTintaMagenta = tanqueAtualMagenta
+	tanqueTintaAmarelo = tanqueAtualAmarelo
+	tanqueTintaCiano = tanqueAtualCiano
+	
+func reset_de_tinta():
 	tanqueTintaPreta = 10
 	tanqueTintaMagenta = 10
 	tanqueTintaAmarelo = 10

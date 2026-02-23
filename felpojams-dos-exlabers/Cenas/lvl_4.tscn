@@ -488,3 +488,18 @@ position = Vector2(1492, 1710)
 
 [node name="FinalLvl3" parent="." instance=ExtResource("11_5kih6")]
 position = Vector2(-554, 1705)
+
+[connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51934" to="TileMapLayer/@Area2D@51934" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51935" to="TileMapLayer/@Area2D@51935" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51936" to="TileMapLayer/@Area2D@51936" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51937" to="TileMapLayer/@Area2D@51937" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51938" to="TileMapLayer/@Area2D@51938" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51939" to="TileMapLayer/@Area2D@51939" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51940" to="TileMapLayer/@Area2D@51940" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51941" to="TileMapLayer/@Area2D@51941" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51942" to="TileMapLayer/@Area2D@51942" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51943" to="TileMapLayer/@Area2D@51943" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51944" to="TileMapLayer/@Area2D@51944" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51945" to="TileMapLayer/@Area2D@51945" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@51946" to="TileMapLayer/@Area2D@51946" method="_on_body_entered"]
