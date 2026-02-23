@@ -246,6 +246,7 @@ coyote_timer = NodePath("coyote_timer")
 camera = NodePath("camera")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
+z_index = 1
 position = Vector2(3, 0)
 sprite_frames = SubResource("SpriteFrames_7kss6")
 animation = &"Run"

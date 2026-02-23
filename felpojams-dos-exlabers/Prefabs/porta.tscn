@@ -32,6 +32,7 @@ script = ExtResource("1_pnrxh")
 sprite = NodePath("sprite")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
+z_index = -10
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_k3mqw")
 

@@ -30,6 +30,7 @@ texture = ExtResource("2_0qfb1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 1, 0.4862745)
+z_index = 10
 material = SubResource("ShaderMaterial_8eq2j")
 texture = ExtResource("3_arqcw")
 
