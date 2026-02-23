@@ -1,8 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dohiuhxtebot1"]
+[gd_scene load_steps=8 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://dukhde1amcw7g" path="res://Imagens/teste_fundo.png" id="2_x33ye"]
+[ext_resource type="Shader" uid="uid://b4hw1bekg3won" path="res://Temas_UI/shaders/vinheta.gdshader" id="4_00dnc"]
+[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/quadradoBranco.png" id="5_0nw1j"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_x33ye"]
+shader = ExtResource("4_00dnc")
+shader_parameter/outerRadius = 3.046000144685
+shader_parameter/MainAlpha = 0.782000037145
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouhyk"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -47,6 +54,15 @@ position = Vector2(1389, 779)
 scale = Vector2(1.484375, 1.0468756)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_x33ye")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_0nw1j")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
