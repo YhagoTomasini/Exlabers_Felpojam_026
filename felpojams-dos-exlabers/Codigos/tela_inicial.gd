@@ -3,10 +3,21 @@ extends Control
 @onready var parallax = $ParallaxBG
 @onready var botao_jogar: Button = $CanvasLayer/VBoxContainer/Jogar
 
+	# ANIMAÇÃO DE TRANSIÇÃO
+@onready var transicao = get_node("CanvasLayer/Transição/ColorRect")
+@onready var animacao = get_node("CanvasLayer/Transição/ColorRect/Animation")
+@export var anim_duracao : float = 1.0
+
 var usando_teclado = false
 var intensidade = 30.0
 var suavidade = 5.0
 var alvo = Vector2.ZERO
+
+func _ready():
+	animacao.speed_scale = anim_duracao
+	animacao.play("transição_out")
+	await animacao.animation_finished
+	transicao.visible = false
 
 func _input(event):
 
@@ -44,8 +55,17 @@ func _process(delta):
 func _on_jogar_pressed() -> void:
 	Globals.reset_de_tinta()
 	Globals.saveTanqueCena()
-	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
+	
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
+	
+	#transição
+	transicao.visible = true
+	animacao.play("transição_in")
+	await animacao.animation_finished
+	
+	#mudança de cena
+	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
+	
 
 func _on_creditos_pressed() -> void:
 	get_tree().change_scene_to_file("res://Cenas/tela_creditos.tscn")
@@ -55,3 +75,9 @@ func _on_sair_pressed() -> void:
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
 	await get_tree().create_timer(0.5).timeout
 	get_tree().quit()
+
+func _transicao_de_tela():
+	transicao.visible = true
+	animacao.speed_scale = anim_duracao
+	animacao.play("transição_in")
+	await animacao.animation_finished
