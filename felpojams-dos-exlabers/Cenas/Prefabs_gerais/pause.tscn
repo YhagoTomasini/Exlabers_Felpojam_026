@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://ben8uam3h2ffs"]
 
 [ext_resource type="Script" uid="uid://bojq0myeh58gy" path="res://Cenas/Prefabs_gerais/pause.gd" id="1_40wpw"]
-[ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="2_70fi1"]
 [ext_resource type="Shader" uid="uid://co4s6dvogqbqv" path="res://Temas_UI/shaders/blur.gdshader" id="2_pqc2j"]
+[ext_resource type="Theme" uid="uid://djcj3jcon5ao0" path="res://Temas_UI/configuracoes.tres" id="3_pqc2j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_thwr7"]
 shader = ExtResource("2_pqc2j")
@@ -48,12 +48,13 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_70fi1")
+theme = ExtResource("3_pqc2j")
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 93
+bbcode_enabled = true
 text = "Pausado"
+fit_content = true
 horizontal_alignment = 1
 
 [node name="Voltar" type="Button" parent="VBoxContainer"]
