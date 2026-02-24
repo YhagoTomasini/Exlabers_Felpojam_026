@@ -15,12 +15,16 @@ func _ready() -> void:
 	noReset = false
 
 func _unhandled_input(event: InputEvent) -> void:
+	if visible:
+		if event.is_action_pressed("ui_pause"):
+			return
+
 	if !noReset:
-		if event.is_action_pressed("reset"):
+		if event.is_action_pressed("reset") and !tavaPause:
 			visible = true
 			get_tree().paused = true
 			grabFocus()
-		
+
 	if podeVoltar:
 		if event.is_action_pressed("ui_pause") or event.is_action_pressed("reset"):
 			if tavaPause:
@@ -30,9 +34,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	
 func voltarPause():
 	pause.grabFocus()
+	tavaPause = false
 	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	podeVoltar = false
-	tavaPause = false
 	pause.visible = true
 	visible = false
 	
@@ -69,7 +73,7 @@ func _on_resetar_jogo_button_down() -> void:
 	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
 
 
-func _on_voltar_button_down() -> void:
+func _on_voltar_pressed() -> void:
 	if podeVoltar:
 		if tavaPause:
 			voltarPause()

@@ -21,6 +21,7 @@ func despausa():
 	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	visible = false
 	reset.noReset = false
+	reset.tavaPause = false
 	parado = false
 	
 func pausar():
@@ -42,6 +43,8 @@ func grabFocus():
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_pause"):
+		if reset.visible:
+			return
 		if !parado:
 			if !naConfig or !noReset:
 				pausar()
@@ -58,6 +61,7 @@ func _on_reiniciar_button_down() -> void:
 	visible = false
 	reset.visible = true
 	noReset = true
+	parado = false
 	reset.grabFocus()
 	
 

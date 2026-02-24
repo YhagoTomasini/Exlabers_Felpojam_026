@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cj5kh1wmhxnyr"]
+[gd_scene load_steps=5 format=3 uid="uid://ben8uam3h2ffs"]
 
 [ext_resource type="Script" uid="uid://bojq0myeh58gy" path="res://Cenas/Prefabs_gerais/pause.gd" id="1_40wpw"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="2_eqixm"]

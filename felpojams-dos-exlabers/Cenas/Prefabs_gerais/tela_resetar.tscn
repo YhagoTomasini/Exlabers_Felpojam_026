@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cl2hitvfdeveu" path="res://Cenas/Prefabs_gerais/tela_resetar.gd" id="1_a0flm"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_40wpw"]
-action = &"ui_cancel"
+action = &"reset"
 
 [sub_resource type="Shortcut" id="Shortcut_a0flm"]
 events = [SubResource("InputEventAction_40wpw")]
@@ -48,6 +48,6 @@ text = "Resetar fase"
 layout_mode = 2
 text = "Resetar jogo"
 
-[connection signal="button_down" from="VBoxContainer/Voltar" to="." method="_on_voltar_button_down"]
+[connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="button_down" from="VBoxContainer/resetarFase" to="." method="_on_resetar_fase_button_down"]
 [connection signal="button_down" from="VBoxContainer/resetarJogo" to="." method="_on_resetar_jogo_button_down"]
