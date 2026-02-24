@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://daq4gpei5jl1t"]
+
+[ext_resource type="Script" uid="uid://cl2hitvfdeveu" path="res://Cenas/Prefabs_gerais/tela_resetar.gd" id="1_a0flm"]
+
+[sub_resource type="InputEventAction" id="InputEventAction_40wpw"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_a0flm"]
+events = [SubResource("InputEventAction_40wpw")]
+
+[node name="TelaResetar" type="Control" node_paths=PackedStringArray("voltarB")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_a0flm")
+voltarB = NodePath("VBoxContainer/Voltar")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Voltar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_a0flm")
+text = "voltar"
+
+[node name="resetarFase" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Resetar fase"
+
+[node name="resetarJogo" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Resetar jogo"
+
+[connection signal="button_down" from="VBoxContainer/Voltar" to="." method="_on_voltar_button_down"]
+[connection signal="button_down" from="VBoxContainer/resetarFase" to="." method="_on_resetar_fase_button_down"]
+[connection signal="button_down" from="VBoxContainer/resetarJogo" to="." method="_on_resetar_jogo_button_down"]
