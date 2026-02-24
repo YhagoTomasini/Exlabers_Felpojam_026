@@ -18,19 +18,24 @@ func _ready() -> void:
 
 func despausa():
 	get_tree().paused = false
+	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	visible = false
 	reset.noReset = false
+	parado = false
 	
 func pausar():
 	if !parado:
 		visible = true
 		get_tree().paused = true
 		grabFocus()
+		await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 		reset.tavaPause = true
-		reset.noReset = true
+		#reset.noReset = true
+		parado = true
 
 func grabFocus():
 	voltarB.grab_focus()
+	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	naConfig = false
 	noReset = false
 	

@@ -20,7 +20,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			visible = true
 			get_tree().paused = true
 			grabFocus()
-			noReset = true
 		
 	if podeVoltar:
 		if event.is_action_pressed("ui_pause") or event.is_action_pressed("reset"):
@@ -30,27 +29,37 @@ func _unhandled_input(event: InputEvent) -> void:
 				voltarJogo()
 	
 func voltarPause():
+	pause.grabFocus()
+	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	podeVoltar = false
+	tavaPause = false
 	pause.visible = true
 	visible = false
-	pause.grabFocus()
+	
 	
 func voltarJogo():
 	get_tree().paused = false
 	visible = false
+	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	noReset = false
+	pause.noReset = false
+	podeVoltar = false
+	tavaPause = false
 
 func grabFocus():
 	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	podeVoltar = true
+	noReset = true
+	pause.noReset = true
 	voltarB.grab_focus()
+	
 
 func _on_resetar_fase_button_down() -> void:
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	Globals.refil_de_tinta()
 	get_tree().paused = false
 	get_tree().call_deferred("reload_current_scene")
-
+	
 
 func _on_resetar_jogo_button_down() -> void:
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)

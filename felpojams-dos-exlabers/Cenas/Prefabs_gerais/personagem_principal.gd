@@ -90,9 +90,9 @@ func _physics_process(delta: float) -> void:
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
 			
-	if Input.is_action_just_pressed("reset"):
-		Globals.refil_de_tinta()
-		get_tree().call_deferred("reload_current_scene")
+	#if Input.is_action_just_pressed("reset"):
+		#Globals.refil_de_tinta()
+		#get_tree().call_deferred("reload_current_scene")
 
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	#Passar de Lvl e recebe uma nova cor de tinta
@@ -184,7 +184,7 @@ func _set_state():
 	
 	
 func player_morreu():
-	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
+	
 	
 	anim.visible = false
 	set_physics_process(false)
