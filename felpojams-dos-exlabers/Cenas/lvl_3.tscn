@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bhrkx0lteq4ue"]
+[gd_scene load_steps=24 format=4 uid="uid://bhrkx0lteq4ue"]
 
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_yoai7"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="3_46wci"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://do6k0t51p0fc0" path="res://Prefabs/espinhos4.tscn" id="9_puvif"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="9_rfkta"]
 [ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="11_jjbd0"]
+[ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="17_e7g1u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlk03"]
 texture = ExtResource("6_scb3e")
@@ -67,9 +68,6 @@ rangeMH = 256
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("5_lbgfl")]
 position = Vector2(805, 1637)
 
-[node name="FinalLvl3" parent="." instance=ExtResource("9_rfkta")]
-position = Vector2(1490, 1679)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_1eq1w")]
@@ -78,14 +76,21 @@ process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
 
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs") instance=ExtResource("7_scb3e")]
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("7_scb3e")]
 visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_afi0q")]
 pause = NodePath("../Pause")
+
+[node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("17_e7g1u")]
+pause = NodePath("../Pause")
+
+[node name="FinalLvl3" parent="." instance=ExtResource("9_rfkta")]
+position = Vector2(1490, 1679)
 
 [node name="FinalLvl2" parent="." instance=ExtResource("11_jjbd0")]
 position = Vector2(444, 1204)

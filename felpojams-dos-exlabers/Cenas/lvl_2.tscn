@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dxyqutrdis8eh"]
+[gd_scene load_steps=27 format=4 uid="uid://dxyqutrdis8eh"]
 
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_c37qn"]
 [ext_resource type="PackedScene" uid="uid://bnp621rfkajuv" path="res://Prefabs/espinhos1.tscn" id="2_r8r8a"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="15_e07xl"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="16_m3pdg"]
 [ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="17_m3pdg"]
+[ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="17_w7074"]
+[ext_resource type="PackedScene" uid="uid://bhe0k7d2w87n3" path="res://Prefabs/final_lvl_4.tscn" id="21_vy8u8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_snc0v"]
 texture = ExtResource("10_vy8u8")
@@ -80,13 +82,17 @@ process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
 
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs") instance=ExtResource("8_e07xl")]
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("8_e07xl")]
 visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("9_m3pdg")]
+pause = NodePath("../Pause")
+
+[node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("17_w7074")]
 pause = NodePath("../Pause")
 
 [node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("15_e07xl")]
@@ -112,3 +118,6 @@ position = Vector2(9602, 1024)
 
 [node name="FinalLvl1" parent="." instance=ExtResource("17_m3pdg")]
 position = Vector2(-251, 1402)
+
+[node name="FinalLvl3" parent="." instance=ExtResource("21_vy8u8")]
+position = Vector2(9915, 984)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://m2yqyxr1rvmi"]
+[gd_scene load_steps=24 format=4 uid="uid://m2yqyxr1rvmi"]
 
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_wi2ro"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="3_ibmap"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bhe0k7d2w87n3" path="res://Prefabs/final_lvl_4.tscn" id="9_16uk6"]
 [ext_resource type="PackedScene" uid="uid://do6k0t51p0fc0" path="res://Prefabs/espinhos4.tscn" id="9_m1y5x"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="11_5kih6"]
+[ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="16_cgeic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mchxp"]
 texture = ExtResource("6_51177")
@@ -75,13 +76,17 @@ process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
 
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs") instance=ExtResource("7_51177")]
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("7_51177")]
 visible = false
 offset_right = 0.0
 offset_bottom = 0.0
 configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_jy2vw")]
+pause = NodePath("../Pause")
+
+[node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("16_cgeic")]
 pause = NodePath("../Pause")
 
 [node name="FinalLvl4" parent="." instance=ExtResource("9_16uk6")]
