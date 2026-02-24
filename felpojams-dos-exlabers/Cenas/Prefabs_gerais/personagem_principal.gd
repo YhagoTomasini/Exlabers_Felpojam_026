@@ -100,22 +100,22 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		if !Globals.arrayTintas.has(Globals.amarelo):
 			Globals.arrayTintas.append(Globals.amarelo)
 		Globals.saveTanqueCena()
-		get_tree().change_scene_to_file("res://Cenas/lvl_2.tscn")
+		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_2.tscn")
 		#area.queue_free()
 	elif area.name == "FinalLvl2":
 		if !Globals.arrayTintas.has(Globals.magenta):
 			Globals.arrayTintas.append(Globals.magenta)
 		Globals.saveTanqueCena()
-		get_tree().change_scene_to_file("res://Cenas/lvl_3.tscn")
+		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_3.tscn")
 		#area.queue_free()
 	elif area.name == "FinalLvl3":
 		if !Globals.arrayTintas.has(Globals.ciano):
 			Globals.arrayTintas.append(Globals.ciano)
 		Globals.saveTanqueCena()
-		get_tree().change_scene_to_file("res://Cenas/lvl_4.tscn")
+		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_4.tscn")
 		#area.queue_free()
 	elif area.name == "FinalLvl4":
-		get_tree().change_scene_to_file("res://Cenas/tela_creditos.tscn")
+		get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_creditos.tscn")
 		#area.queue_free()
 	
 	#Verificação da colisão com o ciano por area2D :D
