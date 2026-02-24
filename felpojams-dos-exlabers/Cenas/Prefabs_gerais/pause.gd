@@ -43,6 +43,7 @@ func _on_menu_button_down() -> void:
 
 func _on_reiniciar_button_down() -> void:
 	Globals.reset_de_tinta()
+	Globals.saveTanqueCena()
 	get_tree().paused = false
 	#get_tree().call_deferred("reload_current_scene")
 	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")

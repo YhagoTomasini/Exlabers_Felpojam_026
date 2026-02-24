@@ -1,24 +1,17 @@
-[gd_scene load_steps=18 format=4 uid="uid://bhrkx0lteq4ue"]
+[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://lxqcc7ay4hyq"]
 
-[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="2_yoai7"]
-[ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="3_46wci"]
-[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_jjbd0"]
-[ext_resource type="Texture2D" uid="uid://durjv1360435b" path="res://Imagens/tiles/TileContas.PNG" id="4_lbgfl"]
-[ext_resource type="Texture2D" uid="uid://d2a6xdj11ibav" path="res://Imagens/tiles/TileEscrita.PNG" id="5_1eq1w"]
-[ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_lbgfl"]
-[ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="6_1eq1w"]
-[ext_resource type="Texture2D" uid="uid://dw6rnit5oskmd" path="res://Imagens/tiles/TileRabiscos.png" id="6_scb3e"]
-[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="7_scb3e"]
-[ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_afi0q"]
-[ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="9_rfkta"]
-[ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="11_jjbd0"]
+[ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="1_uj58g"]
+[ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="2_xpnrg"]
+[ext_resource type="Texture2D" uid="uid://durjv1360435b" path="res://Imagens/tiles/TileContas.PNG" id="3_kyule"]
+[ext_resource type="Texture2D" uid="uid://d2a6xdj11ibav" path="res://Imagens/tiles/TileEscrita.PNG" id="4_717oe"]
+[ext_resource type="Texture2D" uid="uid://dw6rnit5oskmd" path="res://Imagens/tiles/TileRabiscos.png" id="5_7fhwc"]
 
-[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_afi0q"]
-scenes/4/scene = ExtResource("2_yoai7")
-scenes/5/scene = ExtResource("3_46wci")
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_rbpxf"]
+scenes/4/scene = ExtResource("1_uj58g")
+scenes/5/scene = ExtResource("2_xpnrg")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rfkta"]
-texture = ExtResource("4_lbgfl")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xih2w"]
+texture = ExtResource("3_kyule")
 texture_region_size = Vector2i(128, 128)
 9:0/0 = 0
 10:0/0 = 0
@@ -307,8 +300,8 @@ texture_region_size = Vector2i(128, 128)
 8:4/0 = 0
 8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-63.874123, -63.765312, 64.09177, -63.98294, 64.06778, 64.91449, -63.503326, 64.91449)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e7g1u"]
-texture = ExtResource("5_1eq1w")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kv4cq"]
+texture = ExtResource("4_717oe")
 texture_region_size = Vector2i(128, 128)
 0:3/0 = 0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-63.503326, -64.35002, 64.63226, -63.785545, 64.63226, 64.35002, -63.503326, 64.91449)
@@ -377,8 +370,8 @@ texture_region_size = Vector2i(128, 128)
 8:4/0 = 0
 8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-63.503326, -64.35002, 64.63226, -63.785545, 64.63226, 64.35002, -63.503326, 64.91449)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w33r1"]
-texture = ExtResource("6_scb3e")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7xhq"]
+texture = ExtResource("5_7fhwc")
 texture_region_size = Vector2i(128, 128)
 0:3/0 = 0
 0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(63.503296, -63.221077, 64.06778, 64.35002, -62.938843, 64.35002, -64.63226, -64.9145)
@@ -447,46 +440,10 @@ texture_region_size = Vector2i(128, 128)
 5:3/0 = 0
 5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(63.503296, -63.221077, 64.06778, 64.35002, -62.938843, 64.35002, -64.63226, -64.9145)
 
-[sub_resource type="TileSet" id="TileSet_gklxy"]
+[resource]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 15
-sources/1 = SubResource("TileSetScenesCollectionSource_afi0q")
-sources/2 = SubResource("TileSetAtlasSource_rfkta")
-sources/3 = SubResource("TileSetAtlasSource_e7g1u")
-sources/4 = SubResource("TileSetAtlasSource_w33r1")
-
-[node name="lvl_3" type="Node2D"]
-
-[node name="TileMap" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAACAA8AAgABAAMAAAADAA8AAgABAAMAAAAEAA8AAgABAAMAAAAFAA8AAgABAAMAAAAGAA8AAgABAAMAAAAHAA8AAgABAAMAAAAIAA8AAgABAAMAAAAJAA8AAgABAAMAAAAKAA8AAgABAAMAAAALAA8AAgAIAAMAAAALABAAAgAIAAUAAAABABAAAgAAAAUAAAABAA8AAgAAAAMAAAACABAAAgABAAUAAAADABAAAgABAAUAAAAEABAAAgABAAUAAAAFABAAAgABAAUAAAAGABAAAgABAAUAAAAHABAAAgABAAUAAAAIABAAAgABAAUAAAAJABAAAgABAAUAAAAKABAAAgABAAUAAAA=")
-tile_set = SubResource("TileSet_gklxy")
-rendering_quadrant_size = 128
-
-[node name="Carimbo" parent="." instance=ExtResource("4_jjbd0")]
-rangeMH = 256
-
-[node name="PersonagemPrincipal" parent="." instance=ExtResource("5_lbgfl")]
-position = Vector2(805, 1637)
-
-[node name="FinalLvl3" parent="." instance=ExtResource("9_rfkta")]
-position = Vector2(1490, 1679)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_1eq1w")]
-unique_name_in_owner = true
-process_mode = 3
-offset_top = 0.0
-offset_bottom = 0.0
-
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs") instance=ExtResource("7_scb3e")]
-visible = false
-offset_right = 0.0
-offset_bottom = 0.0
-configs = NodePath("../Configs")
-
-[node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_afi0q")]
-pause = NodePath("../Pause")
-
-[node name="FinalLvl2" parent="." instance=ExtResource("11_jjbd0")]
-position = Vector2(444, 1204)
+sources/1 = SubResource("TileSetScenesCollectionSource_rbpxf")
+sources/2 = SubResource("TileSetAtlasSource_xih2w")
+sources/3 = SubResource("TileSetAtlasSource_kv4cq")
+sources/4 = SubResource("TileSetAtlasSource_t7xhq")

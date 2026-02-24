@@ -43,6 +43,7 @@ func _process(delta):
 
 func _on_jogar_pressed() -> void:
 	Globals.reset_de_tinta()
+	Globals.saveTanqueCena()
 	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
 
