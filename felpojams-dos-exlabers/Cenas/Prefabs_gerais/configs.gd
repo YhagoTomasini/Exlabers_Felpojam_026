@@ -3,12 +3,13 @@ extends Control
 @export var pause : Control
 @export var voltarB : Button
 
-@onready var corFundo :ColorRect = $ColorRect
+@onready var cor_fundo: ColorRect = $corFundo
+
 
 var podeVoltar : bool
 
 func _ready() -> void:
-	corFundo.color = Color(0.58, 0.0, 0.188, 0.486)
+	cor_fundo.color = Color(0.58, 0.0, 0.188, 0.486)
 	visible = false
 	podeVoltar = false
 
