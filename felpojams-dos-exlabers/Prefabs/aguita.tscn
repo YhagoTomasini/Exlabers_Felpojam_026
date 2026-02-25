@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bw38lxq1b3nfh"]
+[gd_scene load_steps=9 format=3 uid="uid://bw38lxq1b3nfh"]
 
+[ext_resource type="Script" uid="uid://ko6igpawoi12" path="res://Codigos/aguita.gd" id="1_0qfb1"]
 [ext_resource type="Shader" uid="uid://dirjjsfbncuwq" path="res://Temas_UI/ui_tintas.gdshader" id="1_k4jbl"]
 [ext_resource type="Texture2D" uid="uid://btjb3fmfesuwo" path="res://Imagens/preoUI.png" id="2_0qfb1"]
 [ext_resource type="Texture2D" uid="uid://eogfkidclgro" path="res://Imagens/cianoUI.png" id="3_arqcw"]
@@ -21,15 +22,21 @@ shader_parameter/wave_frequency = 6.2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tf18q"]
 size = Vector2(64, 64)
 
-[node name="aguita" type="Area2D" groups=["agua"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_arqcw"]
+
+[node name="aguita" type="Area2D" node_paths=PackedStringArray("sprite1", "sprite2") groups=["agua", "aguaMaterial"]]
+scale = Vector2(2, 2)
+script = ExtResource("1_0qfb1")
+sprite1 = NodePath("Sprite2D")
+sprite2 = NodePath("Sprite2D2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(1, 1, 1, 0.49803922)
+self_modulate = Color(1, 1, 1, 0.23921569)
 material = SubResource("ShaderMaterial_3u3cw")
 texture = ExtResource("2_0qfb1")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-self_modulate = Color(1, 1, 1, 0.4862745)
+self_modulate = Color(1, 1, 1, 0.3137255)
 z_index = 10
 material = SubResource("ShaderMaterial_8eq2j")
 texture = ExtResource("3_arqcw")
@@ -37,3 +44,11 @@ texture = ExtResource("3_arqcw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource("RectangleShape2D_tf18q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -62)
+shape = SubResource("RectangleShape2D_arqcw")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -33,6 +33,7 @@ window/stretch/aspect="expand"
 Morte="Tudo que mata o player"
 Player=""
 agua=""
+aguaMaterial=""
 
 [input]
 
