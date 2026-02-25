@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bnp621rfkajuv"]
 
 [ext_resource type="Script" uid="uid://dexo3e147nclq" path="res://Codigos/morte.gd" id="1_yjr6j"]
-[ext_resource type="Texture2D" uid="uid://djmfly7rd8ru6" path="res://Imagens/magentaUI.png" id="2_jaun3"]
+[ext_resource type="Texture2D" uid="uid://djmfly7rd8ru6" path="res://Imagens/rascunhos/magentaUI.png" id="2_jaun3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
 size = Vector2(64, 32)

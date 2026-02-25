@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bft7sfgdh1adl"
-path="res://.godot/imported/porta_teste2.png-42d9289eb6ff85db7d49f84d64b57ea0.ctex"
+uid="uid://pkmyer2ggnde"
+path="res://.godot/imported/Obstáculos.png-95df397d08dbe5b59b462a6edbae2ebb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/porta_teste2.png"
-dest_files=["res://.godot/imported/porta_teste2.png-42d9289eb6ff85db7d49f84d64b57ea0.ctex"]
+source_file="res://Imagens/tiles/Obstáculos.png"
+dest_files=["res://.godot/imported/Obstáculos.png-95df397d08dbe5b59b462a6edbae2ebb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://boj0th4p6qj7k"
-path="res://.godot/imported/Rascunho_tile.jpg-bbfab4d06617c12a40fcba3639c0366d.ctex"
+uid="uid://eogfkidclgro"
+path="res://.godot/imported/cianoUI.png-7d2b3bcb7e13524d5f6ccb8a70ac2cda.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/Rascunho_tile.jpg"
-dest_files=["res://.godot/imported/Rascunho_tile.jpg-bbfab4d06617c12a40fcba3639c0366d.ctex"]
+source_file="res://Imagens/rascunhos/cianoUI.png"
+dest_files=["res://.godot/imported/cianoUI.png-7d2b3bcb7e13524d5f6ccb8a70ac2cda.ctex"]
 
 [params]
 

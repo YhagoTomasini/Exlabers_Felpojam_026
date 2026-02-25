@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c1oysdaaphsq4"
-path="res://.godot/imported/amareloUI.png-094b3326dd795f80deb4afaaeefec97b.ctex"
+path="res://.godot/imported/amareloUI.png-52455ef447ea7b04c41799b8e0a2c11a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/amareloUI.png"
-dest_files=["res://.godot/imported/amareloUI.png-094b3326dd795f80deb4afaaeefec97b.ctex"]
+source_file="res://Imagens/rascunhos/amareloUI.png"
+dest_files=["res://.godot/imported/amareloUI.png-52455ef447ea7b04c41799b8e0a2c11a.ctex"]
 
 [params]
 

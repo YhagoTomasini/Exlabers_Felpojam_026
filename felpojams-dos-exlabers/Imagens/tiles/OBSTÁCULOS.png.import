@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cplgt2gb3hrvy"
-path="res://.godot/imported/botao_teste2.png-181257504d92c06df0cd39c207c74814.ctex"
+uid="uid://bdnojng23f37k"
+path="res://.godot/imported/OBSTÁCULOS.png-573ec7691aaab3ee43d8ef3c6e8757df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/botao_teste2.png"
-dest_files=["res://.godot/imported/botao_teste2.png-181257504d92c06df0cd39c207c74814.ctex"]
+source_file="res://Imagens/tiles/OBSTÁCULOS.png"
+dest_files=["res://.godot/imported/OBSTÁCULOS.png-573ec7691aaab3ee43d8ef3c6e8757df.ctex"]
 
 [params]
 

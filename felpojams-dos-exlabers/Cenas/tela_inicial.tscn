@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://dukhde1amcw7g" path="res://Imagens/teste_fundo.png" id="2_x33ye"]
 [ext_resource type="Shader" uid="uid://b4hw1bekg3won" path="res://Temas_UI/shaders/vinheta.gdshader" id="4_00dnc"]
-[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/quadradoBranco.png" id="5_0nw1j"]
+[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="5_0nw1j"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
 [ext_resource type="PackedScene" uid="uid://bk6bbn3tbvijr" path="res://Temas_UI/transição.tscn" id="6_0nw1j"]
 

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://57nkudn0jsnr" path="res://Codigos/sala_de_testes.gd" id="1_ipfeo"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="1_mlq5q"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="1_o0ncy"]
-[ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/Rascunho_tile.jpg" id="1_o42xe"]
+[ext_resource type="Texture2D" uid="uid://boj0th4p6qj7k" path="res://Imagens/rascunhos/Rascunho_tile.jpg" id="1_o42xe"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="3_g2hjm"]
 [ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="3_ueut7"]
 [ext_resource type="PackedScene" uid="uid://dnbtwvdaltm27" path="res://Prefabs/final_lvl_2.tscn" id="4_to47i"]

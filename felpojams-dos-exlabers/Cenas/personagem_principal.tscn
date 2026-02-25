@@ -4,14 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="2_76unu"]
 [ext_resource type="Texture2D" uid="uid://f52843nmhni1" path="res://Imagens/player/player_caindo.png" id="2_js6sr"]
 [ext_resource type="Texture2D" uid="uid://cavphklnfbmdg" path="res://Imagens/player/jumping.png" id="4_2g78t"]
-[ext_resource type="Texture2D" uid="uid://djmfly7rd8ru6" path="res://Imagens/magentaUI.png" id="4_68mg3"]
+[ext_resource type="Texture2D" uid="uid://djmfly7rd8ru6" path="res://Imagens/rascunhos/magentaUI.png" id="4_68mg3"]
 [ext_resource type="Texture2D" uid="uid://3wrt7u4nvg2u" path="res://Imagens/player/player_correndo.png" id="5_68mg3"]
 [ext_resource type="Texture2D" uid="uid://qelfqli71kf7" path="res://Imagens/player/player_swimming.png" id="6_5aplp"]
 [ext_resource type="Texture2D" uid="uid://3slnnctebagi" path="res://Imagens/player/morte1.png" id="7_js6sr"]
 [ext_resource type="Texture2D" uid="uid://b00gvf8ti4o8t" path="res://Imagens/player/morte2.png" id="8_y08vd"]
 [ext_resource type="Texture2D" uid="uid://b60ledmekthf8" path="res://Imagens/player/morte3.png" id="9_vq5uy"]
-[ext_resource type="Texture2D" uid="uid://btjb3fmfesuwo" path="res://Imagens/preoUI.png" id="10_vq5uy"]
-[ext_resource type="PackedScene" path="res://Prefabs/camera.tscn" id="10_y08vd"]
+[ext_resource type="Texture2D" uid="uid://btjb3fmfesuwo" path="res://Imagens/rascunhos/preoUI.png" id="10_vq5uy"]
+[ext_resource type="PackedScene" uid="uid://dxhdb2kpdc0ye" path="res://Prefabs/camera.tscn" id="10_y08vd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p8hgv"]
 atlas = ExtResource("2_js6sr")

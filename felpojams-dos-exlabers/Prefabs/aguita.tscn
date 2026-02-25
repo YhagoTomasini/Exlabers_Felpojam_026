@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://ko6igpawoi12" path="res://Codigos/aguita.gd" id="1_0qfb1"]
 [ext_resource type="Shader" uid="uid://dirjjsfbncuwq" path="res://Temas_UI/ui_tintas.gdshader" id="1_k4jbl"]
-[ext_resource type="Texture2D" uid="uid://btjb3fmfesuwo" path="res://Imagens/preoUI.png" id="2_0qfb1"]
-[ext_resource type="Texture2D" uid="uid://eogfkidclgro" path="res://Imagens/cianoUI.png" id="3_arqcw"]
+[ext_resource type="Texture2D" uid="uid://btjb3fmfesuwo" path="res://Imagens/rascunhos/preoUI.png" id="2_0qfb1"]
+[ext_resource type="Texture2D" uid="uid://eogfkidclgro" path="res://Imagens/rascunhos/cianoUI.png" id="3_arqcw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3u3cw"]
 shader = ExtResource("1_k4jbl")

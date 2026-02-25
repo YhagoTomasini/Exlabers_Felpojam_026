@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bohnbr0c6cea"
-path="res://.godot/imported/porta_teste.png-aab913e40d6c2628a11e6270c8550694.ctex"
+uid="uid://djmfly7rd8ru6"
+path="res://.godot/imported/magentaUI.png-98247f393c9a029c24e76469920fd998.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/porta_teste.png"
-dest_files=["res://.godot/imported/porta_teste.png-aab913e40d6c2628a11e6270c8550694.ctex"]
+source_file="res://Imagens/rascunhos/magentaUI.png"
+dest_files=["res://.godot/imported/magentaUI.png-98247f393c9a029c24e76469920fd998.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://co1uo20k2ecem"]
 
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
-[ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Codigos/ui_tintas.gd" id="1_y871h"]
+[ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Cenas/Prefabs_gerais/ui_tintas.gd" id="1_y871h"]
 [ext_resource type="Shader" uid="uid://dirjjsfbncuwq" path="res://Temas_UI/ui_tintas.gdshader" id="2_mpdm0"]
-[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/quadradoBranco.png" id="4_badn5"]
+[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="4_badn5"]
 [ext_resource type="Texture2D" uid="uid://cmwu3d5nlchph" path="res://Imagens/UI/frasco_generico.png" id="4_mpdm0"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tmomi"]

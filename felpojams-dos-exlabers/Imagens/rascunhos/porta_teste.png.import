@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://eogfkidclgro"
-path="res://.godot/imported/cianoUI.png-d17be62b6a6b594d7034554d137dc340.ctex"
+uid="uid://bohnbr0c6cea"
+path="res://.godot/imported/porta_teste.png-0ca3e38dc4a23bc0d6dcdbc5c0425b3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Imagens/cianoUI.png"
-dest_files=["res://.godot/imported/cianoUI.png-d17be62b6a6b594d7034554d137dc340.ctex"]
+source_file="res://Imagens/rascunhos/porta_teste.png"
+dest_files=["res://.godot/imported/porta_teste.png-0ca3e38dc4a23bc0d6dcdbc5c0425b3f.ctex"]
 
 [params]
 
