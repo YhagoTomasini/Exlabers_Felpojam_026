@@ -70,10 +70,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -229.0
+offset_top = -261.5
+offset_right = 229.0
+offset_bottom = 261.5
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("3_pqc2j")
@@ -94,17 +94,17 @@ text = "voltar"
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="Configrações" type="Button" parent="VBoxContainer"]
+[node name="Reiniciar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "configurações"
+text = "reiniciar"
 
 [node name="VSeparator2" type="HSeparator" parent="VBoxContainer"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="Reiniciar" type="Button" parent="VBoxContainer"]
+[node name="Configrações" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "reiniciar"
+text = "som"
 
 [node name="VSeparator3" type="HSeparator" parent="VBoxContainer"]
 self_modulate = Color(1, 1, 1, 0)
@@ -115,6 +115,6 @@ layout_mode = 2
 text = "menu"
 
 [connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
-[connection signal="button_down" from="VBoxContainer/Configrações" to="." method="_on_configrações_button_down"]
 [connection signal="button_down" from="VBoxContainer/Reiniciar" to="." method="_on_reiniciar_button_down"]
+[connection signal="button_down" from="VBoxContainer/Configrações" to="." method="_on_configrações_button_down"]
 [connection signal="button_down" from="VBoxContainer/Menu" to="." method="_on_menu_button_down"]

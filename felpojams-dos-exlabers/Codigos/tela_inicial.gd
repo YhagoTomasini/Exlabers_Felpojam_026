@@ -9,6 +9,7 @@ extends Control
 @export var anim_duracao : float = 1.0
 
 var usando_teclado = false
+
 var intensidade = 30.0
 var suavidade = 5.0
 var alvo = Vector2.ZERO

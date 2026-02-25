@@ -1,7 +1,9 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://djcj3jcon5ao0"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://djcj3jcon5ao0"]
 
 [ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_wcbq8"]
+[ext_resource type="Texture2D" uid="uid://bj0h3tsw2ulcw" path="res://Temas_UI/slidercinza.svg" id="2_1ekci"]
 [ext_resource type="FontFile" uid="uid://btb1c2whxbho0" path="res://Fontes/Mansalva-Regular.ttf" id="2_r1320"]
+[ext_resource type="Texture2D" uid="uid://8ynourfdu3xq" path="res://Temas_UI/sliderrosa.svg" id="3_7af8f"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ekci"]
 
@@ -19,6 +21,21 @@ texture_margin_top = 10.0
 texture_margin_right = 10.0
 texture_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mkk1j"]
+texture = ExtResource("2_1ekci")
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5g803"]
+texture = ExtResource("3_7af8f")
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ekci"]
+texture = ExtResource("2_1ekci")
+expand_margin_top = 8.0
+expand_margin_bottom = 8.0
+
 [resource]
 Button/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
 Button/colors/font_focus_color = Color(0.5803922, 0, 0.1882353, 1)
@@ -30,10 +47,13 @@ Button/styles/focus = SubResource("StyleBoxEmpty_1ekci")
 Button/styles/hover = SubResource("StyleBoxEmpty_7af8f")
 Button/styles/normal = SubResource("StyleBoxEmpty_mkk1j")
 Button/styles/pressed = SubResource("StyleBoxTexture_71dil")
-Label/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
-Label/font_sizes/font_size = 73
+HSlider/styles/grabber_area = SubResource("StyleBoxTexture_mkk1j")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_5g803")
+HSlider/styles/slider = SubResource("StyleBoxTexture_1ekci")
+Label/colors/font_color = Color(0.10980392, 0.11372549, 0.47058824, 1)
+Label/font_sizes/font_size = 50
 Label/fonts/font = ExtResource("2_r1320")
-RichTextLabel/colors/default_color = Color(0.10810001, 0.11413174, 0.47, 1)
+RichTextLabel/colors/default_color = Color(0.10980392, 0.11372549, 0.47058824, 1)
 RichTextLabel/font_sizes/normal_font_size = 80
 RichTextLabel/fonts/normal_font = ExtResource("2_r1320")
 VBoxContainer/constants/separation = 12

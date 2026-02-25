@@ -1,41 +1,16 @@
-[gd_scene load_steps=11 format=3 uid="uid://cj4boxypchcqd"]
+[gd_scene load_steps=8 format=3 uid="uid://cj4boxypchcqd"]
 
 [ext_resource type="PackedScene" uid="uid://blerwglsbs62e" path="res://Prefabs/vol_slider.tscn" id="1_l3ino"]
-[ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_qoi7d"]
+[ext_resource type="Theme" uid="uid://djcj3jcon5ao0" path="res://Temas_UI/configuracoes.tres" id="1_ooukr"]
 [ext_resource type="Script" uid="uid://cy2yulhwwmopk" path="res://Cenas/Prefabs_gerais/configs.gd" id="1_sbaa7"]
-[ext_resource type="FontFile" uid="uid://btb1c2whxbho0" path="res://Fontes/Mansalva-Regular.ttf" id="2_ooukr"]
+[ext_resource type="Shader" uid="uid://co4s6dvogqbqv" path="res://Temas_UI/shaders/blur.gdshader" id="4_sd3aa"]
+[ext_resource type="Texture2D" uid="uid://bx3m5uuc7ci5d" path="res://Imagens/papeis/1771357403688.png" id="5_pr460"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sd3aa"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ty5da"]
+shader = ExtResource("4_sd3aa")
+shader_parameter/blur_amount = 8.0
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pr460"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ty5da"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2qtkj"]
-load_path = "res://.godot/imported/Rectangle 1.png-3d9faa715ce8e97135060343dd0a874c.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_slxxp"]
-texture = SubResource("CompressedTexture2D_2qtkj")
-texture_margin_left = 10.0
-texture_margin_top = 10.0
-texture_margin_right = 10.0
-texture_margin_bottom = 10.0
-
-[sub_resource type="Theme" id="Theme_06sah"]
-Button/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
-Button/colors/font_focus_color = Color(0.5803922, 0, 0.1882353, 1)
-Button/colors/font_hover_color = Color(0.5803922, 0, 0.1882353, 1)
-Button/colors/font_pressed_color = Color(0.5803922, 0, 0.1882353, 1)
-Button/font_sizes/font_size = 54
-Button/fonts/font = ExtResource("1_qoi7d")
-Button/styles/focus = SubResource("StyleBoxEmpty_sd3aa")
-Button/styles/hover = SubResource("StyleBoxEmpty_pr460")
-Button/styles/normal = SubResource("StyleBoxEmpty_ty5da")
-Button/styles/pressed = SubResource("StyleBoxTexture_slxxp")
-Label/colors/font_color = Color(0.22352941, 0.24705882, 0.23921569, 1)
-Label/font_sizes/font_size = 52
-Label/fonts/font = ExtResource("2_ooukr")
-VBoxContainer/constants/separation = 33
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ooukr"]
 
 [node name="Configs" type="Control" node_paths=PackedStringArray("voltarB")]
 process_mode = 3
@@ -45,9 +20,45 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_06sah")
+theme = ExtResource("1_ooukr")
 script = ExtResource("1_sbaa7")
 voltarB = NodePath("VBoxContainer/Button")
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_ty5da")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.58, 0, 0.18366663, 0.24313726)
+
+[node name="Papel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 328.0
+offset_top = 443.99994
+offset_right = 1653.0186
+offset_bottom = 2213.826
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -3.1415927
+scale = Vector2(0.4884758, 0.4884758)
+texture = ExtResource("5_pr460")
+expand_mode = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
@@ -63,10 +74,6 @@ offset_bottom = 86.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Voltar"
-
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Volume principal"
@@ -75,6 +82,11 @@ horizontal_alignment = 1
 [node name="vol_slider" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
 nomeBus = "Master"
+
+[node name="VSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 19
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ooukr")
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -85,6 +97,11 @@ horizontal_alignment = 1
 layout_mode = 2
 nomeBus = "Musica"
 
+[node name="VSeparator3" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 19
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ooukr")
+
 [node name="Label2" type="Label" parent="VBoxContainer"]
 layout_mode = 2
 text = "Volume dos efeitos"
@@ -93,5 +110,14 @@ horizontal_alignment = 1
 [node name="vol_slider3" parent="VBoxContainer" instance=ExtResource("1_l3ino")]
 layout_mode = 2
 nomeBus = "Efeitos"
+
+[node name="VSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 19
+theme_override_styles/separator = SubResource("StyleBoxEmpty_ooukr")
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Voltar"
 
 [connection signal="button_down" from="VBoxContainer/Button" to="." method="_on_button_button_down"]

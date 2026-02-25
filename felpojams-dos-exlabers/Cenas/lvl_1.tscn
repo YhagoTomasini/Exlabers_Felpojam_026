@@ -45,50 +45,78 @@ pause = NodePath("../Pause")
 configs = NodePath("../Configs")
 reset = NodePath("../TelaResetar")
 
-[node name="20260217162420" type="Sprite2D" parent="."]
+[node name="Fundo" type="Control" parent="."]
 show_behind_parent = true
-position = Vector2(794.8241, 1593.7424)
-rotation = 7.853982
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="20260217162420" type="TextureRect" parent="Fundo"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 2638.0002
+offset_top = 3710.0002
+offset_right = 6278.0005
+offset_bottom = 6145.0
+rotation = 9.424778
 scale = Vector2(1.4388692, 1.4388692)
 texture = ExtResource("11_2qxcg")
 
-[node name="20260217162421" type="Sprite2D" parent="."]
+[node name="20260217162424" type="TextureRect" parent="Fundo"]
 show_behind_parent = true
-position = Vector2(4232, 1540)
-rotation = -7.853982
-scale = Vector2(1.3903445, 1.3903445)
+layout_mode = 0
+offset_left = -2123.4163
+offset_top = -2957.0
+offset_right = 2535.8665
+offset_bottom = 159.85547
+scale = Vector2(1.023677, 1.023677)
 texture = ExtResource("11_2qxcg")
 
-[node name="20260217162422" type="Sprite2D" parent="."]
+[node name="20260217162421" type="TextureRect" parent="Fundo"]
 show_behind_parent = true
-position = Vector2(2462, -3241)
-scale = Vector2(1.89306, 1.89306)
-texture = ExtResource("11_2qxcg")
-
-[node name="20260217162423" type="Sprite2D" parent="."]
-show_behind_parent = true
-position = Vector2(7532, 1523)
+layout_mode = 0
+offset_left = 5972.0005
+offset_top = -4580.0
+offset_right = 9612.0
+offset_bottom = -2145.0
 rotation = -4.712389
 scale = Vector2(1.3903445, 1.3903445)
 texture = ExtResource("11_2qxcg")
 
-[node name="20260217162424" type="Sprite2D" parent="."]
+[node name="20260217162423" type="TextureRect" parent="Fundo"]
 show_behind_parent = true
-position = Vector2(7698.0005, -2189)
-scale = Vector2(1.023677, 1.023677)
+layout_mode = 0
+offset_left = 5972.0
+offset_top = 242.99998
+offset_right = 9612.0
+offset_bottom = 2678.0
+rotation = -4.712389
+scale = Vector2(1.3903445, 1.3903445)
+texture = ExtResource("11_2qxcg")
+
+[node name="20260217162422" type="TextureRect" parent="Fundo"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 10579.0
+offset_top = -2555.0005
+offset_right = 14219.0
+offset_bottom = -120.00049
+rotation = 1.5707964
+scale = Vector2(1.89306, 1.89306)
 texture = ExtResource("11_2qxcg")
 
 [connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75312" to="TileMapLayer/@Area2D@75312" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75313" to="TileMapLayer/@Area2D@75313" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75314" to="TileMapLayer/@Area2D@75314" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75315" to="TileMapLayer/@Area2D@75315" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75316" to="TileMapLayer/@Area2D@75316" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75317" to="TileMapLayer/@Area2D@75317" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75318" to="TileMapLayer/@Area2D@75318" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75319" to="TileMapLayer/@Area2D@75319" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75320" to="TileMapLayer/@Area2D@75320" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75321" to="TileMapLayer/@Area2D@75321" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75322" to="TileMapLayer/@Area2D@75322" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75323" to="TileMapLayer/@Area2D@75323" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@75324" to="TileMapLayer/@Area2D@75324" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208532" to="TileMapLayer/@Area2D@208532" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208533" to="TileMapLayer/@Area2D@208533" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208534" to="TileMapLayer/@Area2D@208534" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208535" to="TileMapLayer/@Area2D@208535" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208536" to="TileMapLayer/@Area2D@208536" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208537" to="TileMapLayer/@Area2D@208537" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208538" to="TileMapLayer/@Area2D@208538" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208539" to="TileMapLayer/@Area2D@208539" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208540" to="TileMapLayer/@Area2D@208540" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208541" to="TileMapLayer/@Area2D@208541" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208542" to="TileMapLayer/@Area2D@208542" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208543" to="TileMapLayer/@Area2D@208543" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@208544" to="TileMapLayer/@Area2D@208544" method="_on_body_entered"]

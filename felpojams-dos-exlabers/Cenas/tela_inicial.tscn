@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dohiuhxtebot1"]
+[gd_scene load_steps=8 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://dukhde1amcw7g" path="res://Imagens/teste_fundo.png" id="2_x33ye"]
@@ -11,18 +11,6 @@
 shader = ExtResource("4_00dnc")
 shader_parameter/outerRadius = 3.046000144685
 shader_parameter/MainAlpha = 0.782000037145
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouhyk"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.5803922, 0, 0.1882353, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [node name="Tela_Inicial" type="Control"]
 layout_mode = 3
@@ -101,15 +89,6 @@ theme = ExtResource("5_x33ye")
 text = "JOGO DO ANO
 FELPS"
 horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="CanvasLayer"]
-offset_left = 701.0
-offset_top = 80.0
-offset_right = 1137.0
-offset_bottom = 155.0
-theme = ExtResource("5_x33ye")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_ouhyk")
-text = "botao teste"
 
 [node name="Transição" parent="CanvasLayer" instance=ExtResource("6_0nw1j")]
 
