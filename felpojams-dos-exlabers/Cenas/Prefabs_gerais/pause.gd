@@ -14,7 +14,7 @@ func _ready() -> void:
 	parado = false
 	naConfig = false
 	noReset = false
-	corFundo.color = Color(1.0, 1.0, 1.0, 0.25)
+	corFundo.color = Color(0.58, 0.0, 0.188, 0.486)
 
 func despausa():
 	get_tree().paused = false

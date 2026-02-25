@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://c7jyjpqtg13xv"]
+[gd_scene load_steps=11 format=4 uid="uid://c7jyjpqtg13xv"]
 
 [ext_resource type="Script" uid="uid://ctpf3csqus7ju" path="res://Codigos/lvl_1.gd" id="1_xcvut"]
 [ext_resource type="TileSet" uid="uid://lxqcc7ay4hyq" path="res://Imagens/tiles/tiles.tres" id="2_ww2hj"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="9_geuvu"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="9_ww2hj"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="9_xcvut"]
+[ext_resource type="Texture2D" uid="uid://cud3cvgoyulkw" path="res://Imagens/papeis/20260217_162419.jpg" id="11_2qxcg"]
 
 [node name="lvl_1" type="Node2D"]
 script = ExtResource("1_xcvut")
@@ -43,3 +44,51 @@ pause = NodePath("../Pause")
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("9_geuvu")]
 configs = NodePath("../Configs")
 reset = NodePath("../TelaResetar")
+
+[node name="20260217162420" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(794.8241, 1593.7424)
+rotation = 7.853982
+scale = Vector2(1.4388692, 1.4388692)
+texture = ExtResource("11_2qxcg")
+
+[node name="20260217162421" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(4232, 1540)
+rotation = -7.853982
+scale = Vector2(1.3903445, 1.3903445)
+texture = ExtResource("11_2qxcg")
+
+[node name="20260217162422" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(2462, -3241)
+scale = Vector2(1.89306, 1.89306)
+texture = ExtResource("11_2qxcg")
+
+[node name="20260217162423" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(7532, 1523)
+rotation = -4.712389
+scale = Vector2(1.3903445, 1.3903445)
+texture = ExtResource("11_2qxcg")
+
+[node name="20260217162424" type="Sprite2D" parent="."]
+show_behind_parent = true
+position = Vector2(7698.0005, -2189)
+scale = Vector2(1.023677, 1.023677)
+texture = ExtResource("11_2qxcg")
+
+[connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75312" to="TileMapLayer/@Area2D@75312" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75313" to="TileMapLayer/@Area2D@75313" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75314" to="TileMapLayer/@Area2D@75314" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75315" to="TileMapLayer/@Area2D@75315" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75316" to="TileMapLayer/@Area2D@75316" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75317" to="TileMapLayer/@Area2D@75317" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75318" to="TileMapLayer/@Area2D@75318" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75319" to="TileMapLayer/@Area2D@75319" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75320" to="TileMapLayer/@Area2D@75320" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75321" to="TileMapLayer/@Area2D@75321" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75322" to="TileMapLayer/@Area2D@75322" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75323" to="TileMapLayer/@Area2D@75323" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@75324" to="TileMapLayer/@Area2D@75324" method="_on_body_entered"]
