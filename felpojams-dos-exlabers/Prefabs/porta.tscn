@@ -34,6 +34,7 @@ animations = [{
 size = Vector2(258, 256)
 
 [node name="porta" type="StaticBody2D" node_paths=PackedStringArray("sprite")]
+z_index = 4
 position = Vector2(0, -1.9073486e-06)
 script = ExtResource("1_pnrxh")
 sprite = NodePath("sprite")
@@ -41,6 +42,7 @@ sprite = NodePath("sprite")
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 z_index = -10
 position = Vector2(-64, 64)
+scale = Vector2(1.0185677, 1)
 sprite_frames = SubResource("SpriteFrames_k3mqw")
 animation = &"aberta"
 

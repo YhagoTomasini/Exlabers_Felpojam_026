@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_pd4op"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnphu"]
-size = Vector2(64, 64)
+size = Vector2(128, 128)
 
 [node name="Dipsarador1" type="StaticBody2D"]
 collision_layer = 2
@@ -12,6 +12,7 @@ script = ExtResource("1_pd4op")
 para_direita = false
 
 [node name="sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.95522386, 0.992248)
 texture = ExtResource("2_pd4op")
 region_enabled = true
 region_rect = Rect2(893.3816, 769.2228, 134.11938, 129.15198)

@@ -34,6 +34,7 @@ animations = [{
 size = Vector2(64, 64)
 
 [node name="pressure_plate" type="Area2D" node_paths=PackedStringArray("sprite")]
+z_index = 4
 scale = Vector2(2, 2)
 script = ExtResource("1_04a13")
 sprite = NodePath("sprite")

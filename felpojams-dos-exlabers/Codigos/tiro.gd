@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@onready var anim: AnimatedSprite2D = $anim
+
+@onready var sprite: Sprite2D = $sprite
 
 var velocidade_do_tiro := 360
 var direcao := 1 
@@ -12,9 +13,9 @@ func _process(delta: float) -> void:
 func qual_direcao(dir):
 	direcao = dir
 	if dir < 0:
-		$anim.flip_h = true
+		$sprite.flip_v = true
 	else:
-		$anim.flip_h = false
+		$sprite.flip_v = false
 
 
 func _on_player_detector_body_entered(body: Node2D) -> void:
