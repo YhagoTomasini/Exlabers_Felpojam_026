@@ -64,7 +64,7 @@ pause = NodePath("../Pause")
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("10_c37qn")]
 offset_left = -960.0
 offset_top = -540.0
-offset_right = -2880.0
-offset_bottom = -1620.0
+offset_right = -960.0
+offset_bottom = -540.0
 configs = NodePath("../Configs")
 reset = NodePath("../TelaResetar")
