@@ -1,19 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3pqevbncic26"]
 
 [ext_resource type="Script" uid="uid://ckm0hnhgfu27o" path="res://Codigos/dipsarador.gd" id="1_pd4op"]
-[ext_resource type="Texture2D" uid="uid://eogfkidclgro" path="res://Imagens/rascunhos/cianoUI.png" id="2_lx8r2"]
+[ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_pd4op"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnphu"]
 size = Vector2(64, 64)
 
 [node name="Dipsarador1" type="StaticBody2D"]
-rotation = 3.1415927
 collision_layer = 2
 script = ExtResource("1_pd4op")
+para_direita = false
 
 [node name="sprite" type="Sprite2D" parent="."]
-modulate = Color(0.38039216, 0.6313726, 0.46666667, 1)
-texture = ExtResource("2_lx8r2")
+texture = ExtResource("2_pd4op")
+region_enabled = true
+region_rect = Rect2(893.3816, 769.2228, 134.11938, 129.15198)
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dnphu")

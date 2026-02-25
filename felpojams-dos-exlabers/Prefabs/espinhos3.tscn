@@ -1,22 +1,23 @@
 [gd_scene load_steps=4 format=3 uid="uid://ddebd3mqwnt7q"]
 
 [ext_resource type="Script" uid="uid://dexo3e147nclq" path="res://Codigos/morte.gd" id="1_3glik"]
-[ext_resource type="Texture2D" uid="uid://djmfly7rd8ru6" path="res://Imagens/rascunhos/magentaUI.png" id="2_wx3rq"]
+[ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_3glik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
-size = Vector2(64, 32)
+size = Vector2(127, 64)
 
 [node name="espinhos" type="Area2D" groups=["Morte"]]
 rotation = 3.1415927
 script = ExtResource("1_3glik")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, 16)
-scale = Vector2(1, 0.5)
-texture = ExtResource("2_wx3rq")
+position = Vector2(0, 32)
+texture = ExtResource("2_3glik")
+region_enabled = true
+region_rect = Rect2(126.39995, 125.566315, 131.78596, 66.19289)
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 16)
+position = Vector2(-0.49999812, 33)
 shape = SubResource("RectangleShape2D_d45mu")
 debug_color = Color(0.9385134, 0.13612941, 0.52302086, 0.41960785)
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://f8g1uga8y487"]
 
 [ext_resource type="Script" uid="uid://ckm0hnhgfu27o" path="res://Codigos/dipsarador.gd" id="1_ncpvi"]
-[ext_resource type="Texture2D" uid="uid://eogfkidclgro" path="res://Imagens/rascunhos/cianoUI.png" id="2_nedkt"]
+[ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_ncpvi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnphu"]
 size = Vector2(64, 64)
@@ -11,8 +11,9 @@ collision_layer = 2
 script = ExtResource("1_ncpvi")
 
 [node name="sprite" type="Sprite2D" parent="."]
-modulate = Color(0.38039216, 0.6313726, 0.46666667, 1)
-texture = ExtResource("2_nedkt")
+texture = ExtResource("2_ncpvi")
+region_enabled = true
+region_rect = Rect2(893.3816, 769.2228, 134.11938, 129.15198)
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dnphu")
