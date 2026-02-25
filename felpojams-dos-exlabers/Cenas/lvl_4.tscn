@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_5kih6"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_gtwjt"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="6_aw0do"]
-[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="7_51177"]
+[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="8_apcf1"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_jy2vw"]
 [ext_resource type="PackedScene" uid="uid://bhe0k7d2w87n3" path="res://Prefabs/final_lvl_4.tscn" id="9_16uk6"]
 [ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="16_cgeic"]
@@ -21,6 +21,9 @@ rangeMH = 256
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("5_gtwjt")]
 position = Vector2(805, 1637)
 
+[node name="FinalLvl4" parent="." instance=ExtResource("9_16uk6")]
+position = Vector2(2737, 1472)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_aw0do")]
@@ -29,18 +32,16 @@ process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
 
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("7_51177")]
-visible = false
-offset_right = 0.0
-offset_bottom = 0.0
-configs = NodePath("../Configs")
-reset = NodePath("../TelaResetar")
-
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_jy2vw")]
 pause = NodePath("../Pause")
 
 [node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("16_cgeic")]
 pause = NodePath("../Pause")
 
-[node name="FinalLvl4" parent="." instance=ExtResource("9_16uk6")]
-position = Vector2(2737, 1472)
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("8_apcf1")]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -2880.0
+offset_bottom = -1620.0
+configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")

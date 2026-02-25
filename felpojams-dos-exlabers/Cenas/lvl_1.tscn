@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_ww2hj"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_xcvut"]
 [ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="6_2qxcg"]
-[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="8_ww2hj"]
 [ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="9_2qxcg"]
+[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="9_geuvu"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="9_ww2hj"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="9_xcvut"]
 
@@ -34,15 +34,12 @@ process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
 
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("8_ww2hj")]
-visible = false
-offset_right = 0.0
-offset_bottom = 0.0
-configs = NodePath("../Configs")
-reset = NodePath("../TelaResetar")
-
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("9_xcvut")]
 pause = NodePath("../Pause")
 
 [node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("9_2qxcg")]
 pause = NodePath("../Pause")
+
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("9_geuvu")]
+configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")

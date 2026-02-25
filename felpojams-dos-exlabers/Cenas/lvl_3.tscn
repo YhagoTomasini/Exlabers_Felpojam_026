@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_jjbd0"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_lbgfl"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="6_1eq1w"]
-[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/pause.tscn" id="7_scb3e"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_afi0q"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="9_rfkta"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="9_yoai7"]
 [ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="10_46wci"]
+[ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="10_yoai7"]
 [ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="17_e7g1u"]
 
 [node name="lvl_3" type="Node2D"]
@@ -22,27 +22,6 @@ rangeMH = 256
 
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("5_lbgfl")]
 position = Vector2(805, 1637)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_1eq1w")]
-unique_name_in_owner = true
-process_mode = 3
-offset_top = 0.0
-offset_bottom = 0.0
-
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("7_scb3e")]
-visible = false
-offset_right = 0.0
-offset_bottom = 0.0
-configs = NodePath("../Configs")
-reset = NodePath("../TelaResetar")
-
-[node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_afi0q")]
-pause = NodePath("../Pause")
-
-[node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("17_e7g1u")]
-pause = NodePath("../Pause")
 
 [node name="FinalLvl3" parent="." instance=ExtResource("9_rfkta")]
 position = Vector2(5586, -1409)
@@ -60,3 +39,25 @@ position = Vector2(3705, -1281)
 [node name="pressure_plate2" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("10_46wci")]
 position = Vector2(4289, 1856)
 alvo_porta = NodePath("../porta2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_1eq1w")]
+unique_name_in_owner = true
+process_mode = 3
+offset_top = 0.0
+offset_bottom = 0.0
+
+[node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("8_afi0q")]
+pause = NodePath("../Pause")
+
+[node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("17_e7g1u")]
+pause = NodePath("../Pause")
+
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("10_yoai7")]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -2880.0
+offset_bottom = -1620.0
+configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")
