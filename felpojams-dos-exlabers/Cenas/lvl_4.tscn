@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cud3cvgoyulkw" path="res://Imagens/papeis/20260217_162419.jpg" id="1_0bvtg"]
 [ext_resource type="TileSet" uid="uid://lxqcc7ay4hyq" path="res://Imagens/tiles/tiles.tres" id="1_apcf1"]
-[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="4_5kih6"]
+[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_5kih6"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_gtwjt"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="6_aw0do"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="8_apcf1"]
@@ -13,6 +13,7 @@
 [node name="lvl_4" type="Node2D"]
 
 [node name="BG" type="Sprite2D" parent="."]
+z_index = -30
 position = Vector2(4922, 1127.25)
 scale = Vector2(2.9835165, 1.5841889)
 texture = ExtResource("1_0bvtg")
