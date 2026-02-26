@@ -1,10 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://diwie2g24di4o"]
+[gd_scene load_steps=5 format=3 uid="uid://diwie2g24di4o"]
 
 [ext_resource type="Script" uid="uid://84xo56kgkdud" path="res://Codigos/tela_creditos.gd" id="1_g6rvf"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="2_sioja"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="3_d2n4h"]
+[ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="4_d2n4h"]
 
-[node name="Tela_Creditos" type="Control" node_paths=PackedStringArray("scroll_container", "text_node")]
+[node name="Tela_Creditos" type="Control" node_paths=PackedStringArray("scroll_container", "text_node", "pause")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +15,7 @@ grow_vertical = 2
 script = ExtResource("1_g6rvf")
 scroll_container = NodePath("ScrollContainer")
 text_node = NodePath("ScrollContainer/MarginContainer/RichTextLabel")
+pause = NodePath("CanvasLayer/Pause")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 layout_mode = 1
@@ -117,11 +119,11 @@ horizontal_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs") instance=ExtResource("2_sioja")]
-visible = false
-offset_right = 0.0
-offset_bottom = 0.0
+[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("2_sioja")]
 configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("3_d2n4h")]
 pause = NodePath("../Pause")
+
+[node name="TelaResetar" parent="CanvasLayer" instance=ExtResource("4_d2n4h")]
