@@ -24,7 +24,7 @@ func _ready():
 
 func _input(event):
 
-	# 🎮 Detecta teclado / controle
+	# 🎮 detecta teclado / controle
 	if event.is_action_pressed("ui_up") \
 	or event.is_action_pressed("ui_down") \
 	or event.is_action_pressed("ui_left") \
@@ -33,12 +33,12 @@ func _input(event):
 		if not usando_teclado:
 			usando_teclado = true
 
-			# Se ninguém estiver focado, foca o primeiro botão
+			# se ninguém estiver focado, foca o primeiro botão
 		if not get_viewport().gui_get_focus_owner():
 			botao_jogar.grab_focus()
 
 
-	# 🖱 Detecta movimento do mouse
+	# 🖱 detecta movimento do mouse
 	if event is InputEventMouseMotion:
 		if usando_teclado:
 			usando_teclado = false

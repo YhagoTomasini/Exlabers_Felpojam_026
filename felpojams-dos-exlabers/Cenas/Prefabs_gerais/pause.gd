@@ -31,10 +31,11 @@ func pausar():
 		
 		visible = true
 		get_tree().paused = true
-		grabFocus()
-		await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
+		
+		await get_tree().process_frame
+		voltarB.grab_focus()
+		
 		reset.tavaPause = true
-		#reset.noReset = true
 		parado = true
 
 func grabFocus():
@@ -55,25 +56,45 @@ func _unhandled_input(event: InputEvent) -> void:
 			if !naConfig or !noReset:
 				despausa()
 
+'''
 func _on_menu_button_down() -> void:
 	Globals.refil_de_tinta()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
+'''
+	
+func _on_menu_pressed() -> void:
+	pass # Replace with function body.
 
+'''
 func _on_reiniciar_button_down() -> void:
 	visible = false
 	reset.visible = true
 	noReset = true
 	parado = false
 	reset.grabFocus()
-	
+'''
 
+func _on_reiniciar_pressed() -> void:
+	visible = false
+	reset.visible = true
+	noReset = true
+	parado = false
+	reset.grabFocus()
+
+'''
 func _on_configrações_button_down() -> void:
 	visible = false
 	configs.visible = true
 	naConfig = true
 	configs.grabFocus()
+'''
 
+func _on_configurações_pressed() -> void:
+	visible = false
+	configs.visible = true
+	naConfig = true
+	configs.grabFocus()
 
 func _on_voltar_pressed() -> void:
 	despausa()
