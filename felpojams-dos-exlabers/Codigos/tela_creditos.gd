@@ -1,20 +1,24 @@
 extends Control
 
-@export var scroll_container: ScrollContainer
 @export var fundo: TextureRect
+@export var elementos: Control
+
+@export var scroll_container: ScrollContainer
 @export var text_node: RichTextLabel
 @export var velo: float = 1.0
 @export var pause: Control
 
 var acabou: bool = false
 var scroll_shader: ShaderMaterial
+var fundo_scroll: float = 0.0
 
 
 func _ready() -> void:
 	acabou = false
-	
-	# Pega o material do fundo
 	scroll_shader = fundo.material as ShaderMaterial
+	
+	if scroll_shader == null:
+		push_error("O fundo precisa ter um ShaderMaterial com o parâmetro 'scroll_y'.")
 
 
 func fim():
@@ -33,16 +37,23 @@ func _process(delta: float) -> void:
 	else:
 		velo = 1.0
 	
-	# Continua rolando
 	if scroll_container.scroll_vertical <= text_node.size.y + 100:
 		
+		# Move créditos
 		scroll_container.scroll_vertical += velo
 		
-		# Move o fundo via shader (valor pequeno para não ficar rápido demais)
-		scroll_shader.set_shader_parameter(
-			"scroll_y",
-			scroll_container.scroll_vertical / 1500.0
-		)
+		var tex_height = fundo.texture.get_height()
+		
+		# Alvo correto em UV (baseado na altura real da textura)
+		var alvo = float(scroll_container.scroll_vertical) / float(tex_height)
+		
+		# 🔥 Desaceleração suave do fundo
+		fundo_scroll = lerp(fundo_scroll, alvo, 2.0 * delta)
+		
+		scroll_shader.set_shader_parameter("scroll_y", fundo_scroll)
+		
+		# 🔥 Elementos seguem a cortiça em pixels reais
+		elementos.position.y = -scroll_container.scroll_vertical
 		
 	else:
 		fim()
