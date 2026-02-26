@@ -9,17 +9,21 @@ var parado : bool
 var naConfig : bool
 var noReset : bool
 
+var usando_teclado : bool 
+
 func _ready() -> void:
 	visible = false
 	parado = false
 	naConfig = false
 	noReset = false
 	corFundo.color = Color(0.58, 0.0, 0.188, 0.486)
+	
+	usando_teclado = false
 
 func despausa():
 	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
 	get_tree().paused = false
-	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
+	#await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	visible = false
 	reset.noReset = false
 	reset.tavaPause = false
@@ -33,14 +37,14 @@ func pausar():
 		get_tree().paused = true
 		
 		await get_tree().process_frame
-		voltarB.grab_focus()
+		#voltarB.grab_focus()
 		
 		reset.tavaPause = true
 		parado = true
 
 func grabFocus():
-	voltarB.grab_focus()
-	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
+	#voltarB.grab_focus()
+	#await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	naConfig = false
 	noReset = false
 	
@@ -56,6 +60,29 @@ func _unhandled_input(event: InputEvent) -> void:
 			if !naConfig or !noReset:
 				despausa()
 
+	# 🎮 detecta teclado / controle
+	if parado:
+		if event.is_action_pressed("ui_up") \
+		or event.is_action_pressed("ui_down") \
+		or event.is_action_pressed("ui_left") \
+		or event.is_action_pressed("ui_right"):
+
+			if not usando_teclado:
+				usando_teclado = true
+
+				# se ninguém estiver focado, foca o primeiro botão
+			if not get_viewport().gui_get_focus_owner():
+				voltarB.grab_focus()
+
+		# 🖱 detecta movimento do mouse
+		if event is InputEventMouseMotion:
+			if usando_teclado:
+				usando_teclado = false
+
+				var foco = get_viewport().gui_get_focus_owner()
+				if foco:
+					foco.release_focus()
+
 '''
 func _on_menu_button_down() -> void:
 	Globals.refil_de_tinta()
@@ -64,7 +91,9 @@ func _on_menu_button_down() -> void:
 '''
 	
 func _on_menu_pressed() -> void:
-	pass # Replace with function body.
+	Globals.refil_de_tinta()
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
 
 '''
 func _on_reiniciar_button_down() -> void:
