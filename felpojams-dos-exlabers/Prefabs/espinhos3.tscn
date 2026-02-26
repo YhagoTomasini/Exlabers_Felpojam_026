@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_3glik"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
-size = Vector2(127, 64)
+size = Vector2(124, 43)
 
 [node name="espinhos" type="Area2D" groups=["Morte"]]
 rotation = 3.1415927
@@ -17,7 +17,7 @@ region_enabled = true
 region_rect = Rect2(126.39995, 125.566315, 131.78596, 66.19289)
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-0.49999812, 33)
+position = Vector2(3.7949144e-06, 42.5)
 shape = SubResource("RectangleShape2D_d45mu")
 debug_color = Color(0.9385134, 0.13612941, 0.52302086, 0.41960785)
 

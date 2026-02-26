@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://dexo3e147nclq" path="res://Codigos/morte.gd" id="1_yjr6j"]
 [ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_yjr6j"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
-size = Vector2(127, 66)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjr6j"]
+size = Vector2(154.99997, 49.999996)
 
 [node name="espinhos" type="Area2D" groups=["Morte"]]
 rotation = 1.5707964
@@ -17,8 +17,9 @@ region_enabled = true
 region_rect = Rect2(126.907196, 123.70932, 130.00137, 68.02498)
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0.50000143, 33)
-shape = SubResource("RectangleShape2D_d45mu")
+position = Vector2(-5.7358957e-06, 44)
+scale = Vector2(0.8, 0.8)
+shape = SubResource("RectangleShape2D_yjr6j")
 debug_color = Color(0.9385134, 0.13612941, 0.52302086, 0.41960785)
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
