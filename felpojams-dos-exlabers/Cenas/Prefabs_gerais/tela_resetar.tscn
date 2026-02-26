@@ -93,5 +93,5 @@ layout_mode = 2
 text = "resetar jogo"
 
 [connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]
-[connection signal="button_down" from="VBoxContainer/resetarFase" to="." method="_on_resetar_fase_button_down"]
-[connection signal="button_down" from="VBoxContainer/resetarJogo" to="." method="_on_resetar_jogo_button_down"]
+[connection signal="pressed" from="VBoxContainer/resetarFase" to="." method="_on_resetar_fase_pressed"]
+[connection signal="pressed" from="VBoxContainer/resetarJogo" to="." method="_on_resetar_jogo_pressed"]

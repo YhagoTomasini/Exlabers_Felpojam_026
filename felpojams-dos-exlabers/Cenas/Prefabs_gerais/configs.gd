@@ -42,6 +42,8 @@ func _unhandled_input(event: InputEvent) -> void:
 	if podeVoltar:
 		if event.is_action_pressed("ui_pause"):
 			voltarPause()
+		
+		
 
 func _on_button_button_down() -> void:
 	voltarPause()

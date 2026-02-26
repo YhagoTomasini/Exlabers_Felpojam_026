@@ -8,12 +8,16 @@ var podeVoltar : bool
 
 var noReset : bool
 
+var usando_teclado : bool
+
 func _ready() -> void:
 	visible = false
 	podeVoltar = false
 	tavaPause = false
 	noReset = false
-
+	
+	usando_teclado = false
+	
 func _unhandled_input(event: InputEvent) -> void:
 	if visible:
 		if event.is_action_pressed("ui_pause"):
@@ -31,47 +35,37 @@ func _unhandled_input(event: InputEvent) -> void:
 				voltarPause()
 			else:
 				voltarJogo()
+				
 	
 func voltarPause():
 	pause.grabFocus()
 	tavaPause = false
-	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
+	#await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	podeVoltar = false
 	pause.visible = true
 	visible = false
 	
 	
+	
 func voltarJogo():
 	get_tree().paused = false
 	visible = false
-	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
+	#await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	noReset = false
 	pause.noReset = false
 	podeVoltar = false
 	tavaPause = false
-
+	
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	
+	
 func grabFocus():
-	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	podeVoltar = true
 	noReset = true
 	pause.noReset = true
-	voltarB.grab_focus()
 	
-
-func _on_resetar_fase_button_down() -> void:
-	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
-	Globals.refil_de_tinta()
-	get_tree().paused = false
-	get_tree().call_deferred("reload_current_scene")
+	AudioManager.pitch_tema(false, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
-
-func _on_resetar_jogo_button_down() -> void:
-	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
-	Globals.reset_de_tinta()
-	Globals.saveTanqueCena()
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
-
 
 func _on_voltar_pressed() -> void:
 	if podeVoltar:
@@ -79,3 +73,18 @@ func _on_voltar_pressed() -> void:
 			voltarPause()
 		else:
 			voltarJogo()
+
+
+func _on_resetar_fase_pressed() -> void:
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
+	Globals.refil_de_tinta()
+	get_tree().paused = false
+	get_tree().call_deferred("reload_current_scene")
+
+
+func _on_resetar_jogo_pressed() -> void:
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
+	Globals.reset_de_tinta()
+	Globals.saveTanqueCena()
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
