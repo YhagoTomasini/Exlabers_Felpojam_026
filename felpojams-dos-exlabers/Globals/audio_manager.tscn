@@ -115,7 +115,7 @@ script = ExtResource("2_838mi")
 limite = 2
 tipo = 10
 som = ExtResource("13_uwodp")
-volume = -12.399999999999999
+volume = -12.4
 pitch_rand = 0.2
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
@@ -131,5 +131,6 @@ bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [node name="AudioManager" type="Node2D"]
+process_mode = 3
 script = ExtResource("1_86yo6")
 sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_r6l1c"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3ex0a"), SubResource("Resource_3m2wa"), SubResource("Resource_fphjp"), SubResource("Resource_fb0sx"), SubResource("Resource_xicdv")])

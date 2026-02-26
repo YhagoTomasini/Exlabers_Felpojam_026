@@ -4,6 +4,8 @@ var registroSons : Dictionary = {}
 
 var sonsAtivos : Dictionary = {}
 
+var pitchOriginal : Dictionary = {}
+
 @export var sons : Array[SoundEffect]
 
 func _ready() -> void:
@@ -52,6 +54,7 @@ func criar_aud(tipo : SoundEffect.TIPO_DE_SOM):
 			novo_aud.play()
 			
 			sonsAtivos[tipo] = novo_aud
+			pitchOriginal[tipo] = novo_aud.pitch_scale
 	else:
 		push_error("n foi o audio", tipo)
 
@@ -68,3 +71,15 @@ func destruir_novo_aud(tipo : SoundEffect.TIPO_DE_SOM):
 			som.queue_free()
 		)
 		sonsAtivos.erase(tipo)
+		
+func pitch_tema(normal : bool, tipo : SoundEffect.TIPO_DE_SOM):
+	if sonsAtivos.has(tipo) and pitchOriginal.has(tipo):
+		var temaAtivo = sonsAtivos[tipo]
+		var pitch_base = pitchOriginal[tipo]
+		var tween = create_tween()
+		
+		if normal:
+			tween.tween_property(temaAtivo, "pitch_scale", pitch_base, 0.5)
+		else:
+			tween.tween_property(temaAtivo, "pitch_scale", pitch_base / 2.0, 0.5)
+			

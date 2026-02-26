@@ -15,6 +15,8 @@ var suavidade = 5.0
 var alvo = Vector2.ZERO
 
 func _ready():
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
+	
 	animacao.speed_scale = anim_duracao
 	animacao.play("transição_out")
 	await animacao.animation_finished

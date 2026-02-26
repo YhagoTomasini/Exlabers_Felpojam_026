@@ -17,6 +17,7 @@ func _ready() -> void:
 	corFundo.color = Color(0.58, 0.0, 0.188, 0.486)
 
 func despausa():
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
 	get_tree().paused = false
 	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	visible = false
@@ -26,6 +27,8 @@ func despausa():
 	
 func pausar():
 	if !parado:
+		AudioManager.pitch_tema(false, SoundEffect.TIPO_DE_SOM.TEMA2)
+		
 		visible = true
 		get_tree().paused = true
 		grabFocus()
