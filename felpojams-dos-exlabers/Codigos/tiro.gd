@@ -23,3 +23,7 @@ func _on_player_detector_body_entered(body: Node2D) -> void:
 		queue_free()
 		print("Ir no tiro e habilitar a morte")
 		body.player_morreu()
+
+
+func _on_timer_timeout() -> void:
+	queue_free()

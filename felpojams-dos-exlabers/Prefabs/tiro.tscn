@@ -40,4 +40,10 @@ rotation = -1.561392
 shape = SubResource("CapsuleShape2D_jt7dn")
 debug_color = Color(0.98214656, 0, 0.36896423, 0.41960785)
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
