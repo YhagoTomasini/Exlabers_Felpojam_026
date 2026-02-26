@@ -61,8 +61,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				despausa()
 
 	# 🎮 detecta teclado / controle
-	if parado:
-		if event.is_action_pressed("ui_up") \
+	if visible:
+		if event.is_action_pressed("ui_up_ui") \
 		or event.is_action_pressed("ui_down") \
 		or event.is_action_pressed("ui_left") \
 		or event.is_action_pressed("ui_right"):
@@ -83,26 +83,12 @@ func _unhandled_input(event: InputEvent) -> void:
 				if foco:
 					foco.release_focus()
 
-'''
-func _on_menu_button_down() -> void:
-	Globals.refil_de_tinta()
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
-'''
 	
 func _on_menu_pressed() -> void:
 	Globals.refil_de_tinta()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
 
-'''
-func _on_reiniciar_button_down() -> void:
-	visible = false
-	reset.visible = true
-	noReset = true
-	parado = false
-	reset.grabFocus()
-'''
 
 func _on_reiniciar_pressed() -> void:
 	visible = false
@@ -111,13 +97,6 @@ func _on_reiniciar_pressed() -> void:
 	parado = false
 	reset.grabFocus()
 
-'''
-func _on_configrações_button_down() -> void:
-	visible = false
-	configs.visible = true
-	naConfig = true
-	configs.grabFocus()
-'''
 
 func _on_configurações_pressed() -> void:
 	visible = false

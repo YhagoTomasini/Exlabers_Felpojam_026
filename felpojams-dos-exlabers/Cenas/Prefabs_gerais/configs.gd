@@ -16,7 +16,7 @@ func _ready() -> void:
 
 func _input(event):
 	# 🎮 detecta teclado / controle
-	if event.is_action_pressed("ui_up") \
+	if event.is_action_pressed("ui_up_ui") \
 	or event.is_action_pressed("ui_down") \
 	or event.is_action_pressed("ui_left") \
 	or event.is_action_pressed("ui_right"):

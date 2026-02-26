@@ -20,22 +20,38 @@ func _ready() -> void:
 	
 func _unhandled_input(event: InputEvent) -> void:
 	if visible:
-		if event.is_action_pressed("ui_pause"):
-			return
-
-	if !noReset:
-		if event.is_action_pressed("reset") and !tavaPause:
-			visible = true
-			get_tree().paused = true
-			grabFocus()
-
-	if podeVoltar:
 		if event.is_action_pressed("ui_pause") or event.is_action_pressed("reset"):
 			if tavaPause:
 				voltarPause()
 			else:
 				voltarJogo()
+			return
 				
+		if event.is_action_pressed("ui_up_ui") \
+		or event.is_action_pressed("ui_down") \
+		or event.is_action_pressed("ui_left") \
+		or event.is_action_pressed("ui_right"):
+
+			if not usando_teclado:
+				usando_teclado = true
+
+			if not get_viewport().gui_get_focus_owner():
+				voltarB.grab_focus()
+
+		# 🖱 mouse
+		if event is InputEventMouseMotion:
+			if usando_teclado:
+				usando_teclado = false
+
+				var foco = get_viewport().gui_get_focus_owner()
+				if foco:
+					foco.release_focus()
+		return
+					
+	if event.is_action_pressed("reset") and !tavaPause and !noReset:
+		visible = true
+		get_tree().paused = true
+		grabFocus()	
 	
 func voltarPause():
 	pause.grabFocus()
