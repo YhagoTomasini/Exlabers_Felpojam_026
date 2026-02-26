@@ -3,8 +3,10 @@ var pressionado : bool = false
 @export var alvo_porta : Node2D 
 @export var sprite : AnimatedSprite2D
 
+var dentroBotao : int
+
 func _ready() -> void:
-	pass
+	dentroBotao = 0
 	
 #func _physics_process(delta):
 	#var corpo = get_overlapping_bodies()
@@ -31,6 +33,7 @@ func desativar_colisao_porta(valor: bool):
 			if colisao:
 				# Usar set_deferred é obrigatório se a colisão mudar durante um impacto
 				colisao.set_deferred("disabled", valor)
+			AudioManager.criar_aud_localizado(alvo_porta.position, SoundEffect.TIPO_DE_SOM.PORTA_ABRE)
 				
 		else:
 			await get_tree().create_timer(1).timeout
@@ -39,26 +42,36 @@ func desativar_colisao_porta(valor: bool):
 			if colisao:
 				# Usar set_deferred é obrigatório se a colisão mudar durante um impacto
 				colisao.set_deferred("disabled", valor)
+			
+			AudioManager.criar_aud_localizado(alvo_porta.position, SoundEffect.TIPO_DE_SOM.PORTA_FECHA)
 
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "body_marcaY" or body.name == "body_marcaP" or body.name == "body_marcaM":
-		print(body)
-		pressionado = true
-		sprite.play("apertado")
-		
-		desativar_colisao_porta(true)
+		entrou_botao()
 
 func _on_body_exited(body: Node2D) -> void:
-	pressionado = false
-	sprite.play("default")
-	
-	desativar_colisao_porta(false)
+	dentroBotao -= 1
+	if dentroBotao <= 0:
+		pressionado = false
+		sprite.play("default")
+		
+		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
+		desativar_colisao_porta(false)
+		dentroBotao = 0
+		
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print(area)
-	pressionado = true
-	sprite.play("apertado")
+	entrou_botao()
 	
-	desativar_colisao_porta(true)
+func entrou_botao():
+	dentroBotao += 1
+	if dentroBotao == 1:
+		pressionado = true
+		sprite.play("apertado")
+		
+		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
+		desativar_colisao_porta(true)
+		
+		#print(dentroBotao)

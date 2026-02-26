@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b8eao55q21qss"]
 
-[ext_resource type="Script" path="res://Codigos/porta.gd" id="1_pnrxh"]
+[ext_resource type="Script" uid="uid://bi7vai4bqnnwo" path="res://Codigos/porta.gd" id="1_pnrxh"]
 [ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="3_pnrxh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8t5db"]
@@ -42,7 +42,6 @@ sprite = NodePath("sprite")
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 z_index = -10
 position = Vector2(-64, 64)
-scale = Vector2(1.0185677, 1)
 sprite_frames = SubResource("SpriteFrames_k3mqw")
 animation = &"aberta"
 

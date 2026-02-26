@@ -184,7 +184,7 @@ func _set_state():
 	
 	
 func player_morreu():
-	
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	
 	anim.visible = false
 	set_physics_process(false)

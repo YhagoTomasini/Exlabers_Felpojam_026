@@ -11,7 +11,9 @@ enum TIPO_DE_SOM {
 	AGUA,
 	MORTE,
 	GOTAS,
-	
+	BOTAO,
+	PORTA_FECHA,
+	PORTA_ABRE,
 }
 
 @export_range(0, 10) var limite : int = 5
