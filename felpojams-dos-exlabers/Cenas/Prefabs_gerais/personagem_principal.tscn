@@ -236,7 +236,7 @@ frame_2/texture = ExtResource("9_vq5uy")
 frame_2/duration = 0.5
 
 [node name="PersonagemPrincipal" type="CharacterBody2D" node_paths=PackedStringArray("anim", "particulas_morte", "particulas_andando", "coyote_timer", "camera") groups=["Player"]]
-collision_layer = 9
+collision_layer = 25
 collision_mask = 3
 script = ExtResource("1_liew2")
 anim = NodePath("anim")
@@ -263,7 +263,7 @@ shape = SubResource("CapsuleShape2D_7kss6")
 debug_color = Color(0, 1, 1, 0.41960785)
 
 [node name="coyote_timer" type="Timer" parent="."]
-wait_time = 0.4
+wait_time = 0.25
 one_shot = true
 
 [node name="particulas_morte" type="CPUParticles2D" parent="."]

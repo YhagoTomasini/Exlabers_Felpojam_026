@@ -1,7 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://f8g1uga8y487"]
+[gd_scene load_steps=9 format=3 uid="uid://f8g1uga8y487"]
 
 [ext_resource type="Script" uid="uid://ckm0hnhgfu27o" path="res://Codigos/dipsarador.gd" id="1_ncpvi"]
-[ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_ncpvi"]
+[ext_resource type="Texture2D" uid="uid://bssqds57vlvit" path="res://Imagens/rascunhos/Illustration2.png" id="2_ncpvi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nedkt"]
+atlas = ExtResource("2_ncpvi")
+region = Rect2(640, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yeem"]
+atlas = ExtResource("2_ncpvi")
+region = Rect2(896, 768, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qo7v1"]
+atlas = ExtResource("2_ncpvi")
+region = Rect2(768, 896, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w6v5u"]
+atlas = ExtResource("2_ncpvi")
+region = Rect2(640, 768, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnft4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nedkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yeem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qo7v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yeem")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nedkt")
+}],
+"loop": false,
+"name": &"Atirando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w6v5u")
+}],
+"loop": true,
+"name": &"Deflaut",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dnphu"]
 size = Vector2(128, 128)
@@ -10,23 +57,27 @@ size = Vector2(128, 128)
 collision_layer = 2
 script = ExtResource("1_ncpvi")
 
-[node name="sprite" type="Sprite2D" parent="."]
+[node name="anim" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.955224, 0.992248)
-texture = ExtResource("2_ncpvi")
-region_enabled = true
-region_rect = Rect2(893.3816, 769.2228, 134.11938, 129.15198)
+sprite_frames = SubResource("SpriteFrames_wnft4")
+animation = &"Atirando"
+autoplay = "Deflaut"
+frame = 4
+frame_progress = 1.0
 
 [node name="collision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_dnphu")
 
 [node name="marker" type="Marker2D" parent="."]
-position = Vector2(17, 0)
+position = Vector2(54, 6)
 
 [node name="cd_tiro" type="Timer" parent="."]
-wait_time = 0.5
-one_shot = true
+wait_time = 1.5
+autostart = true
 
 [node name="detector" type="RayCast2D" parent="."]
+visible = false
+scale = Vector2(1, 130)
 target_position = Vector2(768, 0)
 collision_mask = 8
 

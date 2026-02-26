@@ -4,20 +4,24 @@
 [ext_resource type="Texture2D" uid="uid://pkmyer2ggnde" path="res://Imagens/tiles/Obstáculos.png" id="2_jt7dn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_15u7j"]
-radius = 19.999115
-height = 40.01704
+radius = 31.998585
+height = 63.99717
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jt7dn"]
-radius = 24.998894
-height = 53.997612
+radius = 37.988914
+height = 79.97765
 
 [node name="tiro" type="CharacterBody2D"]
+z_index = 10
+scale = Vector2(0.8, 0.8)
+collision_layer = 16
+collision_mask = 16
 script = ExtResource("1_jt7dn")
 
 [node name="sprite" type="Sprite2D" parent="."]
-position = Vector2(-3.5736587e-09, -0.08175579)
+position = Vector2(-7.6293945e-06, 0)
 rotation = -1.5707964
-scale = Vector2(0.47835925, 0.5)
+scale = Vector2(0.90310293, 0.94395906)
 texture = ExtResource("2_jt7dn")
 region_enabled = true
 region_rect = Rect2(382.4077, 793.26013, 68.5058, 40.147583)
@@ -28,6 +32,8 @@ shape = SubResource("CapsuleShape2D_15u7j")
 debug_color = Color(0.98214656, 0, 0.36896423, 0.41960785)
 
 [node name="player_detector" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
 
 [node name="colision2" type="CollisionShape2D" parent="player_detector"]
 rotation = -1.561392
