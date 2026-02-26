@@ -1,11 +1,32 @@
-[gd_scene load_steps=5 format=3 uid="uid://diwie2g24di4o"]
+[gd_scene load_steps=15 format=3 uid="uid://diwie2g24di4o"]
 
 [ext_resource type="Script" uid="uid://84xo56kgkdud" path="res://Codigos/tela_creditos.gd" id="1_g6rvf"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="2_sioja"]
+[ext_resource type="Shader" uid="uid://cy1s2gttfkwmx" path="res://Temas_UI/shaders/tela_creditos.gdshader" id="2_thpw1"]
+[ext_resource type="Texture2D" uid="uid://cblhj4gwconen" path="res://Imagens/creditos/cortiça/corkboard3b-albedo.png" id="2_vvrht"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="3_d2n4h"]
+[ext_resource type="Texture2D" uid="uid://bsmwbri7dv0la" path="res://Imagens/creditos/cortiça/corkboard3b-normal.png" id="3_imqlj"]
 [ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="4_d2n4h"]
+[ext_resource type="Shader" uid="uid://b4hw1bekg3won" path="res://Temas_UI/shaders/vinheta.gdshader" id="4_ehidp"]
+[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="5_st0xo"]
+[ext_resource type="Theme" uid="uid://cuscv0a8pehuw" path="res://Temas_UI/tela_creditos.tres" id="6_st0xo"]
 
-[node name="Tela_Creditos" type="Control" node_paths=PackedStringArray("scroll_container", "text_node", "pause")]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lxwms"]
+shader = ExtResource("2_thpw1")
+shader_parameter/normal_map = ExtResource("3_imqlj")
+shader_parameter/scroll_y = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_imqlj"]
+shader = ExtResource("4_ehidp")
+shader_parameter/outerRadius = 2.7590001310525
+shader_parameter/MainAlpha = 0.782000037145
+
+[sub_resource type="Gradient" id="Gradient_6hacj"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5qarw"]
+gradient = SubResource("Gradient_6hacj")
+
+[node name="Tela_Creditos" type="Control" node_paths=PackedStringArray("scroll_container", "fundo", "text_node", "pause")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,10 +35,36 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_g6rvf")
 scroll_container = NodePath("ScrollContainer")
+fundo = NodePath("TextureRect")
 text_node = NodePath("ScrollContainer/MarginContainer/RichTextLabel")
 pause = NodePath("CanvasLayer/Pause")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_lxwms")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 840.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_vvrht")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Shader" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_imqlj")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_st0xo")
+
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
+clip_contents = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,11 +83,12 @@ theme_override_constants/margin_bottom = 720
 
 [node name="RichTextLabel" type="RichTextLabel" parent="ScrollContainer/MarginContainer"]
 layout_mode = 2
+theme = ExtResource("6_st0xo")
 bbcode_enabled = true
 text = "[b]Título do jogo[/b]
 
 [b]Por:[/b]
-Artêmio Neto, Tamires Eiko, Yhago Tomasini, Isabela Wagemaker
+Artêmio Neto, Tamires Inoue, Yhago Tomasini, Isabela Wagemaker
 
 _____________________________________________________________________________
 
@@ -50,19 +98,19 @@ _____________________________________________________________________________
 …  
 
 [b]Programação:[/b]
-…  
+Artêmio Neto e Yhago Tomasini
 
 [b]Design de personagem:[/b]
-…  
+Tamires Inoue
 
 [b]Cenários:[/b]
-…  
+Isabela Wagemaker
 
 [b]UI/UX Design:[/b]
-…  
+Tamires Inoue e Yhago Tomasini
 
 [b]Animações:[/b]
-…  
+Tamires Inoue
 
 [b]Narrativa:[/b]
 …  
@@ -118,6 +166,7 @@ fit_content = true
 horizontal_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("2_sioja")]
 configs = NodePath("../Configs")
@@ -127,3 +176,10 @@ reset = NodePath("../TelaResetar")
 pause = NodePath("../Pause")
 
 [node name="TelaResetar" parent="CanvasLayer" instance=ExtResource("4_d2n4h")]
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1928, 1044)
+scale = Vector2(61.203125, 35.16406)
+energy = 1.47
+range_z_min = -1023
+texture = SubResource("GradientTexture2D_5qarw")

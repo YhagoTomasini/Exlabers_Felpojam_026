@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cuscv0a8pehuw"]
+
+[ext_resource type="FontFile" uid="uid://btb1c2whxbho0" path="res://Fontes/Mansalva-Regular.ttf" id="1_76x1f"]
+[ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_hiwd7"]
+
+[resource]
+default_font = ExtResource("1_76x1f")
+default_font_size = 28
+RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+RichTextLabel/font_sizes/bold_font_size = 42
+RichTextLabel/fonts/bold_font = ExtResource("1_hiwd7")
