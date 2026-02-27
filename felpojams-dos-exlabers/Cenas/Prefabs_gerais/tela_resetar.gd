@@ -64,6 +64,8 @@ func voltarPause():
 	
 	
 func voltarJogo():
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+
 	get_tree().paused = false
 	visible = false
 	#await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
@@ -71,8 +73,6 @@ func voltarJogo():
 	pause.noReset = false
 	podeVoltar = false
 	tavaPause = false
-	
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	
 func grabFocus():
@@ -92,6 +92,8 @@ func _on_voltar_pressed() -> void:
 
 
 func _on_resetar_fase_pressed() -> void:
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	Globals.refil_de_tinta()
 	get_tree().paused = false
@@ -99,6 +101,8 @@ func _on_resetar_fase_pressed() -> void:
 
 
 func _on_resetar_jogo_pressed() -> void:
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	Globals.reset_de_tinta()
 	Globals.saveTanqueCena()

@@ -85,12 +85,16 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	
 func _on_menu_pressed() -> void:
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+
 	Globals.refil_de_tinta()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
 
 
 func _on_reiniciar_pressed() -> void:
+	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	
 	visible = false
 	reset.visible = true
 	noReset = true
