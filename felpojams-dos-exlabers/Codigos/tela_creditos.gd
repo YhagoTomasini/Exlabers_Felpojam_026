@@ -12,8 +12,10 @@ var acabou: bool = false
 var scroll_shader: ShaderMaterial
 var fundo_scroll: float = 0.0
 
+var acelerando : bool
 
 func _ready() -> void:
+	acelerando = false
 	acabou = false
 	scroll_shader = fundo.material as ShaderMaterial
 	
@@ -33,8 +35,14 @@ func _process(delta: float) -> void:
 	
 	# Controle de velocidade
 	if Input.is_action_pressed("ui_up"):
+		if !acelerando:
+			AudioManager.pitch_tema(3, SoundEffect.TIPO_DE_SOM.TEMA2)
+			acelerando = true
 		velo = 6.0
 	else:
+		if acelerando:
+			AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+			acelerando = false
 		velo = 1.0
 	
 	if scroll_container.scroll_vertical <= text_node.size.y + 100:

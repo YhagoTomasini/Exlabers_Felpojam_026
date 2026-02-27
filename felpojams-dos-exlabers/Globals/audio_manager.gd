@@ -72,14 +72,16 @@ func destruir_novo_aud(tipo : SoundEffect.TIPO_DE_SOM):
 		)
 		sonsAtivos.erase(tipo)
 		
-func pitch_tema(normal : bool, tipo : SoundEffect.TIPO_DE_SOM):
+func pitch_tema(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo) and pitchOriginal.has(tipo):
 		var temaAtivo = sonsAtivos[tipo]
 		var pitch_base = pitchOriginal[tipo]
 		var tween = create_tween()
 		
-		if normal:
+		if opcao == 1:
 			tween.tween_property(temaAtivo, "pitch_scale", pitch_base, 0.5)
-		else:
+		elif opcao == 2:
 			tween.tween_property(temaAtivo, "pitch_scale", pitch_base / 2.0, 0.5)
+		elif opcao == 3:
+			tween.tween_property(temaAtivo, "pitch_scale", pitch_base * 1.5, 0.5)
 			

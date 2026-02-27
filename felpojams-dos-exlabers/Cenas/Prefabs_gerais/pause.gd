@@ -21,7 +21,7 @@ func _ready() -> void:
 	usando_teclado = false
 
 func despausa():
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	get_tree().paused = false
 	#await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	visible = false
@@ -31,7 +31,7 @@ func despausa():
 	
 func pausar():
 	if !parado:
-		AudioManager.pitch_tema(false, SoundEffect.TIPO_DE_SOM.TEMA2)
+		AudioManager.pitch_tema(2, SoundEffect.TIPO_DE_SOM.TEMA2)
 		
 		visible = true
 		get_tree().paused = true
@@ -85,7 +85,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	
 func _on_menu_pressed() -> void:
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 
 	Globals.refil_de_tinta()
 	get_tree().paused = false
@@ -93,7 +93,7 @@ func _on_menu_pressed() -> void:
 
 
 func _on_reiniciar_pressed() -> void:
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	visible = false
 	reset.visible = true

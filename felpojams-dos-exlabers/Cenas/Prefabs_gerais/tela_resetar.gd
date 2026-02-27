@@ -64,7 +64,7 @@ func voltarPause():
 	
 	
 func voltarJogo():
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 
 	get_tree().paused = false
 	visible = false
@@ -80,7 +80,7 @@ func grabFocus():
 	noReset = true
 	pause.noReset = true
 	
-	AudioManager.pitch_tema(false, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(2, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 
 func _on_voltar_pressed() -> void:
@@ -92,7 +92,7 @@ func _on_voltar_pressed() -> void:
 
 
 func _on_resetar_fase_pressed() -> void:
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	Globals.refil_de_tinta()
@@ -101,7 +101,7 @@ func _on_resetar_fase_pressed() -> void:
 
 
 func _on_resetar_jogo_pressed() -> void:
-	AudioManager.pitch_tema(true, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	Globals.reset_de_tinta()
