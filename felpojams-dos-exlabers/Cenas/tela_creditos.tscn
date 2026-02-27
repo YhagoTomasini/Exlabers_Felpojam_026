@@ -122,6 +122,16 @@ offset_bottom = 1551.4453
 rotation = -0.090483665
 texture = ExtResource("10_btgbj")
 
+[node name="Label" type="Label" parent="Elementos/DevsLindos/Isa"]
+layout_mode = 0
+offset_left = 52.500908
+offset_top = 229.23645
+offset_right = 210.50092
+offset_bottom = 275.23645
+theme = ExtResource("6_st0xo")
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "@arts_wawa"
+
 [node name="Timo" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
 offset_left = 245.99998
@@ -130,6 +140,16 @@ offset_right = 594.0
 offset_bottom = 1906.4453
 rotation = 0.17167252
 texture = ExtResource("11_p7y3g")
+
+[node name="Label" type="Label" parent="Elementos/DevsLindos/Timo"]
+layout_mode = 0
+offset_left = 52.500908
+offset_top = 229.23645
+offset_right = 210.50092
+offset_bottom = 275.23645
+theme = ExtResource("6_st0xo")
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "@thaymoz"
 
 [node name="Tamires" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
@@ -140,6 +160,16 @@ offset_bottom = 1558.4453
 rotation = 0.19295965
 texture = ExtResource("12_a4mgd")
 
+[node name="Label" type="Label" parent="Elementos/DevsLindos/Tamires"]
+layout_mode = 0
+offset_left = 51.727535
+offset_top = 35.290176
+offset_right = 272.72754
+offset_bottom = 81.29018
+theme = ExtResource("6_st0xo")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "@taris.rabiscoisco"
+
 [node name="Yhago" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
 offset_left = 1376.0
@@ -148,6 +178,16 @@ offset_right = 1724.0
 offset_bottom = 1982.4452
 rotation = -0.20057622
 texture = ExtResource("13_mja1u")
+
+[node name="Label" type="Label" parent="Elementos/DevsLindos/Yhago"]
+layout_mode = 0
+offset_left = 68.004135
+offset_top = 227.6678
+offset_right = 226.00414
+offset_bottom = 273.6678
+theme = ExtResource("6_st0xo")
+theme_override_colors/font_color = Color(0.099985994, 0.099985994, 0.099985994, 1)
+text = "@ysketching"
 
 [node name="Prisma" type="TextureRect" parent="Elementos"]
 layout_mode = 0
