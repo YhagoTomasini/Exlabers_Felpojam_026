@@ -20,7 +20,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				usando_teclado = true
 
 				# se ninguém estiver focado, foca o primeiro botão
-			if not get_viewport().gui_get_focus_owner():
+			#if not get_viewport().gui_get_focus_owner():
 				voltarB.grab_focus()
 
 		# 🖱 detecta movimento do mouse
@@ -36,11 +36,21 @@ func _on_voltar_pressed() -> void:
 	voltar()
 
 func ativar():
-	get_tree().paused = true
+	var foco = get_viewport().gui_get_focus_owner()
+	if foco:
+		foco.release_focus()
+	
+	await get_tree().process_frame
+	voltarB.grab_focus()
+	
 	AudioManager.pitch_tema(2, SoundEffect.TIPO_DE_SOM.TEMA2)
 	visible = true
 	
 func voltar():
-	get_tree().paused = false
+	
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	visible = false
+	
+	var foco = get_viewport().gui_get_focus_owner()
+	if foco:
+		foco.release_focus()

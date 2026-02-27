@@ -25,7 +25,7 @@ func _input(event):
 			usando_teclado = true
 
 			# se ninguém estiver focado, foca o primeiro botão
-		if not get_viewport().gui_get_focus_owner():
+		#if not get_viewport().gui_get_focus_owner():
 			voltarB.grab_focus()
 
 
@@ -41,21 +41,38 @@ func _input(event):
 func _unhandled_input(event: InputEvent) -> void:
 	if podeVoltar:
 		if event.is_action_pressed("ui_pause"):
-			voltarPause()
+			if pause:
+				voltarPause()
+			else:
+				AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+				visible = false
 		
 		
 
 func _on_button_button_down() -> void:
-	voltarPause()
+	if pause:
+		voltarPause()
+	else:
+		AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+		visible = false
+		var foco = get_viewport().gui_get_focus_owner()
+		if foco:
+			foco.release_focus()
+		
 	
 func voltarPause():
-	podeVoltar = false
-	pause.visible = true
-	visible = false
-	pause.grabFocus()
+	if pause:
+		podeVoltar = false
+		pause.visible = true
+		visible = false
+		pause.grabFocus()
 
 func grabFocus():
 	await get_tree().create_timer(0.1).timeout #DEUS EXISE AQ
 	podeVoltar = true
 	voltarB.grab_focus()
+	
+	if !pause:
+		AudioManager.pitch_tema(2, SoundEffect.TIPO_DE_SOM.TEMA2)
+
 	
