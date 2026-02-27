@@ -102,8 +102,8 @@ text = "JOGO DO ANO
 FELPS"
 horizontal_alignment = 1
 
-[node name="Tela controles" parent="CanvasLayer" instance=ExtResource("6_ubl30")]
-visible = false
+[node name="Tela controles" parent="CanvasLayer" node_paths=PackedStringArray("focoNoQueHaviaClicado") instance=ExtResource("6_ubl30")]
+focoNoQueHaviaClicado = NodePath("../VBoxContainer/contorles")
 
 [node name="Configs" parent="CanvasLayer" instance=ExtResource("7_0bsfe")]
 

@@ -2,6 +2,7 @@ extends Control
 
 @export var voltarB : Button
 var usando_teclado : bool
+@export var focoNoQueHaviaClicado : Button
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,6 +39,7 @@ func _on_voltar_pressed() -> void:
 func ativar():
 	var foco = get_viewport().gui_get_focus_owner()
 	if foco:
+		print("testeTimo1")
 		foco.release_focus()
 	
 	await get_tree().process_frame
@@ -50,7 +52,7 @@ func voltar():
 	
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	visible = false
-	
 	var foco = get_viewport().gui_get_focus_owner()
 	if foco:
 		foco.release_focus()
+	focoNoQueHaviaClicado.grab_focus()
