@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
-[ext_resource type="Texture2D" uid="uid://dukhde1amcw7g" path="res://Imagens/teste_fundo.png" id="2_x33ye"]
+[ext_resource type="Texture2D" uid="uid://deo5psaqtg1r5" path="res://Imagens/carimbos/capa_teste.png" id="2_0nw1j"]
 [ext_resource type="Shader" uid="uid://b4hw1bekg3won" path="res://Temas_UI/shaders/vinheta.gdshader" id="4_00dnc"]
 [ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="5_0nw1j"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
@@ -26,7 +26,7 @@ script = ExtResource("1_b1rrf")
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBG"]
 position = Vector2(963, 543)
 scale = Vector2(1.0925926, 1.0925926)
-texture = ExtResource("2_x33ye")
+texture = ExtResource("2_0nw1j")
 
 [node name="Parallax2D" type="Parallax2D" parent="ParallaxBG"]
 scroll_scale = Vector2(0.1, 0.1)
