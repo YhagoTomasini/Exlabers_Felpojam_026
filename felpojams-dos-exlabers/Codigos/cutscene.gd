@@ -1,0 +1,18 @@
+extends Control
+
+@export var botao_pular : Button
+
+func _ready():
+	botao_pular.visible = false
+	await get_tree().create_timer(3.5).timeout
+	botao_pular.visible = true
+	botao_pular.grab_focus()
+
+
+
+ 
+func _on_video_stream_player_finished() -> void:
+	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
