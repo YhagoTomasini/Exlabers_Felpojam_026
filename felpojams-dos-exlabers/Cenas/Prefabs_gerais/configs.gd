@@ -2,6 +2,7 @@ extends Control
 
 @export var pause : Control
 @export var voltarB : Button
+@export var focoTelaInicial : Button
 
 @onready var cor_fundo: ColorRect = $corFundo
 
@@ -14,8 +15,15 @@ func _ready() -> void:
 	visible = false
 	podeVoltar = false
 
-func _input(event):
-	# 🎮 detecta teclado / controle
+func _unhandled_input(event: InputEvent) -> void:
+	if podeVoltar:
+		if event.is_action_pressed("ui_pause"):
+			if pause:
+				voltarPause()
+			else:
+				AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+				visible = false
+	
 	if event.is_action_pressed("ui_up_ui") \
 	or event.is_action_pressed("ui_down") \
 	or event.is_action_pressed("ui_left") \
@@ -37,16 +45,6 @@ func _input(event):
 			var foco = get_viewport().gui_get_focus_owner()
 			if foco:
 				foco.release_focus()
-
-func _unhandled_input(event: InputEvent) -> void:
-	if podeVoltar:
-		if event.is_action_pressed("ui_pause"):
-			if pause:
-				voltarPause()
-			else:
-				AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
-				visible = false
-		
 		
 
 func _on_button_button_down() -> void:
@@ -58,7 +56,7 @@ func _on_button_button_down() -> void:
 		var foco = get_viewport().gui_get_focus_owner()
 		if foco:
 			foco.release_focus()
-		
+		focoTelaInicial.grab_focus()
 	
 func voltarPause():
 	if pause:

@@ -96,4 +96,4 @@ func _on_contorles_pressed() -> void:
 
 func _on_configs_pressed() -> void:
 	configs.visible = true
-	configs.grab_focus()
+	configs.grabFocus()
