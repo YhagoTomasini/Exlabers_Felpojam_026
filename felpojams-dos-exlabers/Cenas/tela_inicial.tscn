@@ -26,8 +26,8 @@ menuControles = NodePath("CanvasLayer/Tela controles")
 [node name="ParallaxBG" type="Parallax2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBG"]
-position = Vector2(963, 543)
-scale = Vector2(1.0925926, 1.0925926)
+position = Vector2(973, 538)
+scale = Vector2(0.97243273, 0.9724327)
 texture = ExtResource("2_0nw1j")
 
 [node name="Parallax2D" type="Parallax2D" parent="ParallaxBG"]
@@ -100,7 +100,6 @@ horizontal_alignment = 1
 visible = false
 
 [node name="Transição" parent="CanvasLayer" instance=ExtResource("6_0nw1j")]
-visible = false
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]
