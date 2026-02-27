@@ -37,6 +37,9 @@ func desativar_colisao_porta(valor: bool):
 				
 		else:
 			await get_tree().create_timer(1).timeout
+			if dentroBotao > 0:
+				return
+				
 			if portaAnim:
 				portaAnim.play("default")
 			if colisao:
