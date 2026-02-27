@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://diwie2g24di4o"]
+[gd_scene load_steps=31 format=3 uid="uid://diwie2g24di4o"]
 
 [ext_resource type="Script" uid="uid://84xo56kgkdud" path="res://Codigos/tela_creditos.gd" id="1_g6rvf"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="2_sioja"]
@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bvrnpypa68gki" path="res://Imagens/papeis/1771357318407.png" id="5_tcuhb"]
 [ext_resource type="Theme" uid="uid://cuscv0a8pehuw" path="res://Temas_UI/tela_creditos.tres" id="6_st0xo"]
 [ext_resource type="Texture2D" uid="uid://c2g3otohqvcwl" path="res://Imagens/creditos/Vector(2).png" id="6_wap05"]
+[ext_resource type="Texture2D" uid="uid://dl22smby3r083" path="res://Imagens/creditos/rabisco.png" id="7_mf7jr"]
 [ext_resource type="Texture2D" uid="uid://drfxxtklvl4en" path="res://Imagens/creditos/pin3.png" id="7_wap05"]
-[ext_resource type="Texture2D" uid="uid://dl22duynavmlg" path="res://Imagens/player/player_idle.png" id="7_y1t0j"]
 [ext_resource type="Texture2D" uid="uid://c0s6eq6qna8b6" path="res://Imagens/creditos/prova.png" id="9_y1t0j"]
 [ext_resource type="Texture2D" uid="uid://cu5i5jym34vbx" path="res://Imagens/creditos/post-it_isa.png" id="10_btgbj"]
 [ext_resource type="Texture2D" uid="uid://cufpkq7ydvwh1" path="res://Temas_UI/GrabberBranco.svg" id="11_6hacj"]
@@ -23,62 +23,15 @@
 [ext_resource type="Texture2D" uid="uid://b7wuxr048pckm" path="res://Imagens/creditos/Vector(3).png" id="14_a4mgd"]
 [ext_resource type="Texture2D" uid="uid://4epr8u1m5r37" path="res://Imagens/creditos/adesivo_felps.png" id="14_p7y3g"]
 [ext_resource type="Texture2D" uid="uid://ecdo07uoob3d" path="res://Imagens/creditos/bapo.png" id="16_kvcyb"]
+[ext_resource type="Texture2D" uid="uid://b34tabwcer3is" path="res://Imagens/creditos/fantasmas.png" id="17_yd81c"]
+[ext_resource type="Texture2D" uid="uid://db06xkk1wbt56" path="res://Imagens/creditos/godot.png" id="18_mf7jr"]
+[ext_resource type="Texture2D" uid="uid://coccox63tplvt" path="res://Imagens/creditos/coracao.png" id="19_qe6p1"]
 [ext_resource type="Script" uid="uid://crxyqnburxfpm" path="res://Codigos/RichTextEffect.gd" id="20_mja1u"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lxwms"]
 shader = ExtResource("2_thpw1")
 shader_parameter/normal_map = ExtResource("3_imqlj")
 shader_parameter/scroll_y = 0.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qyr33"]
-atlas = ExtResource("7_y1t0j")
-region = Rect2(0, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rfsvt"]
-atlas = ExtResource("7_y1t0j")
-region = Rect2(256, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_245mn"]
-atlas = ExtResource("7_y1t0j")
-region = Rect2(512, 0, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_btgbj"]
-atlas = ExtResource("7_y1t0j")
-region = Rect2(0, 256, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_p7y3g"]
-atlas = ExtResource("7_y1t0j")
-region = Rect2(256, 256, 256, 256)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a4mgd"]
-atlas = ExtResource("7_y1t0j")
-region = Rect2(512, 256, 256, 256)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_mja1u"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qyr33")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rfsvt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_245mn")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_btgbj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_p7y3g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a4mgd")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_imqlj"]
 shader = ExtResource("4_ehidp")
@@ -127,15 +80,15 @@ grow_vertical = 2
 
 [node name="prota" type="TextureRect" parent="Elementos"]
 layout_mode = 0
-offset_left = 1718.0
-offset_top = 2347.9998
-offset_right = 1879.1289
-offset_bottom = 2548.2805
-rotation = 0.33314872
+offset_left = 1481.3671
+offset_top = 2410.9998
+offset_right = 1642.496
+offset_bottom = 2611.2805
+rotation = 0.25937355
 texture = ExtResource("5_tcuhb")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="Elementos/prota"]
+[node name="adesivo" type="TextureRect" parent="Elementos/prota"]
 layout_mode = 0
 offset_left = 49.725487
 offset_top = -48.952797
@@ -146,11 +99,14 @@ scale = Vector2(0.7516706, 0.7516706)
 texture = ExtResource("6_wap05")
 expand_mode = 1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Elementos/prota"]
-position = Vector2(88.56354, 112.207375)
-scale = Vector2(0.623084, 0.623084)
-sprite_frames = SubResource("SpriteFrames_mja1u")
-frame_progress = 0.7919464
+[node name="rabisco" type="TextureRect" parent="Elementos/prota"]
+layout_mode = 0
+offset_left = 6.0380135
+offset_top = 39.782078
+offset_right = 262.03802
+offset_bottom = 295.78207
+scale = Vector2(0.57510966, 0.57510966)
+texture = ExtResource("7_mf7jr")
 
 [node name="DevsLindos" type="Control" parent="Elementos"]
 anchors_preset = 0
@@ -160,45 +116,45 @@ offset_bottom = 40.0
 [node name="Isa" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
 offset_left = 82.0
-offset_top = 1149.0
+offset_top = 1239.4453
 offset_right = 430.0
-offset_bottom = 1461.0
+offset_bottom = 1551.4453
 rotation = -0.090483665
 texture = ExtResource("10_btgbj")
 
 [node name="Timo" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
 offset_left = 245.99998
-offset_top = 1504.0
+offset_top = 1594.4453
 offset_right = 594.0
-offset_bottom = 1816.0
+offset_bottom = 1906.4453
 rotation = 0.17167252
 texture = ExtResource("11_p7y3g")
 
 [node name="Tamires" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
 offset_left = 1520.9999
-offset_top = 1156.0
+offset_top = 1246.4453
 offset_right = 1868.9999
-offset_bottom = 1468.0
+offset_bottom = 1558.4453
 rotation = 0.19295965
 texture = ExtResource("12_a4mgd")
 
 [node name="Yhago" type="TextureRect" parent="Elementos/DevsLindos"]
 layout_mode = 0
 offset_left = 1376.0
-offset_top = 1579.9999
+offset_top = 1670.4452
 offset_right = 1724.0
-offset_bottom = 1891.9999
+offset_bottom = 1982.4452
 rotation = -0.20057622
 texture = ExtResource("13_mja1u")
 
 [node name="Prisma" type="TextureRect" parent="Elementos"]
 layout_mode = 0
-offset_left = -24.0
-offset_top = 2736.0
-offset_right = 16.0
-offset_bottom = 2776.0
+offset_left = -35.0
+offset_top = 2089.0
+offset_right = 5.0
+offset_bottom = 2129.0
 scale = Vector2(11.222582, 11.222582)
 texture = ExtResource("7_wap05")
 expand_mode = 1
@@ -214,6 +170,7 @@ texture = ExtResource("9_y1t0j")
 expand_mode = 1
 
 [node name="adesivo" type="TextureRect" parent="Elementos/Prova"]
+modulate = Color(1, 1, 1, 0.79607844)
 layout_mode = 0
 offset_left = -30.980732
 offset_top = 24.823273
@@ -225,6 +182,7 @@ texture = ExtResource("14_a4mgd")
 expand_mode = 1
 
 [node name="adesivo2" type="TextureRect" parent="Elementos/Prova"]
+modulate = Color(1, 1, 1, 0.79607844)
 layout_mode = 0
 offset_left = 442.91458
 offset_top = 534.57153
@@ -237,22 +195,97 @@ expand_mode = 1
 
 [node name="Felps" type="TextureRect" parent="Elementos"]
 layout_mode = 0
-offset_left = 1476.0001
-offset_top = 3883.0002
-offset_right = 1732.0001
-offset_bottom = 4139.0
+offset_left = 1490.9999
+offset_top = 3855.0
+offset_right = 1746.9999
+offset_bottom = 4111.0
 rotation = 0.2216303
+scale = Vector2(1.2924099, 1.2924099)
 texture = ExtResource("14_p7y3g")
 
-[node name="TextureRect" type="TextureRect" parent="Elementos"]
+[node name="Bapo" type="TextureRect" parent="Elementos"]
 layout_mode = 0
-offset_left = 30.0
-offset_top = 4277.0
-offset_right = 378.0
-offset_bottom = 4589.0
+offset_left = 30.999939
+offset_top = 4148.0
+offset_right = 378.99994
+offset_bottom = 4460.0
 rotation = -0.23989876
-scale = Vector2(0.77475893, 0.77475893)
+scale = Vector2(0.9610072, 0.9610072)
 texture = ExtResource("16_kvcyb")
+
+[node name="Adesivo" type="TextureRect" parent="Elementos/Bapo"]
+modulate = Color(0.96079797, 0.30261776, 0.54631424, 1)
+layout_mode = 0
+offset_left = 8.54161
+offset_top = 79.1577
+offset_right = 233.54161
+offset_bottom = 146.15771
+rotation = -0.568377
+scale = Vector2(0.56166697, 0.45301417)
+texture = ExtResource("6_wap05")
+expand_mode = 1
+
+[node name="fantasmas" type="TextureRect" parent="Elementos"]
+layout_mode = 0
+offset_left = 1557.3671
+offset_top = 2555.9998
+offset_right = 1839.3671
+offset_bottom = 2751.9998
+rotation = -0.08332988
+texture = ExtResource("17_yd81c")
+
+[node name="Adesivo" type="TextureRect" parent="Elementos/fantasmas"]
+modulate = Color(0.9, 0.5802, 0.432, 0.83137256)
+layout_mode = 0
+offset_left = 34.25953
+offset_top = 202.55437
+offset_right = 259.2595
+offset_bottom = 269.5544
+rotation = -2.1072044
+scale = Vector2(0.37337986, 0.27887523)
+texture = ExtResource("6_wap05")
+expand_mode = 1
+
+[node name="Adesivo2" type="TextureRect" parent="Elementos/fantasmas"]
+modulate = Color(0.9, 0.5802, 0.432, 0.83137256)
+layout_mode = 0
+offset_left = 249.13713
+offset_top = -3.274788
+offset_right = 474.13715
+offset_bottom = 63.725266
+rotation = -5.155109
+scale = Vector2(0.37337986, 0.27887523)
+texture = ExtResource("6_wap05")
+expand_mode = 1
+
+[node name="Godot" type="TextureRect" parent="Elementos"]
+layout_mode = 0
+offset_left = 354.99997
+offset_top = 3129.0
+offset_right = 611.0
+offset_bottom = 3385.0
+rotation = 0.14490286
+texture = ExtResource("18_mf7jr")
+
+[node name="coracao" type="TextureRect" parent="Elementos"]
+layout_mode = 0
+offset_left = 136.0
+offset_top = 3470.0
+offset_right = 392.0
+offset_bottom = 3726.0
+texture = ExtResource("19_qe6p1")
+
+[node name="adesivo" type="TextureRect" parent="Elementos/coracao"]
+modulate = Color(1, 1, 1, 0.7411765)
+layout_mode = 0
+offset_left = -10.000006
+offset_top = 96.00002
+offset_right = 200.0
+offset_bottom = 158.00003
+rotation = -0.4690742
+scale = Vector2(0.48252553, 0.639917)
+texture = ExtResource("14_a4mgd")
+expand_mode = 1
 
 [node name="Shader" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_imqlj")
@@ -374,7 +407,6 @@ custom_effects = [SubResource("RichTextEffect_kvcyb")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 3
-visible = false
 
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("2_sioja")]
 configs = NodePath("../Configs")
