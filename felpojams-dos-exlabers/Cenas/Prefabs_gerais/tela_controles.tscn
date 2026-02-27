@@ -1,0 +1,171 @@
+[gd_scene load_steps=10 format=3 uid="uid://c47hquni58xjp"]
+
+[ext_resource type="Script" uid="uid://dk5uugv7fd2a1" path="res://Cenas/Prefabs_gerais/tela_controles.gd" id="1_7236f"]
+[ext_resource type="Shader" uid="uid://co4s6dvogqbqv" path="res://Temas_UI/shaders/blur.gdshader" id="2_hu0db"]
+[ext_resource type="Texture2D" uid="uid://bx3m5uuc7ci5d" path="res://Imagens/papeis/1771357403688.png" id="3_3vwbq"]
+[ext_resource type="Theme" uid="uid://djcj3jcon5ao0" path="res://Temas_UI/configuracoes.tres" id="4_q5uce"]
+[ext_resource type="Script" path="res://Codigos/RichTextEffect.gd" id="5_o72fc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jcks3"]
+shader = ExtResource("2_hu0db")
+shader_parameter/blur_amount = 8.0
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_jcks3"]
+script = ExtResource("5_o72fc")
+metadata/_custom_type_script = "uid://crxyqnburxfpm"
+
+[sub_resource type="InputEventAction" id="InputEventAction_40wpw"]
+action = &"ui_cancel"
+
+[sub_resource type="Shortcut" id="Shortcut_eqixm"]
+events = [SubResource("InputEventAction_40wpw")]
+
+[node name="Tela controles" type="Control" node_paths=PackedStringArray("voltarB")]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_7236f")
+voltarB = NodePath("VBoxContainer/Voltar")
+
+[node name="Blur" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_jcks3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.58, 0, 0.18366663, 0.24313726)
+
+[node name="Papel" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 328.0
+offset_top = 443.99994
+offset_right = 1653.0186
+offset_bottom = 2213.826
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -3.1415927
+scale = Vector2(0.4884758, 0.4884758)
+texture = ExtResource("3_3vwbq")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 467.0
+offset_bottom = 699.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "TECLADO e MOUSE:
+
+Movimentação horizontal
+A / D
+← / →
+
+Pular
+W
+Espaço
+↑
+
+Mirar
+Segurar botão direito do mouse
+
+Carimbar
+Botão esquerdo do mouse
+
+Pausar
+ESC
+P
+
+Menu de Reset
+R
+
+Resetar o frasco de tinta
+Alt + F4"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "CONSOLE:
+
+Movimentação horizontal
+D-Pad ← / →
+Joystick esquerdo (eixo X)
+
+Pular
+D-Pad ↑
+Joystick esquerdo para cima
+X (Sony)
+A (Xbox)
+
+Mirar
+L2 (Sony)
+LB (Microsoft Xbox)
+
+Carimbar
+R2 (Sony)
+RB (Microsoft Xbox)
+
+Pausar
+Start
+Botão Menu (Xbox)
+
+Menu de Reset
+Select (Sony)
+Back (Xbox)"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -229.0
+offset_top = -261.5
+offset_right = 229.0
+offset_bottom = 261.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_q5uce")
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[tremor]Pausado[/tremor]"
+fit_content = true
+horizontal_alignment = 1
+custom_effects = [SubResource("RichTextEffect_jcks3")]
+
+[node name="VSeparator" type="HSeparator" parent="VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Voltar" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_eqixm")
+text = "voltar"
+
+[connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]

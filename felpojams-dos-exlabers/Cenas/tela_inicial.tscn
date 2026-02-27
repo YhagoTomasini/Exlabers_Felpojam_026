@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dohiuhxtebot1"]
+[gd_scene load_steps=9 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://deo5psaqtg1r5" path="res://Imagens/carimbos/capa_teste.png" id="2_0nw1j"]
@@ -6,13 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="5_0nw1j"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
 [ext_resource type="PackedScene" uid="uid://bk6bbn3tbvijr" path="res://Temas_UI/transição.tscn" id="6_0nw1j"]
+[ext_resource type="PackedScene" uid="uid://c47hquni58xjp" path="res://Cenas/Prefabs_gerais/tela_controles.tscn" id="6_ubl30"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x33ye"]
 shader = ExtResource("4_00dnc")
 shader_parameter/outerRadius = 3.046000144685
 shader_parameter/MainAlpha = 0.782000037145
 
-[node name="Tela_Inicial" type="Control"]
+[node name="Tela_Inicial" type="Control" node_paths=PackedStringArray("menuControles")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,6 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b1rrf")
+menuControles = NodePath("CanvasLayer/Tela controles")
 
 [node name="ParallaxBG" type="Parallax2D" parent="."]
 
@@ -71,6 +73,10 @@ theme = ExtResource("5_x33ye")
 layout_mode = 2
 text = "JOGAR	"
 
+[node name="contorles" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Controles"
+
 [node name="creditos" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "CRÉDITOS"
@@ -90,8 +96,13 @@ text = "JOGO DO ANO
 FELPS"
 horizontal_alignment = 1
 
+[node name="Tela controles" parent="CanvasLayer" instance=ExtResource("6_ubl30")]
+visible = false
+
 [node name="Transição" parent="CanvasLayer" instance=ExtResource("6_0nw1j")]
+visible = false
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/sair" to="." method="_on_sair_pressed"]

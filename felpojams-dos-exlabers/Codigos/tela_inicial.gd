@@ -8,6 +8,8 @@ extends Control
 @onready var animacao = get_node("CanvasLayer/Transição/ColorRect/Animation")
 @export var anim_duracao : float = 1.0
 
+@export var menuControles : Control
+
 var usando_teclado = false
 
 var intensidade = 30.0
@@ -23,29 +25,29 @@ func _ready():
 	transicao.visible = false
 
 func _input(event):
+	if get_tree().paused == false:
+		# 🎮 detecta teclado / controle
+		if event.is_action_pressed("ui_up") \
+		or event.is_action_pressed("ui_down") \
+		or event.is_action_pressed("ui_left") \
+		or event.is_action_pressed("ui_right"):
 
-	# 🎮 detecta teclado / controle
-	if event.is_action_pressed("ui_up") \
-	or event.is_action_pressed("ui_down") \
-	or event.is_action_pressed("ui_left") \
-	or event.is_action_pressed("ui_right"):
+			if not usando_teclado:
+				usando_teclado = true
 
-		if not usando_teclado:
-			usando_teclado = true
-
-			# se ninguém estiver focado, foca o primeiro botão
-		if not get_viewport().gui_get_focus_owner():
-			botao_jogar.grab_focus()
+				# se ninguém estiver focado, foca o primeiro botão
+			if not get_viewport().gui_get_focus_owner():
+				botao_jogar.grab_focus()
 
 
-	# 🖱 detecta movimento do mouse
-	if event is InputEventMouseMotion:
-		if usando_teclado:
-			usando_teclado = false
+		# 🖱 detecta movimento do mouse
+		if event is InputEventMouseMotion:
+			if usando_teclado:
+				usando_teclado = false
 
-			var foco = get_viewport().gui_get_focus_owner()
-			if foco:
-				foco.release_focus()
+				var foco = get_viewport().gui_get_focus_owner()
+				if foco:
+					foco.release_focus()
 
 func _process(delta):
 	var mouse_pos = get_viewport().get_mouse_position()
@@ -84,3 +86,7 @@ func _transicao_de_tela():
 	animacao.speed_scale = anim_duracao
 	animacao.play("transição_in")
 	await animacao.animation_finished
+
+
+func _on_contorles_pressed() -> void:
+	menuControles.ativar()
