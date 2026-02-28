@@ -17,7 +17,6 @@ func _ready() -> void:
 	#
 	#elif corpo.size() == 0 and pressionado:
 		#_on_body_exited(null)
-	
 
 
 func desativar_colisao_porta(valor: bool):
@@ -66,19 +65,28 @@ func _on_area_exited(area: Area2D) -> void:
 	
 func entrou_botao():
 	dentroBotao += 1
-	if dentroBotao == 1:
-		pressionado = true
-		sprite.play("apertado")
-		
-		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
-		desativar_colisao_porta(true)
+	
+	sprite.play("apertado")
+	verificarColisao()
+	
+	AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
+	desativar_colisao_porta(true)
 		
 func saiu_botao():
 	dentroBotao -= 1
+	#if dentroBotao <= 0:
+		#pressionado = false
+	sprite.play("default")
+	
+	AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
+	desativar_colisao_porta(false)
+	
+	verificarColisao()
+	#dentroBotao = 0
+
+func verificarColisao():
 	if dentroBotao <= 0:
 		pressionado = false
-		sprite.play("default")
-		
-		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
-		desativar_colisao_porta(false)
 		dentroBotao = 0
+	else:
+		pressionado = true

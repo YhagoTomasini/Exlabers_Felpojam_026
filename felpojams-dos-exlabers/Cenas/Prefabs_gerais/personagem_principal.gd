@@ -37,6 +37,8 @@ var puloConsumido : bool = false
 
 
 func _ready() -> void:
+	coyote_timer.wait_time = 0.1
+	
 	particulas_andando.emitting = false
 	noCianoB = false
 	noCianoI = 0

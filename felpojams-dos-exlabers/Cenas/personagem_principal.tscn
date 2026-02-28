@@ -262,7 +262,7 @@ shape = SubResource("CapsuleShape2D_7kss6")
 debug_color = Color(0, 1, 1, 0.41960785)
 
 [node name="coyote_timer" type="Timer" parent="."]
-wait_time = 0.161
+wait_time = 0.1
 one_shot = true
 
 [node name="particulas_morte" type="CPUParticles2D" parent="."]
