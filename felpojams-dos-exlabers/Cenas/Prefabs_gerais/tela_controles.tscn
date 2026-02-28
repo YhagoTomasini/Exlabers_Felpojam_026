@@ -182,7 +182,7 @@ fit_content = true
 layout_mode = 2
 size_flags_horizontal = 3
 bbcode_enabled = true
-text = "[b]controle[/b]"
+text = "[b]controle (xbox)[/b]"
 fit_content = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -207,7 +207,7 @@ autowrap_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "A e D / ← / →"
+text = "A e D / ← e →"
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
@@ -252,6 +252,20 @@ size_flags_vertical = 3
 text = "Botão esquerdo mouse"
 vertical_alignment = 1
 
+[node name="Label13" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "TROCAR TINTA"
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Q e E"
+vertical_alignment = 1
+
 [node name="Label9" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -270,7 +284,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "MENU DE RESET"
+text = "REINICIAR FASE"
 vertical_alignment = 1
 
 [node name="Label12" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
@@ -278,20 +292,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "R"
-vertical_alignment = 1
-
-[node name="Label13" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "RESETAR TINTA"
-vertical_alignment = 1
-
-[node name="Label14" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Alt + F4"
 vertical_alignment = 1
 
 [node name="GridContainer2" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
@@ -312,7 +312,8 @@ autowrap_mode = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "A e D / ← / →"
+text = "D-pad ← e → /
+Joystick esquerdo"
 vertical_alignment = 1
 
 [node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
@@ -326,7 +327,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "W / Espaço / ↑"
+text = "D-pad ↑ / A"
 vertical_alignment = 1
 
 [node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
@@ -340,7 +341,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Botão direito mouse"
+text = "LT"
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
@@ -354,7 +355,21 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Botão esquerdo mouse"
+text = "LT + RT"
+vertical_alignment = 1
+
+[node name="Label13" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "TROCAR TINTA"
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "LB e RB"
 vertical_alignment = 1
 
 [node name="Label9" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
@@ -368,35 +383,21 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Esc / P"
+text = "Botão menu"
 vertical_alignment = 1
 
 [node name="Label11" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "MENU DE RESET"
+text = "REINICIAR FASE"
 vertical_alignment = 1
 
 [node name="Label12" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "R"
-vertical_alignment = 1
-
-[node name="Label13" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "RESETAR TINTA"
-vertical_alignment = 1
-
-[node name="Label14" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Alt + F4"
+text = "Back"
 vertical_alignment = 1
 
 [node name="Voltar" type="Button" parent="VBoxContainer"]
