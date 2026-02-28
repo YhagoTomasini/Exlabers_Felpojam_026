@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cb7iaauinfrds" path="res://Imagens/papeis/1771356704578.png" id="3_hu0db"]
 [ext_resource type="Theme" uid="uid://cuscv0a8pehuw" path="res://Temas_UI/tela_creditos.tres" id="4_3vwbq"]
 [ext_resource type="Theme" uid="uid://c7re4iagxgfus" path="res://Temas_UI/controles.tres" id="5_3vwbq"]
-[ext_resource type="Script" uid="uid://crxyqnburxfpm" path="res://Codigos/RichTextEffect.gd" id="5_o72fc"]
+[ext_resource type="Script" path="res://Codigos/RichTextEffect.gd" id="5_o72fc"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="7_3vwbq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jcks3"]
@@ -341,7 +341,7 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "LT"
+text = "LT + Joystick direito"
 vertical_alignment = 1
 
 [node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
