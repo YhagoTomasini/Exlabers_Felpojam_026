@@ -50,34 +50,29 @@ func _physics_process(delta: float) -> void:
 		velocity += (get_gravity() * delta)/4
 		is_jumping = false
 	
-	if estava_no_chao and !is_on_floor():
-		coyote_timer.start()
 	
 	if is_on_floor():
+		is_jumping = false
 		puloConsumido = false
 		
+	if estava_no_chao and !is_on_floor():
+		coyote_timer.start()
 	estava_no_chao = is_on_floor()
-	#can_jump = is_on_floor() or !coyote_timer.is_stopped()
+	
 	
 	#Se estiver no chão e não estiver em um ciano pula normal
-	if Input.is_action_just_pressed("ui_up") and can_jump and !noCianoB:
+	if Input.is_action_just_pressed("ui_up") and !is_jumping and !noCianoB and !puloConsumido:
 		if is_on_floor() or !coyote_timer.is_stopped():
 			velocity.y = -jump_velocity
 			is_jumping = true
 			
 			puloConsumido = true
 			coyote_timer.stop()
+			
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
 	elif Input.is_action_pressed("ui_up") and noCianoB:
 		velocity.y = -jump_velocity/4
 	
-	elif is_on_floor():
-		is_jumping = false
-	
-	#if is_on_floor() and !can_jump:
-		#can_jump = true
-	#elif can_jump and coyote_timer.is_stopped():
-		#coyote_timer.start()
 	
 	if velocity.y > 0 or not Input.is_action_pressed("ui_up"):
 		velocity.y += fall_gravity*delta
@@ -102,10 +97,6 @@ func _physics_process(delta: float) -> void:
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal()*push_force)
-			
-	#if Input.is_action_just_pressed("reset"):
-		#Globals.refil_de_tinta()
-		#get_tree().call_deferred("reload_current_scene")
 
 func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 	#Passar de Lvl e recebe uma nova cor de tinta
