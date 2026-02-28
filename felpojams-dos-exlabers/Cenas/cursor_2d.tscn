@@ -5,7 +5,8 @@
 
 [node name="cursor2D" type="CanvasLayer"]
 process_mode = 3
-layer = 2
+process_priority = 1
+layer = 10
 script = ExtResource("2_020im")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
