@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dy4hw82ok2jao"]
 
-[ext_resource type="Script" path="res://Codigos/cutscene.gd" id="1_2l0h4"]
+[ext_resource type="Script" uid="uid://cnbj0hi2gifix" path="res://Codigos/cutscene.gd" id="1_2l0h4"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="1_iscld"]
 [ext_resource type="VideoStream" uid="uid://cgdfsphtsln6m" path="res://Cutscene/Tira-inicial.ogv" id="2_16nu6"]
 

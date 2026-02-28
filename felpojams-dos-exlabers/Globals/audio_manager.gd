@@ -5,6 +5,7 @@ var registroSons : Dictionary = {}
 var sonsAtivos : Dictionary = {}
 
 var pitchOriginal : Dictionary = {}
+var volOriginal : Dictionary = {}
 
 @export var sons : Array[SoundEffect]
 
@@ -55,6 +56,7 @@ func criar_aud(tipo : SoundEffect.TIPO_DE_SOM):
 			
 			sonsAtivos[tipo] = novo_aud
 			pitchOriginal[tipo] = novo_aud.pitch_scale
+			volOriginal[tipo] = novo_aud.volume_db
 	else:
 		push_error("n foi o audio", tipo)
 
@@ -71,6 +73,8 @@ func destruir_novo_aud(tipo : SoundEffect.TIPO_DE_SOM):
 			som.queue_free()
 		)
 		sonsAtivos.erase(tipo)
+		pitchOriginal.erase(tipo)
+		volOriginal.erase(tipo)
 		
 func pitch_tema(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo) and pitchOriginal.has(tipo):
@@ -84,4 +88,17 @@ func pitch_tema(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 			tween.tween_property(temaAtivo, "pitch_scale", pitch_base / 2.0, 0.5)
 		elif opcao == 3:
 			tween.tween_property(temaAtivo, "pitch_scale", pitch_base * 1.5, 0.5)
+
+func vol_som(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
+	if sonsAtivos.has(tipo) and volOriginal.has(tipo):
+		var somAtivo = sonsAtivos[tipo]
+		var vol_base = volOriginal[tipo]
+		var tween = create_tween()
+		
+		if opcao == 1:
+			tween.tween_property(somAtivo, "volume_db", vol_base, 0.5)
+		elif opcao == 2:
+			tween.tween_property(somAtivo, "volume_db", vol_base - 18.0, 0.5)
+		elif opcao == 3:
+			tween.tween_property(somAtivo, "volume_db", vol_base + 6.0, 0.5)
 			

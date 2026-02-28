@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bk6bbn3tbvijr"]
+[gd_scene load_steps=8 format=3 uid="uid://bk6bbn3tbvijr"]
 
+[ext_resource type="Script" uid="uid://cm4w7n7xuhui7" path="res://Temas_UI/transição.gd" id="1_r8xlt"]
 [ext_resource type="Shader" uid="uid://ctl4fefdgoiru" path="res://Temas_UI/transição.gdshader" id="1_vx7sl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r8xlt"]
@@ -61,7 +62,9 @@ _data = {
 &"transição_out": SubResource("Animation_137g6")
 }
 
-[node name="Transição" type="CanvasLayer"]
+[node name="Transição" type="CanvasLayer" node_paths=PackedStringArray("anim")]
+script = ExtResource("1_r8xlt")
+anim = NodePath("ColorRect/Animation")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_r8xlt")

@@ -15,6 +15,8 @@ var fundo_scroll: float = 0.0
 var acelerando : bool
 
 func _ready() -> void:
+	Transição.anim_out()
+	
 	acelerando = false
 	acabou = false
 	scroll_shader = fundo.material as ShaderMaterial

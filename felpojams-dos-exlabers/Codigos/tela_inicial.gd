@@ -3,11 +3,6 @@ extends Control
 @onready var parallax = $ParallaxBG
 @onready var botao_jogar: Button = $CanvasLayer/VBoxContainer/Jogar
 
-	# ANIMAÇÃO DE TRANSIÇÃO
-@onready var transicao = get_node("CanvasLayer/Transição/ColorRect")
-@onready var animacao = get_node("CanvasLayer/Transição/ColorRect/Animation")
-@export var anim_duracao : float = 1.0
-
 @export var menuControles : Control
 @export var configs : Control
 
@@ -20,10 +15,7 @@ var alvo = Vector2.ZERO
 func _ready():
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 	
-	animacao.speed_scale = anim_duracao
-	animacao.play("transição_out")
-	await animacao.animation_finished
-	transicao.visible = false
+	Transição.anim_out()
 	
 	botao_jogar.grab_focus()
 	
@@ -66,10 +58,8 @@ func _on_jogar_pressed() -> void:
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
 	
 	#transição
-	transicao.visible = true
-	animacao.play("transição_in")
-	await animacao.animation_finished
-	
+	Transição.anim_in()
+	await Transição.anim.animation_finished
 	#mudança de cena
 	get_tree().change_scene_to_file("res://Cenas/cutscene.tscn")
 	
@@ -82,12 +72,6 @@ func _on_sair_pressed() -> void:
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
 	await get_tree().create_timer(0.5).timeout
 	get_tree().quit()
-
-func _transicao_de_tela():
-	transicao.visible = true
-	animacao.speed_scale = anim_duracao
-	animacao.play("transição_in")
-	await animacao.animation_finished
 
 
 func _on_contorles_pressed() -> void:
