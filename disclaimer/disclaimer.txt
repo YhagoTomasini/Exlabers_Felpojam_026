@@ -51,7 +51,7 @@ Porta abrindo:
 Porta fechando:
 	https://pixabay.com/pt/sound-effects/dom%c3%a9stico-close-door-382723/
 
-Barulho do botao dentro do jogo:
+Barulho do botão dentro do jogo:
 	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-button-press-382713/
 
 Som morte:
