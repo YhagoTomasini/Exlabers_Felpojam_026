@@ -28,8 +28,8 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
 - **A**: pular  
    
 ###### *CARIMBO*  
-- **L2 ou LB + Joysick direito**: mirar o carimbo  
-- **R2 ou RB**: carimbar  
+- **L2 ou LT + Joysick direito**: mirar o carimbo  
+- **R2 ou RT**: carimbar  
 - **L1, R1, LB e RB**: trocar de carimbo  
    
 ###### *NAVEGAÇÃO*  
