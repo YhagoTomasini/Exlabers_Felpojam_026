@@ -1,7 +1,7 @@
 *NOME DO JOGO*  
 Equipe: Exlabers  
    
-## **Descriç** **ão e instruç** **ões**  
+## **Descrição e instruções**  
 A partir do tema “Carimbo”, foi desenvolvido um jogo plataforma 2D em que o jogador deve avançar as fases com o auxílio de carimbos, cada um tendo sua própria cor e funcionalidade.  
    
 ### CONTEXTO  
@@ -9,21 +9,21 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
    
 ## **Controles**  
 ### TECLADO E MOUSE  
-###### *MOVIMENTAÇ* *ÃO*  
+###### *MOVIMENTAÇÃO*  
 - **A, D, setas direita e esquerda**: andar  
 - **Espaço e  W**: pular  
    
 ###### *CARIMBO*  
-- **Bot** **ão direito do mouse**: mirar o carimbo  
-- **Bot** **ão esquerdo do mouse**: carimbar  
+- **Botão direito do mouse**: mirar o carimbo  
+- **Botão esquerdo do mouse**: carimbar  
 - **Q e E**: trocar de carimbo  
    
-###### *NAVEGAÇ* *ÃO*  
+###### *NAVEGAÇÃO*  
 - **ESC e P**: pausar  
 - **R**: reiniciar
 
 ### CONTROLE (padrão Xbox)  
-###### *MOVIMENTAÇ* *ÃO*  
+###### *MOVIMENTAÇÃO*  
 - **Joystick esquerdo e DPAd**: andar  
 - **A**: pular  
    
@@ -33,13 +33,13 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
 - **L1, R1, LB e RB**: trocar de carimbo  
    
 ###### *NAVEGAÇ* *ÃO*  
-- **Sttart (Sony) e Botão Menu (Xbox)**: pausar  
+- **Start (Sony) e Botão Menu (Xbox)**: pausar  
 - **Select (Sony) e Back (Xbox)**: reiniciar  
    
    
-## **Classificaç** **ão indicativa**  
+## **Classificação indicativa**  
 Livre  
-## **Cr** **éditos de assets externos**  
+## **Créditos de assets externos**  
 ### IMAGENS e TEXTURAS  
 - Cork Wood PBR Material: [https://freepbr.com/product/cork-wood-pbr-material/](https://freepbr.com/product/cork-wood-pbr-material/ "https://freepbr.com/product/cork-wood-pbr-material/")  
 - avatar  
