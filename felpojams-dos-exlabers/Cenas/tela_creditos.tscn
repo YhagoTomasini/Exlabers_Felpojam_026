@@ -448,7 +448,6 @@ custom_effects = [SubResource("RichTextEffect_kvcyb")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
-visible = false
 
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("2_sioja")]
 configs = NodePath("../Configs")

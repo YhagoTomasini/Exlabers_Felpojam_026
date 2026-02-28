@@ -61,7 +61,7 @@ func _physics_process(delta: float) -> void:
 	
 	
 	#Se estiver no chão e não estiver em um ciano pula normal
-	if Input.is_action_just_pressed("ui_up") and !is_jumping and !noCianoB and !puloConsumido:
+	if Input.is_action_just_pressed("_up") and !is_jumping and !noCianoB and !puloConsumido:
 		if is_on_floor() or !coyote_timer.is_stopped():
 			velocity.y = -jump_velocity
 			is_jumping = true
@@ -70,11 +70,11 @@ func _physics_process(delta: float) -> void:
 			coyote_timer.stop()
 			
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
-	elif Input.is_action_pressed("ui_up") and noCianoB:
+	elif Input.is_action_pressed("_up") and noCianoB:
 		velocity.y = -jump_velocity/4
 	
 	
-	if velocity.y > 0 or not Input.is_action_pressed("ui_up"):
+	if velocity.y > 0 or not Input.is_action_pressed("_up"):
 		velocity.y += fall_gravity*delta
 	else:
 		velocity.y += gravity*delta

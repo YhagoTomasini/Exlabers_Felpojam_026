@@ -62,7 +62,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	# 🎮 detecta teclado / controle
 	if visible:
-		if event.is_action_pressed("ui_up_ui") \
+		if event.is_action_pressed("ui_up") \
 		or event.is_action_pressed("ui_down") \
 		or event.is_action_pressed("ui_left") \
 		or event.is_action_pressed("ui_right"):

@@ -24,7 +24,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 				visible = false
 	
-	if event.is_action_pressed("ui_up_ui") \
+	if event.is_action_pressed("ui_up") \
 	or event.is_action_pressed("ui_down") \
 	or event.is_action_pressed("ui_left") \
 	or event.is_action_pressed("ui_right"):
