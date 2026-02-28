@@ -50,23 +50,19 @@ func desativar_colisao_porta(valor: bool):
 
 
 func _on_body_entered(body: Node2D) -> void:
+	
 	if body.name == "body_marcaY" or body.name == "body_marcaP" or body.name == "body_marcaM":
 		entrou_botao()
 
 func _on_body_exited(body: Node2D) -> void:
-	dentroBotao -= 1
-	if dentroBotao <= 0:
-		pressionado = false
-		sprite.play("default")
-		
-		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
-		desativar_colisao_porta(false)
-		dentroBotao = 0
-		
-
+	saiu_botao()
 
 func _on_area_entered(area: Area2D) -> void:
 	entrou_botao()
+
+func _on_area_exited(area: Area2D) -> void:
+	saiu_botao()
+	
 	
 func entrou_botao():
 	dentroBotao += 1
@@ -77,4 +73,12 @@ func entrou_botao():
 		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
 		desativar_colisao_porta(true)
 		
-		#print(dentroBotao)
+func saiu_botao():
+	dentroBotao -= 1
+	if dentroBotao <= 0:
+		pressionado = false
+		sprite.play("default")
+		
+		AudioManager.criar_aud_localizado(position, SoundEffect.TIPO_DE_SOM.BOTAO)
+		desativar_colisao_porta(false)
+		dentroBotao = 0
