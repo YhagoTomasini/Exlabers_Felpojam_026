@@ -3,7 +3,8 @@ extends Control
 @export var botao_pular : Button
 
 func _ready():
-	AudioManager.vol_som(2, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.vol_som(2, SoundEffect.TIPO_DE_SOM.TEMA1)
+	AudioManager.pitch_tema(2, SoundEffect.TIPO_DE_SOM.TEMA2)
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CUTSCENE)
 	
 	Transição.anim_out()

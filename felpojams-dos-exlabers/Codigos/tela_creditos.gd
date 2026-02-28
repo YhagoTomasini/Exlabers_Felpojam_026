@@ -19,6 +19,8 @@ var acelerando : bool
 func _ready() -> void:
 	Transição.anim_out()
 	
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
+	
 	if !Globals.finalizou:
 		prova.visible = false
 		
@@ -42,13 +44,15 @@ func _process(delta: float) -> void:
 		return
 	
 	# Controle de velocidade
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("_up"):
 		if !acelerando:
+			AudioManager.pitch_tema(3, SoundEffect.TIPO_DE_SOM.TEMA1)
 			AudioManager.pitch_tema(3, SoundEffect.TIPO_DE_SOM.TEMA2)
 			acelerando = true
 		velo = 6.0
 	else:
 		if acelerando:
+			AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA1)
 			AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 			acelerando = false
 		velo = 1.0

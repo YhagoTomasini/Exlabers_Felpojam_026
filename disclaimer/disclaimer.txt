@@ -5,7 +5,7 @@ Shader usado no menu
 Transição de tela
 	https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/
 
-_____________________________________________________________________________________________________________
+'______________________________________________________________________'
 
 IA:
 Tamires:
@@ -15,7 +15,7 @@ Yhago:
 	Durante grande parte do processo da programação foi utilizado ChatGPT para ajudar com erros te sintaxe e identificar erros de lógica. Nenhum código foi copiado e colado dentro do jogo.
 Tirando o shader da onda da água... aquilo lá usava uma matemática que eu só aceitei que funciona.
 
-_____________________________________________________________________________________________________________
+'______________________________________________________________________'
 
 IMAGENS E TEXTURAS:
 Cortiça
@@ -24,7 +24,16 @@ Cortiça
 Fitas
 	https://www.freepik.com/free-vector/washi-tape-clipart-brown-stationery-collage-element-vector-set_20346085.htm#fromView=search&page=1&position=1&uuid=e32847ad-d1fd-4f5d-831e-0c79a14e6f62&query=Adhesive+tape
 
-_____________________________________________________________________________________________________________
+'______________________________________________________________________'
+
+MUSICA:
+Jogo:
+	https://opengameart.org/content/menu-doodle-2
+
+Créditos:
+	https://opengameart.org/content/school-of-quirks
+
+'______________________________________________________________________'
 
 SONS:
 Tap tap tap - passos
@@ -57,7 +66,7 @@ Barulho do botão dentro do jogo:
 Som morte:
 	https://pixabay.com/pt/sound-effects/musical-hurt-c-08-102842/
 
-_____________________________________________________________________________________________________________
+'______________________________________________________________________'
 
 
 EQUIPE:

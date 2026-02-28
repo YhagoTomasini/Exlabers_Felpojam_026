@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyjl8yk6bbiou"]
+[gd_scene load_steps=19 format=3 uid="uid://cyjl8yk6bbiou"]
 
 [ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="1_67ekk"]
 [ext_resource type="Script" uid="uid://57nkudn0jsnr" path="res://Codigos/sala_de_testes.gd" id="1_ipfeo"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://f8g1uga8y487" path="res://Prefabs/disparador1.tscn" id="9_hxyqr"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="10_eorjc"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="14_8262j"]
+[ext_resource type="PackedScene" uid="uid://bhe0k7d2w87n3" path="res://Prefabs/final_lvl_4.tscn" id="16_6h768"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8262j"]
 texture = ExtResource("1_o42xe")
@@ -75,13 +76,13 @@ position = Vector2(0, -128)
 limit_left = -400
 
 [node name="FinalLvl1" parent="." instance=ExtResource("5_ea0tj")]
-position = Vector2(-204, 896)
+position = Vector2(-443, 760)
 
 [node name="FinalLvl2" parent="." instance=ExtResource("4_to47i")]
-position = Vector2(-225, 896)
+position = Vector2(-571, 737)
 
 [node name="FinalLvl3" parent="." instance=ExtResource("6_o0ncy")]
-position = Vector2(-247, 896)
+position = Vector2(-739, 731)
 
 [node name="pressure_plate" parent="." node_paths=PackedStringArray("alvo_porta") instance=ExtResource("8_o0ncy")]
 position = Vector2(1728, 1968)
@@ -119,8 +120,6 @@ para_direita = false
 
 [node name="Pause" parent="HUD" node_paths=PackedStringArray("configs") instance=ExtResource("1_o0ncy")]
 visible = false
-offset_right = 0.0
-offset_bottom = 0.0
 configs = NodePath("../Configs")
 
 [node name="UI_Tintas" parent="HUD" instance=ExtResource("3_g2hjm")]
@@ -135,3 +134,6 @@ pause = NodePath("../Pause")
 
 [node name="porta" parent="." instance=ExtResource("10_eorjc")]
 position = Vector2(832, 1856)
+
+[node name="FinalLvl4" parent="." instance=ExtResource("16_6h768")]
+position = Vector2(1076, 701)

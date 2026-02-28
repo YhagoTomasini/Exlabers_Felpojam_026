@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Globals/audio_manager.gd" id="1_86yo6"]
 [ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Globals/SoundEffects.gd" id="2_838mi"]
-[ext_resource type="AudioStream" uid="uid://cxma2tcb5i183" path="res://Sons/raffa_o_bardo.mp3.mp3" id="3_dhxjl"]
 [ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="3_khsds"]
+[ext_resource type="AudioStream" uid="uid://d280ro7ryd2wh" path="res://Sons/musicasTemas/tema1.mp3" id="3_uwodp"]
 [ext_resource type="AudioStream" uid="uid://xdtj07eeum8x" path="res://Sons/Tap.mp3" id="4_dhxjl"]
-[ext_resource type="AudioStream" uid="uid://dx23yn8jkrovu" path="res://Sons/Baião Temperado (Instrumental).mp3" id="4_fb0sx"]
+[ext_resource type="AudioStream" uid="uid://cgwyyrkavpnjh" path="res://Sons/musicasTemas/Menu.mp3" id="4_uwodp"]
 [ext_resource type="AudioStream" uid="uid://csqm1t2njoqq" path="res://Sons/Boing.mp3" id="5_55k7s"]
 [ext_resource type="AudioStream" uid="uid://ddna3gqnyxptb" path="res://Sons/Jump.mp3" id="6_55k7s"]
 [ext_resource type="AudioStream" uid="uid://dsasgcef2ur61" path="res://Sons/water.mp3" id="8_0yobf"]
@@ -19,7 +19,7 @@
 [sub_resource type="Resource" id="Resource_55k7s"]
 script = ExtResource("2_838mi")
 limite = 1
-som = ExtResource("3_dhxjl")
+som = ExtResource("3_uwodp")
 volume = -8.515999999999998
 bus = &"Musica"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
@@ -28,8 +28,8 @@ metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 script = ExtResource("2_838mi")
 limite = 1
 tipo = 1
-som = ExtResource("4_fb0sx")
-volume = -16.4
+som = ExtResource("4_uwodp")
+volume = -8.837
 bus = &"Musica"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
