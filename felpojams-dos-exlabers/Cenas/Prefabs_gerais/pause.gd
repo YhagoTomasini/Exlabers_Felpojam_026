@@ -87,8 +87,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	
 func _on_menu_pressed() -> void:
-	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA1)
-	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
+	AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 
 	Globals.refil_de_tinta()
 	get_tree().paused = false

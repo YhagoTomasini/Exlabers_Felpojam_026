@@ -368,7 +368,7 @@ theme_override_constants/margin_bottom = 720
 layout_mode = 2
 theme = ExtResource("6_st0xo")
 bbcode_enabled = true
-text = "[b]Título do jogo[/b]
+text = "[tremor][b]TÍTULO DO JOGO[/b][/tremor]
 
 [b]Por:[/b]
 Artêmio Neto, Isabela Wagemaker,  Tamires Inoue e Yhago Tomasini
@@ -403,10 +403,15 @@ _______________________________________
 
 [tremor][b]Músicas e efeitos sonoros[/b][/tremor]
 
+Músicas:
+(opengameart.org)
+StumpyStrust, Zander Noriega
+
 Efeitos sonoros:
 (pixabay)
 Liecio, Bastianhallo, DRAGON-STUDIO, clabed_mess,
 u_y3wk5ympz8, suzenako, MagiaZ e kermite607
+
 _______________________________________
 
 [tremor][b]Ferramentas e tecnologias[/b][/tremor]
@@ -425,9 +430,15 @@ Mais dor
 
 _______________________________________
 
+[tremor][b]Game tester[/b][/tremor]
+Lucas de Paulo, Gabriel “Dimitri” Oliveira, Hugo Soares,
+Maria Clara, Braian, Thiago Coser, Bruno Amaral, 
+
+_______________________________________
+
 [tremor][b]Agradecimentos especiais[/b][/tremor]
 
-Lucas de Paulo
+Paulo de Lucas
 
 Felps e C3B
 Toda  equipe organizadora da Felpojam
