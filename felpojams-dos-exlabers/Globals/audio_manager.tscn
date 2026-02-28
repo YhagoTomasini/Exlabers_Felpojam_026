@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://iavy8kf34yx5"]
+[gd_scene load_steps=29 format=3 uid="uid://iavy8kf34yx5"]
 
 [ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Globals/audio_manager.gd" id="1_86yo6"]
 [ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Globals/SoundEffects.gd" id="2_838mi"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://c7skm8blgqw3" path="res://Sons/botaoSom.mp3" id="12_yu1vx"]
 [ext_resource type="AudioStream" uid="uid://dalhk66hihoqj" path="res://Sons/portaFexa.mp3" id="13_uwodp"]
 [ext_resource type="AudioStream" uid="uid://gmkvycwm1mqy" path="res://Sons/PortaBre.mp3" id="14_m02h0"]
+[ext_resource type="AudioStream" uid="uid://fil8c66s33rx" path="res://Cutscene/Tira-inicial.mp3" id="15_uwodp"]
 
 [sub_resource type="Resource" id="Resource_55k7s"]
 script = ExtResource("2_838mi")
@@ -130,7 +131,16 @@ pitch_rand = 0.2
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
+[sub_resource type="Resource" id="Resource_m02h0"]
+script = ExtResource("2_838mi")
+limite = 1
+tipo = 12
+som = ExtResource("15_uwodp")
+volume = -8.475000000000001
+bus = &"Musica"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
 [node name="AudioManager" type="Node2D"]
 process_mode = 3
 script = ExtResource("1_86yo6")
-sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_r6l1c"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3ex0a"), SubResource("Resource_3m2wa"), SubResource("Resource_fphjp"), SubResource("Resource_fb0sx"), SubResource("Resource_xicdv")])
+sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_r6l1c"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3ex0a"), SubResource("Resource_3m2wa"), SubResource("Resource_fphjp"), SubResource("Resource_fb0sx"), SubResource("Resource_xicdv"), SubResource("Resource_m02h0")])

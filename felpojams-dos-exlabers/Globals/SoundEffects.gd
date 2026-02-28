@@ -14,6 +14,7 @@ enum TIPO_DE_SOM {
 	BOTAO,
 	PORTA_FECHA,
 	PORTA_ABRE,
+	CUTSCENE
 }
 
 @export_range(0, 10) var limite : int = 5

@@ -3,11 +3,14 @@ extends Control
 @export var botao_pular : Button
 
 func _ready():
+	AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CUTSCENE)
+	
 	botao_pular.visible = false
 	await get_tree().create_timer(3.5).timeout
 	botao_pular.visible = true
 	botao_pular.grab_focus()
-
+	
 
 
  
