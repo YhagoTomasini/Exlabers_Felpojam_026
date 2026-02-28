@@ -24,13 +24,16 @@ var knockback_vector := Vector2.ZERO
 var knockback_power := 20 
 var direction
 var is_dead : bool = false
-var estava_no_chao : bool = true
 var push_force = 80.0
-var is_jumping := false
+
 var jump_velocity
 var gravity
 var fall_gravity
+
 var can_jump := true
+var is_jumping := false
+var estava_no_chao : bool = false
+var puloConsumido : bool = false
 
 
 func _ready() -> void:
@@ -42,18 +45,28 @@ func _ready() -> void:
 	fall_gravity = gravity*2
 
 func _physics_process(delta: float) -> void:
-	#Se n estiver no chão e n estiver no ciano cai normal,
-	#if not is_on_floor() and !noCianoB:
-		#velocity.x = 0
 	#Se n estiver no chão e estiver no ciano cai devagar
 	if not is_on_floor() and noCianoB:
 		velocity += (get_gravity() * delta)/4
 		is_jumping = false
-
+	
+	if estava_no_chao and !is_on_floor():
+		coyote_timer.start()
+	
+	if is_on_floor():
+		puloConsumido = false
+		
+	estava_no_chao = is_on_floor()
+	#can_jump = is_on_floor() or !coyote_timer.is_stopped()
+	
 	#Se estiver no chão e não estiver em um ciano pula normal
 	if Input.is_action_just_pressed("ui_up") and can_jump and !noCianoB:
-		velocity.y = -jump_velocity
-		is_jumping = true
+		if is_on_floor() or !coyote_timer.is_stopped():
+			velocity.y = -jump_velocity
+			is_jumping = true
+			
+			puloConsumido = true
+			coyote_timer.stop()
 	#Se estiver no ciano pode precionar que você sobe devagar... até sair do ciano
 	elif Input.is_action_pressed("ui_up") and noCianoB:
 		velocity.y = -jump_velocity/4
@@ -61,10 +74,10 @@ func _physics_process(delta: float) -> void:
 	elif is_on_floor():
 		is_jumping = false
 	
-	if is_on_floor() and !can_jump:
-		can_jump = true
-	elif can_jump and coyote_timer.is_stopped():
-		coyote_timer.start()
+	#if is_on_floor() and !can_jump:
+		#can_jump = true
+	#elif can_jump and coyote_timer.is_stopped():
+		#coyote_timer.start()
 	
 	if velocity.y > 0 or not Input.is_action_pressed("ui_up"):
 		velocity.y += fall_gravity*delta
@@ -218,5 +231,5 @@ func queda_tween():
 	tween.tween_property(anim, "scale", Vector2(1.2, 0.8), 0.1)
 	tween.tween_property(anim, "scale", Vector2.ONE, 0.05)
 
-func _on_coyote_timer_timeout() -> void:
-	can_jump = false
+#func _on_coyote_timer_timeout() -> void:
+	#can_jump = false
