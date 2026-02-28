@@ -31,20 +31,6 @@ position = Vector2(973, 538)
 scale = Vector2(0.97243273, 0.9724327)
 texture = ExtResource("2_0nw1j")
 
-[node name="Parallax2D" type="Parallax2D" parent="ParallaxBG"]
-scroll_scale = Vector2(0.1, 0.1)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Parallax2D"]
-position = Vector2(422, 314)
-scale = Vector2(3.9375, 3.5)
-
-[node name="Parallax2D2" type="Parallax2D" parent="ParallaxBG"]
-scroll_scale = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG/Parallax2D2"]
-position = Vector2(1389, 779)
-scale = Vector2(1.484375, 1.0468756)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
@@ -62,10 +48,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 383.0
-offset_top = -19.0
-offset_right = 722.0
-offset_bottom = 260.0
+offset_left = 322.0
+offset_top = -61.0
+offset_right = 783.0
+offset_bottom = 422.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_x33ye")
@@ -91,20 +77,23 @@ layout_mode = 2
 text = "SAIR"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 1257.0
-offset_top = 198.0
-offset_right = 1768.0
-offset_bottom = 435.0
+offset_left = 1171.0
+offset_top = 125.0
+offset_right = 1850.0
+offset_bottom = 436.0
 size_flags_horizontal = 4
 theme = ExtResource("5_x33ye")
+theme_override_font_sizes/font_size = 97
 text = "JOGO DO ANO
 FELPS"
 horizontal_alignment = 1
 
 [node name="Tela controles" parent="CanvasLayer" node_paths=PackedStringArray("focoNoQueHaviaClicado") instance=ExtResource("6_ubl30")]
+visible = false
 focoNoQueHaviaClicado = NodePath("../VBoxContainer/contorles")
 
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("focoTelaInicial") instance=ExtResource("7_0bsfe")]
+visible = false
 focoTelaInicial = NodePath("../VBoxContainer/configs")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
