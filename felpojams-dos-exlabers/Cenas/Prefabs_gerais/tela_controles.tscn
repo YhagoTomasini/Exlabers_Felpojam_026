@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://c47hquni58xjp"]
+[gd_scene load_steps=12 format=3 uid="uid://c47hquni58xjp"]
 
 [ext_resource type="Script" uid="uid://dk5uugv7fd2a1" path="res://Cenas/Prefabs_gerais/tela_controles.gd" id="1_7236f"]
 [ext_resource type="Shader" uid="uid://co4s6dvogqbqv" path="res://Temas_UI/shaders/blur.gdshader" id="2_hu0db"]
-[ext_resource type="Texture2D" uid="uid://c3m3ddavwkdny" path="res://Imagens/papeis/1771357583652.png" id="3_hu0db"]
+[ext_resource type="Texture2D" uid="uid://cb7iaauinfrds" path="res://Imagens/papeis/1771356704578.png" id="3_hu0db"]
 [ext_resource type="Theme" uid="uid://cuscv0a8pehuw" path="res://Temas_UI/tela_creditos.tres" id="4_3vwbq"]
-[ext_resource type="Theme" uid="uid://djcj3jcon5ao0" path="res://Temas_UI/configuracoes.tres" id="4_q5uce"]
+[ext_resource type="Theme" uid="uid://c7re4iagxgfus" path="res://Temas_UI/controles.tres" id="5_3vwbq"]
 [ext_resource type="Script" uid="uid://crxyqnburxfpm" path="res://Codigos/RichTextEffect.gd" id="5_o72fc"]
+[ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="7_3vwbq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jcks3"]
 shader = ExtResource("2_hu0db")
@@ -52,19 +53,22 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.58, 0, 0.18366663, 0.24313726)
 
-[node name="Papel" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 301.0
-offset_top = 59.000008
-offset_right = 301.0
-offset_bottom = 389.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -699.0
+offset_top = -508.0
+offset_right = 603.5884
+offset_bottom = 411.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.698, 0.698)
+scale = Vector2(1.0917208, 1.0917208)
 texture = ExtResource("3_hu0db")
+expand_mode = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 0
@@ -143,56 +147,262 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -229.0
-offset_top = -261.5
-offset_right = 229.0
-offset_bottom = 261.5
+offset_left = -548.0
+offset_top = -418.0
+offset_right = 514.0
+offset_bottom = 411.3521
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("4_q5uce")
+scale = Vector2(1.0418751, 1.0418751)
+theme = ExtResource("5_3vwbq")
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/default_color = Color(0.10980392, 0.11372549, 0.47058824, 1)
+theme_override_constants/outline_size = 0
+theme_override_constants/text_highlight_h_padding = 3
+theme_override_font_sizes/normal_font_size = 65
 bbcode_enabled = true
 text = "[tremor]Controles[/tremor]"
 fit_content = true
 horizontal_alignment = 1
 custom_effects = [SubResource("RichTextEffect_jcks3")]
 
-[node name="VSeparator" type="HSeparator" parent="VBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[b]mouse e teclado[/b]"
+fit_content = true
+
+[node name="Label2" type="RichTextLabel" parent="VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "[b]controle[/b]"
+fit_content = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(0.04, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MOVIMENTAÇÃO HORIZONTAL"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "A e D / ← / →"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "PULAR"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "W / Espaço / ↑"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MIRAR"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Botão direito mouse"
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CARIMBAR"
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Botão esquerdo mouse"
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "PAUSAR"
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Esc / P"
+vertical_alignment = 1
+
+[node name="Label11" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MENU DE RESET"
+vertical_alignment = 1
+
+[node name="Label12" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "R"
+vertical_alignment = 1
+
+[node name="Label13" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "RESETAR TINTA"
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Alt + F4"
+vertical_alignment = 1
+
+[node name="GridContainer2" type="GridContainer" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+custom_minimum_size = Vector2(0.04, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MOVIMENTAÇÃO HORIZONTAL"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "A e D / ← / →"
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "PULAR"
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "W / Espaço / ↑"
+vertical_alignment = 1
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MIRAR"
+vertical_alignment = 1
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Botão direito mouse"
+vertical_alignment = 1
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "CARIMBAR"
+vertical_alignment = 1
+
+[node name="Label8" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Botão esquerdo mouse"
+vertical_alignment = 1
+
+[node name="Label9" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "PAUSAR"
+vertical_alignment = 1
+
+[node name="Label10" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Esc / P"
+vertical_alignment = 1
+
+[node name="Label11" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "MENU DE RESET"
+vertical_alignment = 1
+
+[node name="Label12" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "R"
+vertical_alignment = 1
+
+[node name="Label13" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "RESETAR TINTA"
+vertical_alignment = 1
+
+[node name="Label14" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Alt + F4"
+vertical_alignment = 1
 
 [node name="Voltar" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("7_3vwbq")
 shortcut = SubResource("Shortcut_eqixm")
-text = "voltar"
-
-[node name="TabContainer" type="TabContainer" parent="."]
-layout_mode = 0
-offset_right = 126.0
-offset_bottom = 40.0
-current_tab = 0
-
-[node name="TabBar" type="TabBar" parent="TabContainer"]
-layout_mode = 2
-metadata/_tab_index = 0
-
-[node name="BoxContainer" type="BoxContainer" parent="TabContainer/TabBar"]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 31.0
-
-[node name="TabBar2" type="TabBar" parent="TabContainer"]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
-
-[node name="BoxContainer" type="BoxContainer" parent="TabContainer/TabBar2"]
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 31.0
+text = " voltar "
 
 [connection signal="pressed" from="VBoxContainer/Voltar" to="." method="_on_voltar_pressed"]

@@ -1,0 +1,29 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c7re4iagxgfus"]
+
+[ext_resource type="FontFile" uid="uid://d13syq55uejv5" path="res://Fontes/WalterTurncoat-Regular.ttf" id="1_60sev"]
+[ext_resource type="FontFile" uid="uid://btb1c2whxbho0" path="res://Fontes/Mansalva-Regular.ttf" id="2_mb8o0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60sev"]
+bg_color = Color(1, 0, 0.20000029, 0.3882353)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 12.0
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[resource]
+default_font = ExtResource("2_mb8o0")
+default_font_size = 24
+GridContainer/constants/h_separation = 14
+GridContainer/constants/v_separation = 21
+HBoxContainer/constants/separation = 65
+Label/styles/normal = SubResource("StyleBoxFlat_60sev")
+RichTextLabel/colors/default_color = Color(0.13433993, 0.14779454, 0.14330897, 1)
+RichTextLabel/colors/font_outline_color = Color(1, 1, 1, 1)
+RichTextLabel/constants/outline_size = 9
+RichTextLabel/font_sizes/bold_font_size = 42
+RichTextLabel/font_sizes/normal_font_size = 34
+RichTextLabel/fonts/bold_font = ExtResource("1_60sev")
+VBoxContainer/constants/separation = 16
