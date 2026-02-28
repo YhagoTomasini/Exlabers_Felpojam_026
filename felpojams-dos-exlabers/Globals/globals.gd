@@ -8,7 +8,7 @@ var amarelo : Texture2D = preload("res://Imagens/carimbos/amarelo.png")
 var ciano : Texture2D = preload("res://Imagens/carimbos/azul.png")
 
 # VARIAVEIS GLOBAIS
-
+var finalizou : bool
 # VARIAVEIS do PERSONAGEM
 
 #TINTAS

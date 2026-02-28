@@ -124,6 +124,8 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_4.tscn")
 
 	elif area.name == "FinalLvl4":
+		Globals.finalizou = true
+		
 		Transição.anim_in()
 		await Transição.anim.animation_finished
 		

@@ -8,6 +8,8 @@ extends Control
 @export var velo: float = 1.0
 @export var pause: Control
 
+@export var prova : TextureRect
+
 var acabou: bool = false
 var scroll_shader: ShaderMaterial
 var fundo_scroll: float = 0.0
@@ -16,6 +18,10 @@ var acelerando : bool
 
 func _ready() -> void:
 	Transição.anim_out()
+	
+	if !Globals.finalizou:
+		prova.visible = false
+		
 	
 	acelerando = false
 	acabou = false
