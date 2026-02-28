@@ -246,10 +246,10 @@ texture = ExtResource("14_p7y3g")
 
 [node name="Bapo" type="TextureRect" parent="Elementos"]
 layout_mode = 0
-offset_left = 30.999939
-offset_top = 4148.0
-offset_right = 378.99994
-offset_bottom = 4460.0
+offset_left = 31.0
+offset_top = 4500.0
+offset_right = 379.0
+offset_bottom = 4812.0
 rotation = -0.23989876
 scale = Vector2(0.9610072, 0.9610072)
 texture = ExtResource("16_kvcyb")
@@ -301,19 +301,19 @@ expand_mode = 1
 
 [node name="Godot" type="TextureRect" parent="Elementos"]
 layout_mode = 0
-offset_left = 354.99997
-offset_top = 3129.0
+offset_left = 355.0
+offset_top = 3329.0
 offset_right = 611.0
-offset_bottom = 3385.0
+offset_bottom = 3585.0
 rotation = 0.14490286
 texture = ExtResource("18_mf7jr")
 
 [node name="coracao" type="TextureRect" parent="Elementos"]
 layout_mode = 0
 offset_left = 136.0
-offset_top = 3470.0
+offset_top = 3670.0
 offset_right = 392.0
-offset_bottom = 3726.0
+offset_bottom = 3926.0
 texture = ExtResource("19_qe6p1")
 
 [node name="adesivo" type="TextureRect" parent="Elementos/coracao"]
@@ -432,7 +432,7 @@ _______________________________________
 
 [tremor][b]Game tester[/b][/tremor]
 Lucas de Paulo, Gabriel “Dimitri” Oliveira, Hugo Soares,
-Maria Clara, Braian, Thiago Coser, Bruno Amaral, Pedro \"Pedrin\" Yung
+Maria Clara, Braian \"O T.I.\" Misael, Thiago Coser, Bruno Amaral, Pedro \"Pedrin\" Yung
 
 _______________________________________
 
