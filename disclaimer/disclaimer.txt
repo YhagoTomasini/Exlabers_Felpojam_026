@@ -1,1 +1,72 @@
-blablablablal
+SHADERS:
+Shader usado no menu
+	https://godotshaders.com/shader/vignette-2/
+
+Transição de tela
+	https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/
+
+_____________________________________________________________________________________________________________
+
+IA:
+Tamires:
+	Foi utilizado o ChatGPT para auxiliar na programação: da tipografia (efeito das letras se mexendo;
+
+Yhago:
+	Durante grande parte do processo da programação foi utilizado ChatGPT para ajudar com erros te sintaxe e identificar erros de lógica. Nenhum código foi copiado e colado dentro do jogo.
+Tirando o shader da onda da água... aquilo lá usava uma matemática que eu só aceitei que funciona.
+
+_____________________________________________________________________________________________________________
+
+IMAGENS E TEXTURAS:
+Cortiça
+	https://freepbr.com/product/cork-wood-pbr-material/
+
+Fitas
+	https://www.freepik.com/free-vector/washi-tape-clipart-brown-stationery-collage-element-vector-set_20346085.htm#fromView=search&page=1&position=1&uuid=e32847ad-d1fd-4f5d-831e-0c79a14e6f62&query=Adhesive+tape
+
+_____________________________________________________________________________________________________________
+
+SONS:
+Tap tap tap - passos
+	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-stamp-81635/
+
+Carimbo
+	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-tap-264682/
+
+Boing - pula–pula
+	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-boing-6222/
+
+Gotas
+	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-gotas-drops-325526/
+
+Água
+	https://pixabay.com/pt/sound-effects/natureza-water-bubbles-257594/
+
+Pulo
+	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-cartoon-jump-6462/
+
+Porta abrindo:
+	https://pixabay.com/pt/sound-effects/door-opening-454242/
+
+Porta fechando:
+	https://pixabay.com/pt/sound-effects/dom%c3%a9stico-close-door-382723/
+
+Barulho do botao dentro do jogo:
+	https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-button-press-382713/
+
+Som morte:
+	https://pixabay.com/pt/sound-effects/musical-hurt-c-08-102842/
+
+_____________________________________________________________________________________________________________
+
+
+EQUIPE:
+Embora a equipe cadastrada oficialmente na Felojam seja composta por duas pessoas (Yhago e Tamires), o desenvolvimento do jogo contou também com a colaboração de Isabela e Artemio.
+
+Pela incompetência de ambos, eles não realizaram o cadastro dentro do prazo estabelecido pela Jam. No entanto, ambos estão de acordo com todos os termos e requisitos do regulamento: são maiores de 18 anos, residem no Brasil e possuem documento de identificação válido.
+
+Temos total compreensão de que o cadastro dentro do prazo é uma etapa fundamental para a elegibilidade à premiação. Caso a participação deles inviabilize nossa validação para concorrer aos prêmios, esperamos que o projeto possa ao menos ser avaliado e apreciado pelos jurados.
+
+Se for necessário fornecer informações adicionais sobre os colaboradores mencionados, ficamos à disposição para compartilhá-las por meio de um canal privado.
+
+

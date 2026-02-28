@@ -1,3 +1,8 @@
+Tamires:
 Foi utilizado o ChatGPT para auxiliar na programação:
 -da tipografia (efeito das letras se mexendo;
 
+Yhago:
+Durante grande parte do processo da programação foi utilizado GPT para ajudar com erros te sintaxe e identificar erros de lógica. Nenhum código foi copiado e colado dentro do jogo.
+
+Tirando o shader da onda da água... aquilo lá usava uma matemática que eu só aceitei que funciona.
