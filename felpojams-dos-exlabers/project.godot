@@ -10,10 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Felpojams_dos_Exlabers"
+config/name="TGA 2026"
+config/description="Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dormindo durante o tempo do teste e sua avaliação foi recolhida. Um de seus desenhos toma vida e corre até a prova de seu criador para corrigí-la. "
+config/version="BETA_0.8"
 run/main_scene="uid://dohiuhxtebot1"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://6brus8staoto"
 
 [autoload]
 
@@ -26,6 +28,7 @@ Cursor2d="*res://Globals/cursor_2d.tscn"
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

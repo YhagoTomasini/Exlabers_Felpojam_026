@@ -17,7 +17,7 @@ func _ready():
 	
 	Transição.anim_out()
 	
-	botao_jogar.grab_focus()
+	#botao_jogar.grab_focus()
 	
 func _input(event):
 	# 🎮 detecta teclado / controle
@@ -30,7 +30,7 @@ func _input(event):
 			usando_teclado = true
 
 			# se ninguém estiver focado, foca o primeiro botão
-		#if not get_viewport().gui_get_focus_owner():
+		if not get_viewport().gui_get_focus_owner():
 			botao_jogar.grab_focus()
 
 
