@@ -22,7 +22,7 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
 - **ESC e P**: pausar  
 - **R**: reiniciar
 
-### CONTROLE (padrão Xbox)  
+### CONTROLE
 ###### *MOVIMENTAÇÃO*  
 - **Joystick esquerdo e DPAd**: andar  
 - **A**: pular  
@@ -32,7 +32,7 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
 - **R2 ou RB**: carimbar  
 - **L1, R1, LB e RB**: trocar de carimbo  
    
-###### *NAVEGAÇ* *ÃO*  
+###### *NAVEGAÇÃO*  
 - **Start (Sony) e Botão Menu (Xbox)**: pausar  
 - **Select (Sony) e Back (Xbox)**: reiniciar  
    
