@@ -10,8 +10,8 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
 ## **Controles**  
 ### TECLADO E MOUSE  
 ###### *MOVIMENTAÇ* *ÃO*  
-- **A e D **ou as  **setas direita e esquerda**: andar  
-- **Espaço** e  **W**: pular  
+- **A, D, setas direita e esquerda**: andar  
+- **Espaço e  W**: pular  
    
 ###### *CARIMBO*  
 - **Bot** **ão direito do mouse**: mirar o carimbo  
@@ -19,21 +19,22 @@ Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dorm
 - **Q e E**: trocar de carimbo  
    
 ###### *NAVEGAÇ* *ÃO*  
-- **Esc**: pausar  
-- **R**: reiniciar  
+- **ESC e P**: pausar  
+- **R**: reiniciar
+
 ### CONTROLE (padrão Xbox)  
 ###### *MOVIMENTAÇ* *ÃO*  
-- **Joystick esquerdo**: andar  
+- **Joystick esquerdo e DPAd**: andar  
 - **A**: pular  
    
 ###### *CARIMBO*  
-- **LT**: mirar o carimbo  
-- **RT**: carimbar  
-- **?????????**: trocar de carimbo  
+- **L2 ou LB + Joysick direito**: mirar o carimbo  
+- **R2 ou RB**: carimbar  
+- **L1, R1, LB e RB**: trocar de carimbo  
    
 ###### *NAVEGAÇ* *ÃO*  
-- **???????**: pausar  
-- **?????????????**: reiniciar  
+- **Sttart (Sony) e Botão Menu (Xbox)**: pausar  
+- **Select (Sony) e Back (Xbox)**: reiniciar  
    
    
 ## **Classificaç** **ão indicativa**  
@@ -46,7 +47,15 @@ Livre
 -    
 ### SHADERS  
 - Vignette (imakeshaders): [https://godotshaders.com/shader/vignette-2/](https://godotshaders.com/shader/vignette-2/ "https://godotshaders.com/shader/vignette-2/")  
-- Dot Matrix Diagonal Reveal Shader (muzi1983): [https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/](https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/ "https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/")  
+- Dot Matrix Diagonal Reveal Shader (muzi1983): [https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/](https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/ "https://godotshaders.com/shader/dot-matrix-diagonal-reveal-shader/")
+
+### MÚSICAS
+Tema
+https://opengameart.org/content/menu-doodle-2
+
+Créditos:
+https://opengameart.org/content/school-of-quirks
+
 ### SONS  
 Tap tap tap - passos  
 [https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-stamp-81635/](https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-stamp-81635/ "https://pixabay.com/pt/sound-effects/filme-e-efeitos-especiais-stamp-81635/")  
