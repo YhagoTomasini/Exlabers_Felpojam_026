@@ -90,29 +90,31 @@ func destruir_novo_aud(tipo : SoundEffect.TIPO_DE_SOM):
 		
 func pitch_tema(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo) and pitchOriginal.has(tipo):
-		var temaAtivo = sonsAtivos[tipo].pop_back()
-		var pitch_base = pitchOriginal[tipo]
-		var tween = create_tween()
-		
-		if opcao == 1:
-			tween.tween_property(temaAtivo, "pitch_scale", pitch_base, 0.5)
-		elif opcao == 2:
-			tween.tween_property(temaAtivo, "pitch_scale", pitch_base / 2.0, 0.5)
-		elif opcao == 3:
-			tween.tween_property(temaAtivo, "pitch_scale", pitch_base * 1.5, 0.5)
+		for temaAtivo in sonsAtivos[tipo]:
+			if is_instance_valid(temaAtivo):
+				var pitch_base = pitchOriginal[tipo]
+				var tween = create_tween()
+				
+				if opcao == 1:
+					tween.tween_property(temaAtivo, "pitch_scale", pitch_base, 0.5)
+				elif opcao == 2:
+					tween.tween_property(temaAtivo, "pitch_scale", pitch_base / 2.0, 0.5)
+				elif opcao == 3:
+					tween.tween_property(temaAtivo, "pitch_scale", pitch_base * 1.5, 0.5)
 
 func vol_som(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo) and volOriginal.has(tipo):
-		var somAtivo = sonsAtivos[tipo]
-		var vol_base = volOriginal[tipo]
-		var tween = create_tween()
-		
-		if opcao == 1:
-			tween.tween_property(somAtivo, "volume_db", vol_base, 0.5)
-		elif opcao == 2:
-			tween.tween_property(somAtivo, "volume_db", vol_base - 18.0, 0.5)
-		elif opcao == 3:
-			tween.tween_property(somAtivo, "volume_db", vol_base + 6.0, 0.5)
+		for somAtivo in sonsAtivos[tipo]:
+			if is_instance_valid(somAtivo):
+				var vol_base = volOriginal[tipo]
+				var tween = create_tween()
+				
+				if opcao == 1:
+					tween.tween_property(somAtivo, "volume_db", vol_base, 0.5)
+				elif opcao == 2:
+					tween.tween_property(somAtivo, "volume_db", vol_base - 18.0, 0.5)
+				elif opcao == 3:
+					tween.tween_property(somAtivo, "volume_db", vol_base + 6.0, 0.5)
 			
 func destruir_todos_aud(tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo):
