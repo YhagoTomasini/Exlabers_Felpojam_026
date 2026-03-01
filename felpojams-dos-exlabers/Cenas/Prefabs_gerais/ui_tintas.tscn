@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://co1uo20k2ecem"]
+[gd_scene load_steps=9 format=3 uid="uid://co1uo20k2ecem"]
 
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
 [ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Cenas/Prefabs_gerais/ui_tintas.gd" id="1_y871h"]
+[ext_resource type="Texture2D" uid="uid://bx3m5uuc7ci5d" path="res://Imagens/papeis/1771357403688.png" id="2_3c1j0"]
 [ext_resource type="Shader" uid="uid://dirjjsfbncuwq" path="res://Temas_UI/ui_tintas.gdshader" id="2_mpdm0"]
 [ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="4_badn5"]
 [ext_resource type="Texture2D" uid="uid://cmwu3d5nlchph" path="res://Imagens/UI/frasco_generico.png" id="4_mpdm0"]
@@ -37,6 +38,17 @@ icone3 = NodePath("IconeT22")
 barra = NodePath("BarraTanque")
 barra2 = NodePath("Sprite2D")
 frasco = NodePath("FundoBarraTanque")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_left = -150.0
+offset_top = -251.0
+offset_right = 1259.0
+offset_bottom = 1631.0
+rotation = -0.2565634
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_3c1j0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0, 0, 0, 1)
