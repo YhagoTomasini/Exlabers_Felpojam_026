@@ -1,21 +1,35 @@
-[gd_scene load_steps=19 format=3 uid="uid://cc4jlw8ceg1ml"]
+[gd_scene load_steps=29 format=3 uid="uid://cc4jlw8ceg1ml"]
 
 [ext_resource type="Script" uid="uid://dl6macd4ir4n2" path="res://Globals/audio_manager.gd" id="1_86yo6"]
 [ext_resource type="Script" uid="uid://cbp7cejpihvu8" path="res://Globals/SoundEffects.gd" id="2_838mi"]
 [ext_resource type="AudioStream" uid="uid://cxma2tcb5i183" path="res://Sons/raffa_o_bardo.mp3.mp3" id="3_dhxjl"]
 [ext_resource type="AudioStream" uid="uid://csx74d6eph618" path="res://Sons/Stamp.mp3" id="3_khsds"]
 [ext_resource type="AudioStream" uid="uid://xdtj07eeum8x" path="res://Sons/Tap.mp3" id="4_dhxjl"]
+[ext_resource type="AudioStream" uid="uid://d280ro7ryd2wh" path="res://Sons/musicasTemas/tema1.mp3" id="4_xoh1m"]
 [ext_resource type="AudioStream" uid="uid://csqm1t2njoqq" path="res://Sons/Boing.mp3" id="5_55k7s"]
 [ext_resource type="AudioStream" uid="uid://ddna3gqnyxptb" path="res://Sons/Jump.mp3" id="6_55k7s"]
 [ext_resource type="AudioStream" uid="uid://dsasgcef2ur61" path="res://Sons/water.mp3" id="8_0yobf"]
 [ext_resource type="AudioStream" uid="uid://d17y0fmwy3vq1" path="res://Sons/gotas_agua.mp3" id="9_0yobf"]
 [ext_resource type="AudioStream" uid="uid://dc5vq57eoogw7" path="res://Sons/hurt.mp3" id="9_fwm2o"]
+[ext_resource type="AudioStream" uid="uid://c7skm8blgqw3" path="res://Sons/botaoSom.mp3" id="12_eefjb"]
+[ext_resource type="AudioStream" uid="uid://dalhk66hihoqj" path="res://Sons/portaFexa.mp3" id="13_w6urj"]
+[ext_resource type="AudioStream" uid="uid://gmkvycwm1mqy" path="res://Sons/PortaBre.mp3" id="14_tnlua"]
+[ext_resource type="AudioStream" uid="uid://fil8c66s33rx" path="res://Cutscene/Tira-inicial.mp3" id="15_p3gic"]
 
 [sub_resource type="Resource" id="Resource_55k7s"]
 script = ExtResource("2_838mi")
 limite = 1
 som = ExtResource("3_dhxjl")
 volume = -5.3160000000000025
+bus = &"Musica"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
+[sub_resource type="Resource" id="Resource_ooyvv"]
+script = ExtResource("2_838mi")
+limite = 1
+tipo = 1
+som = ExtResource("4_xoh1m")
+volume = -8.067
 bus = &"Musica"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
@@ -31,7 +45,7 @@ metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [sub_resource type="Resource" id="Resource_khsds"]
 script = ExtResource("2_838mi")
-limite = 1
+limite = 2
 tipo = 3
 som = ExtResource("4_dhxjl")
 volume = -5.3160000000000025
@@ -72,6 +86,7 @@ metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [sub_resource type="Resource" id="Resource_3ex0a"]
 script = ExtResource("2_838mi")
+limite = 1
 tipo = 7
 som = ExtResource("9_fwm2o")
 pitch_rand = 0.15
@@ -87,6 +102,45 @@ pitch_rand = 0.2
 bus = &"Efeitos"
 metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
+[sub_resource type="Resource" id="Resource_uogaj"]
+script = ExtResource("2_838mi")
+limite = 2
+tipo = 9
+som = ExtResource("12_eefjb")
+volume = -4.537999999999997
+pitch_rand = 0.2
+bus = &"Efeitos"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
+[sub_resource type="Resource" id="Resource_ssrrd"]
+script = ExtResource("2_838mi")
+limite = 2
+tipo = 10
+som = ExtResource("13_w6urj")
+volume = -4.537999999999997
+pitch_rand = 0.2
+bus = &"Efeitos"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
+[sub_resource type="Resource" id="Resource_cwk65"]
+script = ExtResource("2_838mi")
+limite = 2
+tipo = 11
+som = ExtResource("14_tnlua")
+volume = -4.033000000000001
+pitch_rand = 0.2
+bus = &"Efeitos"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
+[sub_resource type="Resource" id="Resource_7fdfo"]
+script = ExtResource("2_838mi")
+limite = 1
+tipo = 12
+som = ExtResource("15_p3gic")
+volume = -8.571000000000002
+bus = &"Musica"
+metadata/_custom_type_script = "uid://cbp7cejpihvu8"
+
 [node name="AudioManager" type="Node2D"]
 script = ExtResource("1_86yo6")
-sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3ex0a"), SubResource("Resource_3m2wa")])
+sons = Array[ExtResource("2_838mi")]([SubResource("Resource_55k7s"), SubResource("Resource_ooyvv"), SubResource("Resource_dhxjl"), SubResource("Resource_khsds"), SubResource("Resource_838mi"), SubResource("Resource_0yobf"), SubResource("Resource_fwm2o"), SubResource("Resource_3ex0a"), SubResource("Resource_3m2wa"), SubResource("Resource_uogaj"), SubResource("Resource_ssrrd"), SubResource("Resource_cwk65"), SubResource("Resource_7fdfo")])

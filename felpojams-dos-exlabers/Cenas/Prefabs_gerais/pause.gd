@@ -87,12 +87,13 @@ func _unhandled_input(event: InputEvent) -> void:
 
 	
 func _on_menu_pressed() -> void:
-	AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
-	AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
+	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
 
 	Globals.refil_de_tinta()
+	
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
 

@@ -19,10 +19,13 @@ var acelerando : bool
 func _ready() -> void:
 	Transição.anim_out()
 	
-	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
+	
 	
 	if !Globals.finalizou:
 		prova.visible = false
+	else:
+		AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
+		AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
 		
 	
 	acelerando = false

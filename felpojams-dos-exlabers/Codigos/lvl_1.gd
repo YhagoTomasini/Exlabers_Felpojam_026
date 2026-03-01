@@ -5,6 +5,8 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	AudioManager.vol_som(1, SoundEffect.TIPO_DE_SOM.TEMA1)
+	AudioManager.vol_som(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA1)
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	#transicao.visible = false

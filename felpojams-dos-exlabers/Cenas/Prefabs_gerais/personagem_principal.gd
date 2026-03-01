@@ -135,8 +135,8 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		Transição.anim_in()
 		await Transição.anim.animation_finished
 		
-		AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
-		AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
+		#AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
+		#AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 		
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_creditos.tscn")
 
