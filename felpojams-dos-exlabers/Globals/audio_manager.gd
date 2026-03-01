@@ -32,6 +32,13 @@ func criar_aud_localizado(local : Vector2, tipo : SoundEffect.TIPO_DE_SOM):
 			novo_aud.finished.connect(novo_aud.queue_free)
 			
 			novo_aud.play()
+			
+			if !sonsAtivos.has(tipo):
+				sonsAtivos[tipo] = []
+			sonsAtivos[tipo].append(novo_aud)
+			
+			pitchOriginal[tipo] = novo_aud.pitch_scale
+			volOriginal[tipo] = novo_aud.volume_db
 	else:
 		push_error("n foi o audio", tipo)
 
@@ -54,7 +61,10 @@ func criar_aud(tipo : SoundEffect.TIPO_DE_SOM):
 			
 			novo_aud.play()
 			
-			sonsAtivos[tipo] = novo_aud
+			if !sonsAtivos.has(tipo):
+				sonsAtivos[tipo] = []
+			sonsAtivos[tipo].append(novo_aud)
+			
 			pitchOriginal[tipo] = novo_aud.pitch_scale
 			volOriginal[tipo] = novo_aud.volume_db
 	else:
@@ -62,23 +72,25 @@ func criar_aud(tipo : SoundEffect.TIPO_DE_SOM):
 
 func destruir_novo_aud(tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo):
-		var som = sonsAtivos[tipo]
-		var tween = create_tween()
+		var som = sonsAtivos[tipo].pop_back()
 		var controleLimite : SoundEffect = registroSons[tipo]
 		
-		tween.tween_property(som, "volume_db", -40, 0.3)
-		tween.tween_callback(func():
-			som.stop()
-			controleLimite.contar_aud(-1)
-			som.queue_free()
-		)
-		sonsAtivos.erase(tipo)
-		pitchOriginal.erase(tipo)
-		volOriginal.erase(tipo)
+		if is_instance_valid(som):
+			var tween = create_tween()
+			tween.tween_property(som, "volume_db", -40, 0.3)
+			tween.tween_callback(func():
+				som.stop()
+				controleLimite.contar_aud(-1)
+				som.queue_free()
+			)
+			
+			sonsAtivos.erase(tipo)
+			pitchOriginal.erase(tipo)
+			volOriginal.erase(tipo)
 		
 func pitch_tema(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 	if sonsAtivos.has(tipo) and pitchOriginal.has(tipo):
-		var temaAtivo = sonsAtivos[tipo]
+		var temaAtivo = sonsAtivos[tipo].pop_back()
 		var pitch_base = pitchOriginal[tipo]
 		var tween = create_tween()
 		
@@ -102,3 +114,21 @@ func vol_som(opcao : int, tipo : SoundEffect.TIPO_DE_SOM):
 		elif opcao == 3:
 			tween.tween_property(somAtivo, "volume_db", vol_base + 6.0, 0.5)
 			
+func destruir_todos_aud(tipo : SoundEffect.TIPO_DE_SOM):
+	if sonsAtivos.has(tipo):
+		var controleLimite : SoundEffect = registroSons[tipo]
+		
+		for som in sonsAtivos[tipo]:
+			if is_instance_valid(som):
+				var tween = create_tween()
+				
+				tween.tween_property(som, "volume_db", -40, 0.3)
+				tween.tween_callback(func():
+					som.stop()
+					controleLimite.contar_aud(-1)
+					som.queue_free()
+				)
+		
+		sonsAtivos.erase(tipo)
+		pitchOriginal.erase(tipo)
+		volOriginal.erase(tipo)

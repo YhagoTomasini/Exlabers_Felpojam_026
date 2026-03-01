@@ -62,7 +62,6 @@ func _on_jogar_pressed() -> void:
 	await Transição.anim.animation_finished
 	#mudança de cena
 	get_tree().change_scene_to_file("res://Cenas/cutscene.tscn")
-	
 
 func _on_creditos_pressed() -> void:
 	get_tree().change_scene_to_file("res://Cenas/tela_creditos.tscn")

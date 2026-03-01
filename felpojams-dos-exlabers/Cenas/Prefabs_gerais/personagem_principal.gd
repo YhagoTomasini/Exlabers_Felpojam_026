@@ -214,6 +214,9 @@ func player_morreu():
 	particulas_morte.emitting = true
 	camera.shake(20)
 	await get_tree().create_timer(1).timeout
+	
+	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
+	
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")
 

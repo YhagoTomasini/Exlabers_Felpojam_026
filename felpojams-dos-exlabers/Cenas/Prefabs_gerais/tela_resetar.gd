@@ -98,6 +98,9 @@ func _on_resetar_fase_pressed() -> void:
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
+	
+	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
+	
 	Globals.refil_de_tinta()
 	get_tree().paused = false
 	get_tree().call_deferred("reload_current_scene")
@@ -106,6 +109,8 @@ func _on_resetar_fase_pressed() -> void:
 func _on_resetar_jogo_pressed() -> void:
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA1)
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
+
+	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
 
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	Globals.reset_de_tinta()
