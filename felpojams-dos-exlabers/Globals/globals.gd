@@ -2,10 +2,10 @@ extends Node
 
 #preload das imagens dos icones da ui de cada cor de tinta para deixar no array
 #e permitir a funcionalidade do botão interativo que criei na ui
-var preto : Texture2D = preload("res://Imagens/carimbos/preto.png")
-var magenta : Texture2D = preload("res://Imagens/carimbos/magenta2.png")
-var amarelo : Texture2D = preload("res://Imagens/carimbos/amarelo.png")
-var ciano : Texture2D = preload("res://Imagens/carimbos/azul.png")
+var preto : Texture2D = preload("res://Imagens/carimbos/preto_ui.png")
+var magenta : Texture2D = preload("res://Imagens/carimbos/magenta2_ui.png")
+var amarelo : Texture2D = preload("res://Imagens/carimbos/amarelo_ui.png")
+var ciano : Texture2D = preload("res://Imagens/carimbos/azul_i.png")
 
 # VARIAVEIS GLOBAIS
 var finalizou : bool
