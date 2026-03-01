@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dohiuhxtebot1"]
+[gd_scene load_steps=10 format=3 uid="uid://dohiuhxtebot1"]
 
 [ext_resource type="Script" uid="uid://di50xjfemrgg0" path="res://Codigos/tela_inicial.gd" id="1_b1rrf"]
 [ext_resource type="Texture2D" uid="uid://deo5psaqtg1r5" path="res://Imagens/carimbos/capa_teste.png" id="2_0nw1j"]
@@ -7,6 +7,7 @@
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="5_x33ye"]
 [ext_resource type="PackedScene" uid="uid://c47hquni58xjp" path="res://Cenas/Prefabs_gerais/tela_controles.tscn" id="6_ubl30"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="7_0bsfe"]
+[ext_resource type="Texture2D" uid="uid://8ynourfdu3xq" path="res://Temas_UI/sliderrosa.svg" id="8_0bsfe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x33ye"]
 shader = ExtResource("4_00dnc")
@@ -48,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 322.0
-offset_top = -61.0
-offset_right = 783.0
-offset_bottom = 422.0
+offset_left = 186.0
+offset_top = -127.0
+offset_right = 743.0
+offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("5_x33ye")
@@ -77,16 +78,19 @@ layout_mode = 2
 text = "SAIR"
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 1171.0
-offset_top = 125.0
-offset_right = 1850.0
-offset_bottom = 436.0
+offset_left = 937.0
+offset_top = 250.0
+offset_right = 1616.0
+offset_bottom = 404.0
+rotation = -0.21131028
+scale = Vector2(1.2937667, 1.2937667)
 size_flags_horizontal = 4
 theme = ExtResource("5_x33ye")
+theme_override_colors/font_color = Color(0.5803922, 0, 0.1882353, 1)
 theme_override_font_sizes/font_size = 97
-text = "JOGO DO ANO
-FELPS"
+text = "PAPELITO"
 horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="Tela controles" parent="CanvasLayer" node_paths=PackedStringArray("focoNoQueHaviaClicado") instance=ExtResource("6_ubl30")]
 visible = false
@@ -95,6 +99,14 @@ focoNoQueHaviaClicado = NodePath("../VBoxContainer/contorles")
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("focoTelaInicial") instance=ExtResource("7_0bsfe")]
 visible = false
 focoTelaInicial = NodePath("../VBoxContainer/configs")
+
+[node name="Sliderrosa" type="TextureRect" parent="CanvasLayer"]
+offset_left = 1201.9999
+offset_top = 375.0001
+offset_right = 1725.0768
+offset_bottom = 392.0001
+rotation = -0.24198335
+texture = ExtResource("8_0bsfe")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]

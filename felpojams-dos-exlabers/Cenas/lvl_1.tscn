@@ -31,7 +31,6 @@ rangeMH = 256
 
 [node name="PersonagemPrincipal" parent="." instance=ExtResource("5_xcvut")]
 visibility_layer = 2
-z_index = 1
 position = Vector2(440, 1200)
 
 [node name="FinalLvl1" parent="." instance=ExtResource("6_2qxcg")]
@@ -140,123 +139,133 @@ offset_bottom = 291.0
 rotation = -0.4956735
 texture = ExtResource("11_geuvu")
 
-[node name="Untitled26February202617_26_19" type="TextureRect" parent="Fundo"]
+[node name="tutorial1" type="TextureRect" parent="Fundo"]
 layout_mode = 0
-offset_left = 763.44214
-offset_top = 1040.6157
-offset_right = 2483.4424
-offset_bottom = 2760.6157
-rotation = 0.44331366
+offset_left = 518.00006
+offset_top = 1122.0001
+offset_right = 2238.0002
+offset_bottom = 2842.0
+rotation = 0.108745456
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_30rey")
 
-[node name="Untitled26February202617_26_20" type="TextureRect" parent="Fundo"]
+[node name="Vector" type="TextureRect" parent="Fundo/tutorial1"]
+modulate = Color(1, 1, 1, 0.34901962)
+layout_mode = 0
+offset_left = 1251.3651
+offset_top = 1658.258
+offset_right = 1824.3241
+offset_bottom = 1830.1458
+rotation = -0.39966214
+texture = ExtResource("14_kqqgy")
+
+[node name="Vector2" type="TextureRect" parent="Fundo/tutorial1"]
+modulate = Color(1, 1, 1, 0.42352942)
+layout_mode = 0
+offset_left = -136.67647
+offset_top = 111.76883
+offset_right = 436.28253
+offset_bottom = 283.65652
+rotation = -0.509929
+texture = ExtResource("14_kqqgy")
+
+[node name="tutorial2" type="TextureRect" parent="Fundo"]
 layout_mode = 0
 offset_left = 1383.0
 offset_top = 1099.0
 offset_right = 3103.0
 offset_bottom = 2819.0
-rotation = -0.3281219
+rotation = -0.08937515
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_kqqgy")
 
-[node name="Untitled26February202617_26_21" type="TextureRect" parent="Fundo"]
+[node name="Vector(1)" type="TextureRect" parent="Fundo/tutorial2"]
+modulate = Color(1, 1, 1, 0.42745098)
 layout_mode = 0
-offset_left = 4961.0
-offset_top = 852.0001
-offset_right = 9041.0
-offset_bottom = 3148.0
-rotation = -0.24260077
-scale = Vector2(0.25, 0.25)
+offset_left = -49.228416
+offset_top = 1373.4077
+offset_right = 154.77158
+offset_bottom = 1435.4077
+rotation = 0.57220817
+scale = Vector2(2.940975, 2.940975)
+texture = ExtResource("13_30rey")
+
+[node name="Vector2" type="TextureRect" parent="Fundo/tutorial2"]
+modulate = Color(1, 1, 1, 0.50980395)
+layout_mode = 0
+offset_left = 1428.9177
+offset_top = -126.24394
+offset_right = 1648.9177
+offset_bottom = -60.24388
+rotation = 0.6789331
+scale = Vector2(2.4791424, 2.4791424)
+texture = ExtResource("14_kqqgy")
+
+[node name="tutorial3" type="TextureRect" parent="Fundo"]
+layout_mode = 0
+offset_left = 5059.0
+offset_top = 806.0
+offset_right = 9139.0
+offset_bottom = 3102.0
+rotation = 0.08847204
+scale = Vector2(0.2022628, 0.2022628)
 texture = ExtResource("14_i581n")
 
-[node name="Vector(1)" type="TextureRect" parent="Fundo"]
+[node name="Vector(1)3" type="TextureRect" parent="Fundo/tutorial3"]
+modulate = Color(1, 1, 1, 0.42745098)
 layout_mode = 0
-offset_left = 1470.0
-offset_top = 1407.0001
-offset_right = 1674.0
-offset_bottom = 1469.0001
-rotation = 0.37350047
-scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("13_30rey")
-
-[node name="Vector(1)3" type="TextureRect" parent="Fundo"]
-layout_mode = 0
-offset_left = 5106.0
-offset_top = 809.0001
-offset_right = 5310.0
-offset_bottom = 871.0001
+offset_left = 604.334
+offset_top = -27.631348
+offset_right = 808.334
+offset_bottom = 34.368652
 rotation = 2.2549653
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(3.8351045, 3.8351045)
 texture = ExtResource("13_30rey")
 
-[node name="Vector(1)4" type="TextureRect" parent="Fundo"]
+[node name="Vector(1)4" type="TextureRect" parent="Fundo/tutorial3"]
+modulate = Color(1, 1, 1, 0.42745098)
 layout_mode = 0
-offset_left = 6022.0005
-offset_top = 1206.0001
-offset_right = 6226.0005
-offset_bottom = 1268.0001
+offset_left = 3779.5605
+offset_top = 2394.063
+offset_right = 3983.5605
+offset_bottom = 2456.063
 rotation = -1.3351768
-scale = Vector2(0.9999999, 0.9999999)
+scale = Vector2(3.83516, 3.83516)
 texture = ExtResource("13_30rey")
 
-[node name="Vector(1)2" type="TextureRect" parent="Fundo"]
+[node name="Vector3" type="TextureRect" parent="Fundo/tutorial3"]
+modulate = Color(1, 1, 1, 0.42745098)
 layout_mode = 0
-offset_left = 687.44226
-offset_top = 1059.6157
-offset_right = 891.44226
-offset_bottom = 1121.6157
-rotation = -0.1605703
-scale = Vector2(0.9999999, 0.9999999)
-texture = ExtResource("13_30rey")
-
-[node name="Vector" type="TextureRect" parent="Fundo"]
-layout_mode = 0
-offset_left = 858.44226
-offset_top = 1584.6156
-offset_right = 1078.4423
-offset_bottom = 1650.6156
-rotation = -0.5078908
-texture = ExtResource("14_kqqgy")
-
-[node name="Vector2" type="TextureRect" parent="Fundo"]
-layout_mode = 0
-offset_left = 1730.0
-offset_top = 901.0
-offset_right = 1950.0
-offset_bottom = 967.00006
+offset_left = -58.04883
+offset_top = 1699.8315
+offset_right = 161.95117
+offset_bottom = 1765.8315
 rotation = 0.6789331
+scale = Vector2(3.8351605, 3.8351605)
 texture = ExtResource("14_kqqgy")
 
-[node name="Vector3" type="TextureRect" parent="Fundo"]
+[node name="Vector4" type="TextureRect" parent="Fundo/tutorial3"]
+modulate = Color(1, 1, 1, 0.42745098)
 layout_mode = 0
-offset_left = 5049.0
-offset_top = 1268.0
-offset_right = 5269.0
-offset_bottom = 1334.0
-rotation = 0.6789331
-texture = ExtResource("14_kqqgy")
-
-[node name="Vector4" type="TextureRect" parent="Fundo"]
-layout_mode = 0
-offset_left = 5995.0
-offset_top = 743.99976
-offset_right = 6215.0
-offset_bottom = 809.99976
+offset_left = 4118.662
+offset_top = 574.23193
+offset_right = 4338.662
+offset_bottom = 640.23193
 rotation = -2.5691247
+scale = Vector2(3.8351612, 3.8351612)
 texture = ExtResource("14_kqqgy")
 
 [connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104383" to="TileMapLayer/@Area2D@104383" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104384" to="TileMapLayer/@Area2D@104384" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104385" to="TileMapLayer/@Area2D@104385" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104386" to="TileMapLayer/@Area2D@104386" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104387" to="TileMapLayer/@Area2D@104387" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104388" to="TileMapLayer/@Area2D@104388" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104389" to="TileMapLayer/@Area2D@104389" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104390" to="TileMapLayer/@Area2D@104390" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104391" to="TileMapLayer/@Area2D@104391" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104392" to="TileMapLayer/@Area2D@104392" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104393" to="TileMapLayer/@Area2D@104393" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104394" to="TileMapLayer/@Area2D@104394" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@104395" to="TileMapLayer/@Area2D@104395" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88489" to="TileMapLayer/@Area2D@88489" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88490" to="TileMapLayer/@Area2D@88490" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88491" to="TileMapLayer/@Area2D@88491" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88492" to="TileMapLayer/@Area2D@88492" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88493" to="TileMapLayer/@Area2D@88493" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88494" to="TileMapLayer/@Area2D@88494" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88495" to="TileMapLayer/@Area2D@88495" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88496" to="TileMapLayer/@Area2D@88496" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88497" to="TileMapLayer/@Area2D@88497" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88498" to="TileMapLayer/@Area2D@88498" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88499" to="TileMapLayer/@Area2D@88499" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88500" to="TileMapLayer/@Area2D@88500" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@88501" to="TileMapLayer/@Area2D@88501" method="_on_body_entered"]
