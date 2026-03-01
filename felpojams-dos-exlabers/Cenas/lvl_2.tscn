@@ -68,16 +68,6 @@ process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
 
-[node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("9_m3pdg")]
-pause = NodePath("../Pause")
-
-[node name="TelaResetar" parent="CanvasLayer" node_paths=PackedStringArray("pause") instance=ExtResource("17_w7074")]
-pause = NodePath("../Pause")
-
-[node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("10_c37qn")]
-configs = NodePath("../Configs")
-reset = NodePath("../TelaResetar")
-
 [node name="Node" type="Node" parent="."]
 
 [node name="Felps" type="Sprite2D" parent="Node"]
@@ -89,3 +79,16 @@ texture = ExtResource("13_2anat")
 position = Vector2(470.9995, 217)
 rotation = -0.4956735
 texture = ExtResource("13_2anat")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+layer = 90
+
+[node name="Configs" parent="CanvasLayer2" node_paths=PackedStringArray("pause") instance=ExtResource("9_m3pdg")]
+pause = NodePath("../Pause")
+
+[node name="TelaResetar" parent="CanvasLayer2" node_paths=PackedStringArray("pause") instance=ExtResource("17_w7074")]
+pause = NodePath("../Pause")
+
+[node name="Pause" parent="CanvasLayer2" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("10_c37qn")]
+configs = NodePath("../Configs")
+reset = NodePath("../TelaResetar")

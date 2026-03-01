@@ -216,7 +216,7 @@ func player_morreu():
 	
 	
 	Transição.anim_in()
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(1, false).timeout
 	
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
 	
