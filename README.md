@@ -1,4 +1,4 @@
-*NOME DO JOGO*  
+*PAPELIO*  
 Equipe: Exlabers  
    
 ## **Descrição e instruções**  
