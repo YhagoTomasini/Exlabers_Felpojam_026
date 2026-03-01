@@ -38,6 +38,7 @@ Morte="Tudo que mata o player"
 Player=""
 agua=""
 aguaMaterial=""
+colisivel=""
 
 [input]
 

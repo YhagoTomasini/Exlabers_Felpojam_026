@@ -19,7 +19,7 @@ size = Vector2(128, 128)
 script = ExtResource("1_4o040")
 simbulo = NodePath("Area2DCiano/CollisionShape2D/Sprite2D")
 
-[node name="Area2DCiano" type="Area2D" parent="." groups=["agua"]]
+[node name="Area2DCiano" type="Area2D" parent="." groups=["agua", "colisivel"]]
 script = SubResource("GDScript_4o040")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2DCiano"]

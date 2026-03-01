@@ -21,7 +21,7 @@ shape = SubResource("RectangleShape2D_fmdbb")
 [node name="Sprite2D" type="Sprite2D" parent="body_marcaP/CollisionShape2D"]
 texture = ExtResource("2_1jbht")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["colisivel"]]
 scale = Vector2(1.3512659, 1.6399994)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]

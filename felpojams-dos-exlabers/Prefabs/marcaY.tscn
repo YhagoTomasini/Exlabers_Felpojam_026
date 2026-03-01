@@ -12,7 +12,7 @@ visibility_layer = 3
 script = ExtResource("1_ve2ui")
 simbulo = NodePath("body_marcaY/CollisionShape2D/Sprite2D")
 
-[node name="body_marcaY" type="RigidBody2D" parent="."]
+[node name="body_marcaY" type="RigidBody2D" parent="." groups=["colisivel"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="body_marcaY"]
 shape = SubResource("CircleShape2D_ve2ui")

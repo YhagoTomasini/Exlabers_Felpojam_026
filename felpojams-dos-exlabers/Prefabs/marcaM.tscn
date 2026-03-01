@@ -24,7 +24,7 @@ position = Vector2(0, 64)
 texture = ExtResource("2_5ktuj")
 offset = Vector2(0, -64)
 
-[node name="Area2DMagenta" type="Area2D" parent="." node_paths=PackedStringArray("sprite")]
+[node name="Area2DMagenta" type="Area2D" parent="." node_paths=PackedStringArray("sprite") groups=["colisivel"]]
 script = ExtResource("3_xc68n")
 sprite = NodePath("../body_marcaM/CollisionShape2D/Sprite2D")
 
