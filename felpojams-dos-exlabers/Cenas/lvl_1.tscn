@@ -1,14 +1,15 @@
-[gd_scene load_steps=17 format=4 uid="uid://c7jyjpqtg13xv"]
+[gd_scene load_steps=18 format=4 uid="uid://c7jyjpqtg13xv"]
 
 [ext_resource type="Script" uid="uid://ctpf3csqus7ju" path="res://Codigos/lvl_1.gd" id="1_xcvut"]
 [ext_resource type="TileSet" uid="uid://lxqcc7ay4hyq" path="res://Imagens/tiles/tiles.tres" id="2_ww2hj"]
-[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="4_ww2hj"]
+[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_ww2hj"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_xcvut"]
 [ext_resource type="PackedScene" uid="uid://cjdjfwiarpnt1" path="res://Prefabs/final_lvl_1.tscn" id="6_2qxcg"]
 [ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="9_2qxcg"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="9_geuvu"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="9_ww2hj"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="9_xcvut"]
+[ext_resource type="PackedScene" uid="uid://dsamep4b2vym6" path="res://Cenas/Prefabs_gerais/ui_pr.tscn" id="10_i581n"]
 [ext_resource type="Texture2D" uid="uid://cud3cvgoyulkw" path="res://Imagens/papeis/20260217_162419.jpg" id="11_2qxcg"]
 [ext_resource type="Texture2D" uid="uid://4epr8u1m5r37" path="res://Imagens/creditos/adesivo_felps.png" id="11_geuvu"]
 [ext_resource type="Texture2D" uid="uid://cuu2258tpfv82" path="res://Imagens/tutorial/tutorial1.png" id="12_30rey"]
@@ -38,6 +39,8 @@ position = Vector2(8263, 450)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="ui_PR" parent="CanvasLayer" instance=ExtResource("10_i581n")]
+
 [node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("9_ww2hj")]
 unique_name_in_owner = true
 process_mode = 3
@@ -53,6 +56,18 @@ pause = NodePath("../Pause")
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("9_geuvu")]
 configs = NodePath("../Configs")
 reset = NodePath("../TelaResetar")
+
+[node name="Felps" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(1991, 2661)
+rotation = 0.3159046
+texture = ExtResource("11_geuvu")
+
+[node name="Felps2" type="Sprite2D" parent="."]
+z_index = 3
+position = Vector2(-30, 7)
+rotation = -0.4956735
+texture = ExtResource("11_geuvu")
 
 [node name="Fundo" type="Control" parent="."]
 show_behind_parent = true
@@ -120,24 +135,6 @@ offset_bottom = -120.00049
 rotation = 1.5707964
 scale = Vector2(1.89306, 1.89306)
 texture = ExtResource("11_2qxcg")
-
-[node name="Felps" type="TextureRect" parent="Fundo"]
-layout_mode = 0
-offset_left = 1956.0
-offset_top = 2474.0
-offset_right = 2212.0
-offset_bottom = 2730.0
-rotation = 0.3159046
-texture = ExtResource("11_geuvu")
-
-[node name="Felps2" type="TextureRect" parent="Fundo"]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 35.0
-offset_right = 296.0
-offset_bottom = 291.0
-rotation = -0.4956735
-texture = ExtResource("11_geuvu")
 
 [node name="tutorial1" type="TextureRect" parent="Fundo"]
 layout_mode = 0
@@ -254,17 +251,3 @@ offset_bottom = 640.23193
 rotation = -2.5691247
 scale = Vector2(3.8351612, 3.8351612)
 texture = ExtResource("14_kqqgy")
-
-[connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74586" to="TileMapLayer/@Area2D@74586" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74587" to="TileMapLayer/@Area2D@74587" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74588" to="TileMapLayer/@Area2D@74588" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74589" to="TileMapLayer/@Area2D@74589" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74590" to="TileMapLayer/@Area2D@74590" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74591" to="TileMapLayer/@Area2D@74591" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74592" to="TileMapLayer/@Area2D@74592" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74593" to="TileMapLayer/@Area2D@74593" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74594" to="TileMapLayer/@Area2D@74594" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74595" to="TileMapLayer/@Area2D@74595" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74596" to="TileMapLayer/@Area2D@74596" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@74597" to="TileMapLayer/@Area2D@74597" method="_on_body_entered"]

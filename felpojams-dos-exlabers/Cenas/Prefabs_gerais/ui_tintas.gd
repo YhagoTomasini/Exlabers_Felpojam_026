@@ -31,18 +31,18 @@ func atualizar_barra():
 		
 	elif Globals.corAtual == 2:
 		estoqueAtual = Globals.tanqueTintaMagenta
-		barra.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
-		frasco.self_modulate = Color(1.0, 0.0, 1.0, 1.0)
+		barra.self_modulate = Color(1.0, 0.0, 0.882, 1.0)
+		frasco.self_modulate = Color(1.0, 0.0, 0.882, 1.0)
 		
 	elif Globals.corAtual == 1:
 		estoqueAtual = Globals.tanqueTintaAmarelo
-		barra.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
-		frasco.self_modulate = Color(1.0, 1.0, 0.0, 1.0)
+		barra.self_modulate = Color(1.0, 0.882, 0.0, 1.0)
+		frasco.self_modulate = Color(1.0, 0.882, 0.0, 1.0)
 		
 	elif Globals.corAtual == 3:
 		estoqueAtual = Globals.tanqueTintaCiano
-		barra.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
-		frasco.self_modulate = Color(0.0, 1.0, 1.0, 1.0)
+		barra.self_modulate = Color(0.0, 0.882, 1.0, 1.0)
+		frasco.self_modulate = Color(0.0, 0.882, 1.0, 1.0)
 	
 	#e escala ela baseado no maximo que teria de tinta e a quantidadde de tinta atual
 	barra.scale.y = (estoqueAtual / Globals.maxTanque)*1.5

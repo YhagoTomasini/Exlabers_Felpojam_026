@@ -1,12 +1,13 @@
-[gd_scene load_steps=14 format=4 uid="uid://bhrkx0lteq4ue"]
+[gd_scene load_steps=15 format=4 uid="uid://bhrkx0lteq4ue"]
 
 [ext_resource type="Texture2D" uid="uid://cud3cvgoyulkw" path="res://Imagens/papeis/20260217_162419.jpg" id="1_46wci"]
 [ext_resource type="TileSet" uid="uid://lxqcc7ay4hyq" path="res://Imagens/tiles/tiles.tres" id="1_eqqki"]
-[ext_resource type="Script" path="res://Codigos/lvl_2.gd" id="1_jjbd0"]
-[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Prefabs/carimbo.tscn" id="4_jjbd0"]
+[ext_resource type="Script" uid="uid://dhiumpyfsnym" path="res://Codigos/lvl_2.gd" id="1_jjbd0"]
+[ext_resource type="PackedScene" uid="uid://csmiixpup6vdl" path="res://Cenas/Prefabs_gerais/carimbo.tscn" id="4_jjbd0"]
 [ext_resource type="PackedScene" uid="uid://crihralf2ygsv" path="res://Cenas/Prefabs_gerais/personagem_principal.tscn" id="5_lbgfl"]
 [ext_resource type="PackedScene" uid="uid://co1uo20k2ecem" path="res://Cenas/Prefabs_gerais/ui_tintas.tscn" id="6_1eq1w"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_afi0q"]
+[ext_resource type="PackedScene" uid="uid://dsamep4b2vym6" path="res://Cenas/Prefabs_gerais/ui_pr.tscn" id="9_1eq1w"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="9_rfkta"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="9_yoai7"]
 [ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="10_46wci"]
@@ -51,6 +52,8 @@ position = Vector2(4289, 1856)
 alvo_porta = NodePath("../porta2")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ui_PR" parent="CanvasLayer" instance=ExtResource("9_1eq1w")]
 
 [node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("6_1eq1w")]
 unique_name_in_owner = true
