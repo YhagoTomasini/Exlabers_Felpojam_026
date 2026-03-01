@@ -236,6 +236,7 @@ frame_2/texture = ExtResource("9_vq5uy")
 frame_2/duration = 0.5
 
 [node name="PersonagemPrincipal" type="CharacterBody2D" node_paths=PackedStringArray("anim", "particulas_morte", "particulas_andando", "coyote_timer", "camera") groups=["Player", "colisivel"]]
+z_index = 1
 collision_layer = 25
 collision_mask = 3
 script = ExtResource("1_liew2")

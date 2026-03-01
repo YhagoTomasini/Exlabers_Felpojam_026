@@ -213,12 +213,17 @@ func player_morreu():
 	set_physics_process(false)
 	particulas_morte.emitting = true
 	camera.shake(20)
+	
+	
+	Transição.anim_in()
 	await get_tree().create_timer(1).timeout
 	
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
 	
 	Globals.refil_de_tinta()
 	get_tree().call_deferred("reload_current_scene")
+	
+	Transição.anim_out()
 
 func jump_tween():
 	var tween = create_tween()
