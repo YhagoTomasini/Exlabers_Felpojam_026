@@ -43,6 +43,30 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_0nw1j")
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 937.0
+offset_top = 250.0
+offset_right = 1616.0
+offset_bottom = 404.0
+rotation = -0.21131028
+scale = Vector2(1.2937667, 1.2937667)
+size_flags_horizontal = 4
+theme = ExtResource("5_x33ye")
+theme_override_colors/font_color = Color(0.5803922, 0, 0.1882353, 1)
+theme_override_font_sizes/font_size = 97
+text = "PAPELITO"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Sliderrosa" type="TextureRect" parent="CanvasLayer"]
+z_index = -1
+offset_left = 1201.9999
+offset_top = 375.0001
+offset_right = 1725.0768
+offset_bottom = 392.0001
+rotation = -0.24198335
+texture = ExtResource("8_0bsfe")
+
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 8
 anchor_left = 0.5
@@ -77,21 +101,6 @@ text = "CRÉDITOS"
 layout_mode = 2
 text = "SAIR"
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = 937.0
-offset_top = 250.0
-offset_right = 1616.0
-offset_bottom = 404.0
-rotation = -0.21131028
-scale = Vector2(1.2937667, 1.2937667)
-size_flags_horizontal = 4
-theme = ExtResource("5_x33ye")
-theme_override_colors/font_color = Color(0.5803922, 0, 0.1882353, 1)
-theme_override_font_sizes/font_size = 97
-text = "PAPELITO"
-horizontal_alignment = 1
-vertical_alignment = 2
-
 [node name="Tela controles" parent="CanvasLayer" node_paths=PackedStringArray("focoNoQueHaviaClicado") instance=ExtResource("6_ubl30")]
 visible = false
 focoNoQueHaviaClicado = NodePath("../VBoxContainer/contorles")
@@ -99,14 +108,6 @@ focoNoQueHaviaClicado = NodePath("../VBoxContainer/contorles")
 [node name="Configs" parent="CanvasLayer" node_paths=PackedStringArray("focoTelaInicial") instance=ExtResource("7_0bsfe")]
 visible = false
 focoTelaInicial = NodePath("../VBoxContainer/configs")
-
-[node name="Sliderrosa" type="TextureRect" parent="CanvasLayer"]
-offset_left = 1201.9999
-offset_top = 375.0001
-offset_right = 1725.0768
-offset_bottom = 392.0001
-rotation = -0.24198335
-texture = ExtResource("8_0bsfe")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]

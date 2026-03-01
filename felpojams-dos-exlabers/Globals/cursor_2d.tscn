@@ -5,8 +5,16 @@
 
 [node name="cursor2D" type="CanvasLayer"]
 process_mode = 3
-layer = 2
+layer = 100
 script = ExtResource("2_020im")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="TextureRect" parent="."]
+visible = false
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_xu56n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
 texture = ExtResource("1_xu56n")

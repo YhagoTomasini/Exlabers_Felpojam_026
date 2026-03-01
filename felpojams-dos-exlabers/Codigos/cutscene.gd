@@ -7,7 +7,7 @@ func _ready():
 	AudioManager.vol_som(2, SoundEffect.TIPO_DE_SOM.TEMA2)
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CUTSCENE)
 	
-	Transição.anim_out()
+	#Transição.anim_out()
 	
 	botao_pular.visible = false
 	await get_tree().create_timer(3.5).timeout

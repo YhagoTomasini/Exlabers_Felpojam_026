@@ -8,7 +8,7 @@ shader = ExtResource("1_vx7sl")
 shader_parameter/spacing = 15.0
 shader_parameter/animation_progress = 1.0
 shader_parameter/dot_size = 1.0
-shader_parameter/dot_color = Color(0, 0, 0, 1)
+shader_parameter/dot_color = Color(0.10980392, 0.14509805, 0.21568628, 1)
 
 [sub_resource type="Animation" id="Animation_r8xlt"]
 length = 0.001

@@ -13,7 +13,7 @@ var suavidade = 5.0
 var alvo = Vector2.ZERO
 
 func _ready():
-	await get_tree().create_timer(0.1).timeout
+	#await get_tree().create_timer(0.1).timeout
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	Transição.anim_out()

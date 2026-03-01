@@ -13,8 +13,10 @@ config_version=5
 config/name="TGA 2026"
 config/description="Um aluno entediado rabiscava sua folha enquanto fazia uma prova. Ele acabou dormindo durante o tempo do teste e sua avaliação foi recolhida. Um de seus desenhos toma vida e corre até a prova de seu criador para corrigí-la. "
 config/version="BETA_0.8"
-run/main_scene="uid://dohiuhxtebot1"
+run/main_scene="uid://dos4jbb3rkflr"
 config/features=PackedStringArray("4.5", "GL Compatibility")
+boot_splash/fullsize=false
+boot_splash/image="uid://ce10k0dgh3up4"
 config/icon="uid://6brus8staoto"
 
 [autoload]
@@ -31,6 +33,7 @@ window/size/viewport_height=1080
 window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="canvas_items"
+mouse_cursor/tooltip_position_offset=Vector2(0, 0)
 
 [global_group]
 
