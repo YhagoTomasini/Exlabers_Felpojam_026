@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=16 format=3 uid="uid://lxqcc7ay4hyq"]
+[gd_resource type="TileSet" load_steps=18 format=3 uid="uid://lxqcc7ay4hyq"]
 
 [ext_resource type="Texture2D" uid="uid://dw6rnit5oskmd" path="res://Imagens/tiles/TileRabiscos.png" id="1_xih2w"]
 [ext_resource type="Texture2D" uid="uid://d2a6xdj11ibav" path="res://Imagens/tiles/TileEscrita.PNG" id="2_kv4cq"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://do6k0t51p0fc0" path="res://Prefabs/espinhos4.tscn" id="9_b5f4i"]
 [ext_resource type="PackedScene" uid="uid://y1np6ckhs8dw" path="res://Prefabs/morte.tscn" id="10_0rrcs"]
 [ext_resource type="PackedScene" uid="uid://bw38lxq1b3nfh" path="res://Prefabs/aguita.tscn" id="11_8lbvf"]
+[ext_resource type="Texture2D" uid="uid://d2agwj6lpqo3h" path="res://Imagens/tiles/Illustration2.png" id="12_kv4cq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oy1k6"]
 texture = ExtResource("1_xih2w")
@@ -184,6 +185,31 @@ scenes/6/scene = ExtResource("9_b5f4i")
 scenes/7/scene = ExtResource("10_0rrcs")
 scenes/8/scene = ExtResource("11_8lbvf")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t7xhq"]
+texture = ExtResource("12_kv4cq")
+texture_region_size = Vector2i(128, 128)
+0:8/0 = 0
+2:8/0 = 0
+4:8/0 = 0
+6:8/0 = 0
+8:8/0 = 0
+3:6/0 = 0
+1:6/0 = 0
+0:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+0:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+6:2/0 = 0
+8:2/0 = 0
+0:0/0 = 0
+2:0/0 = 0
+4:0/0 = 0
+6:0/0 = 0
+8:0/0 = 0
+
 [resource]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 15
@@ -191,3 +217,4 @@ sources/0 = SubResource("TileSetAtlasSource_oy1k6")
 sources/1 = SubResource("TileSetAtlasSource_cvc4u")
 sources/2 = SubResource("TileSetAtlasSource_8mvs3")
 sources/3 = SubResource("TileSetScenesCollectionSource_fxe4r")
+sources/4 = SubResource("TileSetAtlasSource_t7xhq")
