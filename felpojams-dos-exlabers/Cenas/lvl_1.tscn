@@ -59,7 +59,7 @@ reset = NodePath("../TelaResetar")
 
 [node name="Felps" type="Sprite2D" parent="."]
 z_index = 3
-position = Vector2(1991, 2661)
+position = Vector2(1991, 2800)
 rotation = 0.3159046
 texture = ExtResource("11_geuvu")
 
