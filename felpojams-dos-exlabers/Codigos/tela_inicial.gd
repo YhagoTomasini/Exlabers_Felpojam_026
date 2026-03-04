@@ -68,10 +68,10 @@ func _on_creditos_pressed() -> void:
 	get_tree().change_scene_to_file("res://Cenas/tela_creditos.tscn")
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
 
-func _on_sair_pressed() -> void:
-	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
-	await get_tree().create_timer(0.5).timeout
-	get_tree().quit()
+#func _on_sair_pressed() -> void:
+	#AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
+	#await get_tree().create_timer(0.5).timeout
+	#get_tree().quit()
 
 
 func _on_contorles_pressed() -> void:
