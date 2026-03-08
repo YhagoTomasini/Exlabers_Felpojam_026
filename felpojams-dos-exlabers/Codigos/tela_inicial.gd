@@ -88,4 +88,4 @@ func _on_configs_pressed() -> void:
 func _on_speedrun_pressed() -> void:
 	Globals.speedrun_mode = true
 	Globals.speedRun()
-	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
+	get_tree().change_scene_to_file("res://Cenas/tela_scores.tscn")

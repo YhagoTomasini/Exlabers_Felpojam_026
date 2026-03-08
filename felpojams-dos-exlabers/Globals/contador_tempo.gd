@@ -3,8 +3,6 @@ extends Control
 @onready var timer = $Timer
 @onready var canva = $CanvasLayer
 
-var tempo_segs : int = 0
-
 func _ready() -> void:
 	canva.visible = false
 
@@ -25,10 +23,13 @@ func parar_timer():
 	timer.stop()
 	
 func reset_timer():
-	tempo_segs = 0
+	Globals.tempo_segs = 0
 	
 func _on_timer_timeout() -> void:
-	tempo_segs += 1
-	var m = int(tempo_segs / 60.0)
-	var s = tempo_segs % 60
+	Globals.tempo_segs += 1
+	var m = int(Globals.tempo_segs / 60.0)
+	var s = Globals.tempo_segs % 60
 	%Label.text = '%02d:%02d ' % [m, s]
+	
+	
+	

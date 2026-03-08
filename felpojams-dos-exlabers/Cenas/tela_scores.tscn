@@ -1,0 +1,135 @@
+[gd_scene load_steps=8 format=3 uid="uid://jfh0yxo3xedl"]
+
+[ext_resource type="Script" uid="uid://kp2dxoj1qxh1" path="res://Codigos/tela_scores.gd" id="1_dsp5l"]
+[ext_resource type="Texture2D" uid="uid://bx3m5uuc7ci5d" path="res://Imagens/papeis/1771357403688.png" id="1_e88hu"]
+[ext_resource type="Shader" uid="uid://b4hw1bekg3won" path="res://Temas_UI/shaders/vinheta.gdshader" id="2_dsp5l"]
+[ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="3_8b4bq"]
+[ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="4_nbpqy"]
+[ext_resource type="Texture2D" uid="uid://8ynourfdu3xq" path="res://Temas_UI/sliderrosa.svg" id="5_xe7bk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jfm7e"]
+shader = ExtResource("2_dsp5l")
+shader_parameter/outerRadius = 3.046000144685
+shader_parameter/MainAlpha = 0.782000037145
+
+[node name="Tela_scores" type="Control" node_paths=PackedStringArray("scoreTxt", "score", "hScore")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dsp5l")
+scoreTxt = NodePath("CanvasLayer/VBoxContainer/HBoxContainer/ScoreTXT")
+score = NodePath("CanvasLayer/VBoxContainer/HBoxContainer/Score")
+hScore = NodePath("CanvasLayer/VBoxContainer/HighScore")
+
+[node name="ParallaxBG" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBG"]
+position = Vector2(973, 538)
+scale = Vector2(0.97243273, 0.9724327)
+texture = ExtResource("1_e88hu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_jfm7e")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8b4bq")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 2.9999962
+offset_top = 246.0
+offset_right = 908.00006
+offset_bottom = 400.0
+rotation = -0.21131028
+scale = Vector2(1.2937667, 1.2937667)
+size_flags_horizontal = 4
+theme = ExtResource("4_nbpqy")
+theme_override_colors/font_color = Color(0.5803922, 0, 0.1882353, 1)
+theme_override_font_sizes/font_size = 80
+text = "MODO SPEEDRUN"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Sliderrosa" type="TextureRect" parent="CanvasLayer"]
+z_index = -1
+offset_left = -47.130234
+offset_top = 455.90894
+offset_right = 1186.9752
+offset_bottom = 472.90894
+rotation = -0.24198335
+texture = ExtResource("5_xe7bk")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -347.0
+offset_top = -220.0
+offset_right = 347.0
+offset_bottom = 533.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_nbpqy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="ScoreTXT" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Tempo:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Score" type="Label" parent="CanvasLayer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="HSTXT" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5803922, 0, 0.1882353, 1)
+text = "TEMPO RECORDE:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HighScore" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5803922, 0, 0.1882353, 1)
+theme_override_font_sizes/font_size = 96
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/VBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="Jogar" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "JOGAR	"
+
+[node name="menu" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "MENU"
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/menu" to="." method="_on_menu_pressed"]

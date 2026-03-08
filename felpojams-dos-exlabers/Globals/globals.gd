@@ -11,6 +11,10 @@ var ciano : Texture2D = preload("res://Imagens/carimbos/azul_i.png")
 var finalizou : bool
 
 var speedrun_mode : bool = false
+
+var tempo_segs : int = 0
+
+var high_tempo : int
 # VARIAVEIS do PERSONAGEM
 
 #TINTAS

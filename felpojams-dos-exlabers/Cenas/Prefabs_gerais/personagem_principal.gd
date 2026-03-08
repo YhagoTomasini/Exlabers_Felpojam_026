@@ -138,7 +138,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		if !Globals.speedrun_mode:
 			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_creditos.tscn")
 		else:
-			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_inicial.tscn")
+			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_scores.tscn")
 			
 	#Verificação da colisão com o ciano por area2D :D
 	elif area.is_in_group("agua"):
@@ -223,9 +223,9 @@ func player_morreu():
 	
 	if Globals.speedrun_mode:
 		ContadorTempo.reset_timer()
-		get_tree().call_deferred("change_scene_to_file", "res://Cenas/lvl_1.tscn")
-	else:
-		get_tree().call_deferred("reload_current_scene")
+		#get_tree().call_deferred("change_scene_to_file", "res://Cenas/lvl_1.tscn")
+	#else:
+	get_tree().call_deferred("reload_current_scene")
 	
 	Transição.anim_out()
 	
