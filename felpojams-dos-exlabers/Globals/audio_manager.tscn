@@ -18,7 +18,7 @@
 
 [sub_resource type="Resource" id="Resource_55k7s"]
 script = ExtResource("2_838mi")
-limite = 2
+limite = 1
 som = ExtResource("3_uwodp")
 volume = -8.515999999999998
 bus = &"Musica"
@@ -26,7 +26,7 @@ metadata/_custom_type_script = "uid://cbp7cejpihvu8"
 
 [sub_resource type="Resource" id="Resource_r6l1c"]
 script = ExtResource("2_838mi")
-limite = 2
+limite = 1
 tipo = 1
 som = ExtResource("4_uwodp")
 volume = -8.837

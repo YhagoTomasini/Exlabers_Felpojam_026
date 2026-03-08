@@ -9,6 +9,9 @@ func _ready() -> void:
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA1)
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
+	if Globals.speedrun_mode:
+		ContadorTempo.iniciar_timer()
+	
 	#transicao.visible = false
 	#animacao.speed_scale = anim_duracao
 	#animacao.play("transição_out")

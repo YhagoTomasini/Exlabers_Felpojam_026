@@ -2,6 +2,7 @@ extends Control
 
 @onready var parallax = $ParallaxBG
 @onready var botao_jogar: Button = $CanvasLayer/VBoxContainer/Jogar
+@onready var botao_speedrun : Button = $CanvasLayer/VBoxContainer/Speedrun
 
 @export var menuControles : Control
 @export var configs : Control
@@ -13,6 +14,8 @@ var suavidade = 5.0
 var alvo = Vector2.ZERO
 
 func _ready():
+	if !Globals.finalizou:
+		botao_speedrun.visible = false
 	#await get_tree().create_timer(0.1).timeout
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 	
@@ -53,8 +56,7 @@ func _process(delta):
 	parallax.scroll_offset = parallax.scroll_offset.lerp(alvo, delta * suavidade)
 
 func _on_jogar_pressed() -> void:
-	Globals.reset_de_tinta()
-	Globals.saveTanqueCena()
+	Globals.novo_jogo()
 	
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.CARIMBO)
 	
@@ -81,3 +83,9 @@ func _on_contorles_pressed() -> void:
 func _on_configs_pressed() -> void:
 	configs.visible = true
 	configs.grabFocus()
+
+
+func _on_speedrun_pressed() -> void:
+	Globals.speedrun_mode = true
+	Globals.speedRun()
+	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")

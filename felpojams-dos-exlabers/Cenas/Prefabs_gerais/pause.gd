@@ -89,12 +89,17 @@ func _unhandled_input(event: InputEvent) -> void:
 func _on_menu_pressed() -> void:
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
-
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
-
-	Globals.refil_de_tinta()
+	
+	ContadorTempo.parar_timer()
+	ContadorTempo.reset_timer()
+	Globals.speedrun_mode = false
+	#Globals.refil_de_tinta()
 	
 	get_tree().paused = false
+	Transição.anim_in()
+	await get_tree().create_timer(0.5).timeout
+	
 	get_tree().change_scene_to_file("res://Cenas/tela_inicial.tscn")
 
 

@@ -27,7 +27,7 @@ func _ready() -> void:
 	
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_copy"):
-		speedRun()
+		Globals.speedRun()
 		
 	if Input.is_action_pressed("clickRight"):
 		if marcaHipotetica == null:
@@ -77,11 +77,11 @@ func _process(delta: float) -> void:
 		
 #############################
 
-func speedRun():
-	if !Globals.arrayTintas.has(Globals.amarelo):
-		Globals.arrayTintas.append(Globals.amarelo)
-	if !Globals.arrayTintas.has(Globals.magenta):
-		Globals.arrayTintas.append(Globals.magenta)
-	if !Globals.arrayTintas.has(Globals.ciano):
-		Globals.arrayTintas.append(Globals.ciano)
-	Globals.saveTanqueCena()
+#func speedRun():
+	#if !Globals.arrayTintas.has(Globals.amarelo):
+		#Globals.arrayTintas.append(Globals.amarelo)
+	#if !Globals.arrayTintas.has(Globals.magenta):
+		#Globals.arrayTintas.append(Globals.magenta)
+	#if !Globals.arrayTintas.has(Globals.ciano):
+		#Globals.arrayTintas.append(Globals.ciano)
+	#Globals.saveTanqueCena()

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://84xo56kgkdud" path="res://Codigos/tela_creditos.gd" id="1_g6rvf"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="2_sioja"]
-[ext_resource type="Shader" uid="uid://cy1s2gttfkwmx" path="res://Temas_UI/shaders/tela_creditos.gdshader" id="2_thpw1"]
+[ext_resource type="Shader" path="res://Temas_UI/shaders/tela_creditos.gdshader" id="2_thpw1"]
 [ext_resource type="Texture2D" uid="uid://cblhj4gwconen" path="res://Imagens/creditos/cortiça/corkboard3b-albedo.png" id="2_vvrht"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="3_d2n4h"]
 [ext_resource type="Texture2D" uid="uid://bsmwbri7dv0la" path="res://Imagens/creditos/cortiça/corkboard3b-normal.png" id="3_imqlj"]
@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://b34tabwcer3is" path="res://Imagens/creditos/fantasmas.png" id="17_yd81c"]
 [ext_resource type="Texture2D" uid="uid://db06xkk1wbt56" path="res://Imagens/creditos/godot.png" id="18_mf7jr"]
 [ext_resource type="Texture2D" uid="uid://coccox63tplvt" path="res://Imagens/creditos/coracao.png" id="19_qe6p1"]
-[ext_resource type="Script" uid="uid://crxyqnburxfpm" path="res://Codigos/RichTextEffect.gd" id="20_mja1u"]
+[ext_resource type="Script" path="res://Codigos/RichTextEffect.gd" id="20_mja1u"]
 [ext_resource type="Texture2D" uid="uid://blv4ipv6npxar" path="res://Imagens/papeis/unity.png" id="21_kslpf"]
 [ext_resource type="Texture2D" uid="uid://dog7lcjm3db2c" path="res://Imagens/creditos/meiaum.png" id="22_pvn6d"]
 
@@ -493,7 +493,7 @@ horizontal_alignment = 1
 custom_effects = [SubResource("RichTextEffect_kvcyb")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 2
+layer = 90
 
 [node name="Pause" parent="CanvasLayer" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("2_sioja")]
 configs = NodePath("../Configs")

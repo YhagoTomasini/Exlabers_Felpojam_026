@@ -135,12 +135,11 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		Transição.anim_in()
 		await Transição.anim.animation_finished
 		
-		#AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA1)
-		#AudioManager.destruir_novo_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
-		
-		get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_creditos.tscn")
-
-	
+		if !Globals.speedrun_mode:
+			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_creditos.tscn")
+		else:
+			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_inicial.tscn")
+			
 	#Verificação da colisão com o ciano por area2D :D
 	elif area.is_in_group("agua"):
 		noCianoI += 1
@@ -221,9 +220,17 @@ func player_morreu():
 	AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.GOTAS)
 	
 	Globals.refil_de_tinta()
-	get_tree().call_deferred("reload_current_scene")
+	
+	if Globals.speedrun_mode:
+		ContadorTempo.reset_timer()
+		get_tree().call_deferred("change_scene_to_file", "res://Cenas/lvl_1.tscn")
+	else:
+		get_tree().call_deferred("reload_current_scene")
 	
 	Transição.anim_out()
+	
+	
+		
 
 func jump_tween():
 	var tween = create_tween()

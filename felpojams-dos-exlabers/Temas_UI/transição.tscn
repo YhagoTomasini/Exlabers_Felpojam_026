@@ -63,7 +63,7 @@ _data = {
 }
 
 [node name="Transição" type="CanvasLayer" node_paths=PackedStringArray("anim")]
-layer = 60
+layer = 85
 script = ExtResource("1_r8xlt")
 anim = NodePath("ColorRect/Animation")
 

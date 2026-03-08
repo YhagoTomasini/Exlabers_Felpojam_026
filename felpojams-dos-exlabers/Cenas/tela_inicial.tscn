@@ -85,6 +85,10 @@ theme = ExtResource("5_x33ye")
 layout_mode = 2
 text = "JOGAR	"
 
+[node name="Speedrun" type="Button" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "MOODO DE SPEEDRUN"
+
 [node name="contorles" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
 text = "CONTROLES"
@@ -110,6 +114,7 @@ visible = false
 focoTelaInicial = NodePath("../VBoxContainer/configs")
 
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Speedrun" to="." method="_on_speedrun_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/configs" to="." method="_on_configs_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/creditos" to="." method="_on_creditos_pressed"]

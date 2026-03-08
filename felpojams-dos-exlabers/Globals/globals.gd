@@ -9,6 +9,8 @@ var ciano : Texture2D = preload("res://Imagens/carimbos/azul_i.png")
 
 # VARIAVEIS GLOBAIS
 var finalizou : bool
+
+var speedrun_mode : bool = false
 # VARIAVEIS do PERSONAGEM
 
 #TINTAS
@@ -46,3 +48,17 @@ func reset_de_tinta():
 	tanqueTintaAmarelo = 10
 	tanqueTintaCiano = 10
 	
+func novo_jogo():
+	arrayTintas = [preto]
+	
+	reset_de_tinta()
+	saveTanqueCena()
+
+func speedRun():
+	if !arrayTintas.has(amarelo):
+		arrayTintas.append(amarelo)
+	if !arrayTintas.has(magenta):
+		arrayTintas.append(magenta)
+	if !arrayTintas.has(ciano):
+		arrayTintas.append(ciano)
+	saveTanqueCena()

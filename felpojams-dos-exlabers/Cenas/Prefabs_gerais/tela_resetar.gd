@@ -117,3 +117,6 @@ func _on_resetar_jogo_pressed() -> void:
 	Globals.saveTanqueCena()
 	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Cenas/lvl_1.tscn")
+	
+	if Globals.speedrun_mode:
+		ContadorTempo.reset_timer()

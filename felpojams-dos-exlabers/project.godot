@@ -25,6 +25,7 @@ Globals="*res://Globals/globals.gd"
 AudioManager="*res://Globals/audio_manager.tscn"
 Cursor2d="*res://Globals/cursor_2d.tscn"
 "Transição"="*res://Temas_UI/transição.tscn"
+ContadorTempo="*res://Globals/contador_tempo.tscn"
 
 [display]
 
