@@ -94,6 +94,7 @@ func _on_menu_pressed() -> void:
 	ContadorTempo.parar_timer()
 	ContadorTempo.reset_timer()
 	Globals.dados.speedrun_mode = false
+	Globals.salvar_jogo()
 	#Globals.refil_de_tinta()
 	
 	get_tree().paused = false

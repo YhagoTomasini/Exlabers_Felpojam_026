@@ -1,7 +1,7 @@
 extends Node
 #extends Resource
 
-const SAVE_PATH := "user://Globals/saveInfo.tres"
+const SAVE_PATH := "user://saveInfo.tres"
 #preload das imagens dos icones da ui de cada cor de tinta para deixar no array
 #e permitir a funcionalidade do botão interativo que criei na ui
 var preto : Texture2D = preload("res://Imagens/carimbos/preto_ui.png")
@@ -29,9 +29,6 @@ var tanqueAtualPreta : float = 10
 var tanqueAtualMagenta : float = 10
 var tanqueAtualAmarelo : float = 10
 var tanqueAtualCiano : float = 10
-
-func _ready():
-	carregar_save()
 
 func saveTanqueCena():
 	tanqueAtualPreta = tanqueTintaPreta
@@ -74,3 +71,7 @@ func carregar_save():
 		dados = load(SAVE_PATH)
 	else:
 		dados = SaveInfo.new()
+
+func apagar_save():
+	dados = SaveInfo.new()
+	salvar_jogo()

@@ -17,14 +17,14 @@ var usando_teclado = false
 func _ready() -> void:
 	ContadorTempo.parar_timer()
 	
-	if !Globals.dados.tempo_segs != 0:
+	if !Globals.dados.tempo_segs:
 		scoreTxt.visible = false
 		score.visible = false
 	
 	if !Globals.dados.high_tempo and Globals.dados.tempo_segs != 0:
 		Globals.dados.high_tempo = Globals.dados.tempo_segs
 	
-	elif Globals.dados.tempo_segs < Globals.dados.high_tempo:
+	elif Globals.dados.tempo_segs != 0 and Globals.dados.tempo_segs < Globals.dados.high_tempo:
 		Globals.dados.high_tempo = Globals.dados.tempo_segs
 	
 	var m = int(Globals.dados.tempo_segs / 60.0)
@@ -34,6 +34,7 @@ func _ready() -> void:
 	var hm = int(Globals.dados.high_tempo / 60.0)
 	var hs = Globals.dados.high_tempo % 60
 	hScore.text = '%02d:%02d ' % [hm, hs]
+	Globals.salvar_jogo()
 
 func _input(event):
 	# 🎮 detecta teclado / controle
@@ -78,6 +79,7 @@ func _on_jogar_pressed() -> void:
 
 func _on_menu_pressed() -> void:
 	Globals.dados.speedrun_mode = false
+	Globals.salvar_jogo()
 	ContadorTempo.reset_timer()
 	
 	Transição.anim_in()

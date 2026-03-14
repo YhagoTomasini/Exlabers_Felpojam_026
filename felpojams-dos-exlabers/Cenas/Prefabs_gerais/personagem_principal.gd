@@ -131,6 +131,7 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 
 	elif area.name == "FinalLvl4":
 		Globals.dados.finalizou = true
+		Globals.salvar_jogo()
 		
 		Transição.anim_in()
 		await Transição.anim.animation_finished
