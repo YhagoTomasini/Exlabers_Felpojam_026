@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://jfh0yxo3xedl"]
 
 [ext_resource type="Script" uid="uid://kp2dxoj1qxh1" path="res://Codigos/tela_scores.gd" id="1_dsp5l"]
-[ext_resource type="Texture2D" uid="uid://bx3m5uuc7ci5d" path="res://Imagens/papeis/1771357403688.png" id="1_e88hu"]
+[ext_resource type="Texture2D" uid="uid://q8r4hwtnr5f5" path="res://Imagens/teste_fundo2.png" id="2_8b4bq"]
 [ext_resource type="Shader" uid="uid://b4hw1bekg3won" path="res://Temas_UI/shaders/vinheta.gdshader" id="2_dsp5l"]
 [ext_resource type="Texture2D" uid="uid://dfxsbrknioce6" path="res://Imagens/rascunhos/quadradoBranco.png" id="3_8b4bq"]
 [ext_resource type="Theme" uid="uid://dfcivdba3fj8h" path="res://Temas_UI/tela_inicial.tres" id="4_nbpqy"]
@@ -12,7 +12,7 @@ shader = ExtResource("2_dsp5l")
 shader_parameter/outerRadius = 3.046000144685
 shader_parameter/MainAlpha = 0.782000037145
 
-[node name="Tela_scores" type="Control" node_paths=PackedStringArray("scoreTxt", "score", "hScore")]
+[node name="Tela_scores" type="Control" node_paths=PackedStringArray("scoreTxt", "score", "hScore", "parallax", "botao_jogar")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,13 +23,15 @@ script = ExtResource("1_dsp5l")
 scoreTxt = NodePath("CanvasLayer/VBoxContainer/HBoxContainer/ScoreTXT")
 score = NodePath("CanvasLayer/VBoxContainer/HBoxContainer/Score")
 hScore = NodePath("CanvasLayer/VBoxContainer/HighScore")
+parallax = NodePath("ParallaxBG")
+botao_jogar = NodePath("CanvasLayer/VBoxContainer/Jogar")
 
 [node name="ParallaxBG" type="Parallax2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBG"]
 position = Vector2(973, 538)
 scale = Vector2(0.97243273, 0.9724327)
-texture = ExtResource("1_e88hu")
+texture = ExtResource("2_8b4bq")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
