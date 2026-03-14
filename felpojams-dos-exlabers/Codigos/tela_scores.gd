@@ -17,22 +17,22 @@ var usando_teclado = false
 func _ready() -> void:
 	ContadorTempo.parar_timer()
 	
-	if !Globals.tempo_segs != 0:
+	if !Globals.dados.tempo_segs != 0:
 		scoreTxt.visible = false
 		score.visible = false
 	
-	if !Globals.high_tempo and Globals.tempo_segs != 0:
-		Globals.high_tempo = Globals.tempo_segs
+	if !Globals.dados.high_tempo and Globals.dados.tempo_segs != 0:
+		Globals.dados.high_tempo = Globals.dados.tempo_segs
 	
-	elif Globals.tempo_segs < Globals.high_tempo:
-		Globals.high_tempo = Globals.tempo_segs
+	elif Globals.dados.tempo_segs < Globals.dados.high_tempo:
+		Globals.dados.high_tempo = Globals.dados.tempo_segs
 	
-	var m = int(Globals.tempo_segs / 60.0)
-	var s = Globals.tempo_segs % 60
+	var m = int(Globals.dados.tempo_segs / 60.0)
+	var s = Globals.dados.tempo_segs % 60
 	score.text = '%02d:%02d ' % [m, s]
 	
-	var hm = int(Globals.high_tempo / 60.0)
-	var hs = Globals.high_tempo % 60
+	var hm = int(Globals.dados.high_tempo / 60.0)
+	var hs = Globals.dados.high_tempo % 60
 	hScore.text = '%02d:%02d ' % [hm, hs]
 
 func _input(event):
@@ -77,7 +77,7 @@ func _on_jogar_pressed() -> void:
 
 
 func _on_menu_pressed() -> void:
-	Globals.speedrun_mode = false
+	Globals.dados.speedrun_mode = false
 	ContadorTempo.reset_timer()
 	
 	Transição.anim_in()

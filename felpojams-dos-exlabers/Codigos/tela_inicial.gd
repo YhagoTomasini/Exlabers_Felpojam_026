@@ -14,7 +14,7 @@ var suavidade = 5.0
 var alvo = Vector2.ZERO
 
 func _ready():
-	if !Globals.finalizou:
+	if !Globals.dados.finalizou:
 		botao_speedrun.visible = false
 	#await get_tree().create_timer(0.1).timeout
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
@@ -86,6 +86,6 @@ func _on_configs_pressed() -> void:
 
 
 func _on_speedrun_pressed() -> void:
-	Globals.speedrun_mode = true
+	Globals.dados.speedrun_mode = true
 	Globals.speedRun()
 	get_tree().change_scene_to_file("res://Cenas/tela_scores.tscn")

@@ -9,7 +9,7 @@ func _ready() -> void:
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA1)
 	AudioManager.pitch_tema(1, SoundEffect.TIPO_DE_SOM.TEMA2)
 	
-	if Globals.speedrun_mode:
+	if Globals.dados.speedrun_mode:
 		ContadorTempo.iniciar_timer()
 	
 	#transicao.visible = false

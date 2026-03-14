@@ -130,12 +130,12 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_4.tscn")
 
 	elif area.name == "FinalLvl4":
-		Globals.finalizou = true
+		Globals.dados.finalizou = true
 		
 		Transição.anim_in()
 		await Transição.anim.animation_finished
 		
-		if !Globals.speedrun_mode:
+		if !Globals.dados.speedrun_mode:
 			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_creditos.tscn")
 		else:
 			get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_scores.tscn")
@@ -221,7 +221,7 @@ func player_morreu():
 	
 	Globals.refil_de_tinta()
 	
-	if Globals.speedrun_mode:
+	if Globals.dados.speedrun_mode:
 		ContadorTempo.reset_timer()
 		#get_tree().call_deferred("change_scene_to_file", "res://Cenas/lvl_1.tscn")
 	#else:

@@ -21,7 +21,7 @@ func _ready() -> void:
 	
 	
 	
-	if !Globals.finalizou:
+	if !Globals.dados.finalizou:
 		prova.visible = false
 	else:
 		AudioManager.destruir_todos_aud(SoundEffect.TIPO_DE_SOM.TEMA2)

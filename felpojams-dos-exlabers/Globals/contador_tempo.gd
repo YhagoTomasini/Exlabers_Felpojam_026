@@ -8,7 +8,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_paste"):
-		Globals.finalizou = true
+		Globals.dados.finalizou = true
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/tela_inicial.tscn")
 		
 func iniciar_timer():
@@ -23,12 +23,12 @@ func parar_timer():
 	timer.stop()
 	
 func reset_timer():
-	Globals.tempo_segs = 0
+	Globals.dados.tempo_segs = 0
 	
 func _on_timer_timeout() -> void:
-	Globals.tempo_segs += 1
-	var m = int(Globals.tempo_segs / 60.0)
-	var s = Globals.tempo_segs % 60
+	Globals.dados.tempo_segs += 1
+	var m = int(Globals.dados.tempo_segs / 60.0)
+	var s = Globals.dados.tempo_segs % 60
 	%Label.text = '%02d:%02d ' % [m, s]
 	
 	

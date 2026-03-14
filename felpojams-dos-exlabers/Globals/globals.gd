@@ -1,5 +1,7 @@
 extends Node
+#extends Resource
 
+const SAVE_PATH := "user://Globals/saveInfo.tres"
 #preload das imagens dos icones da ui de cada cor de tinta para deixar no array
 #e permitir a funcionalidade do botão interativo que criei na ui
 var preto : Texture2D = preload("res://Imagens/carimbos/preto_ui.png")
@@ -8,13 +10,7 @@ var amarelo : Texture2D = preload("res://Imagens/carimbos/amarelo_ui.png")
 var ciano : Texture2D = preload("res://Imagens/carimbos/azul_i.png")
 
 # VARIAVEIS GLOBAIS
-var finalizou : bool
-
-var speedrun_mode : bool = false
-
-var tempo_segs : int = 0
-
-var high_tempo : int
+var dados : SaveInfo
 # VARIAVEIS do PERSONAGEM
 
 #TINTAS
@@ -33,6 +29,9 @@ var tanqueAtualPreta : float = 10
 var tanqueAtualMagenta : float = 10
 var tanqueAtualAmarelo : float = 10
 var tanqueAtualCiano : float = 10
+
+func _ready():
+	carregar_save()
 
 func saveTanqueCena():
 	tanqueAtualPreta = tanqueTintaPreta
@@ -66,3 +65,12 @@ func speedRun():
 	if !arrayTintas.has(ciano):
 		arrayTintas.append(ciano)
 	saveTanqueCena()
+	
+func salvar_jogo():
+	ResourceSaver.save(dados, SAVE_PATH)
+
+func carregar_save():
+	if ResourceLoader.exists(SAVE_PATH):
+		dados = load(SAVE_PATH)
+	else:
+		dados = SaveInfo.new()
