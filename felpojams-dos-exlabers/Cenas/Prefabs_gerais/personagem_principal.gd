@@ -222,7 +222,7 @@ func player_morreu():
 	
 	Globals.refil_de_tinta()
 	
-	if Globals.dados.speedrun_mode:
+	if Globals.dados.speedrun_mode and get_tree().current_scene.scene_file_path == "res://Cenas/lvl_1.tscn":
 		ContadorTempo.reset_timer()
 		#get_tree().call_deferred("change_scene_to_file", "res://Cenas/lvl_1.tscn")
 	#else:

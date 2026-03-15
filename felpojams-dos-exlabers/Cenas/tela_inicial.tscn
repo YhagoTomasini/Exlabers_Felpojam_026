@@ -87,7 +87,7 @@ text = "JOGAR	"
 
 [node name="Speedrun" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2
-text = "MOODO DE SPEEDRUN"
+text = "MODO DE SPEEDRUN"
 
 [node name="contorles" type="Button" parent="CanvasLayer/VBoxContainer"]
 layout_mode = 2

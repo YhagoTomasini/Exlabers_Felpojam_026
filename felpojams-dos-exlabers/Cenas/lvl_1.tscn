@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://c7jyjpqtg13xv"]
+[gd_scene load_steps=18 format=4 uid="uid://c7jyjpqtg13xv"]
 
 [ext_resource type="Script" uid="uid://ctpf3csqus7ju" path="res://Codigos/lvl_1.gd" id="1_xcvut"]
 [ext_resource type="TileSet" uid="uid://lxqcc7ay4hyq" path="res://Imagens/tiles/tiles.tres" id="2_ww2hj"]
@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://c0yjvahkj7ie4" path="res://Imagens/tutorial/tutorial2.png" id="13_kqqgy"]
 [ext_resource type="Texture2D" uid="uid://bq0fvajmg1wc3" path="res://Imagens/tutorial/aaaaaaaa.png" id="14_i581n"]
 [ext_resource type="Texture2D" uid="uid://d2oji00nc3ngv" path="res://Imagens/creditos/Vector.png" id="14_kqqgy"]
-[ext_resource type="PackedScene" uid="uid://bhe0k7d2w87n3" path="res://Prefabs/final_lvl_4.tscn" id="18_o31xl"]
 
 [node name="lvl_1" type="Node2D"]
 z_index = -30
@@ -255,20 +254,3 @@ pause = NodePath("../Pause")
 [node name="Pause" parent="CanvasLayer2" node_paths=PackedStringArray("configs", "reset") instance=ExtResource("9_geuvu")]
 configs = NodePath("../Configs")
 reset = NodePath("../TelaResetar")
-
-[node name="FinalLvl4" parent="." instance=ExtResource("18_o31xl")]
-position = Vector2(1499, 1462)
-
-[connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125553" to="TileMapLayer/@Area2D@125553" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125554" to="TileMapLayer/@Area2D@125554" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125555" to="TileMapLayer/@Area2D@125555" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125556" to="TileMapLayer/@Area2D@125556" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125557" to="TileMapLayer/@Area2D@125557" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125558" to="TileMapLayer/@Area2D@125558" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125559" to="TileMapLayer/@Area2D@125559" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125560" to="TileMapLayer/@Area2D@125560" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125561" to="TileMapLayer/@Area2D@125561" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125562" to="TileMapLayer/@Area2D@125562" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125563" to="TileMapLayer/@Area2D@125563" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@125564" to="TileMapLayer/@Area2D@125564" method="_on_body_entered"]
