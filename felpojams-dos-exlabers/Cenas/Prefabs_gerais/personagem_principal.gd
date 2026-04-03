@@ -108,6 +108,8 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		
 		if !Globals.arrayTintas.has(Globals.amarelo):
 			Globals.arrayTintas.append(Globals.amarelo)
+		
+		Achivements.conquista(1)
 		Globals.saveTanqueCena()
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_2.tscn")
 

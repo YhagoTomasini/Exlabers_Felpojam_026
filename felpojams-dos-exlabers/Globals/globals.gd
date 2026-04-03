@@ -63,6 +63,7 @@ func speedRun():
 		arrayTintas.append(ciano)
 	saveTanqueCena()
 	
+#sistema de save
 func salvar_jogo():
 	ResourceSaver.save(dados, SAVE_PATH)
 
