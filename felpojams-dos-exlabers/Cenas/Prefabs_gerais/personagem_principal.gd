@@ -119,6 +119,8 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		
 		if !Globals.arrayTintas.has(Globals.magenta):
 			Globals.arrayTintas.append(Globals.magenta)
+		
+		Achivements.conquista(2)
 		Globals.saveTanqueCena()
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_3.tscn")
 
@@ -128,12 +130,16 @@ func _on_area_2d_personagem_area_entered(area: Area2D) -> void:
 		
 		if !Globals.arrayTintas.has(Globals.ciano):
 			Globals.arrayTintas.append(Globals.ciano)
+		
+		Achivements.conquista(3)
 		Globals.saveTanqueCena()
 		get_tree().call_deferred("change_scene_to_file","res://Cenas/lvl_4.tscn")
 
 	elif area.name == "FinalLvl4":
 		Globals.dados.finalizou = true
 		Globals.salvar_jogo()
+		
+		Achivements.conquista(4)
 		
 		Transição.anim_in()
 		await Transição.anim.animation_finished

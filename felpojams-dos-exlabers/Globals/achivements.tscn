@@ -1,30 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://b0gxrs3w4l0v6"]
+[gd_scene load_steps=10 format=3 uid="uid://b0gxrs3w4l0v6"]
 
 [ext_resource type="Script" uid="uid://d1rybu4yh7plw" path="res://achivements.gd" id="1_pcrqp"]
+[ext_resource type="Theme" uid="uid://c7re4iagxgfus" path="res://Temas_UI/controles.tres" id="2_exqku"]
+[ext_resource type="Script" path="res://Codigos/RichTextEffect.gd" id="3_62ibn"]
 
 [sub_resource type="Animation" id="Animation_pcrqp"]
 resource_name = "new_animation"
 length = 4.0
+step = 1.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:position:x")
+tracks/0/path = NodePath("CanvasLayer/Panel:position:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(1528, -0.25, 0, 0.25, 0, 1528, -0.5, 0, 0, 0, 1528, -0.33333334, 0, 0, 0, 1528, -0.5, 0, 0, 0),
-"times": PackedFloat32Array(0, 1, 3, 4)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(1100, -0.25, 0, 0.25, 0, 960, -0.5, 23.333334, 0, 0, 960, -0.33333334, 0, 0, 0, 1100, -0.5, -23.333334, 0, 0),
+"handle_modes": PackedInt32Array(2, 2, 2, 2),
+"points": PackedFloat32Array(1100, 0, 0, 0.16666667, -23.333334, 906, -0.16666667, 7.777778, 0.33333334, -15.555556, 906, -0.33333334, -21.555555, 0.16666667, 10.777778, 1100, -0.16666667, -32.333336, 0, 0),
 "times": PackedFloat32Array(0, 1, 3, 4)
 }
 
@@ -33,21 +25,10 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Panel:position:x")
+tracks/0/path = NodePath("CanvasLayer/Panel:position:y")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1528, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Panel:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(1100, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
@@ -59,42 +40,74 @@ _data = {
 &"new_animation": SubResource("Animation_pcrqp")
 }
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_62ibn"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_exqku"]
 
-[node name="achivements" type="Control"]
+[sub_resource type="RichTextEffect" id="RichTextEffect_plmoh"]
+script = ExtResource("3_62ibn")
+metadata/_custom_type_script = "uid://crxyqnburxfpm"
+
+[node name="achivements" type="Control" node_paths=PackedStringArray("icon", "nome", "anim")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_pcrqp")
+icon = NodePath("CanvasLayer/Panel/TextureRect")
+nome = NodePath("CanvasLayer/Panel/RichTextLabel")
+anim = NodePath("AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_62ibn")
 }
 
-[node name="Panel" type="Panel" parent="."]
-self_modulate = Color(1, 1, 1, 0.32156864)
-layout_mode = 0
-offset_left = 1528.0
-offset_top = 1100.0
-offset_right = 1888.0
-offset_bottom = 1180.0028
-pivot_offset = Vector2(360, 80)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 10
 
-[node name="TextureRect" type="TextureRect" parent="Panel"]
+[node name="Panel" type="TextureRect" parent="CanvasLayer"]
+process_mode = 3
+self_modulate = Color(0.1764706, 0.17254902, 0.21960784, 1)
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -540.0
+offset_top = 20.0
+offset_right = -28.0
+offset_bottom = 164.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset = Vector2(360, 80)
+texture = SubResource("CanvasTexture_62ibn")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel"]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 72.0
-offset_bottom = 72.0
+offset_right = 136.0
+offset_bottom = 136.0
 texture = SubResource("CanvasTexture_exqku")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 80.0
+offset_left = 144.0
 offset_top = 8.0
-offset_right = 352.0
-offset_bottom = 72.0
+offset_right = 504.0
+offset_bottom = 136.0
+theme = ExtResource("2_exqku")
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0)
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 32
+bbcode_enabled = true
+text = "[tremor][b]TESTE[/b][/tremor]
+Caralhou, rs."
+vertical_alignment = 1
+custom_effects = [SubResource("RichTextEffect_plmoh")]

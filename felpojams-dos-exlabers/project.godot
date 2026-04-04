@@ -26,6 +26,7 @@ Cursor2d="*res://Globals/cursor_2d.tscn"
 "Transição"="*res://Temas_UI/transição.tscn"
 ContadorTempo="*res://Globals/contador_tempo.tscn"
 Globals="*res://Globals/globals.gd"
+Achivements="*res://Globals/achivements.tscn"
 
 [display]
 
