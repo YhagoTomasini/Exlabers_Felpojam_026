@@ -30,6 +30,7 @@ var tanqueAtualMagenta : float = 10
 var tanqueAtualAmarelo : float = 10
 var tanqueAtualCiano : float = 10
 
+
 func saveTanqueCena():
 	tanqueAtualPreta = tanqueTintaPreta
 	tanqueAtualMagenta = tanqueTintaMagenta
@@ -62,6 +63,17 @@ func speedRun():
 	if !arrayTintas.has(ciano):
 		arrayTintas.append(ciano)
 	saveTanqueCena()
+	
+	
+func felpses_counter(n : int):
+	var index = n - 1
+	
+	if !dados.felps_contados[index]:
+		dados.felps_contados[index] = true
+		dados.totalFelps += 1
+		
+	if dados.totalFelps == dados.felps_contados.size():
+		Achivements.conquista(5)
 	
 #sistema de save
 func salvar_jogo():

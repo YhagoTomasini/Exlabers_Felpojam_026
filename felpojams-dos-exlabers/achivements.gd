@@ -8,7 +8,7 @@ extends Control
 @onready var icon2 = preload("res://Imagens/carimbos/magenta2.png")
 @onready var icon3 = preload("res://Imagens/carimbos/azul.png")
 #@onready var icon1 = preload()
-#@onready var icon1 = preload()
+@onready var icon5 = preload("res://Imagens/creditos/adesivo_felps.png")
 
 func conquista(id : int):
 	match  id:
@@ -40,5 +40,13 @@ func conquista(id : int):
 				Globals.dados.conquista4 = true
 				icon.texture = icon1
 				nome.text = "[tremor][b]O FINAL[/b][/tremor] \n Completar a segunda fase."
+				
+				anim.play("new_animation")
+				
+		5:
+			if Globals.dados.conquista5 == false:
+				Globals.dados.conquista5 = true
+				icon.texture = icon5
+				nome.text = "[tremor][b]VUGNAES SREO[/b][/tremor] \n Achar todos os Felps."
 				
 				anim.play("new_animation")

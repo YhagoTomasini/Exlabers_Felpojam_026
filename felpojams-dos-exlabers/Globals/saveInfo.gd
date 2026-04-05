@@ -16,3 +16,7 @@ class_name SaveInfo
 @export var conquista4 : bool 
 @export var conquista5 : bool 
 @export var conquista6 : bool 
+
+#FELPSES 6
+var felps_contados := [false, false, false, false, false]#, false]
+var totalFelps : int
