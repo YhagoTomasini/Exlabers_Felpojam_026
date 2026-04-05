@@ -10,42 +10,49 @@ extends Control
 #@onready var icon1 = preload()
 @onready var icon5 = preload("res://Imagens/creditos/adesivo_felps.png")
 
+func _ready() -> void:
+	Globals.carregar_save()
+
 func conquista(id : int):
 	match  id:
 		1:
-			if Globals.dados.conquista1 == false:
-				Globals.dados.conquista1 = true
+			if !Globals.dados.conquista.get(0, false):
+				Globals.dados.conquista[0] = true
 				
 				icon.texture = icon1
 				nome.text = "[tremor][b]SEGUNDO DEGRAU[/b][/tremor] \n Completar a primeira fase."
 				
 				anim.play("new_animation")
 		2:
-			if Globals.dados.conquista2 == false:
-				Globals.dados.conquista2 = true
+			if !Globals.dados.conquista.get(1, false):
+				Globals.dados.conquista[1] = true
+				
 				icon.texture = icon2
 				nome.text = "[tremor][b]TERCEIRO DEGRAU[/b][/tremor] \n Completar a segunda fase."
 				
 				anim.play("new_animation")
 		3:
-			if Globals.dados.conquista3 == false:
-				Globals.dados.conquista3 = true
+			if !Globals.dados.conquista.get(2, false):
+				Globals.dados.conquista[2] = true
+				
 				icon.texture = icon3
 				nome.text = "[tremor][b]QUARTO DEGRAU[/b][/tremor] \n Completar a terceira fase."
 				
 				anim.play("new_animation")
 		
 		4:
-			if Globals.dados.conquista4 == false:
-				Globals.dados.conquista4 = true
+			if !Globals.dados.conquista.get(3, false):
+				Globals.dados.conquista[3] = true
+				
 				icon.texture = icon1
 				nome.text = "[tremor][b]O FINAL[/b][/tremor] \n Completar a segunda fase."
 				
 				anim.play("new_animation")
 				
 		5:
-			if Globals.dados.conquista5 == false:
-				Globals.dados.conquista5 = true
+			if !Globals.dados.conquista.get(4, false):
+				Globals.dados.conquista[4] = true
+				
 				icon.texture = icon5
 				nome.text = "[tremor][b]VUGNAES SREO[/b][/tremor] \n Achar todos os Felps."
 				

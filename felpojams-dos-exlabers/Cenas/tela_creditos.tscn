@@ -21,8 +21,8 @@
 [ext_resource type="Texture2D" uid="uid://dm6hffi736k8x" path="res://Imagens/creditos/post-it_tamires.png" id="12_a4mgd"]
 [ext_resource type="Texture2D" uid="uid://c8an10xbhy1vv" path="res://Imagens/creditos/post-it_yhago.png" id="13_mja1u"]
 [ext_resource type="Texture2D" uid="uid://b7wuxr048pckm" path="res://Imagens/creditos/Vector(3).png" id="14_a4mgd"]
-[ext_resource type="Texture2D" uid="uid://4epr8u1m5r37" path="res://Imagens/creditos/adesivo_felps.png" id="14_p7y3g"]
 [ext_resource type="Texture2D" uid="uid://ecdo07uoob3d" path="res://Imagens/creditos/bapo.png" id="16_kvcyb"]
+[ext_resource type="PackedScene" uid="uid://42v1x460j7vy" path="res://Prefabs/felpses.tscn" id="16_pvn6d"]
 [ext_resource type="Texture2D" uid="uid://b34tabwcer3is" path="res://Imagens/creditos/fantasmas.png" id="17_yd81c"]
 [ext_resource type="Texture2D" uid="uid://db06xkk1wbt56" path="res://Imagens/creditos/godot.png" id="18_mf7jr"]
 [ext_resource type="Texture2D" uid="uid://coccox63tplvt" path="res://Imagens/creditos/coracao.png" id="19_qe6p1"]
@@ -236,15 +236,11 @@ scale = Vector2(0.4832826, 0.4832826)
 texture = ExtResource("14_a4mgd")
 expand_mode = 1
 
-[node name="Felps" type="TextureRect" parent="Elementos"]
-layout_mode = 0
-offset_left = 1544.0001
-offset_top = 4652.0
-offset_right = 1800.0001
-offset_bottom = 4908.0
-rotation = 0.2216303
+[node name="Felps2" parent="Elementos" instance=ExtResource("16_pvn6d")]
+position = Vector2(1664, 4850)
+rotation = 0.22163028
 scale = Vector2(1.2924099, 1.2924099)
-texture = ExtResource("14_p7y3g")
+n = 9
 
 [node name="Bapo" type="TextureRect" parent="Elementos"]
 layout_mode = 0

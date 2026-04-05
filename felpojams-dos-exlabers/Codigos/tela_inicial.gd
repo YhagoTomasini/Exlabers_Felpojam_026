@@ -14,8 +14,6 @@ var suavidade = 5.0
 var alvo = Vector2.ZERO
 
 func _ready():
-	Globals.carregar_save()
-	
 	if !Globals.dados.finalizou:
 		botao_speedrun.visible = false
 	#await get_tree().create_timer(0.1).timeout
@@ -77,15 +75,12 @@ func _on_sair_pressed() -> void:
 	await get_tree().create_timer(0.5).timeout
 	get_tree().quit()
 
-
 func _on_contorles_pressed() -> void:
 	menuControles.ativar()
-
 
 func _on_configs_pressed() -> void:
 	configs.visible = true
 	configs.grabFocus()
-
 
 func _on_speedrun_pressed() -> void:
 	Globals.dados.speedrun_mode = true
