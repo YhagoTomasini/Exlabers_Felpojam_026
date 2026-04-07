@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://birw1ddk6h76u" path="res://Imagens/carimbos/azul.png" id="6_qghlc"]
 [ext_resource type="PackedScene" uid="uid://c47hquni58xjp" path="res://Cenas/Prefabs_gerais/tela_controles.tscn" id="6_ubl30"]
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="7_0bsfe"]
-[ext_resource type="Texture2D" uid="uid://4epr8u1m5r37" path="res://Imagens/creditos/adesivo_felps.png" id="7_qint4"]
+[ext_resource type="Texture2D" uid="uid://dav8fwmxme1qi" path="res://Imagens/achievementspng/cabecafelps_a.png" id="7_rvqkd"]
 [ext_resource type="Texture2D" uid="uid://8ynourfdu3xq" path="res://Temas_UI/sliderrosa.svg" id="8_0bsfe"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_x33ye"]
@@ -79,15 +79,15 @@ texture = ExtResource("6_qghlc")
 
 [node name="A_4" type="Button" parent="ParallaxBG/achievements"]
 self_modulate = Color(1, 1, 1, 0)
-offset_left = 454.0
-offset_top = 557.0
-offset_right = 613.0
-offset_bottom = 770.0
+offset_left = 489.0
+offset_top = 538.0
+offset_right = 617.0
+offset_bottom = 666.0
 rotation = 0.2565634
 
 [node name="AdesivoFelps" type="Sprite2D" parent="ParallaxBG/achievements/A_4"]
-position = Vector2(78, 104)
-texture = ExtResource("7_qint4")
+position = Vector2(64, 64)
+texture = ExtResource("7_rvqkd")
 
 [node name="A_5" type="Button" parent="ParallaxBG/achievements"]
 self_modulate = Color(1, 1, 1, 0)
