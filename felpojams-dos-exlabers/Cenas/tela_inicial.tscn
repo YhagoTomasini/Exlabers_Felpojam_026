@@ -19,7 +19,7 @@ shader = ExtResource("4_00dnc")
 shader_parameter/outerRadius = 3.046000144685
 shader_parameter/MainAlpha = 0.782000037145
 
-[node name="Tela_Inicial" type="Control" node_paths=PackedStringArray("menuControles", "configs")]
+[node name="Tela_Inicial" type="Control" node_paths=PackedStringArray("parallax", "botao_jogar", "botao_speedrun", "menuControles", "configs")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,6 +27,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b1rrf")
+parallax = NodePath("ParallaxBG")
+botao_jogar = NodePath("CanvasLayer/VBoxContainer/Jogar")
+botao_speedrun = NodePath("CanvasLayer/VBoxContainer/Speedrun")
 menuControles = NodePath("CanvasLayer/Tela controles")
 configs = NodePath("CanvasLayer/Configs")
 
@@ -37,16 +40,19 @@ position = Vector2(973, 538)
 scale = Vector2(0.97243273, 0.9724327)
 texture = ExtResource("2_0nw1j")
 
-[node name="achievements" type="Node2D" parent="ParallaxBG" node_paths=PackedStringArray("a_n")]
+[node name="achievements" type="Control" parent="ParallaxBG" node_paths=PackedStringArray("a_n")]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("3_rjfpe")
 a_n = [NodePath("A_1"), NodePath("A_2"), NodePath("A_3"), NodePath("A_4")]
 
 [node name="A_1" type="Button" parent="ParallaxBG/achievements"]
-self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 125.0
 offset_top = 53.0
 offset_right = 253.0
 offset_bottom = 181.0
+flat = true
 
 [node name="Amarelo" type="Sprite2D" parent="ParallaxBG/achievements/A_1"]
 position = Vector2(64, 64)
@@ -54,6 +60,7 @@ texture = ExtResource("4_rjfpe")
 
 [node name="A_2" type="Button" parent="ParallaxBG/achievements"]
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 322.0
 offset_top = 9.999998
 offset_right = 450.0
@@ -66,6 +73,7 @@ texture = ExtResource("5_mdldl")
 
 [node name="A_3" type="Button" parent="ParallaxBG/achievements"]
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 502.0
 offset_top = 65.000015
 offset_right = 630.0
@@ -79,6 +87,7 @@ texture = ExtResource("6_qghlc")
 
 [node name="A_4" type="Button" parent="ParallaxBG/achievements"]
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 489.0
 offset_top = 538.0
 offset_right = 617.0
@@ -91,6 +100,7 @@ texture = ExtResource("7_rvqkd")
 
 [node name="A_5" type="Button" parent="ParallaxBG/achievements"]
 self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 79.0
 offset_top = -245.0
 offset_right = 207.0
@@ -178,6 +188,14 @@ focoNoQueHaviaClicado = NodePath("../VBoxContainer/contorles")
 visible = false
 focoTelaInicial = NodePath("../VBoxContainer/configs")
 
+[connection signal="mouse_entered" from="ParallaxBG/achievements/A_1" to="ParallaxBG/achievements" method="_on_a_1_mouse_entered"]
+[connection signal="mouse_exited" from="ParallaxBG/achievements/A_1" to="ParallaxBG/achievements" method="_on_a_1_mouse_exited"]
+[connection signal="mouse_entered" from="ParallaxBG/achievements/A_2" to="ParallaxBG/achievements" method="_on_a_2_mouse_entered"]
+[connection signal="mouse_exited" from="ParallaxBG/achievements/A_2" to="ParallaxBG/achievements" method="_on_a_2_mouse_exited"]
+[connection signal="mouse_entered" from="ParallaxBG/achievements/A_3" to="ParallaxBG/achievements" method="_on_a_3_mouse_entered"]
+[connection signal="mouse_exited" from="ParallaxBG/achievements/A_3" to="ParallaxBG/achievements" method="_on_a_3_mouse_exited"]
+[connection signal="mouse_entered" from="ParallaxBG/achievements/A_4" to="ParallaxBG/achievements" method="_on_a_4_mouse_entered"]
+[connection signal="mouse_exited" from="ParallaxBG/achievements/A_4" to="ParallaxBG/achievements" method="_on_a_4_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Speedrun" to="." method="_on_speedrun_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]

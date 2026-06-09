@@ -1,8 +1,46 @@
-[gd_scene load_steps=10 format=3 uid="uid://b0gxrs3w4l0v6"]
+[gd_scene load_steps=11 format=3 uid="uid://b0gxrs3w4l0v6"]
 
-[ext_resource type="Script" uid="uid://d1rybu4yh7plw" path="res://achivements.gd" id="1_pcrqp"]
+[ext_resource type="Script" uid="uid://d1rybu4yh7plw" path="res://Globals/achivements.gd" id="1_pcrqp"]
 [ext_resource type="Theme" uid="uid://c7re4iagxgfus" path="res://Temas_UI/controles.tres" id="2_exqku"]
-[ext_resource type="Script" path="res://Codigos/RichTextEffect.gd" id="3_62ibn"]
+[ext_resource type="Script" uid="uid://crxyqnburxfpm" path="res://Codigos/RichTextEffect.gd" id="3_62ibn"]
+
+[sub_resource type="Animation" id="Animation_exqku"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Panel:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1100, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel:anchors_preset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Panel:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(704, 1120)]
+}
 
 [sub_resource type="Animation" id="Animation_pcrqp"]
 resource_name = "new_animation"
@@ -19,25 +57,52 @@ tracks/0/keys = {
 "points": PackedFloat32Array(1100, 0, 0, 0.16666667, -23.333334, 906, -0.16666667, 7.777778, 0.33333334, -15.555556, 906, -0.33333334, -21.555555, 0.16666667, 10.777778, 1100, -0.16666667, -32.333336, 0, 0),
 "times": PackedFloat32Array(0, 1, 3, 4)
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel:anchors_preset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
 
-[sub_resource type="Animation" id="Animation_exqku"]
-length = 0.001
-tracks/0/type = "bezier"
+[sub_resource type="Animation" id="Animation_62ibn"]
+resource_name = "telaInicial_conq_anim"
+step = 1.0
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/Panel:position:y")
+tracks/0/path = NodePath("CanvasLayer/Panel:anchors_preset")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1100, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Panel:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(704, 880)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_62ibn"]
 _data = {
 &"RESET": SubResource("Animation_exqku"),
-&"new_animation": SubResource("Animation_pcrqp")
+&"new_animation": SubResource("Animation_pcrqp"),
+&"telaInicial_conq_anim": SubResource("Animation_62ibn")
 }
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_62ibn"]
@@ -78,10 +143,10 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -540.0
-offset_top = 20.0
-offset_right = -28.0
-offset_bottom = 164.0
+offset_left = -1216.0
+offset_top = 40.0
+offset_right = -704.0
+offset_bottom = 184.0
 grow_horizontal = 0
 grow_vertical = 0
 pivot_offset = Vector2(360, 80)

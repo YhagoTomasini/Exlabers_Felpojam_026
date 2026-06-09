@@ -39,7 +39,6 @@ func conquista(id : int):
 				nome.text = "[tremor][b]QUARTO DEGRAU[/b][/tremor] \n Completar a terceira fase."
 				
 				anim.play("new_animation")
-		
 		4:
 			if !Globals.dados.conquista.get(3, false):
 				Globals.dados.conquista[3] = true
@@ -48,7 +47,6 @@ func conquista(id : int):
 				nome.text = "[tremor][b]O FINAL[/b][/tremor] \n Finalizar o jogo."
 				
 				anim.play("new_animation")
-				
 		5:
 			if !Globals.dados.conquista.get(4, false):
 				Globals.dados.conquista[4] = true
@@ -57,3 +55,34 @@ func conquista(id : int):
 				nome.text = "[tremor][b]VUGNAES SREO[/b][/tremor] \n Achar todos os Felps."
 				
 				anim.play("new_animation")
+
+func display(id : int):
+	match  id:
+		1:
+			icon.texture = icon1
+			nome.text = "[tremor][b]SEGUNDO DEGRAU[/b][/tremor] \n Completar a primeira fase."
+				
+			anim.play("telaInicial_conq_anim")
+		2:
+			icon.texture = icon2
+			nome.text = "[tremor][b]TERCEIRO DEGRAU[/b][/tremor] \n Completar a segunda fase."
+				
+			anim.play("telaInicial_conq_anim")
+		3:
+			icon.texture = icon3
+			nome.text = "[tremor][b]QUARTO DEGRAU[/b][/tremor] \n Completar a terceira fase."
+				
+			anim.play("telaInicial_conq_anim")
+		4:
+			icon.texture = icon1
+			nome.text = "[tremor][b]O FINAL[/b][/tremor] \n Finalizar o jogo."
+				
+			anim.play("telaInicial_conq_anim")
+		5:
+			icon.texture = icon5
+			nome.text = "[tremor][b]VUGNAES SREO[/b][/tremor] \n Achar todos os Felps."
+				
+			anim.play("telaInicial_conq_anim")
+
+func reset_anim():
+	anim.play("RESET")

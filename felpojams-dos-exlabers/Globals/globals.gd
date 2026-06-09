@@ -11,7 +11,6 @@ var ciano : Texture2D = preload("res://Imagens/carimbos/azul_i.png")
 
 # VARIAVEIS GLOBAIS
 var dados : SaveInfo
-# VARIAVEIS do PERSONAGEM
 
 #TINTAS
 var arrayTintas = [preto] #só para os icones das cores na ui

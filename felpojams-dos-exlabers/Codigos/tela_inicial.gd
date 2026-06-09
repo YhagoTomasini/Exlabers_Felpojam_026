@@ -1,8 +1,8 @@
 extends Control
 
-@onready var parallax = $ParallaxBG
-@onready var botao_jogar: Button = $CanvasLayer/VBoxContainer/Jogar
-@onready var botao_speedrun : Button = $CanvasLayer/VBoxContainer/Speedrun
+@export var parallax : Parallax2D
+@export var botao_jogar: Button
+@export var botao_speedrun : Button
 
 @export var menuControles : Control
 @export var configs : Control
