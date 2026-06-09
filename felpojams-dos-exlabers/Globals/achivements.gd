@@ -45,7 +45,7 @@ func conquista(id : int):
 				Globals.dados.conquista[3] = true
 				
 				icon.texture = icon1
-				nome.text = "[tremor][b]O FINAL[/b][/tremor] \n Completar a segunda fase."
+				nome.text = "[tremor][b]O FINAL[/b][/tremor] \n Finalizar o jogo."
 				
 				anim.play("new_animation")
 				
