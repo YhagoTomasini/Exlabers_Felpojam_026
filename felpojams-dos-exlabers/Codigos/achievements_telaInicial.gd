@@ -12,13 +12,13 @@ func _ready() -> void:
 
 
 func _on_a_1_mouse_entered() -> void:
-	Achivements.display(1)
+	Achivements.display(0)
 func _on_a_2_mouse_entered() -> void:
-	Achivements.display(2)
+	Achivements.display(1)
 func _on_a_3_mouse_entered() -> void:
-	Achivements.display(3)
+	Achivements.display(2)
 func _on_a_4_mouse_entered() -> void:
-	Achivements.display(4)
+	Achivements.display(3)
 
 
 func _on_a_1_mouse_exited() -> void:
