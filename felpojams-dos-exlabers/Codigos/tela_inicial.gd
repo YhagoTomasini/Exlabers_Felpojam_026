@@ -7,6 +7,8 @@ extends Control
 @export var menuControles : Control
 @export var configs : Control
 
+@export var telaConquistas : Control
+
 var usando_teclado = false
 
 var intensidade = 30.0
@@ -21,6 +23,7 @@ func _ready():
 	
 	Transição.anim_out()
 	
+	telaConquistas.visible = false
 	#botao_jogar.grab_focus()
 	
 func _input(event):
@@ -87,3 +90,11 @@ func _on_speedrun_pressed() -> void:
 	Globals.salvar_jogo()
 	Globals.speedRun()
 	get_tree().change_scene_to_file("res://Cenas/tela_scores.tscn")
+
+
+func _on_check_box_toggled(toggled_on: bool) -> void:
+	if toggled_on:
+		telaConquistas.visible = true
+		
+	else:
+		telaConquistas.visible = false
