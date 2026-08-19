@@ -1,13 +1,20 @@
 extends Control
 
 @export var text : Label
+@onready var canva : CanvasLayer = $CanvasLayer
 #var dados : SaveInfo
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void: pass
-
+func _ready() -> void: 
+	canva.visible = false
 
 func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_focus_mode"):
+		if !canva.visible:
+			canva.visible = true
+		else:
+			canva.visible = false
+		
 	var fCount := 0
 	for i in Globals.dados.felps_contados:
 		if i:

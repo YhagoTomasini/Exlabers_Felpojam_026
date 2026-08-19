@@ -19,6 +19,7 @@ func _ready():
 	if !Globals.dados.finalizou:
 		botao_speedrun.visible = false
 	#await get_tree().create_timer(0.1).timeout
+	Globals.corAtual = 0
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 	
 	Transição.anim_out()

@@ -42,6 +42,19 @@ position = Vector2(973, 538)
 scale = Vector2(0.97243273, 0.9724327)
 texture = ExtResource("2_0nw1j")
 
+[node name="TextureRect" type="TextureRect" parent="ParallaxBG"]
+material = SubResource("ShaderMaterial_x33ye")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -48.0
+offset_right = 2016.0
+offset_bottom = 1132.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_0nw1j")
+
 [node name="achievements" type="Control" parent="ParallaxBG" node_paths=PackedStringArray("a_n")]
 layout_mode = 3
 anchors_preset = 0
@@ -109,16 +122,6 @@ offset_right = 207.0
 offset_bottom = -117.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-visible = false
-material = SubResource("ShaderMaterial_x33ye")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_0nw1j")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
 offset_left = 937.0
