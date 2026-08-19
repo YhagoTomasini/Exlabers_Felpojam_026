@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpykuouccx070"]
+
+[ext_resource type="Script" uid="uid://dkdsw1qxcv8lw" path="res://Globals/controle_status.gd" id="1_lhq54"]
+[ext_resource type="Theme" uid="uid://c7re4iagxgfus" path="res://Temas_UI/controles.tres" id="2_4rvkg"]
+
+[node name="ControleStatus" type="Control" node_paths=PackedStringArray("text")]
+z_index = 999
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lhq54")
+text = NodePath("CanvasLayer/Label")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 999
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -255.0
+offset_top = 40.0
+offset_right = 255.0
+offset_bottom = 79.0
+grow_horizontal = 2
+theme = ExtResource("2_4rvkg")
+text = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+horizontal_alignment = 1

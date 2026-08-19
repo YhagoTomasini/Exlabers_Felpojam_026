@@ -21,6 +21,7 @@ config/icon="uid://6brus8staoto"
 
 [autoload]
 
+ControleStatus="*res://Globals/controle_status.tscn"
 Globals="*res://Globals/globals.gd"
 AudioManager="*res://Globals/audio_manager.tscn"
 Cursor2d="*res://Globals/cursor_2d.tscn"
