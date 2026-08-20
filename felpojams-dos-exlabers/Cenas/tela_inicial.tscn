@@ -20,7 +20,7 @@ shader = ExtResource("4_00dnc")
 shader_parameter/outerRadius = 3.046000144685
 shader_parameter/MainAlpha = 0.782000037145
 
-[node name="Tela_Inicial" type="Control" node_paths=PackedStringArray("parallax", "botao_jogar", "botao_speedrun", "menuControles", "configs", "telaConquistas")]
+[node name="Tela_Inicial" type="Control" node_paths=PackedStringArray("parallax", "botao_jogar", "botao_speedrun", "menuControles", "configs", "telaConquistas", "checkBoxTelaC")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,6 +34,7 @@ botao_speedrun = NodePath("CanvasLayer/VBoxContainer/Speedrun")
 menuControles = NodePath("CanvasLayer/Tela controles")
 configs = NodePath("CanvasLayer/Configs")
 telaConquistas = NodePath("ParallaxBG/achievements")
+checkBoxTelaC = NodePath("CanvasLayer/CheckBox")
 
 [node name="ParallaxBG" type="Parallax2D" parent="."]
 

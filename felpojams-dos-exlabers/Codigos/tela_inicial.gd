@@ -8,6 +8,7 @@ extends Control
 @export var configs : Control
 
 @export var telaConquistas : Control
+@export var checkBoxTelaC : CheckBox
 
 var usando_teclado = false
 
@@ -22,9 +23,11 @@ func _ready():
 	Globals.corAtual = 0
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.TEMA2)
 	
+	checkBoxTelaC.button_pressed = Globals.dados.telaConquistaOn
+	_on_check_box_toggled(Globals.dados.telaConquistaOn)
+	
 	Transição.anim_out()
 	
-	telaConquistas.visible = false
 	#botao_jogar.grab_focus()
 	
 func _input(event):
@@ -96,6 +99,8 @@ func _on_speedrun_pressed() -> void:
 func _on_check_box_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		telaConquistas.visible = true
+		Globals.dados.telaConquistaOn = true
 		
 	else:
 		telaConquistas.visible = false
+		Globals.dados.telaConquistaOn = false

@@ -25,5 +25,6 @@ func _process(delta: float) -> void:
 		"Lvl2:" + str(Globals.dados.conquista[1]) + "\n" +
 		"Lvl3:" + str(Globals.dados.conquista[2]) + "\n" +
 		"Finalizou:" + str(Globals.dados.finalizou) + "\n" +
-		"Felps achados:" + str(fCount)
+		"Felps achados:" + str(fCount) + "\n" +
+		"Tela conquista on:" + str(Globals.dados.telaConquistaOn)
 	)

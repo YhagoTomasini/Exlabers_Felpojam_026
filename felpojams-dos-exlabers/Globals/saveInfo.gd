@@ -10,6 +10,7 @@ class_name SaveInfo
 @export var high_tempo : int
 
 #CONQUISTAS
+@export var telaConquistaOn : bool
 @export var conquista := {
 	0: false, 1: false, 2: false, 3: false, 4: false, 5: false, 6: false,
 	}
