@@ -37,16 +37,6 @@ position = Vector2(440, 1200)
 [node name="FinalLvl1" parent="." instance=ExtResource("6_2qxcg")]
 position = Vector2(8808, 490)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ui_PR" parent="CanvasLayer" instance=ExtResource("10_i581n")]
-
-[node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("9_ww2hj")]
-unique_name_in_owner = true
-process_mode = 3
-offset_top = 0.0
-offset_bottom = 0.0
-
 [node name="Fundo" type="Control" parent="."]
 show_behind_parent = true
 z_index = -2
@@ -183,6 +173,28 @@ rotation = -2.5691247
 scale = Vector2(3.8351612, 3.8351612)
 texture = ExtResource("14_kqqgy")
 
+[node name="Felpses" type="Node" parent="."]
+
+[node name="Felps" parent="Felpses" instance=ExtResource("8_o31xl")]
+position = Vector2(-38.00003, 9.000004)
+rotation = -0.3159046
+n = 1
+
+[node name="Felps2" parent="Felpses" instance=ExtResource("8_o31xl")]
+position = Vector2(1952, 2718.0002)
+rotation = 0.47472957
+n = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ui_PR" parent="CanvasLayer" instance=ExtResource("10_i581n")]
+
+[node name="UI_Tintas" parent="CanvasLayer" instance=ExtResource("9_ww2hj")]
+unique_name_in_owner = true
+process_mode = 3
+offset_top = 0.0
+offset_bottom = 0.0
+
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 90
 
@@ -196,32 +208,16 @@ pause = NodePath("../Pause")
 configs = NodePath("../Configs")
 reset = NodePath("../TelaResetar")
 
-[node name="Felpses" type="Node" parent="."]
-
-[node name="Felps" parent="Felpses" instance=ExtResource("8_o31xl")]
-position = Vector2(-38.00003, 9.000004)
-rotation = -0.3159046
-n = 1
-
-[node name="Felps2" parent="Felpses" instance=ExtResource("8_o31xl")]
-position = Vector2(1952, 2718.0002)
-rotation = 0.47472957
-n = 2
-
-[node name="Felps5" parent="Felpses" instance=ExtResource("8_o31xl")]
-position = Vector2(6860.0005, 964.00024)
-n = 5
-
 [connection signal="body_entered" from="TileMapLayer/morte" to="TileMapLayer/morte" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40983" to="TileMapLayer/@Area2D@40983" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40984" to="TileMapLayer/@Area2D@40984" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40985" to="TileMapLayer/@Area2D@40985" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40986" to="TileMapLayer/@Area2D@40986" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40987" to="TileMapLayer/@Area2D@40987" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40988" to="TileMapLayer/@Area2D@40988" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40989" to="TileMapLayer/@Area2D@40989" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40990" to="TileMapLayer/@Area2D@40990" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40991" to="TileMapLayer/@Area2D@40991" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40992" to="TileMapLayer/@Area2D@40992" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40993" to="TileMapLayer/@Area2D@40993" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer/@Area2D@40994" to="TileMapLayer/@Area2D@40994" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42673" to="TileMapLayer/@Area2D@42673" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42674" to="TileMapLayer/@Area2D@42674" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42675" to="TileMapLayer/@Area2D@42675" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42676" to="TileMapLayer/@Area2D@42676" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42677" to="TileMapLayer/@Area2D@42677" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42678" to="TileMapLayer/@Area2D@42678" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42679" to="TileMapLayer/@Area2D@42679" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42680" to="TileMapLayer/@Area2D@42680" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42681" to="TileMapLayer/@Area2D@42681" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42682" to="TileMapLayer/@Area2D@42682" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42683" to="TileMapLayer/@Area2D@42683" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer/@Area2D@42684" to="TileMapLayer/@Area2D@42684" method="_on_body_entered"]

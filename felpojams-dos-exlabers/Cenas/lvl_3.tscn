@@ -9,10 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://cj4boxypchcqd" path="res://Cenas/Prefabs_gerais/configs.tscn" id="8_afi0q"]
 [ext_resource type="PackedScene" uid="uid://dsamep4b2vym6" path="res://Cenas/Prefabs_gerais/ui_pr.tscn" id="9_1eq1w"]
 [ext_resource type="PackedScene" uid="uid://cl4jcpv4a41vx" path="res://Prefabs/final_lvl_3.tscn" id="9_rfkta"]
+[ext_resource type="PackedScene" uid="uid://42v1x460j7vy" path="res://Prefabs/felpses.tscn" id="9_scb3e"]
 [ext_resource type="PackedScene" uid="uid://b8eao55q21qss" path="res://Prefabs/porta.tscn" id="9_yoai7"]
 [ext_resource type="PackedScene" uid="uid://cl1s0ivmo0f7r" path="res://Prefabs/pressure_plate.tscn" id="10_46wci"]
 [ext_resource type="PackedScene" uid="uid://ben8uam3h2ffs" path="res://Cenas/Prefabs_gerais/pause.tscn" id="10_yoai7"]
-[ext_resource type="Texture2D" uid="uid://4epr8u1m5r37" path="res://Imagens/creditos/adesivo_felps.png" id="13_lbgfl"]
 [ext_resource type="PackedScene" uid="uid://daq4gpei5jl1t" path="res://Cenas/Prefabs_gerais/tela_resetar.tscn" id="17_e7g1u"]
 
 [node name="lvl_3" type="Node2D"]
@@ -51,6 +51,18 @@ position = Vector2(3705, -1281)
 position = Vector2(4289, 1856)
 alvo_porta = NodePath("../porta2")
 
+[node name="Felpses" type="Node" parent="."]
+
+[node name="Felps3" parent="Felpses" instance=ExtResource("9_scb3e")]
+position = Vector2(4693, -36)
+rotation = 0.19198622
+n = 5
+
+[node name="Felps4" parent="Felpses" instance=ExtResource("9_scb3e")]
+position = Vector2(2701, -2836)
+rotation = -0.45553094
+n = 6
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ui_PR" parent="CanvasLayer" instance=ExtResource("9_1eq1w")]
@@ -60,18 +72,6 @@ unique_name_in_owner = true
 process_mode = 3
 offset_top = 0.0
 offset_bottom = 0.0
-
-[node name="Node" type="Node" parent="."]
-
-[node name="Felps" type="Sprite2D" parent="Node"]
-position = Vector2(4779, -23.000122)
-rotation = 0.3159046
-texture = ExtResource("13_lbgfl")
-
-[node name="Felps2" type="Sprite2D" parent="Node"]
-position = Vector2(2741, -2896)
-rotation = -0.4956735
-texture = ExtResource("13_lbgfl")
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 layer = 90
