@@ -72,7 +72,7 @@ func felpses_counter(n : int):
 		dados.totalFelps += 1
 		
 	if dados.totalFelps == dados.felps_contados.size():
-		Achivements._liberar_conquista(5)
+		Achivements._liberar_conquista(4)
 	
 #sistema de save
 func salvar_jogo():
