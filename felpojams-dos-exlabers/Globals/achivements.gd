@@ -30,6 +30,11 @@ var conquistas := {
 		"icon": Globals.felpsPic,
 		"texto": "[tremor][b]VUGNAES SREO[/b][/tremor]",
 		"descricao": "Achar todos os Felps."
+	},
+	5: {
+		"icon": Globals.felpsPic,
+		"texto": "[tremor][b]CURSED[/b][/tremor]",
+		"descricao": "Achar o Felps anão"
 	}
 }
 

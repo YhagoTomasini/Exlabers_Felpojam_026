@@ -11,8 +11,15 @@ class_name SaveInfo
 
 #CONQUISTAS
 @export var telaConquistaOn : bool
+
 @export var conquista := {
-	0: false, 1: false, 2: false, 3: false, 4: false, 5: false, 6: false,
+	0: false, #passar a primeira fase
+	1: false, #passar a segunda fase
+	2: false, #passar a terceira fase
+	3: false, #finalizar o jogo
+	4: false, #achar todos is felpses
+	5: false, #achar o felps anao
+	6: false,
 	}
 
 #FELPSES 9
