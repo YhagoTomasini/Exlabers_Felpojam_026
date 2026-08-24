@@ -61,7 +61,7 @@ texture = ExtResource("5_0nw1j")
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("3_rjfpe")
-a_n = [NodePath("A_1"), NodePath("A_2"), NodePath("A_3"), NodePath("A_4")]
+a_n = [NodePath("A_1"), NodePath("A_2"), NodePath("A_3"), NodePath("A_4"), NodePath("A_5")]
 
 [node name="A_1" type="Button" parent="ParallaxBG/achievements"]
 layout_mode = 0

@@ -8,6 +8,7 @@ var preto : Texture2D = preload("res://Imagens/carimbos/preto_ui.png")
 var magenta : Texture2D = preload("res://Imagens/carimbos/magenta2_ui.png")
 var amarelo : Texture2D = preload("res://Imagens/carimbos/amarelo_ui.png")
 var ciano : Texture2D = preload("res://Imagens/carimbos/azul_i.png")
+var felpsPic : Texture2D = preload("res://Imagens/creditos/adesivo_felps.png")
 
 # VARIAVEIS GLOBAIS
 var dados : SaveInfo

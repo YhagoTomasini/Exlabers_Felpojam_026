@@ -7,27 +7,27 @@ extends Control
 
 var conquistas := {
 	0: {
-		"icon": preload("res://Imagens/carimbos/amarelo.png"),
+		"icon": Globals.amarelo,
 		"texto": "[tremor][b]SEGUNDO DEGRAU[/b][/tremor]",
 		"descricao": "Completar a primeira fase."
 	},
 	1: {
-		"icon": preload("res://Imagens/carimbos/magenta2.png"),
+		"icon": Globals.magenta,
 		"texto": "[tremor][b]TERCEIRO DEGRAU[/b][/tremor]",
 		"descricao": "Completar a segunda fase."
 	},
 	2: {
-		"icon": preload("res://Imagens/carimbos/azul.png"),
+		"icon": Globals.ciano,
 		"texto": "[tremor][b]QUARTO DEGRAU[/b][/tremor]",
 		"descricao": "Completarar a terceira fase."
 	},
 	3: {
-		"icon": preload("res://Imagens/carimbos/azul.png"),
+		"icon": Globals.preto,
 		"texto": "[tremor][b]O FINAL[/b][/tremor]",
 		"descricao": "Finalizar o jogo."
 	},
 	4: {
-		"icon": preload("res://Imagens/creditos/adesivo_felps.png"),
+		"icon": Globals.felpsPic,
 		"texto": "[tremor][b]VUGNAES SREO[/b][/tremor]",
 		"descricao": "Achar todos os Felps."
 	}
@@ -56,7 +56,7 @@ func display(id : int):
 		nome.text = conquista["texto"] + "\n\n" + conquista["descricao"]
 	
 	else:
-		icon.texture = preload("res://Imagens/carimbos/preto.png")
+		icon.texture = Globals.preto
 		nome.text = "[tremor][b]?????[/b][/tremor]" + "\n\n" + conquista["descricao"]
 	
 	anim.play("telaInicial_conq_anim")
