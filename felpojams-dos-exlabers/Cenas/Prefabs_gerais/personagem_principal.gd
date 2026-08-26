@@ -214,7 +214,7 @@ func _set_state():
 			AudioManager.criar_aud(efeitoSom)
 	
 	
-func player_morreu():
+func player_morreu(assassino):
 	AudioManager.criar_aud(SoundEffect.TIPO_DE_SOM.MORTE)
 	
 	anim.visible = false
@@ -222,6 +222,12 @@ func player_morreu():
 	particulas_morte.emitting = true
 	camera.shake(20)
 	
+	if assassino == str([&"Morte", &"espinho"]):
+		Globals.assassinos_counter(1)
+	elif assassino == str([&"Morte", &"void"]):
+		Globals.assassinos_counter(2)
+	elif assassino == str([&"Morte", &"grampo"]):
+		Globals.assassinos_counter(3)
 	
 	Transição.anim_in()
 	await get_tree().create_timer(1, false).timeout

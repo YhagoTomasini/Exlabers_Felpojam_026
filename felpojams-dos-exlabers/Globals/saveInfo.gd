@@ -27,3 +27,8 @@ class_name SaveInfo
 	false, false, false, false, false, false, false, false, false
 	]
 @export var totalFelps : int
+
+@export var assassinos_contados := [
+	false, false, false
+]
+@export var totalAssassinos : int

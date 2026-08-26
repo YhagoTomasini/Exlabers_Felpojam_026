@@ -74,7 +74,17 @@ func felpses_counter(n : int):
 		
 	if dados.totalFelps == dados.felps_contados.size():
 		Achivements._liberar_conquista(4)
+
+func assassinos_counter(n : int):
+	var index = n-1
 	
+	if !dados.assassinos_contados[index]:
+		dados.assassinos_contados[index] = true
+		dados.totalAssassinos += 1
+	
+	if dados.totalAssassinos == dados.assassinos_contados.size():
+		Achivements._liberar_conquista(6)
+
 #sistema de save
 func salvar_jogo():
 	ResourceSaver.save(dados, SAVE_PATH)

@@ -11,7 +11,7 @@ height = 63.99717
 radius = 37.988914
 height = 79.97765
 
-[node name="tiro" type="CharacterBody2D"]
+[node name="tiro" type="CharacterBody2D" groups=["grampo"]]
 z_index = 10
 scale = Vector2(0.8, 0.8)
 collision_layer = 16
@@ -31,11 +31,11 @@ rotation = -1.561392
 shape = SubResource("CapsuleShape2D_15u7j")
 debug_color = Color(0.98214656, 0, 0.36896423, 0.41960785)
 
-[node name="player_detector" type="Area2D" parent="."]
+[node name="grampo" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 16
 
-[node name="colision2" type="CollisionShape2D" parent="player_detector"]
+[node name="colision2" type="CollisionShape2D" parent="grampo"]
 rotation = -1.561392
 shape = SubResource("CapsuleShape2D_jt7dn")
 debug_color = Color(0.98214656, 0, 0.36896423, 0.41960785)
@@ -45,5 +45,5 @@ wait_time = 4.0
 one_shot = true
 autostart = true
 
-[connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
+[connection signal="body_entered" from="grampo" to="." method="_on_player_detector_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -23,6 +23,8 @@ func _on_a_5_mouse_entered() -> void:
 	Achivements.display(4)
 func _on_a_6_mouse_entered() -> void:
 	Achivements.display(5)
+func _on_a_7_mouse_entered() -> void:
+	Achivements.display(6)
 	
 func _on_a_1_mouse_exited() -> void:
 	Achivements.reset_anim()
@@ -35,4 +37,6 @@ func _on_a_4_mouse_exited() -> void:
 func _on_a_5_mouse_exited() -> void:
 	Achivements.reset_anim()
 func _on_a_6_mouse_exited() -> void:
+	Achivements.reset_anim()
+func _on_a_7_mouse_exited() -> void:
 	Achivements.reset_anim()

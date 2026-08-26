@@ -45,6 +45,9 @@ Player=""
 agua=""
 aguaMaterial=""
 colisivel=""
+grampo=""
+espinho=""
+void=""
 
 [input]
 

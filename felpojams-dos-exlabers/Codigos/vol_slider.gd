@@ -8,7 +8,7 @@ func _ready() -> void:
 	busIndex = AudioServer.get_bus_index(nomeBus)
 	value_changed.connect(volume_alterado)
 	
-	print("Bus:", nomeBus, " Index:", busIndex)
+	#print("Bus:", nomeBus, " Index:", busIndex)
 	
 	value = db_to_linear(AudioServer.get_bus_volume_db(busIndex))
 	

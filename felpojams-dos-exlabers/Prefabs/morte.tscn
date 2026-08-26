@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
 
-[node name="morte" type="Area2D" groups=["Morte"]]
+[node name="morte" type="Area2D" groups=["Morte", "void"]]
 script = ExtResource("1_w58u7")
 
 [node name="Collision" type="CollisionShape2D" parent="."]

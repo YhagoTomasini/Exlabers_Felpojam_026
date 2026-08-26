@@ -19,12 +19,19 @@ func _process(delta: float) -> void:
 	for i in Globals.dados.felps_contados:
 		if i:
 			fCount += 1
+	var aCount := 0
+	for i in Globals.dados.assassinos_contados:
+		if i:
+			aCount += 1
+			
 			
 	text.text = (
-		"Lvl1:" + str(Globals.dados.conquista[0]) + "\n" +
-		"Lvl2:" + str(Globals.dados.conquista[1]) + "\n" +
-		"Lvl3:" + str(Globals.dados.conquista[2]) + "\n" +
-		"Finalizou:" + str(Globals.dados.finalizou) + "\n" +
-		"Felps achados:" + str(fCount) + "\n" +
-		"Tela conquista on:" + str(Globals.dados.telaConquistaOn)
+		"Lvl1: " + str(Globals.dados.conquista[0]) + " | " +
+		"Lvl2: " + str(Globals.dados.conquista[1]) + " | " +
+		"Lvl3: " + str(Globals.dados.conquista[2]) + "\n" +
+		"Finalizou: " + str(Globals.dados.finalizou) + "\n" +
+		"Felps achados: " + str(fCount) + str(Globals.dados.conquista[4]) +"\n" +
+		"Felps anão: " + str(Globals.dados.conquista[5]) + "\n" +
+		"Mortes morridas: " + str(aCount) + str(Globals.dados.conquista[6]) +"\n" +
+		"Tela conquista on: " + str(Globals.dados.telaConquistaOn)
 	)

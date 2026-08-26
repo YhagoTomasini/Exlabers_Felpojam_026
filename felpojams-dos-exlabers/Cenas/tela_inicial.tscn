@@ -61,7 +61,7 @@ texture = ExtResource("5_0nw1j")
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("3_rjfpe")
-a_n = [NodePath("A_1"), NodePath("A_2"), NodePath("A_3"), NodePath("A_4"), NodePath("A_5"), NodePath("A_6")]
+a_n = [NodePath("A_1"), NodePath("A_2"), NodePath("A_3"), NodePath("A_4"), NodePath("A_5"), NodePath("A_6"), NodePath("A_7")]
 
 [node name="A_1" type="Button" parent="ParallaxBG/achievements"]
 layout_mode = 0
@@ -123,6 +123,7 @@ offset_left = 589.0
 offset_top = 362.0
 offset_right = 717.0
 offset_bottom = 490.0
+rotation = -0.46774822
 pivot_offset = Vector2(64, 64)
 
 [node name="AdesivoFelps" type="Sprite2D" parent="ParallaxBG/achievements/A_5"]
@@ -137,10 +138,25 @@ offset_left = 748.0
 offset_top = 504.99994
 offset_right = 876.0
 offset_bottom = 632.99994
-rotation = -0.5462881
+rotation = -0.70162237
 pivot_offset = Vector2(64, 64)
 
 [node name="AdesivoFelps" type="Sprite2D" parent="ParallaxBG/achievements/A_6"]
+position = Vector2(64, 64)
+rotation = 0.2565634
+texture = ExtResource("7_rvqkd")
+
+[node name="A_7" type="Button" parent="ParallaxBG/achievements"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 479.0
+offset_top = 630.0
+offset_right = 607.0
+offset_bottom = 758.0
+rotation = 0.39095375
+pivot_offset = Vector2(64, 64)
+
+[node name="AdesivoFelps" type="Sprite2D" parent="ParallaxBG/achievements/A_7"]
 position = Vector2(64, 64)
 rotation = 0.2565634
 texture = ExtResource("7_rvqkd")
@@ -242,6 +258,8 @@ focoTelaInicial = NodePath("../VBoxContainer/configs")
 [connection signal="mouse_exited" from="ParallaxBG/achievements/A_5" to="ParallaxBG/achievements" method="_on_a_5_mouse_exited"]
 [connection signal="mouse_entered" from="ParallaxBG/achievements/A_6" to="ParallaxBG/achievements" method="_on_a_6_mouse_entered"]
 [connection signal="mouse_exited" from="ParallaxBG/achievements/A_6" to="ParallaxBG/achievements" method="_on_a_6_mouse_exited"]
+[connection signal="mouse_entered" from="ParallaxBG/achievements/A_7" to="ParallaxBG/achievements" method="_on_a_7_mouse_entered"]
+[connection signal="mouse_exited" from="ParallaxBG/achievements/A_7" to="ParallaxBG/achievements" method="_on_a_7_mouse_exited"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Jogar" to="." method="_on_jogar_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/Speedrun" to="." method="_on_speedrun_pressed"]
 [connection signal="pressed" from="CanvasLayer/VBoxContainer/contorles" to="." method="_on_contorles_pressed"]

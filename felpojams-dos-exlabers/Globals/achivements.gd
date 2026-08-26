@@ -35,6 +35,11 @@ var conquistas := {
 		"icon": Globals.felpsPic,
 		"texto": "[tremor][b]CURSED[/b][/tremor]",
 		"descricao": "Achar o Felps anão"
+	},
+	6: {
+		"icon": Globals.felpsPic,
+		"texto": "[tremor][b]MORTE MATADA[/b][/tremor]",
+		"descricao": "Morrer de todas as formas possíveis"
 	}
 }
 
