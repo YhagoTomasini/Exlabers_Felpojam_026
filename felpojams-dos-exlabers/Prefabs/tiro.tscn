@@ -11,7 +11,7 @@ height = 63.99717
 radius = 37.988914
 height = 79.97765
 
-[node name="tiro" type="CharacterBody2D" groups=["grampo"]]
+[node name="tiro" type="CharacterBody2D" groups=["Morte", "grampo"]]
 z_index = 10
 scale = Vector2(0.8, 0.8)
 collision_layer = 16
