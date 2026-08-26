@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yjr6j"]
 size = Vector2(154.99997, 49.999996)
 
-[node name="espinhos" type="Area2D" groups=["Morte"]]
+[node name="espinhos" type="Area2D" groups=["Morte", "espinho"]]
 rotation = 1.5707964
 script = ExtResource("1_yjr6j")
 

@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d45mu"]
 size = Vector2(124, 41)
 
-[node name="espinhos" type="Area2D" groups=["Morte"]]
+[node name="espinhos" type="Area2D" groups=["Morte", "espinho"]]
 script = ExtResource("1_sw43j")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
