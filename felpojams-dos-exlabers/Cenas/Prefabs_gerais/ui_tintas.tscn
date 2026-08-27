@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://co1uo20k2ecem"]
+[gd_scene load_steps=14 format=3 uid="uid://co1uo20k2ecem"]
 
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
 [ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Cenas/Prefabs_gerais/ui_tintas.gd" id="1_y871h"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cmwu3d5nlchph" path="res://Imagens/UI/frasco_generico.png" id="4_mpdm0"]
 [ext_resource type="Texture2D" uid="uid://vubu3bhwkgkk" path="res://Imagens/UI/q.png" id="7_14xx5"]
 [ext_resource type="Texture2D" uid="uid://dnh21f5drh7a7" path="res://Imagens/UI/e.png" id="8_i05he"]
+[ext_resource type="Theme" uid="uid://cuscv0a8pehuw" path="res://Temas_UI/tela_creditos.tres" id="10_andj5"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_tmomi"]
 shader = ExtResource("2_mpdm0")
@@ -24,7 +25,9 @@ shader_parameter/wave_strength = 4.0
 shader_parameter/wave_speed = 4.0
 shader_parameter/wave_frequency = 5.2
 
-[node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra", "barra2", "frasco")]
+[sub_resource type="CanvasTexture" id="CanvasTexture_andj5"]
+
+[node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra", "barra2", "frasco", "valorTintas")]
 layout_mode = 3
 anchors_preset = 2
 anchor_top = 1.0
@@ -41,6 +44,7 @@ icone3 = NodePath("IconeT22")
 barra = NodePath("BarraTanque")
 barra2 = NodePath("Sprite2D")
 frasco = NodePath("FundoBarraTanque")
+valorTintas = [NodePath("VBoxContainer/Label"), NodePath("VBoxContainer/Label2"), NodePath("VBoxContainer/Label3"), NodePath("VBoxContainer/Label4")]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
@@ -127,3 +131,54 @@ offset_right = 272.0
 offset_bottom = 20.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_i05he")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = -640.0
+offset_right = 60.0
+offset_bottom = -300.0
+texture = SubResource("CanvasTexture_andj5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -640.0
+offset_right = 52.0
+offset_bottom = -308.0
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("10_andj5")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("10_andj5")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("10_andj5")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label4" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("10_andj5")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

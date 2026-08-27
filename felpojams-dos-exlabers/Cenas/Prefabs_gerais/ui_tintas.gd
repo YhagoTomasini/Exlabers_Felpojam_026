@@ -11,6 +11,8 @@ extends Control
 @export var barra2 : Sprite2D
 @export var frasco : Sprite2D
 
+@export var valorTintas : Array[Label]
+
 func _ready() -> void:
 	atualizar_tintas()
 	atualizar_barra()
@@ -73,3 +75,18 @@ func _process(delta: float) -> void:
 		Globals.corAtual = (Globals.corAtual - 1 + Globals.arrayTintas.size()) % Globals.arrayTintas.size()
 		atualizar_tintas()
 		atualizar_barra()
+	
+	for i in range(valorTintas.size()):
+		match i:
+			0:
+				valorTintas[i].self_modulate = Color(0.157, 0.157, 0.267, 1.0)
+				valorTintas[i].text = str(int(Globals.tanqueTintaPreta))
+			1:
+				valorTintas[i].self_modulate = Color(1.0, 0.882, 0.0, 1.0)
+				valorTintas[i].text = str(int(Globals.tanqueTintaAmarelo))
+			2:
+				valorTintas[i].self_modulate = Color(1.0, 0.0, 0.882, 1.0)
+				valorTintas[i].text = str(int(Globals.tanqueTintaMagenta))
+			3:
+				valorTintas[i].self_modulate = Color(0.0, 0.882, 1.0, 1.0)
+				valorTintas[i].text = str(int(Globals.tanqueTintaCiano))
