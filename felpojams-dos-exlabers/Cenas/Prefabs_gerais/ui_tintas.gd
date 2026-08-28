@@ -79,14 +79,26 @@ func _process(delta: float) -> void:
 	for i in range(valorTintas.size()):
 		match i:
 			0:
-				valorTintas[i].self_modulate = Color(0.157, 0.157, 0.267, 1.0)
-				valorTintas[i].text = str(int(Globals.tanqueTintaPreta))
+				if Globals.arrayTintas.has(Globals.preto):
+					valorTintas[i].visible = true
+					valorTintas[i].self_modulate = Color(0.157, 0.157, 0.267, 1.0)
+					valorTintas[i].text = str(int(Globals.tanqueTintaPreta))
+				else: valorTintas[i].visible = false
 			1:
-				valorTintas[i].self_modulate = Color(1.0, 0.882, 0.0, 1.0)
-				valorTintas[i].text = str(int(Globals.tanqueTintaAmarelo))
+				if Globals.arrayTintas.has(Globals.amarelo):
+					valorTintas[i].visible = true
+					valorTintas[i].self_modulate = Color(1.0, 0.882, 0.0, 1.0)
+					valorTintas[i].text = str(int(Globals.tanqueTintaAmarelo))
+				else: valorTintas[i].visible = false
 			2:
-				valorTintas[i].self_modulate = Color(1.0, 0.0, 0.882, 1.0)
-				valorTintas[i].text = str(int(Globals.tanqueTintaMagenta))
+				if Globals.arrayTintas.has(Globals.magenta):
+					valorTintas[i].visible = true
+					valorTintas[i].self_modulate = Color(1.0, 0.0, 0.882, 1.0)
+					valorTintas[i].text = str(int(Globals.tanqueTintaMagenta))
+				else: valorTintas[i].visible = false
 			3:
-				valorTintas[i].self_modulate = Color(0.0, 0.882, 1.0, 1.0)
-				valorTintas[i].text = str(int(Globals.tanqueTintaCiano))
+				if Globals.arrayTintas.has(Globals.ciano):
+					valorTintas[i].visible = true
+					valorTintas[i].self_modulate = Color(0.0, 0.882, 1.0, 1.0)
+					valorTintas[i].text = str(int(Globals.tanqueTintaCiano))
+				else: valorTintas[i].visible = false

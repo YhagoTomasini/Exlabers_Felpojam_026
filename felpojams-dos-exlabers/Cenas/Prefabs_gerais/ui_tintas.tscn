@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://co1uo20k2ecem"]
+[gd_scene load_steps=13 format=3 uid="uid://co1uo20k2ecem"]
 
 [ext_resource type="Texture2D" uid="uid://c131j4cd1l0pp" path="res://icon.svg" id="1_8xrun"]
 [ext_resource type="Script" uid="uid://btslllw50g2d2" path="res://Cenas/Prefabs_gerais/ui_tintas.gd" id="1_y871h"]
@@ -24,8 +24,6 @@ shader_parameter/progress = 0.0550000026125
 shader_parameter/wave_strength = 4.0
 shader_parameter/wave_speed = 4.0
 shader_parameter/wave_frequency = 5.2
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_andj5"]
 
 [node name="UI_Tintas" type="Control" node_paths=PackedStringArray("icone1", "icone2", "icone3", "barra", "barra2", "frasco", "valorTintas")]
 layout_mode = 3
@@ -131,14 +129,6 @@ offset_right = 272.0
 offset_bottom = 20.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_i05he")
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 16.0
-offset_top = -640.0
-offset_right = 60.0
-offset_bottom = -300.0
-texture = SubResource("CanvasTexture_andj5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
